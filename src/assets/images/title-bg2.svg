@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1436.925" height="809.628" viewBox="0 0 1436.925 809.628">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#424c67"/>
+      <stop offset="1" stop-color="#212634"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_804" data-name="Group 804" transform="translate(-351.71 -3747.422)">
+    <g id="Group_696" data-name="Group 696" transform="translate(142.615 -1228.578)" opacity="0.232">
+      <rect id="Rectangle_550" data-name="Rectangle 550" width="235.115" height="218.416" rx="46" transform="translate(932.85 5130.127) rotate(48)" opacity="0.274" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_551" data-name="Rectangle 551" width="121.989" height="113.325" rx="21" transform="translate(1122.314 5342.127) rotate(48)" opacity="0.538" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_552" data-name="Rectangle 552" width="97.123" height="90.225" rx="21" transform="translate(994.031 5457.951) rotate(48)" opacity="0.497" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_553" data-name="Rectangle 553" width="97.123" height="90.225" rx="21" transform="translate(542.031 5130.127) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_554" data-name="Rectangle 554" width="71.703" height="66.611" rx="21" transform="translate(656.521 5369.252) rotate(48)" opacity="0.549" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_555" data-name="Rectangle 555" width="71.703" height="66.611" rx="21" transform="translate(1323.761 5541.571) rotate(48)" opacity="0.309" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_556" data-name="Rectangle 556" width="97.123" height="90.225" rx="21" transform="translate(322.547 4997.578) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_557" data-name="Rectangle 557" width="97.123" height="90.225" rx="21" transform="translate(282.037 5099.726) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_558" data-name="Rectangle 558" width="97.123" height="90.225" rx="21" transform="translate(1581.031 4976) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+    </g>
+    <g id="Group_689" data-name="Group 689" transform="translate(136.723 -1082.379)" opacity="0.232">
+      <rect id="Rectangle_550-2" data-name="Rectangle 550" width="235.115" height="218.416" rx="46" transform="translate(932.85 5130.127) rotate(48)" opacity="0.274" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_551-2" data-name="Rectangle 551" width="121.989" height="113.325" rx="21" transform="translate(1122.314 5342.127) rotate(48)" opacity="0.538" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_552-2" data-name="Rectangle 552" width="97.123" height="90.225" rx="21" transform="translate(994.031 5457.951) rotate(48)" opacity="0.497" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_553-2" data-name="Rectangle 553" width="97.123" height="90.225" rx="21" transform="translate(542.031 5130.127) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_554-2" data-name="Rectangle 554" width="71.703" height="66.611" rx="21" transform="translate(656.521 5369.252) rotate(48)" opacity="0.549" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_555-2" data-name="Rectangle 555" width="71.703" height="66.611" rx="21" transform="translate(1323.761 5541.571) rotate(48)" opacity="0.309" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_556-2" data-name="Rectangle 556" width="97.123" height="90.225" rx="21" transform="translate(322.547 4997.578) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_557-2" data-name="Rectangle 557" width="97.123" height="90.225" rx="21" transform="translate(282.037 5099.726) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_558-2" data-name="Rectangle 558" width="97.123" height="90.225" rx="21" transform="translate(1581.031 4976) rotate(48)" opacity="0.389" fill="url(#linear-gradient)"/>
+    </g>
+  </g>
+</svg>
