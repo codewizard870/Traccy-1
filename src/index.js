@@ -4,10 +4,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './assets/scss/style.scss';
 
+import { KeplrWalletProvider } from "./contexts/keplrWallet"
+import { MetamaskProvider } from "./contexts/metamask"
+import { TrustWalletProvider } from "./contexts/trustWallet"
+import { ToastContainer } from 'react-toastify';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <KeplrWalletProvider>
+      <MetamaskProvider>
+        <TrustWalletProvider>
+          <App />
+          <ToastContainer />
+        </TrustWalletProvider>
+      </MetamaskProvider>
+    </KeplrWalletProvider>
   </React.StrictMode>
 );
 

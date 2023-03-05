@@ -8,6 +8,7 @@ import "./Navbar.scss";
 import EnIcon from '../../../assets/images/en.png';
 import GermanIcon from '../../../assets/images/german.png';
 import FrenchIcon from '../../../assets/images/french.png';
+import ConnectWallet from "./ConnectWallet";
 
 const Menus = () => {
   const history = useLocation();
@@ -19,6 +20,7 @@ const Menus = () => {
   const onClose = () => {
     setOpen(false);
   };
+
   return (
     <>
       <Drawer
@@ -100,6 +102,9 @@ const Menus = () => {
         </li>
         <li>
           <NavLink to='/contact'>CONTACT</NavLink>
+        </li>
+        <li style={{cursor:"pointer"}}>
+          <ConnectWallet />
         </li>
       </ul>
       <Select
