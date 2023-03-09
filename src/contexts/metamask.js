@@ -140,7 +140,6 @@ const WalletSubscription = () => {
         const balance = await provider.getBalance(
           useMetamaskStore.getState().account
         );
-console.log(balance)
         useMetamaskStore.setState({ balance: balance });
         useMetamaskStore.setState({ initialized: true });
       }

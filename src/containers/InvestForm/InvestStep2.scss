@@ -1,0 +1,44 @@
+.invest-step2-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 51px;
+  background: linear-gradient(
+    180deg,
+    rgba(187, 37, 119, 0.82) 0%,
+    rgba(188, 37, 119, 0.23) 100%
+  );
+  padding-left: 130px;
+  padding-right: 130px;
+  & > span {
+    &:nth-child(1) {
+      font-size: 40px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 88px;
+    }
+    &:nth-child(2) {
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 70px;
+      line-height: 29px;
+    }
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    gap: 80px;
+  }
+  .next-button {
+    width: 300px;
+    height: 80px;
+    background-color: #E30FAE;
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    font-size: 36px;
+    color: #FFFFFF;
+  }
+}

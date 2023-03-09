@@ -14,7 +14,7 @@ module.exports = {
         path: false,
         stream: false,
         string_decoder: false,
-        "crypto": require.resolve("crypto-browserify"),
+        crypto: require.resolve("crypto-browserify"),
         assert: false,
         os: false,
         url: false,

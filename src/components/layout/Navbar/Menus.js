@@ -103,10 +103,11 @@ const Menus = () => {
         <li>
           <NavLink to='/contact'>CONTACT</NavLink>
         </li>
-        <li style={{cursor:"pointer"}}>
-          <ConnectWallet />
+        <li>
+          <NavLink to='/invest-step1'>INVEST</NavLink>
         </li>
       </ul>
+      <ConnectWallet />
       <Select
         defaultValue="en"
         className='lang-select'

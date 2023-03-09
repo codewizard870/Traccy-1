@@ -1,0 +1,61 @@
+.invest-step4-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-radius: 51px;
+  background: linear-gradient(
+    180deg,
+    rgba(187, 37, 119, 0.82) 0%,
+    rgba(188, 37, 119, 0.23) 100%
+  );
+
+  .congrat-wrapper {
+    margin-top: 75px;
+    & > span {
+      font-size: 48px;
+    }
+  }
+  & > span {
+    &:nth-child(2) {
+      margin-top: 17px;
+      font-size: 36px;
+    }
+    &:nth-child(3) {
+      margin-top: 54px;
+      font-size: 26px;
+    }
+    &:nth-child(4) {
+      margin-top: 97px;
+      font-size: 24px;
+    }
+  }
+  .grid-wrapper{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px;
+    align-items: center;
+    margin-top: 20px;
+    grid-template-rows: 60px;
+    
+    .grid-header {
+      background: #FFFFFF80;
+      padding: 10px 30px;
+
+    }
+    .grid-data {
+      background: #160720;
+      padding: 10px 30px;
+    }
+  }
+  .next-button {
+    width: 300px;
+    height: 80px;
+    background-color: #e30fae;
+    border-radius: 10px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    font-size: 36px;
+    color: #ffffff;
+  }
+}

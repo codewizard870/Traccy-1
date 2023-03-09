@@ -1,5 +1,6 @@
-import React, { createContext, useContext, useReducer } from "react";
-import { NETWORK } from "../config/constants";
+import { useReducer } from "react";
+import { NETWORK, CHAINS } from "../config/constants";
+import { createContainer } from 'react-tracked';
 
 const initialState = {
   walletType: undefined,
@@ -8,14 +9,18 @@ const initialState = {
   openWalletModal: undefined,
   net: NETWORK,
   address: undefined,
+  investChain: CHAINS[0],
+  investToken: "",
+  investAmount: 0,
+  investTrcyAmount: 0,
+  investName: "",
+  investTitle: "",
+  investEmail: "",
+  investSign: undefined,
+  investDate: ""
 };
 
-const StoreContext = createContext({
-  state: initialState,
-  dispatch: () => null,
-});
-
-export const reducer = (state, action) => {
+const reducer = (state, action) => {
   switch (action.type) {
     case "setWalletType":
       return { ...state, walletType: action.payload };
@@ -29,29 +34,41 @@ export const reducer = (state, action) => {
       return { ...state, net: action.payload };
     case "setAddress":
       return { ...state, address: action.payload };
+    case "setInvestChain":
+      return { ...state, chain: action.payload };
+    case 'setInvestToken':
+      return { ...state, token: action.payload };
+    case 'setInvestAmount':
+      return { ...state, investAmount: action.payload };
+    case 'setInvestName':
+      return { ...state, investName: action.payload };
+    case 'setInvestTitle':
+      return { ...state, investTitle: action.payload };
+    case 'setInvestEmail':
+      return { ...state, investEmail: action.payload };
+    case 'setInvestSign':
+      return { ...state, investSign: action.payload };
+    case 'setInvestDate':
+      return {...state, investDate: action.payload };
     default:
       return state;
   }
 };
 
-export const StoreProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialState);
+const useValue = () => useReducer(reducer, initialState);
 
-  return (
-    <StoreContext.Provider value={{ state, dispatch }}>
-      {children}
-    </StoreContext.Provider>
-  );
-};
-
-export const useStore = () => useContext(StoreContext);
+export const {
+  Provider,
+  useTrackedState,
+  useUpdate: useDispatch,
+} = createContainer(useValue);
 
 export const useJunoConnection = () => {
-  const { state } = useStore();
+  const state = useTrackedState();
   return state.junoConnection;
 };
 
 export const useWallet = () => {
-  const { state } = useStore();
+  const state = useTrackedState();
   return state.wallet;
 };

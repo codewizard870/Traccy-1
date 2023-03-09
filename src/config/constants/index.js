@@ -37,6 +37,8 @@ export const ERROR_OPTION = {
   progress: undefined,
 };
 
+export const CHAINS = ["Juno", "BSC", "Tron", "Polygon"];
+
 export const TOKEN_LIST = [
   {
     chain: "Juno",
@@ -238,27 +240,27 @@ export const CHAINS_CONFIG = {
 export const WALLET_LIST = [
   {
     name: "Metamask",
-    icon: "/media/Wallet/metamask-fox.svg",
+    icon: "/wallet/metamask-fox.svg",
     link: "metamask",
   },
   {
     name: "TrustWallet",
-    icon: "/media/Wallet/trust_platform.svg",
+    icon: "/Wallet/trust_platform.svg",
     link: "trust",
   },
   {
     name: "Keplr",
-    icon: "/media/Wallet/keplr.svg",
+    icon: "/Wallet/keplr.svg",
     link: "keplr",
   },
   {
     name: "TronLink",
-    icon: "/media/Wallet/tron_link.svg",
+    icon: "/Wallet/tron_link.svg",
     link: "tron",
   },
   {
     name: "ElrondWeb",
-    icon: "/media/Wallet/elrond-wallet-logo.png",
+    icon: "/Wallet/elrond-wallet-logo.png",
     link: "elrond",
   },
 ];
