@@ -6,12 +6,10 @@ import HomeThree from "./containers/HomeThree";
 import ImpactThroughTraccy from "./containers/ImpactThroughTraccy";
 import ImpactThroughTraccyDetails from "./containers/ImpactThroughTraccyDetails";
 import TraccyToken from "./containers/TraccyToken";
-import InvestStep1 from "./containers/InvestForm/InvestStep1";
 // Layout Types
 import { authLayout, defaultaboutLayout, defaultdarkdetailsheaderLayout, defaultdarkheaderLayout, defaultLayout } from "./layouts";
-import InvestStep2 from "./containers/InvestForm/InvestStep2";
-import InvestStep3 from "./containers/InvestForm/InvestStep3";
-import InvestStep4 from "./containers/InvestForm/InvestStep4";
+
+import Invest from "./containers/Invest";
 
 // Route Views
 
@@ -69,27 +67,9 @@ export const rotues = [
     component: () => <ImpactThroughTraccyDetails />
   },
   {
-    path: "/invest-step1",
+    path: "/invest",
     exact: true,
-    layout: defaultLayout,
-    component: () => <InvestStep1 />
+    layout: authLayout,
+    component: () => <Invest />
   },
-  {
-    path: "/invest-step2",
-    exact: true,
-    layout: defaultLayout,
-    component: () => <InvestStep2 />
-  },
-  {
-    path: "/invest-step3",
-    exact: true,
-    layout: defaultLayout,
-    component: () => <InvestStep3 />
-  },  
-  {
-    path: "/invest-step4",
-    exact: true,
-    layout: defaultLayout,
-    component: () => <InvestStep4 />
-  }
 ];

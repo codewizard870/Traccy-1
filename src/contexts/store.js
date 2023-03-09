@@ -35,9 +35,9 @@ const reducer = (state, action) => {
     case "setAddress":
       return { ...state, address: action.payload };
     case "setInvestChain":
-      return { ...state, chain: action.payload };
+      return { ...state, investChain: action.payload };
     case 'setInvestToken':
-      return { ...state, token: action.payload };
+      return { ...state, investToken: action.payload };
     case 'setInvestAmount':
       return { ...state, investAmount: action.payload };
     case 'setInvestName':

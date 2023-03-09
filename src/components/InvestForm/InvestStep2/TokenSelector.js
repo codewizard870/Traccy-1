@@ -14,7 +14,7 @@ const TokenSelector = () => {
   const balance = 0;
   const token = "TRCY";
 
-  const token_list = useMemo(() => TOKEN_LIST.filter(token => token.chain.toLowerCase() === state.chain.toLowerCase()), [state.chain]);
+  const token_list = useMemo(() => TOKEN_LIST.filter(token => token.chain.toLowerCase() === state.investChain.toLowerCase()), [state.investChain]);
 
   const items = useMemo(() => token_list.map((token, index) => {
     return {
@@ -27,7 +27,7 @@ const TokenSelector = () => {
 
   const handleSelect = (key) => {
     setKey(key)
-    dispatch({ type: "setToken", payload: token_list[key].name });
+    dispatch({ type: "setInvestToken", payload: token_list[key].name });
   }
 
   const value = useMemo(() => parseFloat(state.investAmount) / 0.06, [state.investAmount]);
@@ -48,7 +48,6 @@ const TokenSelector = () => {
         </div>
       </Dropdown>
       <div className="input-card">
-        <img src="/invest-form/receive.svg" alt="receive" />
         <span>TRCY tokens you will receive</span>
         <div className="input-box">
           <input value={value} readOnly placeholder={0} />

@@ -22,13 +22,12 @@ const ChainSelector = () => {
 
   const handleSelect = (key) => {
     setKey(key)
-    dispatch({type: "setChain", payload: CHAINS[key]});
+    dispatch({type: "setInvestChain", payload: CHAINS[key]});
   }
 
   const changeValue = (e) => {
     dispatch({type: "setInvestAmount", payload: e.target.value})
   }
-
   return (
     <div className="select-chain">
       <span>Select Chain</span>
@@ -45,12 +44,11 @@ const ChainSelector = () => {
         </div>
       </Dropdown>
       <div className="input-card">
-        <img src="/invest-form/invest.svg" alt="invest"/>
         <span>Token amount you want to invest</span>
         <div className="input-box">
           <input onChange={changeValue} placeholder={0}/>
           <span className="suffix">
-            {state.token}
+            {state.investToken}
           </span>
         </div>
         <span className="balance">balance : {balance}</span>

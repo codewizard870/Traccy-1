@@ -104,7 +104,7 @@ const Menus = () => {
           <NavLink to='/contact'>CONTACT</NavLink>
         </li>
         <li>
-          <NavLink to='/invest-step1'>INVEST</NavLink>
+          <NavLink to='/invest'>INVEST</NavLink>
         </li>
       </ul>
       <ConnectWallet />
