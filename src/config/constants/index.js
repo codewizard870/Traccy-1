@@ -1,4 +1,4 @@
-export const NETWORK = "testnet";
+export const NETWORK = "mainnet";
 export const WEFUND_ID = 1;
 export const REQUEST_ENDPOINT =
   "https://clownfish-app-ytxjf.ondigitalocean.app";
@@ -69,7 +69,7 @@ export const TOKEN_LIST = [
     decimals: 18,
     native: false,
     address:
-      NETWORK == "mainnet"
+      NETWORK === "mainnet"
         ? "0x55d398326f99059fF775485246999027B3197955"
         : "0x337610d27c682E347C9cD60BD4b3b107C9d34dDd",
   },
@@ -79,7 +79,7 @@ export const TOKEN_LIST = [
     decimals: 18,
     native: false,
     address:
-      NETWORK == "mainnet"
+      NETWORK === "mainnet"
         ? "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
         : "0x64544969ed7EBf5f083679233325356EbE738930",
   },
@@ -89,7 +89,7 @@ export const TOKEN_LIST = [
     decimals: 18,
     native: false,
     address:
-      NETWORK == "mainnet"
+      NETWORK === "mainnet"
         ? "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56"
         : "0xeD24FC36d5Ee211Ea25A80239Fb8C4Cfd80f12Ee",
   },
@@ -106,7 +106,7 @@ export const TOKEN_LIST = [
     decimals: 6,
     native: false,
     address:
-      NETWORK == "mainnet"
+      NETWORK === "mainnet"
         ? "TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t"
         : "TG3XXyExBkPp9nzdajDZsozEu4BkaSJozs",
   },

@@ -70,7 +70,7 @@ export default function ConnectWallet() {
       >
         <div className="modal-content">
           {WALLET_LIST.map((wallet, index) => (
-            <div className="modal-item" onClick={() => connectTo(wallet.link)}>
+            <div className="modal-item" key={index} onClick={() => connectTo(wallet.link)}>
               <img src={wallet.icon} width="50px" rounded="10px" alt="wallet" className="item-image" />
               <span className="item-text">
                 {wallet.name}

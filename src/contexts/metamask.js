@@ -4,18 +4,20 @@ import { createTrackedSelector } from "react-tracked";
 import { toast } from "react-toastify";
 import create from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
-import { BigNumber, ethers } from "ethers";
+import { BigNumber as EtherBigNumber, ethers } from "ethers";
 
 import {
   WEFUND_BSC_ADDRESS,
   ERC20_ABI,
   ERROR_OPTION,
 } from "../config/constants";
+import { formatUnits } from "ethers/lib/utils";
+import BigNumber from "bignumber.js";
 
 const defaultStates = {
   connected: false,
   account: "",
-  balance: BigNumber.from("0"),
+  balance: EtherBigNumber.from("0"),
   initialized: false,
   initializing: true,
   signer: undefined,
@@ -33,7 +35,7 @@ export const useMetamaskStore = create(
 
         const accounts = await provider.send("eth_requestAccounts", []);
         const account = accounts[0];
-console.log(account)
+
         const res = await provider.getNetwork();
         set({
           connected: true,
@@ -84,20 +86,22 @@ console.log(account)
       }
       return balance.toString() + " " + chain;
     },
-    sendTokens: async (
-      amount,
-      denom,
-      address,
-      native
-    ) => {
+    sendTokens: async (_amount, tokenInfo) => {
       const signer = get().signer;
       if (!signer) return false;
+
+      let amount = new BigNumber(parseFloat(_amount));
+      amount = amount
+        .multipliedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
 
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const sender = get().account;
       const nonce = provider.getTransactionCount(sender, "latest");
 
-      if (native) {
+      if (tokenInfo.native) {
         const tx = {
           from: sender,
           to: WEFUND_BSC_ADDRESS,
@@ -109,7 +113,7 @@ console.log(account)
 
         await signer.sendTransaction(tx);
       } else {
-        const contract = new ethers.Contract(address, ERC20_ABI, signer);
+        const contract = new ethers.Contract(tokenInfo.address, ERC20_ABI, signer);
         const gasPrice = await provider.getGasPrice();
         const res = await contract.transfer(WEFUND_BSC_ADDRESS, amount, {
           gasPrice,
@@ -117,6 +121,15 @@ console.log(account)
         await res.wait();
       }
     },
+    getTokenBalance: async (tokenInfo) => {
+      const account = get().account;
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const contract = new ethers.Contract(tokenInfo.address, ERC20_ABI, provider);
+      const balance = await contract.balanceOf(account);
+
+      console.log(formatUnits(balance, tokenInfo.decimals))
+      return(formatUnits(balance, tokenInfo.decimals));
+    }
   }))
 );
 export const useMetamaskWallet =

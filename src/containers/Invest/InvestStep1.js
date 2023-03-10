@@ -21,7 +21,7 @@ const InvestStep1 = ({ onNext }) => {
 
   useEffect(() => {
     function getSnapshot() {
-      setWidth(window.innerWidth > 576 ? window.innerWidth *0.5 : window.innerWidth*0.7);
+      setWidth(window.innerWidth > 576 ? window.innerWidth * 0.5 : window.innerWidth * 0.7);
     }
     getSnapshot();
     window.addEventListener('resize', getSnapshot);
@@ -40,7 +40,7 @@ const InvestStep1 = ({ onNext }) => {
         <span>Please check and confirm the form and<br /> go next step</span>
         <div className="check-group">
           <input type="checkbox" id="check" className="checkbox" onChange={handleCheck} />
-          <label for="check" className="checkbox-label">I agree with all conditions of this Project and Traccy</label>
+          <label htmlFor="check" className="checkbox-label">I agree with all conditions of this Project and Traccy</label>
         </div>
         <div className="steps-action">
           <Link to='/'>FAQ</Link>

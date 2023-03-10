@@ -8,6 +8,7 @@ import { Provider as StoreProvider } from "./contexts/store"
 import { KeplrWalletProvider } from "./contexts/keplrWallet"
 import { MetamaskProvider } from "./contexts/metamask"
 import { TrustWalletProvider } from "./contexts/trustWallet"
+import { TronLinkProvider } from './contexts/tronLink';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -18,8 +19,10 @@ root.render(
       <KeplrWalletProvider>
         <MetamaskProvider>
           <TrustWalletProvider>
-            <App />
-            <ToastContainer />
+            <TronLinkProvider>
+              <App />
+              <ToastContainer />
+            </TronLinkProvider>
           </TrustWalletProvider>
         </MetamaskProvider>
       </KeplrWalletProvider>

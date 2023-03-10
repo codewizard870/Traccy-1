@@ -17,7 +17,6 @@ const Invest = () => {
 
     const next = () => {
         setCurrent(current + 1);
-        console.log(current)
     };
 
     const prev = () => {

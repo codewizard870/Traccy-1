@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 import create from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
 
-import { BigNumber } from "ethers";
+import { BigNumber } from "bignumber.js";
 import Web3 from "web3";
 import WalletConnectProvider from "@walletconnect/web3-provider";
 import Web3Modal from "web3modal";
@@ -25,7 +25,7 @@ const providerOptions = {
 const defaultStates = {
   connected: false,
   account: "",
-  balance: BigNumber.from("0"),
+  balance: new BigNumber(0),
   initialized: false,
   initializing: true,
   web3: undefined,
@@ -78,18 +78,20 @@ export const useTrustWalletStore = create(
     getBalanceString: () => {
       return get().balance.toString() + "  Trust";
     },
-    sendTokens: async (
-      amount,
-      denom,
-      address,
-      native
-    ) => {
+    sendTokens: async (_amount, tokenInfo) => {
       const web3 = get().web3;
       if (!web3) return false;
       const sender = get().account;
       const nonce = await web3.eth.getTransactionCount(sender);
 
-      if (native) {
+      let amount = new BigNumber(parseFloat(_amount));
+      amount = amount
+        .multipliedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+
+      if (tokenInfo.native) {
         const tx = {
           from: sender,
           to: WEFUND_BSC_ADDRESS,
@@ -107,13 +109,26 @@ export const useTrustWalletStore = create(
       } else {
         const contract = new web3.eth.Contract(
           ERC20_ABI.abi,
-          address
+          tokenInfo.address
         );
         await contract.methods
           .transfer(WEFUND_BSC_ADDRESS, amount)
           .send({ from: get().account });
       }
     },
+    getTokenBalance: async (tokenInfo) => {
+      const { account, web3 } = get();
+      if (!web3) return false;
+
+      const contract = new web3.eth.Contract(
+        ERC20_ABI.abi,
+        tokenInfo.address
+      );
+      const balance = await contract.methods
+        .balanceOf(account)
+
+      return (Web3.utils.fromWei(balance, "ether"));
+    }
   }))
 );
 

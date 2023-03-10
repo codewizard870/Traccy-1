@@ -4,7 +4,7 @@ import { DownOutlined } from "@ant-design/icons"
 
 import "./ChainSelector.scss"
 import { CHAINS, TOKEN_LIST, CHAINS_CONFIG, ERROR_OPTION } from "../../../config/constants"
-import { useDispatch, useTrackedState } from "../../../contexts/store"
+import { useDispatch, useTrackedState, useWallet } from "../../../contexts/store"
 import { useKeplrWallet } from "../../../contexts/keplrWallet"
 import { useMetamaskWallet } from "../../../contexts/metamask"
 import { useTronLink } from "../../../contexts/tronLink"
@@ -13,6 +13,7 @@ import { toast } from "react-toastify"
 const ChainSelector = () => {
   const state = useTrackedState();
   const dispatch = useDispatch();
+  const wallet = useWallet();
   const keplr = useKeplrWallet();
   const metamask = useMetamaskWallet();
   const tronLink = useTronLink();
@@ -57,7 +58,6 @@ const ChainSelector = () => {
             params: [{ chainId: CHAINS_CONFIG[chain].chainId }],
           });
         } catch (switchError) {
-          console.log(switchError)
           if (switchError.code === 4902) {
             try {
               await ethereum.request({
@@ -83,9 +83,9 @@ const ChainSelector = () => {
       default: break;
     }
   }
-  useEffect(() =>{
-    handleChainSelect(0);
-  } , []);
+  useEffect(() => {
+    handleChainSelect(chainKey);
+  }, []);
 
   const [tokenKey, setTokenKey] = useState(0);
 
@@ -104,6 +104,12 @@ const ChainSelector = () => {
     setTokenKey(key)
     dispatch({ type: "setInvestToken", payload: token_list[key].name });
   }
+
+  useEffect(() => {
+    if (!wallet.initialized) return;
+    const tokenInfo = LookForTokenInfo(state.investChain, state.investToken);
+    const balance = wallet?.getTokenBalance(tokenInfo);
+  }, [state.investToken, state.investChain, wallet]);
 
   return (
     <div className="selector-wrapper">
@@ -142,3 +148,14 @@ const ChainSelector = () => {
 }
 
 export default ChainSelector;
+
+function LookForTokenInfo(chain, token) {
+  const list = TOKEN_LIST.filter(
+    (one) =>
+      one.chain.toLowerCase() === chain.toLowerCase() &&
+      one.name.toLowerCase() === token.toLowerCase()
+  );
+  if (list.length === 0) return null;
+  return list[0];
+}
+

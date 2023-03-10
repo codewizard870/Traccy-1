@@ -147,9 +147,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
       await wallet.sendTokens(
         amount.toFixed(),
-        tokenInfo?.denom,
-        tokenInfo?.address,
-        tokenInfo?.native
+        tokenInfo
       );
 
       toast.dismiss();
@@ -219,8 +217,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
 export default InvestStep3;
 
-
-export function LookForTokenInfo(chain, token) {
+function LookForTokenInfo(chain, token) {
   const list = TOKEN_LIST.filter(
     (one) =>
       one.chain.toLowerCase() === chain.toLowerCase() &&

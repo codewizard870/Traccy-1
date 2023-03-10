@@ -81,22 +81,40 @@ export const useKeplrWalletStore = create(
       return "0 JUNO";
     },
     sendTokens: async (
-      amount,
-      denom,
-      addr,
-      native,
+      _amount,
+      tokenInfo
     ) => {
       const client = get().client;
       const account = get().account;
       if (!client) return;
 
-      await client?.sendTokens(
+      let amount = new BigNumber(parseFloat(_amount));
+      amount = amount
+        .multipliedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+
+      await client.sendTokens(
         account,
         WEFUND_JUNO_ADDRESS,
-        [{ amount: amount, denom: denom }],
+        [{ amount, denom: tokenInfo.denom }],
         "auto"
       );
     },
+    getTokenBalance: async (tokenInfo) => {
+      const { client, account } = get();
+      if (!client) return;
+      const coin = await client.getBalance(account, tokenInfo.denom);
+      let amount = new BigNumber(coin.amount);
+      amount = amount
+        .dividedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+      console.log(amount.toFixed())
+      return amount.toFixed();
+    }
   }))
 );
 
@@ -113,30 +131,6 @@ export const KeplrWalletProvider = ({ children }) => {
 };
 
 const WalletSubscription = () => {
-  useEffect(() => {
-    // const walletAddress = window.localStorage.getItem("wallet_address");
-    // if (walletAddress) {
-    //   void useKeplrWalletStore.getState().connect();
-    // } else {
-    //   useKeplrWalletStore.setState({ initializing: false });
-    // }
-
-    const listenChange = () => {
-      void useKeplrWalletStore.getState().connect(true);
-    };
-    const listenFocus = () => {
-      // if (walletAddress) void useKeplrWalletStore.getState().connect("focus");
-    };
-
-    window.addEventListener("keplr_keystorechange", listenChange);
-    window.addEventListener("focus", listenFocus);
-
-    return () => {
-      window.removeEventListener("keplr_keystorechange", listenChange);
-      window.removeEventListener("focus", listenFocus);
-    };
-  }, []);
-
   useEffect(() => {
     return useKeplrWalletStore.subscribe(
       (x) => x.signer,
@@ -169,7 +163,7 @@ const WalletSubscription = () => {
         const key = await window.keplr.getKey(config.chainId);
         await refreshBalance(address, balance);
         window.localStorage.setItem("wallet_address", address);
-console.log(address, account, balance)
+
         useKeplrWalletStore.setState({
           accountNumber: account?.accountNumber || 0,
           account: address,

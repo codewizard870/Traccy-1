@@ -52,16 +52,18 @@ export const useTronLinkStore = create(
       const balance = get().balance.dividedBy(10 ** 6);
       return balance.toFixed() + " TRX";
     },
-    sendTokens: async (
-      amount,
-      denom,
-      addr,
-      native,
-    ) => {
+    sendTokens: async (_amount, tokenInfo) => {
       const account = get().account;
       const tronWeb = get().tronWeb;
 
-      if (native) {
+      let amount = new BigNumber(parseFloat(_amount));
+      amount = amount
+        .multipliedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+
+      if (tokenInfo.native) {
         const tx = await tronWeb.transactionBuilder.sendTrx(
           WEFUND_TRON_WALLET,
           amount,
@@ -70,7 +72,7 @@ export const useTronLinkStore = create(
         const signedTx = await tronWeb.trx.sign(tx);
         const broastTx = await tronWeb.trx.sendRawTransaction(signedTx);
       } else {
-        const contract = await tronWeb.contract().at(addr);
+        const contract = await tronWeb.contract().at(tokenInfo.address);
 
         // const balance = await contract.balanceOf(account).call();
         // const val = BigNumber.from(balance);
@@ -82,6 +84,21 @@ export const useTronLinkStore = create(
         });
       }
     },
+    getTokenBalance: async (tokenInfo) => {
+      const account = get().account;
+      const tronWeb = get().tronWeb;
+
+      const contract = await tronWeb.contract().at(tokenInfo.address);
+      const balance = await contract.balanceOf(account).call();
+      let amount = new BigNumber(balance.toString());
+      amount = amount
+        .dividedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+      console.log(amount.toFixed())
+      return amount.toFixed();
+    }
   }))
 );
 export const useTronLink =
@@ -101,6 +118,7 @@ const WalletSubscription = () => {
     return useTronLinkStore.subscribe(
       (x) => x.connected,
       async (connected) => {
+
         const tronWeb = useTronLinkStore.getState().tronWeb;
 
         const balance = await tronWeb.trx.getBalance(
