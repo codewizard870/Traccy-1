@@ -1,74 +1,51 @@
-.select-chain {
+.selector-wrapper {
   display: flex;
-  flex-direction: column;
+  gap: 50px;
   margin-top: 80px;
-  font-size: 16px;
-  font-weight: 600;
-  flex-grow: 1;
-
-  .drop-down {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 64px;
-    background: linear-gradient(0deg, rgba(48, 53, 73, 0), rgba(48, 53, 73, 0)),
-      linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
-    border-radius: 10px;
-    margin-top: 25px;
-    padding-left: 37px;
-    padding-right: 37px;
-    font-size: 15px;
-    font-weight: 400;
+  @media screen and (max-width: 576px) {
+    flex-direction: column;
+    gap: 30px;
   }
-  .input-card {
+  .selector {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: #2e3353;
-    padding: 27px;
-    margin-top: 128px;
-    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
 
-    & > span {
-      font-size: 16px;
-      margin-top: 19px;
-      color: #ffffff99;
+    @media screen and (max-width: 576px) {
+      font-size: 12px;
     }
-    .input-box {
+
+    .drop-down {
       display: flex;
-      width: 100%;
+      justify-content: space-between;
       align-items: center;
-      position: relative;
-      margin-top: 33px;
-
-      font-size: 12px;
+      width: 100%;
+      height: 64px;
+      background: linear-gradient(
+          0deg,
+          rgba(48, 53, 73, 0),
+          rgba(48, 53, 73, 0)
+        ),
+        linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1)
+        );
+      border-radius: 10px;
+      margin-top: 25px;
+      padding-left: 37px;
+      padding-right: 37px;
+      font-size: 15px;
       font-weight: 400;
-      & > input {
-        width: 100%;
-        height: 67px;
-        background: linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0.05),
-            rgba(255, 255, 255, 0.05)
-          ),
-          linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
-        border: 0px;
-        border-radius: 10px;
-        padding: 0 10px;
-        &:focus-visible {
-          outline: 0;
-        }
-      }
-      .suffix {
-        position: absolute;
-        right: 10px;
-        color: #E74283;
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+        margin-top: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
-    .balance {
-      font-size: 12px;
-      margin-top: 20px;
-    }
+    
   }
 }

@@ -62,7 +62,7 @@ const Invest = () => {
                     <Navbar />
                 </div>
                 <div className='rightbar-inner'>
-                    <div className='address-bar'>
+                    {/* <div className='address-bar'>
                         <div className='logo-section'>
                             <img src={LogoLight} alt='Logo' />
                         </div>
@@ -89,7 +89,7 @@ const Invest = () => {
                         <div className='bottom-link'>
                             <Link to='/'>Terms of Use</Link>  I  <Link to='/'> Privacy Policy </Link>
                         </div>
-                    </div>
+                    </div> */}
                     <div className='dtl-section'>
                         <Steps current={current} items={items} />
                         <div className="steps-content">{steps[current].content}</div>

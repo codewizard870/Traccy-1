@@ -1,16 +1,46 @@
+import { useEffect } from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom"
 
 import InvestWrapper from "./InvestWrapper";
 import "./InvestStep4.scss";
-import { useTrackedState, useDispatch } from "../../contexts/store";
+import { useTrackedState } from "../../contexts/store";
 import { toast } from "react-toastify";
-import { ERROR_OPTION, REQUEST_ENDPOINT, SUCCESS_OPTION, TOKEN_LIST } from "../../config/constants";
+import { REQUEST_ENDPOINT, SUCCESS_OPTION } from "../../config/constants";
 
-const InvestStep4 = ({onNext, onPrev}) => {
+const InvestStep4 = ({ onNext, onPrev }) => {
   const state = useTrackedState();
-  const dispatch = useDispatch();
 
+  const download_pdf = () => {
+    toast("Downloading", SUCCESS_OPTION);
+
+    const xhr = new XMLHttpRequest();
+    const a = document.createElement("a");
+
+    xhr.open(
+      "GET",
+      REQUEST_ENDPOINT + "/download_pdf?filename=" + state.saftDocument,
+      true
+    );
+
+    xhr.responseType = "blob";
+    xhr.onload = function () {
+      const file = new Blob([xhr.response], {
+        type: "application/octet-stream",
+      });
+      window.URL = window.URL || window.webkitURL;
+      a.href = window.URL.createObjectURL(file);
+      a.download = "confirm.pdf";
+      a.click();
+    };
+    xhr.send();
+
+    toast.dismiss();
+  };
+
+  useEffect(() => {
+    download_pdf();
+  }, []);
 
   return (
     <InvestWrapper>
@@ -31,7 +61,7 @@ const InvestStep4 = ({onNext, onPrev}) => {
           <div className="grid-data">{state.investDate}</div>
           <div className="grid-data">{state.investAmount}</div>
           <div className="grid-data">{state.investTrcyAmount}</div>
-          <div className="grid-data download">Download</div>
+          <div className="grid-data download" onClick={download_pdf}>Download</div>
         </div>
         <div className="steps-action">
           <Link to='/'>FAQ</Link>

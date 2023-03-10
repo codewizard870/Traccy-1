@@ -17,7 +17,8 @@ const initialState = {
   investTitle: "",
   investEmail: "",
   investSign: undefined,
-  investDate: ""
+  investDate: "",
+  saftDocument: undefined,
 };
 
 const reducer = (state, action) => {
@@ -40,6 +41,8 @@ const reducer = (state, action) => {
       return { ...state, investToken: action.payload };
     case 'setInvestAmount':
       return { ...state, investAmount: action.payload };
+    case 'setInvestTrcyAmount':
+      return { ...state, investTrcyAmount: action.payload };
     case 'setInvestName':
       return { ...state, investName: action.payload };
     case 'setInvestTitle':
@@ -49,7 +52,9 @@ const reducer = (state, action) => {
     case 'setInvestSign':
       return { ...state, investSign: action.payload };
     case 'setInvestDate':
-      return {...state, investDate: action.payload };
+      return { ...state, investDate: action.payload };
+    case 'setSaftDocument':
+      return { ...state, saftDocument: action.payload };
     default:
       return state;
   }

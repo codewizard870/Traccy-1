@@ -1,8 +1,8 @@
 .invest-step1-body0 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 100%;
 
   & > span {
     &:nth-child(1) {
@@ -11,6 +11,10 @@
       text-align: center;
       margin-top: 88px;
       color: #be1e73;
+      @media screen and (max-width: 576px) {
+        font-size: 30px;
+        margin-top: 40px;
+      }
     }
     &:nth-child(2) {
       font-size: 36px;
@@ -19,12 +23,20 @@
       margin-top: 70px;
       line-height: 60px;
       color: #ffffff80;
+      @media screen and (max-width: 576px) {
+        font-size: 27px;
+        line-height: 45px;
+        margin-top: 35px;
+      }
     }
   }
   .check-group {
     display: flex;
     align-items: center;
     margin-top: 90px;
+    @media screen and (max-width: 576px) {
+      margin-top: 45px;
+    }
     .checkbox {
       width: 21px;
       height: 21px;
@@ -34,10 +46,20 @@
       margin-left: 10px;
       font-size: 24px;
       color: #ffffff;
+      @media screen and (max-width: 576px) {
+        font-size: 18px;
+      }
     }
   }
 }
 
 .invest-document {
+  display: flex;
+  justify-content: center;
   margin-top: 170px;
+  width: 100%;
+
+  @media screen and (max-width: 576px) {
+    margin-top: 50px;
+  }
 }

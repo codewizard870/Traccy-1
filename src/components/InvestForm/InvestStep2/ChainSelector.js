@@ -1,57 +1,141 @@
-import { useState } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Dropdown, Space } from "antd"
 import { DownOutlined } from "@ant-design/icons"
 
 import "./ChainSelector.scss"
-import { CHAINS } from "../../../config/constants"
+import { CHAINS, TOKEN_LIST, CHAINS_CONFIG, ERROR_OPTION } from "../../../config/constants"
 import { useDispatch, useTrackedState } from "../../../contexts/store"
+import { useKeplrWallet } from "../../../contexts/keplrWallet"
+import { useMetamaskWallet } from "../../../contexts/metamask"
+import { useTronLink } from "../../../contexts/tronLink"
+import { toast } from "react-toastify"
 
 const ChainSelector = () => {
   const state = useTrackedState();
   const dispatch = useDispatch();
+  const keplr = useKeplrWallet();
+  const metamask = useMetamaskWallet();
+  const tronLink = useTronLink();
 
-  const [key, setKey] = useState(0);
-  const balance = 0;
+  async function connectTo(to) {
+    let wallet;
+    switch (to.toLowerCase()) {
+      case "metamask": wallet = metamask; break;
+      case "keplr": wallet = keplr; break;
+      case "tron": wallet = tronLink; break;
+      default: wallet = metamask; break;
+    }
 
-  const items = CHAINS.map((chain, index) => {
+    await wallet.connect();
+    dispatch({ type: "setWalletType", payload: to });
+  }
+
+  const [chainKey, setChainKey] = useState(0);
+  const chainItems = CHAINS.map((chain, index) => {
     return {
       key: index,
-      label: <div onClick={() => handleSelect(index)}>{chain}</div>
+      label: <div onClick={() => handleChainSelect(index)}>{chain}</div>
     }
   })
 
-  const handleSelect = (key) => {
-    setKey(key)
-    dispatch({type: "setInvestChain", payload: CHAINS[key]});
+  const handleChainSelect = async (key) => {
+    setChainKey(key)
+    dispatch({ type: "setInvestChain", payload: CHAINS[key] });
+
+    const chain = CHAINS[key].toLowerCase();
+    switch (chain) {
+      case "juno":
+        connectTo("keplr");
+        break;
+      case "bsc":
+      case "bsc_testnet":
+      case "polygon":
+        const ethereum = window.ethereum;
+        try {
+          await ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{ chainId: CHAINS_CONFIG[chain].chainId }],
+          });
+        } catch (switchError) {
+          console.log(switchError)
+          if (switchError.code === 4902) {
+            try {
+              await ethereum.request({
+                method: "wallet_addEthereumChain",
+                params: [
+                  {
+                    chainId: CHAINS_CONFIG[chain].chainId,
+                    chainName: CHAINS_CONFIG[chain].chainName,
+                    rpcUrls: [CHAINS_CONFIG[chain].rpc] /* ... */,
+                  },
+                ],
+              });
+            } catch (addError) {
+              toast("Can't switch to " + chain.toUpperCase(), ERROR_OPTION);
+            }
+          }
+        }
+        connectTo("metamask");
+        break;
+      case "tron":
+        connectTo("tron");
+        break;
+      default: break;
+    }
+  }
+  useEffect(() =>{
+    handleChainSelect(0);
+  } , []);
+
+  const [tokenKey, setTokenKey] = useState(0);
+
+  const token_list = useMemo(() => TOKEN_LIST.filter(token => token.chain.toLowerCase() === state.investChain.toLowerCase()), [state.investChain]);
+
+  const tokenItems = useMemo(() => token_list.map((token, index) => {
+    return {
+      key: index,
+      label: <div onClick={() => handleTokenSelect(index)}>{token.name}</div>
+    }
+  }), [token_list]);
+
+  useEffect(() => handleTokenSelect(0), [token_list]);
+
+  const handleTokenSelect = (key) => {
+    setTokenKey(key)
+    dispatch({ type: "setInvestToken", payload: token_list[key].name });
   }
 
-  const changeValue = (e) => {
-    dispatch({type: "setInvestAmount", payload: e.target.value})
-  }
   return (
-    <div className="select-chain">
-      <span>Select Chain</span>
-      <Dropdown
-        menu={{
-          items: items,
-        }}
-        trigger={['click']}
-        className="drop-down"
-      >
-        <div>
-          {items[key].label}
-          <DownOutlined />
-        </div>
-      </Dropdown>
-      <div className="input-card">
-        <span>Token amount you want to invest</span>
-        <div className="input-box">
-          <input onChange={changeValue} placeholder={0}/>
-          <span className="suffix">
-            {state.investToken}
-          </span>
-        </div>
-        <span className="balance">balance : {balance}</span>
+    <div className="selector-wrapper">
+      <div className="selector">
+        <span>Select Chain</span>
+        <Dropdown
+          menu={{
+            items: chainItems,
+          }}
+          trigger={['click']}
+          className="drop-down"
+        >
+          <div>
+            {chainItems[chainKey].label}
+            <DownOutlined />
+          </div>
+        </Dropdown>
+      </div>
+      <div className="selector">
+        <span>Select Token</span>
+        <Dropdown
+          menu={{
+            items: tokenItems,
+          }}
+          trigger={['click']}
+          className="drop-down"
+        >
+          <div>
+            {tokenItems[tokenKey]?.label}
+            <DownOutlined />
+          </div>
+        </Dropdown>
       </div>
     </div>
   )

@@ -95,6 +95,7 @@
         }
         .rightbar-inner{
             display: flex;
+            justify-content: center;
             @media screen and (max-width:991px) {
                 flex-direction: column-reverse;
             }
@@ -164,10 +165,13 @@
                 }
             }
             .dtl-section{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 padding: 2.5% 3%;
                 width: 100%;
                 max-width: 1100px;
-                border-left: 1px solid #292828;
+                // border-left: 1px solid #292828;
                 // height: calc(100vh - 100px);
                 height: auto;
                 position: relative;
@@ -182,18 +186,18 @@
                     padding: 15px;
                     margin: 0 0 3rem 0;
                 }
-                &::before {
-                    position: absolute;
-                    content: ' ';
-                    left: -4.8px;
-                    width: 9px;
-                    height: 9px;
-                    border-radius: 9px;
-                    background: #A7A7A7;
-                    display: inline-block;
-                    z-index: 2;
-                    top: 60px;
-                }
+                // &::before {
+                //     position: absolute;
+                //     content: ' ';
+                //     left: -4.8px;
+                //     width: 9px;
+                //     height: 9px;
+                //     border-radius: 9px;
+                //     background: #A7A7A7;
+                //     display: inline-block;
+                //     z-index: 2;
+                //     top: 60px;
+                // }
                 .ant-steps{
                     margin-bottom: 3rem;
                     max-width: 670px;
@@ -247,6 +251,7 @@
                     text-align: right;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     width: 100%;
                     a{
                         color: #BE1E73;

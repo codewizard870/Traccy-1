@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useSyncExternalStore, useEffect, useMemo } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { Button } from "antd";
 import { Link } from 'react-router-dom';
@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 const InvestStep1 = ({ onNext }) => {
   const [agree, setAgree] = useState(false);
   const [numPages, setNumPages] = useState(null);
-
+  const [width, setWidth] = useState(0);
   const handleCheck = (e) => {
     setAgree(e.target.checked)
   }
@@ -19,8 +19,17 @@ const InvestStep1 = ({ onNext }) => {
       onNext();
   }
 
+  useEffect(() => {
+    function getSnapshot() {
+      setWidth(window.innerWidth > 576 ? window.innerWidth *0.5 : window.innerWidth*0.7);
+    }
+    getSnapshot();
+    window.addEventListener('resize', getSnapshot);
+    return () => window.removeEventListener('resize', getSnapshot);
+  }, [])
+
   const src = "/PDFTemplate_presale.pdf";
-  const onDocumentLoadSuccess = ({ numPages }) => {
+  const onDocumentLoadSuccess = ({ numPages, ...e }) => {
     setNumPages(numPages);
   }
 
@@ -42,12 +51,13 @@ const InvestStep1 = ({ onNext }) => {
       </div>
       <div className="invest-document">
         <Document file={src} onLoadSuccess={onDocumentLoadSuccess}>
-          {[...Array(numPages).keys()].map((page) => {
+          {[...Array(numPages).keys()].map((page, index) => {
             return <Page
               pageNumber={page + 1}
-              scale={1.3}
+              width={width}
               renderAnnotationLayer={false}
               renderTextLayer={false}
+              key={index}
             />
           })}
         </Document>

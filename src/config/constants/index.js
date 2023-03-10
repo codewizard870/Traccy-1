@@ -1,7 +1,7 @@
 export const NETWORK = "testnet";
 export const WEFUND_ID = 1;
 export const REQUEST_ENDPOINT =
-  "https://wefund-nodejs-gwb6v.ondigitalocean.app";
+  "https://clownfish-app-ytxjf.ondigitalocean.app";
 
 export const WEFUND_JUNO_ADDRESS =
   "juno1gc3lpde7nx8khqfafw3st7j4ptd6qfccu6y04a";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import InvestWrapper from "./InvestWrapper";
 import "./InvestStep2.scss";
 import ChainSelector from "../../components/InvestForm/InvestStep2/ChainSelector"
-import TokenSelector from "../../components/InvestForm/InvestStep2/TokenSelector";
+import TokenSelector from "../../components/InvestForm/InvestStep2/AmountInput";
 
 const InvestStep2 = ({onPrev, onNext}) => {
   return (
@@ -12,7 +12,7 @@ const InvestStep2 = ({onPrev, onNext}) => {
       <div className="invest-step2-body0">
         <span>Input your Investment Amount</span>
         <span>Please select the chain and tokens, enter amount and we will convert<br /> the TRCY amount for you</span>
-        <div className="container">
+        <div className="selector-container">
           <ChainSelector />
           <TokenSelector />
         </div>
