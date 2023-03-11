@@ -7,7 +7,8 @@ import { toast } from "react-toastify";
 import InvestWrapper from "./InvestWrapper";
 import "./InvestStep3.scss";
 import { useTrackedState, useDispatch, useWallet } from "../../contexts/store";
-import { ERROR_OPTION, REQUEST_ENDPOINT, SUCCESS_OPTION, TOKEN_LIST } from "../../config/constants";
+import { ERROR_OPTION, REQUEST_ENDPOINT, SUCCESS_OPTION } from "../../config/constants";
+import { LookForTokenInfo } from "../../config/utilitiy";
 
 const InvestStep3 = ({ onNext, onPrev }) => {
   const state = useTrackedState();
@@ -16,10 +17,10 @@ const InvestStep3 = ({ onNext, onPrev }) => {
   const canvasRef = useRef({});
   const [_, setSignature] = useState("");
   const [width, setWidth] = useState(0);
-console.log(width)
+
   useEffect(() => {
     function getSnapshot() {
-      setWidth(window.innerWidth);
+      setWidth(window.innerWidth > 576 ? 576: window.innerWidth);
     }
     getSnapshot();
     window.addEventListener('resize', getSnapshot);
@@ -61,7 +62,6 @@ console.log(width)
     if (canvasRef.current) canvasRef.current.clear();
   }
 
-  
   function checkValication() {
     const investChain = state.investChain;
     const investAmount = state.investAmount;
@@ -70,7 +70,7 @@ console.log(width)
       toast("Please connect to wallet", SUCCESS_OPTION);
       return false;
     }
-  
+
     let proper = false;
     if (investChain.toLowerCase() === "juno" && state.walletType == "keplr") {
       proper = true;
@@ -132,7 +132,7 @@ console.log(width)
   const handleNext = async () => {
     try {
       checkValication();
-      
+
       await createSAFTPdf();
       toast("Please wait", { ...SUCCESS_OPTION, autoClose: false });
 
@@ -208,14 +208,3 @@ console.log(width)
 }
 
 export default InvestStep3;
-
-function LookForTokenInfo(chain, token) {
-  const list = TOKEN_LIST.filter(
-    (one) =>
-      one.chain.toLowerCase() === chain.toLowerCase() &&
-      one.name.toLowerCase() === token.toLowerCase()
-  );
-  if (list.length === 0) return null;
-  return list[0];
-}
-

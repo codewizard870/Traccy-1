@@ -1,14 +1,12 @@
 import { useReducer } from "react";
-import { NETWORK, CHAINS } from "../config/constants";
+import { CHAINS } from "../config/constants";
 import { createContainer } from 'react-tracked';
 
 const initialState = {
   walletType: undefined,
-  junoConnection: undefined,
   wallet: undefined,
-  openWalletModal: undefined,
-  net: NETWORK,
   address: undefined,
+  balance: "0",
   investChain: CHAINS[0],
   investToken: "",
   investAmount: 0,
@@ -25,16 +23,12 @@ const reducer = (state, action) => {
   switch (action.type) {
     case "setWalletType":
       return { ...state, walletType: action.payload };
-    case "setJunoConnection":
-      return { ...state, junoConnection: action.payload };
     case "setWallet":
       return { ...state, wallet: action.payload };
-    case "setWalletModal":
-      return { ...state, openWalletModal: action.payload };
-    case "setNet":
-      return { ...state, net: action.payload };
     case "setAddress":
       return { ...state, address: action.payload };
+    case 'setBalance':
+      return { ...state, balance: action.payload };
     case "setInvestChain":
       return { ...state, investChain: action.payload };
     case 'setInvestToken':

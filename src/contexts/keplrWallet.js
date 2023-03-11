@@ -104,14 +104,16 @@ export const useKeplrWalletStore = create(
     },
     getTokenBalance: async (tokenInfo) => {
       const { client, account } = get();
+               
       if (!client) return;
       const coin = await client.getBalance(account, tokenInfo.denom);
+
       let amount = new BigNumber(coin.amount);
       amount = amount
         .dividedBy(
           new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
         )
-        .decimalPlaces(0, 1);
+        .decimalPlaces(5, 1);
       return amount.toFixed();
     }
   }))

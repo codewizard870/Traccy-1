@@ -1,12 +1,24 @@
-import { useMemo } from "react"
+import { useState, useEffect } from "react";
 import "./AmountInput.scss"
-import { useDispatch, useTrackedState } from "../../../contexts/store"
+import { useDispatch, useTrackedState, useWallet } from "../../../contexts/store"
+import { LookForTokenInfo } from "../../../config/utilitiy";
 
 const TokenSelector = () => {
   const state = useTrackedState();
   const dispatch = useDispatch();
+  const wallet = useWallet();
 
-  const balance = 0;
+  useEffect(() => {
+    const getBalance = async() => {
+      const tokenInfo = LookForTokenInfo(state.investChain, state.investToken);
+      if(wallet && wallet.initialized && tokenInfo){
+        const balance = await wallet.getTokenBalance(tokenInfo);
+        dispatch({type: "setBalance", payload: balance});
+      }
+    }
+    getBalance();
+  }, [dispatch, state.investChain, state.investToken, wallet]);
+
   const token = "TRCY";
   const price = 0.06;
 
@@ -24,7 +36,7 @@ const TokenSelector = () => {
             {state.investToken}
           </span>
         </div>
-        <span className="balance">balance : {balance}</span>
+        <span className="balance">balance : {state.balance}</span>
       </div>
       <div className="input-card">
         <span>TRCY tokens you will receive</span>
@@ -34,7 +46,6 @@ const TokenSelector = () => {
             {token}
           </span>
         </div>
-        <span className="balance">balance : {balance}</span>
       </div>
     </div>
   )

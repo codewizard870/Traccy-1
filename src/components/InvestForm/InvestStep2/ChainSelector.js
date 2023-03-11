@@ -9,11 +9,11 @@ import { useKeplrWallet } from "../../../contexts/keplrWallet"
 import { useMetamaskWallet } from "../../../contexts/metamask"
 import { useTronLink } from "../../../contexts/tronLink"
 import { toast } from "react-toastify"
+import { LookForTokenInfo } from "../../../config/utilitiy"
 
 const ChainSelector = () => {
   const state = useTrackedState();
   const dispatch = useDispatch();
-  const wallet = useWallet();
   const keplr = useKeplrWallet();
   const metamask = useMetamaskWallet();
   const tronLink = useTronLink();
@@ -105,12 +105,6 @@ const ChainSelector = () => {
     dispatch({ type: "setInvestToken", payload: token_list[key].name });
   }
 
-  useEffect(() => {
-    if (!wallet.initialized) return;
-    const tokenInfo = LookForTokenInfo(state.investChain, state.investToken);
-    const balance = wallet?.getTokenBalance(tokenInfo);
-  }, [state.investToken, state.investChain, wallet]);
-
   return (
     <div className="selector-wrapper">
       <div className="selector">
@@ -148,14 +142,4 @@ const ChainSelector = () => {
 }
 
 export default ChainSelector;
-
-function LookForTokenInfo(chain, token) {
-  const list = TOKEN_LIST.filter(
-    (one) =>
-      one.chain.toLowerCase() === chain.toLowerCase() &&
-      one.name.toLowerCase() === token.toLowerCase()
-  );
-  if (list.length === 0) return null;
-  return list[0];
-}
 
