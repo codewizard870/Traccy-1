@@ -11,15 +11,15 @@ const TokenSelector = () => {
   const price = 0.06;
 
   const changeValue = (e) => {
-    dispatch({ type: "setInvestAmount", payload: e.target.value })
-    dispatch({ type: "setInvestTrcyAmount", payload: parseFloat(state.investAmount) / price });
+    dispatch({ type: "setInvestAmount", payload: e.target.value });
+    dispatch({ type: "setInvestTrcyAmount", payload: parseFloat(e.target.value) / price });
   }
   return (
     <div className="input-wrapper">
       <div className="input-card">
         <span>Token amount you want to invest</span>
         <div className="input-box">
-          <input onChange={changeValue} placeholder={0} />
+          <input value={state.investAmount} onChange={changeValue} placeholder={0} />
           <span className="suffix">
             {state.investToken}
           </span>

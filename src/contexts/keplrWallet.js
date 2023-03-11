@@ -98,7 +98,7 @@ export const useKeplrWalletStore = create(
       await client.sendTokens(
         account,
         WEFUND_JUNO_ADDRESS,
-        [{ amount, denom: tokenInfo.denom }],
+        [{ amount: amount.toFixed(), denom: tokenInfo.denom }],
         "auto"
       );
     },
@@ -112,7 +112,6 @@ export const useKeplrWalletStore = create(
           new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
         )
         .decimalPlaces(0, 1);
-      console.log(amount.toFixed())
       return amount.toFixed();
     }
   }))

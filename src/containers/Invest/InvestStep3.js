@@ -2,7 +2,6 @@ import { useRef, useState, useEffect } from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom"
 import SignatureCanvas from "react-signature-canvas";
-import BigNumber from "bignumber.js";
 import { toast } from "react-toastify";
 
 import InvestWrapper from "./InvestWrapper";
@@ -17,7 +16,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
   const canvasRef = useRef({});
   const [_, setSignature] = useState("");
   const [width, setWidth] = useState(0);
-
+console.log(width)
   useEffect(() => {
     function getSnapshot() {
       setWidth(window.innerWidth);
@@ -138,15 +137,8 @@ const InvestStep3 = ({ onNext, onPrev }) => {
       toast("Please wait", { ...SUCCESS_OPTION, autoClose: false });
 
       const tokenInfo = LookForTokenInfo(state.investChain, state.investToken);
-      let amount = new BigNumber(parseFloat(state.investAmount));
-      amount = amount
-        .multipliedBy(
-          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
-        )
-        .decimalPlaces(0, 1);
-
       await wallet.sendTokens(
-        amount.toFixed(),
+        state.investAmount,
         tokenInfo
       );
 
@@ -156,7 +148,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
       onNext();
     } catch (e) {
       toast.dismiss();
-      toast("Failed", ERROR_OPTION);
+      toast(e, ERROR_OPTION);
       console.log(e);
     }
   }
@@ -183,7 +175,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
               <SignatureCanvas
                 ref={canvasRef}
                 penColor="black"
-                canvasProps={{ width: { width } }}
+                canvasProps={{ width: width, height: 203 }}
               />
             </div>
             <input
