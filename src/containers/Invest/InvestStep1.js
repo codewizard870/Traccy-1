@@ -37,7 +37,7 @@ const InvestStep1 = ({ onNext }) => {
     <InvestWrapper>
       <div className="invest-step1-body0">
         <span>SAFT FORM</span>
-        <span>Please check and confirm the form and<br /> go next step</span>
+        <span>Please check and confirm the form and go next step</span>
         <div className="check-group">
           <input type="checkbox" id="check" className="checkbox" onChange={handleCheck} />
           <label htmlFor="check" className="checkbox-label">I agree with all conditions of this Project and Traccy</label>

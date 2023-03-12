@@ -20,7 +20,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
   useEffect(() => {
     function getSnapshot() {
-      setWidth(window.innerWidth > 576 ? 576: window.innerWidth);
+      setWidth(window.innerWidth > 576 ? 576: window.innerWidth*0.7);
     }
     getSnapshot();
     window.addEventListener('resize', getSnapshot);
@@ -131,7 +131,8 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
   const handleNext = async () => {
     try {
-      checkValication();
+      if(checkValication() === false)
+        return;
 
       await createSAFTPdf();
       toast("Please wait", { ...SUCCESS_OPTION, autoClose: false });
@@ -148,8 +149,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
       onNext();
     } catch (e) {
       toast.dismiss();
-      toast(e, ERROR_OPTION);
-      console.log(e);
+      toast(e.toString(), ERROR_OPTION);
     }
   }
 
@@ -175,7 +175,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
               <SignatureCanvas
                 ref={canvasRef}
                 penColor="black"
-                canvasProps={{ width: width, height: 203 }}
+                canvasProps={{ width: width, height: 150 }}
               />
             </div>
             <input

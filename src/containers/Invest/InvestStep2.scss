@@ -7,19 +7,19 @@
     &:nth-child(1) {
       font-size: 40px;
       font-weight: 700;
-      margin-top: 88px;
+      margin-top: 40px;
       color: #911557;
       @media screen and (max-width: 576px) {
         font-size: 30px;
       }
     }
     &:nth-child(2) {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 400;
-      line-height: 29px;
+      line-height: 20px;
       color: #FFFFFF80;
       @media screen and (max-width: 576px) {
-        font-size: 15px;
+        font-size: 12px;
       }
     }
   }
