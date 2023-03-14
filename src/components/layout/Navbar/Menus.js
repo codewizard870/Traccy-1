@@ -101,10 +101,11 @@ const Menus = () => {
           <NavLink to='/become-part'>BECOME A PART</NavLink>
         </li>
         <li>
-          <NavLink to='/contact'>CONTACT</NavLink>
+          <NavLink to='/contact'>LIBRARY</NavLink>
         </li>
         <li>
-          <NavLink to='/invest'>INVEST</NavLink>
+          <NavLink to='/invest'>PURCHASE<br/>
+            TRCY TOKEN</NavLink>
         </li>
       </ul>
       <ConnectWallet />

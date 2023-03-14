@@ -5,13 +5,15 @@
   width: 100%;
 
   .congrat-wrapper {
-    margin-top: 75px;
+    margin-top: 42px;
     img {
       display: none;
     }
     & > span {
       font-size: 48px;
-      color: #BE1E73;
+      font-weight: 700;
+      line-height: 59px;
+      color: #be1e73;
       @media screen and (max-width: 576px) {
         font-size: 36px;
       }
@@ -19,52 +21,57 @@
   }
   & > span {
     &:nth-child(2) {
-      margin-top: 17px;
-      font-size: 36px;
-      color: #FFFFFF80;
+      font-size: 32px;
+      font-weight: 400;
+      color: #ffffff80;
       @media screen and (max-width: 576px) {
         font-size: 27px;
         text-align: center;
       }
     }
     &:nth-child(3) {
-      margin-top: 54px;
+      margin-top: 28px;
       font-size: 26px;
-      color: #FFFFFF80;
+      color: #ffffff80;
       @media screen and (max-width: 576px) {
         font-size: 20px;
         text-align: center;
       }
     }
     &:nth-child(4) {
-      margin-top: 97px;
+      margin-top: 31px;
       font-size: 24px;
-      color: #BE1E73;
+      font-weight: 700;
+      color: #be1e73;
       @media screen and (max-width: 576px) {
         font-size: 20px;
       }
     }
   }
-  .grid-wrapper{
+  .grid-wrapper {
     display: inline-grid;
     grid-template-columns: auto auto auto auto;
     align-items: center;
-    margin-top: 20px;
-    grid-template-rows: 60px;
-    font-size: 16px;
+    margin-top: 22px;
+    grid-template-rows: 57px;
+
     @media screen and (max-width: 576px) {
-      font-size: 12px;
       text-align: center;
     }
 
     .grid-header {
       display: flex;
       align-items: center;
-      background: #FFFFFF80;
+      background: #ffffff80;
       padding: 10px 30px;
       justify-content: center;
-      height: 40px;
+      height: 57px;
+      font-size: 18px;
+      font-weight: 700;
+      color: #160720;
+
       @media screen and (max-width: 576px) {
+        font-size: 12px;
         padding: 2px;
       }
     }
@@ -74,14 +81,38 @@
       background: #160720;
       padding: 10px 30px;
       justify-content: center;
-      height: 40px;
+      height: 57px;
+      font-size: 20px;
+      font-weight: 700;
+
       @media screen and (max-width: 576px) {
+        font-size: 12px;
         padding: 2px;
       }
     }
-    .download{
-      color: #BE1E73;
+    .download {
+      color: #be1e73;
       cursor: pointer;
+    }
+  }
+  .span-auto {
+    margin-top: 51px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
+    }
+  }
+  .span-download {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff80;
+    span {
+      color: #be1e73;
+    }
+    @media screen and (max-width: 576px) {
+      font-size: 15px;
     }
   }
 }

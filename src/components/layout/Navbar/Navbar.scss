@@ -150,6 +150,8 @@
                 margin: auto;
 
                 &.web-menu{
+                    display: flex;
+                    align-items: center;
                     @media screen and (max-width:1130px) {
                         display: none;
                     }

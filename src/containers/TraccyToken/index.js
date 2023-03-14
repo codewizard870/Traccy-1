@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import Countdown from "react-countdown";
 import { PieChart } from 'react-minimal-pie-chart';
 import './index.scss';
+import { useHistory } from "react-router-dom";
 
 import BannerImg from '../../assets/images/banner-img.png';
 import videoimg from '../../assets/images/video-img.jpg';
@@ -19,6 +20,7 @@ import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import VotingPower from '../../assets/images/voting-power.svg';
 
 const TraccyToken = () => {
+    const history = useHistory();
     const [countdownEndDate, setCountdownEndDate] = useState(
         new Date("March 2, 2023 00:00:00").getTime()
     );
@@ -72,7 +74,10 @@ const TraccyToken = () => {
                                 </li>
                             </ul>
                             <div className='learn-more-row'>
-                                <Button>Learn more <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                <Button onClick={() => history.push("/invest")}>
+                                    Purchase TRCY token 
+                                    <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' />
+                                </Button>
                                 <div className='white-paper'>
                                     <div>
                                         <h4>White paper </h4>

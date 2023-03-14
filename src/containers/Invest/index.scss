@@ -10,6 +10,7 @@
     height: auto;
     position: relative;
     display: flex;
+    overflow: hidden;
     .leftbar{
         width: 140px;
         border-right: 1px solid #292828;
@@ -424,6 +425,20 @@
                 min-width: 200px;
                 margin: 20px auto 10px auto;
             }
+        }
+    }
+}
+
+.polygon-effect{
+    & > img {
+        &:nth-child(1){
+            position: absolute;
+            top: 376px;
+        }
+        &:nth-child(2) {
+            position: absolute;
+            right: 0;
+            top: 226px;
         }
     }
 }

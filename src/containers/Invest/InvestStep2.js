@@ -24,7 +24,7 @@ const InvestStep2 = ({onPrev, onNext}) => {
     <InvestWrapper>
       <div className="invest-step2-body0">
         <span>Input your Investment Amount</span>
-        <span>Please select the chain and tokens, enter amount and we will convert<br /> the TRCY amount for you</span>
+        <span>Please select the chain and tokens, enter amount and we will convert the TRCY amount for you</span>
         <div className="selector-container">
           <ChainSelector />
           <AmountInput />
@@ -32,11 +32,8 @@ const InvestStep2 = ({onPrev, onNext}) => {
         <div className="steps-action">
           <Link to='/'>FAQ</Link>
           <div>
-            <Button onClick={() => onPrev()}>
-              Back
-            </Button>
             <Button type="primary" onClick={() => handleNext()}>
-              Continue
+              Invest
             </Button>
           </div>
         </div>

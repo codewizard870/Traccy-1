@@ -20,7 +20,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
   useEffect(() => {
     function getSnapshot() {
-      setWidth(window.innerWidth > 576 ? 576: window.innerWidth*0.7);
+      setWidth(window.innerWidth > 576 ? 576 : window.innerWidth * 0.7);
     }
     getSnapshot();
     window.addEventListener('resize', getSnapshot);
@@ -131,7 +131,9 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
   const handleNext = async () => {
     try {
-      if(checkValication() === false)
+      onNext();
+      return;
+      if (checkValication() === false)
         return;
 
       await createSAFTPdf();
@@ -157,18 +159,21 @@ const InvestStep3 = ({ onNext, onPrev }) => {
     <InvestWrapper>
       <div className="invest-step3-body0">
         <div className="input-parts">
-          <div className="input-name">
-            <span>Name</span>
-            <input onChange={handleName} placeholder="input name" />
+          <div className="input-contents">
+            <div className="input-name">
+              <span>Full Name *</span>
+              <input onChange={handleName} placeholder="Mick Misamu" />
+            </div>
+            <div className="input-title">
+              <span>Title *</span>
+              <input onChange={handleTitle} placeholder="Invest Name" />
+            </div>
+            <div className="input-email">
+              <span>Email *</span>
+              <input onChange={handleEmail} placeholder="example@gmail.com" />
+            </div>
           </div>
-          <div className="input-title">
-            <span>Title</span>
-            <input onChange={handleTitle} placeholder="input title" />
-          </div>
-          <div className="input-email">
-            <span>Email</span>
-            <input onChange={handleEmail} placeholder="input email" />
-          </div>
+          <div className="splitter" />
           <div className="input-signature">
             <span>Signature</span>
             <div className="signature-wrapper">
@@ -186,7 +191,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
               onChange={(e) => onChangeSignature(e)}
             />
             <div className="button-wrapper">
-              <Button onClick={handleClear}>Clear</Button>
+              <Button type="primary" onClick={handleClear}>Clear</Button>
               <Button type="primary" onClick={openUpload}>Open Signature</Button>
             </div>
           </div>
@@ -194,11 +199,8 @@ const InvestStep3 = ({ onNext, onPrev }) => {
         <div className="steps-action">
           <Link to='/'>FAQ</Link>
           <div>
-            <Button onClick={() => onPrev()}>
-              Back
-            </Button>
             <Button type="primary" onClick={() => handleNext()}>
-              Continue
+              Invest
             </Button>
           </div>
         </div>

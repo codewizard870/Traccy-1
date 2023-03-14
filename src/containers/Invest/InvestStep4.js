@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "antd";
-import { Link } from "react-router-dom"
+import { Link, Router, useHistory } from "react-router-dom"
 
 import InvestWrapper from "./InvestWrapper";
 import "./InvestStep4.scss";
@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import { REQUEST_ENDPOINT, SUCCESS_OPTION } from "../../config/constants";
 
 const InvestStep4 = ({ onNext, onPrev }) => {
+  const history = useHistory();
   const state = useTrackedState();
 
   const download_pdf = () => {
@@ -41,7 +42,9 @@ const InvestStep4 = ({ onNext, onPrev }) => {
   useEffect(() => {
     download_pdf();
   }, []);
-
+  const handleNext = () => {
+    history.push("/home");
+  }
   return (
     <InvestWrapper>
       <div className="invest-step4-body0">
@@ -63,14 +66,13 @@ const InvestStep4 = ({ onNext, onPrev }) => {
           <div className="grid-data">{state.investTrcyAmount}</div>
           <div className="grid-data download" onClick={download_pdf}>Download</div>
         </div>
+        <span className="span-auto">Your download has been procced automatically.</span>
+        <span className="span-download">Do you want to download again? Click on <span className="download">Download</span></span>
         <div className="steps-action">
           <Link to='/'>FAQ</Link>
           <div>
-            <Button onClick={() => onPrev()}>
-              Back
-            </Button>
-            <Button type="primary" onClick={() => onNext()}>
-              Continue
+            <Button type="primary" onClick={() => handleNext()}>
+              Back Home
             </Button>
           </div>
         </div>

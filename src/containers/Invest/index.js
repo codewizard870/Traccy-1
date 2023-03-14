@@ -45,6 +45,10 @@ const Invest = () => {
     const items = steps.map((item) => ({ key: item.title, title: item.title }));
     return (
         <div className='becomepart-wrapper0'>
+            <div className="polygon-effect">
+                <img src="/invest-form/left-hexa.svg" alt="polygon-left"/>
+                <img src="/invest-form/right-hexa.svg" alt="polygon-right"/>
+            </div>
             <div className='leftbar'>
                 <div className='traccy-icon'>
                     <img src={Traccyicon} alt='Logo' />
@@ -61,63 +65,13 @@ const Invest = () => {
                     <Navbar />
                 </div>
                 <div className='rightbar-inner'>
-                    {/* <div className='address-bar'>
-                        <div className='logo-section'>
-                            <img src={LogoLight} alt='Logo' />
-                        </div>
-                        <div className='address-col'>
-                            <h3>Location Switzerland</h3>
-                            <p>
-                                TRACCY AG <br />
-                                Grabenstrasse 15b, <br />
-                                6340 Baar <br />
-                                info@traccy.ch <br />
-                                +41 44 045 45 45
-                            </p>
-                        </div>
-                        <div className='address-col'>
-                            <h3>Location Switzerland</h3>
-                            <p>
-                                TRACCY AG <br />
-                                Grabenstrasse 15b, <br />
-                                6340 Baar <br />
-                                info@traccy.ch <br />
-                                +41 44 045 45 45
-                            </p>
-                        </div>
-                        <div className='bottom-link'>
-                            <Link to='/'>Terms of Use</Link>  I  <Link to='/'> Privacy Policy </Link>
-                        </div>
-                    </div> */}
                     <div className='dtl-section'>
                         <Steps current={current} items={items} />
                         <div className="steps-content">{steps[current].content}</div>
-                        {/* <div className="steps-action">
-                            {current === 0 && (
-                                <>
-                                    <Link to='/'>FAQ</Link>
-                                    <Button type="primary" onClick={() => next()}>
-                                        Continue
-                                    </Button>
-                                </>
-                            )}
-                            {current === 1 && (
-                                <>
-                                    <Link to='/'>FAQ</Link>
-                                    <div>
-                                        <Button onClick={() => prev()}>
-                                            Back
-                                        </Button>
-                                        <Button type="primary" onClick={() => next()}>
-                                            Continue
-                                        </Button>
-                                    </div>
-                                </>
-                            )}
-                        </div> */}
                     </div>
                 </div>
             </div>
+
         </div>
     )
 };

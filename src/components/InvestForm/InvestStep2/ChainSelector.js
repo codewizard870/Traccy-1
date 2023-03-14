@@ -1,15 +1,14 @@
 import { useState, useMemo, useEffect } from "react"
-import { Dropdown, Space } from "antd"
+import { Dropdown } from "antd"
 import { DownOutlined } from "@ant-design/icons"
 
 import "./ChainSelector.scss"
 import { CHAINS, TOKEN_LIST, CHAINS_CONFIG, ERROR_OPTION } from "../../../config/constants"
-import { useDispatch, useTrackedState, useWallet } from "../../../contexts/store"
+import { useDispatch, useTrackedState } from "../../../contexts/store"
 import { useKeplrWallet } from "../../../contexts/keplrWallet"
 import { useMetamaskWallet } from "../../../contexts/metamask"
 import { useTronLink } from "../../../contexts/tronLink"
 import { toast } from "react-toastify"
-import { LookForTokenInfo } from "../../../config/utilitiy"
 
 const ChainSelector = () => {
   const state = useTrackedState();
@@ -114,7 +113,7 @@ const ChainSelector = () => {
             items: chainItems,
           }}
           trigger={['click']}
-          className="drop-down"
+          className="drop-down-chain"
         >
           <div>
             {chainItems[chainKey].label}
@@ -129,7 +128,7 @@ const ChainSelector = () => {
             items: tokenItems,
           }}
           trigger={['click']}
-          className="drop-down"
+          className="drop-down-token"
         >
           <div>
             {tokenItems[tokenKey]?.label}
