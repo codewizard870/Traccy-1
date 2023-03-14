@@ -245,22 +245,22 @@ export const WALLET_LIST = [
   },
   {
     name: "TrustWallet",
-    icon: "/Wallet/trust_platform.svg",
+    icon: "/wallet/trust_platform.svg",
     link: "trust",
   },
   {
     name: "Keplr",
-    icon: "/Wallet/keplr.svg",
+    icon: "/wallet/keplr.svg",
     link: "keplr",
   },
   {
     name: "TronLink",
-    icon: "/Wallet/tron_link.svg",
+    icon: "/wallet/tron_link.svg",
     link: "tron",
   },
   {
     name: "ElrondWeb",
-    icon: "/Wallet/elrond-wallet-logo.png",
+    icon: "/wallet/elrond-wallet-logo.png",
     link: "elrond",
   },
 ];

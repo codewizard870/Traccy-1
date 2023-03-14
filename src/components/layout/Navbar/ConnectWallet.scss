@@ -170,7 +170,10 @@ $white: #ffffff;
           }
           .item-text {
             font-size: 20px;
-            font-weight: 600;
+            font-weight: 600;          
+          }
+          &:hover .item-text{
+            color: #be1e73;
           }
         }
         .wallet-item-splitter {
