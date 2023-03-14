@@ -71,7 +71,6 @@ const Invest = () => {
                     </div>
                 </div>
             </div>
-
         </div>
     )
 };

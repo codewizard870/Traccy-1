@@ -10,11 +10,11 @@ const DefaultLayout = ({ children }) => {
     <React.Fragment>
       <div className="main-wrapper">
         <Navbar />
-          <Content>
-            <main>
-              {children}
-            </main>
-          </Content>
+        <Content>
+          <main>
+            {children}
+          </main>
+        </Content>
         <Footer />
       </div>
     </React.Fragment>
