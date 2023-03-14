@@ -131,8 +131,6 @@ const InvestStep3 = ({ onNext, onPrev }) => {
 
   const handleNext = async () => {
     try {
-      onNext();
-      return;
       if (checkValication() === false)
         return;
 

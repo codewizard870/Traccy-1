@@ -45,6 +45,34 @@ const TraccyToken = () => {
             );
         },
     };
+    const [percent, setPercent] = useState(0);
+    const onDownload = () => {
+        const xhr = new XMLHttpRequest();
+        const a = document.createElement("a");
+    
+        xhr.open(
+          "GET",
+          "/2022-09-23 09-34-14.mp4",
+          true
+        );
+    
+        xhr.responseType = "blob";
+        xhr.onprogress = function(pr) {
+            console.log(pr.loaded, pr.total, Math.floor(pr.loaded/pr.total * 1000)/10);
+            setPercent(Math.floor(pr.loaded/pr.total * 1000)/10);
+        };
+        xhr.onload = function () {
+          const file = new Blob([xhr.response], {
+            type: "application/octet-stream",
+          });
+          window.URL = window.URL || window.webkitURL;
+          a.href = window.URL.createObjectURL(file);
+          a.download = "1.mp4";
+          a.click();
+        };
+        xhr.send();
+
+    }
     return (
         <div className='tracytoken-wrapper'>
             <section className='banner-section'>
@@ -81,9 +109,11 @@ const TraccyToken = () => {
                                 <div className='white-paper'>
                                     <div>
                                         <h4>White paper </h4>
-                                        <p>Download 11,9%</p>
+                                        {percent > 0 && <p>Download {percent}%</p> }
                                     </div>
-                                    <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87' />
+                                    <div className="download"  onClick={onDownload}>
+                                        <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87'/>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
