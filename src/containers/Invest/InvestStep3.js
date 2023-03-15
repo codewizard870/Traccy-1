@@ -159,15 +159,15 @@ const InvestStep3 = ({ onNext, onPrev }) => {
         <div className="input-parts">
           <div className="input-contents">
             <div className="input-name">
-              <span>Full Name *</span>
+              <span>Full Name <span style={{color:"red"}}>*</span></span>
               <input onChange={handleName} placeholder="Mick Misamu" />
             </div>
             <div className="input-title">
-              <span>Title *</span>
+              <span>Title <span style={{color:"red"}}>*</span></span>
               <input onChange={handleTitle} placeholder="Invest Name" />
             </div>
             <div className="input-email">
-              <span>Email *</span>
+              <span>Email <span style={{color:"red"}}>*</span></span>
               <input onChange={handleEmail} placeholder="example@gmail.com" />
             </div>
           </div>

@@ -4,7 +4,6 @@
   font-size: 12px;
   align-items: center;
 
-
   @media screen and (max-width: 576px) {
     font-size: 8px;
     width: 100%;
@@ -24,6 +23,7 @@
     }
     .input-contents {
       width: 300px;
+      font-size: 14px;
 
       input {
         width: 100%;
@@ -84,6 +84,8 @@
       width: 300px;
       flex-direction: column;
       margin-top: 20px;
+      font-size: 14px;
+
       @media screen and (max-width: 576px) {
         width: 100%;
       }
