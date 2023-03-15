@@ -30,7 +30,6 @@ const InvestStep2 = ({onPrev, onNext}) => {
           <AmountInput />
         </div>
         <div className="steps-action">
-          <Link to='/'>FAQ</Link>
           <div>
             <Button type="primary" onClick={() => handleNext()}>
               Invest

@@ -69,7 +69,6 @@ const InvestStep4 = ({ onNext, onPrev }) => {
         <span className="span-auto">Your download has been procced automatically.</span>
         <span className="span-download">Do you want to download again? Click on <span className="download">Download</span></span>
         <div className="steps-action">
-          <Link to='/'>FAQ</Link>
           <div>
             <Button type="primary" onClick={() => handleNext()}>
               Back Home

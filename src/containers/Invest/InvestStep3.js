@@ -195,7 +195,6 @@ const InvestStep3 = ({ onNext, onPrev }) => {
           </div>
         </div>
         <div className="steps-action">
-          <Link to='/'>FAQ</Link>
           <div>
             <Button type="primary" onClick={() => handleNext()}>
               Invest
