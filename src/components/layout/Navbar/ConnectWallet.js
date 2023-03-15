@@ -6,7 +6,7 @@ import { useTronLink } from "../../../contexts/tronLink";
 import { useTrackedState, useDispatch } from "../../../contexts/store";
 
 import { Button, Drawer, Modal, Spin } from "antd";
-import { CheckOutlined } from "@ant-design/icons";
+import { WalletOutlined, CheckOutlined } from "@ant-design/icons";
 import "./ConnectWallet.scss"
 import { WALLET_LIST } from "../../../config/constants";
 import { SvgIcon } from '../../../components/common';
@@ -53,22 +53,22 @@ export default function ConnectWallet() {
 
   const connected = wallet ? wallet.connected : false;
   const initialized = wallet ? wallet.initialized : false;
-  const address = wallet.account ? wallet.account.slice(0, 10) + "..." + wallet.account.slice(-10) : undefined;
+  const address = wallet.account ? wallet.account.slice(0, 5) + "..." + wallet.account.slice(-5) : undefined;
 
   return (
     <>
-      <div className="connect-wallet" onClick={onConnect}>
+      {/* <div className="connect-wallet" onClick={onConnect}>
         <img src="/wallet/wallet.svg" alt="wallet" />
         <div className="connect-status">
           {(connected && !initialized) && <Spin spinning={true} color="#be1e73" />}
           {(connected && initialized) && <CheckOutlined color="red"/>}
         </div>
-      </div>
-      {/* <Button type="ghost" className="connect-wallet" onClick={onConnect}>
+      </div> */}
+      <Button type="ghost" className="connect-wallet" onClick={onConnect}>
         {!connected && <span>Connect Wallet</span>}
         {(connected && !initialized) && <span>Loading</span>}
         {(connected && initialized) && <><WalletOutlined /><CheckOutlined /><span>{address}</span></>}
-      </Button> */}
+      </Button>
       {/* <Modal
         open={openModal}
         onOk={onOk}
@@ -101,7 +101,7 @@ export default function ConnectWallet() {
           <SvgIcon name="close" viewbox="0 0 10.357 10.357" />
         </Button>
         <div className="wallet-content">
-          <span>{address}</span>
+          {/* <span>{address}</span> */}
           {WALLET_LIST.map((wallet, index) => (
             <React.Fragment key={index}>
               <div className="wallet-item" onClick={() => connectTo(wallet.link)}>
@@ -110,7 +110,6 @@ export default function ConnectWallet() {
                   {wallet.name}
                 </span>
               </div>
-              <div className="wallet-item-splitter" />
             </React.Fragment>
           ))}
         </div>

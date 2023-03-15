@@ -1,5 +1,5 @@
-import { useState, useMemo, useEffect } from "react"
-import { Dropdown } from "antd"
+import React, { useState, useMemo, useEffect } from "react"
+import { Col, Dropdown, Form, Row, Select, Input } from "antd"
 import { DownOutlined } from "@ant-design/icons"
 
 import "./ChainSelector.scss"
@@ -9,6 +9,9 @@ import { useKeplrWallet } from "../../../contexts/keplrWallet"
 import { useMetamaskWallet } from "../../../contexts/metamask"
 import { useTronLink } from "../../../contexts/tronLink"
 import { toast } from "react-toastify"
+import { SvgIcon } from '../../common';
+import TextArea from "antd/es/input/TextArea"
+import { useCallback } from "react"
 
 const ChainSelector = () => {
   const state = useTrackedState();
@@ -33,16 +36,16 @@ const ChainSelector = () => {
   const [chainKey, setChainKey] = useState(0);
   const chainItems = CHAINS.map((chain, index) => {
     return {
-      key: index,
-      label: <div onClick={() => handleChainSelect(index)}>{chain}</div>
+      value: index,
+      label: chain
     }
   })
 
-  const handleChainSelect = async (key) => {
-    setChainKey(key)
-    dispatch({ type: "setInvestChain", payload: CHAINS[key] });
+  const handleChainSelect = async (index) => {
+    setChainKey(index)
+    dispatch({ type: "setInvestChain", payload: CHAINS[index] });
 
-    const chain = CHAINS[key].toLowerCase();
+    const chain = CHAINS[index].toLowerCase();
     switch (chain) {
       case "juno":
         connectTo("keplr");
@@ -97,46 +100,54 @@ const ChainSelector = () => {
     }
   }), [token_list]);
 
-  useEffect(() => handleTokenSelect(0), [token_list]);
+  useEffect(() => {
+    handleTokenSelect(0);
+  }, [tokenItems]);
 
-  const handleTokenSelect = (key) => {
-    setTokenKey(key)
-    dispatch({ type: "setInvestToken", payload: token_list[key].name });
-  }
+  const handleTokenSelect = (index) => {
+    console.log(token_list, index)
+    setTokenKey(index)
+    dispatch({ type: "setInvestToken", payload: token_list[index].name });
+  };
 
   return (
-    <div className="selector-wrapper">
-      <div className="selector">
-        <span>Select Chain</span>
-        <Dropdown
-          menu={{
-            items: chainItems,
-          }}
-          trigger={['click']}
-          className="drop-down-chain"
-        >
-          <div>
-            {chainItems[chainKey].label}
-            <DownOutlined />
-          </div>
-        </Dropdown>
-      </div>
-      <div className="selector">
-        <span>Select Token</span>
-        <Dropdown
-          menu={{
-            items: tokenItems,
-          }}
-          trigger={['click']}
-          className="drop-down-token"
-        >
-          <div>
-            {tokenItems[tokenKey]?.label}
-            <DownOutlined />
-          </div>
-        </Dropdown>
-      </div>
-    </div>
+    <Form
+      name="normal_login"
+      className="login-form selector-wrapper"
+      initialValues={{ remember: true }}
+      layout='vertical'
+    >
+      <Form.Item
+        name="chain"
+        label="Select Chain"
+        style={{ width: "100%" }}
+      >
+        <Select
+          defaultValue={0}
+          suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+          popupClassName="select-drop"
+          options={chainItems}
+          onChange={handleChainSelect}
+        />
+      </Form.Item>
+      <Form.Item
+        name="tokens"
+        label="Tokens"
+        style={{ width: "100%", position: "relative" }}
+      >
+        <input
+          value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
+        />
+        <Select
+          value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
+          suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+          popupClassName="select-drop"
+          options={tokenItems}
+          onChange={(e) => console.log(e)}
+        />
+
+      </Form.Item>
+    </Form>
   )
 }
 

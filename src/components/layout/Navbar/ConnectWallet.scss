@@ -23,14 +23,19 @@
   }
 }
 
-// .connect-wallet {
-//   border-radius: 13px !important;
-//   width: 150px;
-//   height: 45px;
-//   background: transparent !important;
-//   border: 2px solid #e30fae !important;
-//   margin: auto 20px;
-// }
+.connect-wallet {
+  border-radius: 13px !important;
+  width: 150px;
+  height: 45px;
+  // background: transparent !important;
+  // border: 2px solid #e30fae !important;
+  background: #93054F !important;
+  margin: auto 20px;
+  color: white !important;
+  &:hover {
+    color: rgb(175, 169, 169) !important;
+  }
+}
 
 // .modal-button {
 //   display: none;
@@ -151,8 +156,7 @@ $white: #ffffff;
       .wallet-content {
         display: flex;
         flex-direction: column;
-        gap: 50px;
-        justify-content: flex-end;
+        gap: 35px;
         height: 100vh;
         & > span {
           font-size: 13px;
