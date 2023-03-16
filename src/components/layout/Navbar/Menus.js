@@ -55,7 +55,7 @@ const Menus = () => {
               <div className='menu-icon'>
                 <SvgIcon name='itc-icon' viewbox='0 0 22.018 17.733' />
               </div>
-              Impact through Traccy
+              Traccy Impact
             </Link>
           </li>
           <li>
@@ -79,7 +79,7 @@ const Menus = () => {
               <div className='menu-icon'>
                 <SvgIcon name='docs-icon' viewbox='0 0 26 18' />
               </div>
-              Contact
+              Library
             </Link>
           </li>
           <li>
@@ -87,7 +87,7 @@ const Menus = () => {
               <div className='menu-icon'>
                 <img src="/invest-form/crypto-wallet-bitcoin-icon.svg" width="26px" height="26px" alt="bitcoin" />
               </div>
-              Purchase TRCY token
+              Buy token
             </Link>
           </li>
         </ul>
@@ -100,7 +100,7 @@ const Menus = () => {
           <NavLink to='/traccy-token'>TRCY TOKEN</NavLink>
         </li>
         <li>
-          <NavLink to='/impact-through-traccy' className={history.pathname === "/impact-through-traccy-details" ? "active" : ""}>IMPACT THROUGH TRACCY</NavLink>
+          <NavLink to='/impact-through-traccy' className={history.pathname === "/impact-through-traccy-details" ? "active" : ""}>TRACCY IMPACT</NavLink>
         </li>
         <li>
           <NavLink to='/about'>ABOUT US</NavLink>
@@ -112,7 +112,7 @@ const Menus = () => {
           <NavLink to='/contact'>LIBRARY</NavLink>
         </li>
         <li>
-          <NavLink to='/invest'>PURCHASE TRCY TOKEN</NavLink>
+          <NavLink to='/invest'>BUY TOKEN</NavLink>
         </li>
       </ul>
       <ConnectWallet />

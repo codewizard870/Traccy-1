@@ -64,6 +64,7 @@
 }
 
 .homethree-wrapper {
+   
     background: rgb(25, 8, 32);
     background: -moz-linear-gradient(125deg, rgba(25, 8, 32, 1) 0%, rgba(28, 9, 34, 1) 13%, rgba(80, 23, 76, 1) 44%, rgba(25, 8, 32, 1) 100%);
     background: -webkit-linear-gradient(125deg, rgba(25, 8, 32, 1) 0%, rgba(28, 9, 34, 1) 13%, rgba(80, 23, 76, 1) 44%, rgba(25, 8, 32, 1) 100%);
@@ -250,9 +251,9 @@
 
 .home2-wrapper {
     background: rgb(75, 20, 70);
-    background: -moz-linear-gradient(153deg, rgba(75, 20, 70, 1) 0%, rgba(13, 11, 23, 1) 100%);
-    background: -webkit-linear-gradient(153deg, rgba(75, 20, 70, 1) 0%, rgba(13, 11, 23, 1) 100%);
-    background: linear-gradient(153deg, rgba(75, 20, 70, 1) 0%, rgba(13, 11, 23, 1) 100%);
+    background: -moz-linear-gradient(107.59deg, #6F1B5C 3.18%, #300434 101.48%);
+    background: -webkit-linear-gradient(107.59deg, #6F1B5C 3.18%, #300434 101.48%);
+    background: linear-gradient(107.59deg, #6F1B5C 3.18%, #300434 101.48%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4b1446", endColorstr="#0d0b17", GradientType=1);
     min-height: 100vh;
     position: relative;
@@ -290,9 +291,9 @@
         padding-left: 240px;
         max-width: 1580px;
         margin: auto;
-        background: -webkit-linear-gradient(176deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
-        background: -moz-linear-gradient(176deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
-        background: linear-gradient(176deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
+        background: -webkit-radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
+        background: -moz-radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
+        background: radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
         position: relative;
 
         @media screen and (max-width:1200px) {
@@ -392,9 +393,9 @@
             .slick-slide {
                 // min-height: calc(100vh - 6rem);
                 max-height: 900px;
-                background: -moz-linear-gradient(156deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
-                background: -webkit-linear-gradient(156deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
-                background: linear-gradient(156deg, #6a2062 0%, #160C34 100%) 0% 0% no-repeat padding-box;
+                background: -moz-radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
+                background: -webkit-radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
+                background: radial-gradient(121.17% 144.74% at 49.96% 3.67%, #460E3D 0%, #150727 100%);
                 transition: all ease-in 0.1s;
                 border-right: 1px solid rgba($white, 0.05);
 
@@ -622,9 +623,9 @@
 
                 &:hover {
                     background: rgb(229, 117, 209);
-                    background: -moz-linear-gradient(172deg, rgba(229, 117, 209, 0.68) 0%, rgba(25, 10, 41, 0.68) 100%);
-                    background: -webkit-linear-gradient(172deg, rgba(229, 117, 209, 0.68) 0%, rgba(25, 10, 41, 0.68) 100%);
-                    background: linear-gradient(172deg, rgba(229, 117, 209, 0.68) 0%, rgba(25, 10, 41, 0.68) 100%);
+                    background: -moz-radial-gradient(621.1% 143.12% at -34.36% 99.49%, #29022C 0%, #842758 70.83%);
+                    background: -webkit-radial-gradient(621.1% 143.12% at -34.36% 99.49%, #29022C 0%, #842758 70.83%);
+                    background: radial-gradient(621.1% 143.12% at -34.36% 99.49%, #29022C 0%, #842758 70.83%);
                     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e575d1", endColorstr="#190a29", GradientType=1);
 
                     .home2-slide-card {

@@ -1,9 +1,9 @@
-.connect-wallet {
+.connect-wallet-mobile {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -11,9 +11,9 @@
   &:hover {
     background-color: #be1e73;
   }
-  .connect-status{
+  .connect-status {
     position: absolute;
-    svg{
+    svg {
       color: #be1e73;
     }
   }
@@ -21,21 +21,48 @@
     width: 35px;
     height: 35px;
   }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .connect-wallet {
-  border-radius: 13px !important;
+  // border-radius: 13px !important;
   width: 150px;
-  height: 45px;
-  // background: transparent !important;
-  // border: 2px solid #e30fae !important;
-  background: #93054F !important;
+  height: 40px !important;
+  background: #93054f !important;
   color: white !important;
   &:hover {
     color: rgb(175, 169, 169) !important;
   }
-}
 
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+  }
+
+  @media (max-width: 1200px) {
+  }
+
+  @media (max-width: 1300px) {
+    width: 100px;
+    padding: 0.1rem 0.1rem !important;
+    height: 35px !important;
+    font-size: 12px !important;
+  }
+
+  @media (max-width: 1400px) {
+  }
+
+  @media (max-width: 1500px) {
+  }
+
+  @media (max-width: 1650px) {
+  }
+}
 // .modal-button {
 //   display: none;
 // }
@@ -63,6 +90,82 @@
 //     }
 //   }
 // }
+
+$white: #ffffff;
+
+.wallet-sidebar {
+  top: 0px;
+  right: 0px;
+  left: auto;
+  width: 238px;
+
+  .ant-drawer-mask {
+    opacity: 0;
+  }
+
+  .ant-drawer-content-wrapper {
+    box-shadow: none;
+
+    .ant-drawer-header {
+      display: none;
+    }
+
+    .ant-drawer-content {
+      background: rgba($white, 0.08);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      .ant-drawer-body {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+        .menu-close {
+          background: none;
+          border: 0;
+          text-align: right;
+          box-shadow: none;
+          border: 0;
+          .icon {
+            fill: $white;
+          }
+        }
+      }
+
+      .wallet-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+        margin-top: 90px;
+
+        & > span {
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .wallet-item {
+          display: flex;
+          border-radius: 10px;
+          gap: 30px;
+          align-items: center;
+          cursor: pointer;
+
+          .item-text {
+            font-size: 15px;
+            font-weight: 400;
+          }
+          &:hover .item-text {
+            font-weight: 700;
+          }
+        }
+        .wallet-item-splitter {
+          width: 100%;
+          height: 2px;
+          border-bottom: 1px solid #ffffff12;
+        }
+      }
+    }
+  }
+}
 
 @media (max-width: 767px) {
   .container-with-connect-wallet {
@@ -109,82 +212,5 @@
 @media (min-width: 1650px) {
   .container-with-connect-wallet {
     max-width: 1520px !important;
-  }
-}
-
-$white: #ffffff;
-
-.wallet-sidebar {
-  top: 0px;
-  right: 0px;
-  left: auto;
-  width: 309px;
-
-  .ant-drawer-mask {
-    opacity: 0;
-  }
-
-  .ant-drawer-content-wrapper {
-    box-shadow: none;
-
-    .ant-drawer-header {
-      display: none;
-    }
-
-    .ant-drawer-content {
-      background: rgba($white, 0.08);
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-
-      .ant-drawer-body {
-        display: flex;
-        flex-direction: column;
-        padding: 20px 40px;
-        .menu-close {
-          background: none;
-          border: 0;
-          text-align: right;
-          box-shadow: none;
-          border: 0;
-          .icon {
-            fill: $white;
-          }
-        }
-      }
-
-      .wallet-content {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
-        height: 100vh;
-        & > span {
-          font-size: 13px;
-          font-weight: 700;;
-        }
-        .wallet-item {
-          display: flex;
-          border-radius: 10px;
-          gap: 30px;
-          align-items: center;
-          cursor: pointer;
-
-          .item-image {
-            border-radius: 13px;
-          }
-          .item-text {
-            font-size: 20px;
-            font-weight: 600;          
-          }
-          &:hover .item-text{
-            color: #be1e73;
-          }
-        }
-        .wallet-item-splitter {
-          width: 100%;
-          height: 2px;
-          border-bottom: 1px solid #ffffff12;
-        }
-      }
-    }
   }
 }

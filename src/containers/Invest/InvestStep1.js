@@ -28,12 +28,6 @@ const InvestStep1 = ({ onNext }) => {
         <div className="invest-document">
           <TERMS />
         </div>
-        {/* <div className="check-group">
-          <input type="checkbox" id="check" className="checkbox" value={agree} onChange={handleCheck} />
-          <label htmlFor="check" className="checkbox-label">
-            I agree to the terms and conditions and privacy policy inside<br/> the SAFT of Traccy AG
-          </label>
-        </div> */}
         <div className="steps-action">
           <Button type="primary" onClick={() => handleNext()}>
             Accept

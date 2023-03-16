@@ -57,13 +57,13 @@ export default function ConnectWallet() {
 
   return (
     <>
-      {/* <div className="connect-wallet" onClick={onConnect}>
+      <div className="connect-wallet-mobile" onClick={onConnect}>
         <img src="/wallet/wallet.svg" alt="wallet" />
         <div className="connect-status">
           {(connected && !initialized) && <Spin spinning={true} color="#be1e73" />}
           {(connected && initialized) && <CheckOutlined color="red"/>}
         </div>
-      </div> */}
+      </div>
       <Button type="ghost" className="connect-wallet" onClick={onConnect}>
         {!connected && <span>Connect Wallet</span>}
         {(connected && !initialized) && <span>Loading</span>}
@@ -102,7 +102,7 @@ export default function ConnectWallet() {
         </Button>
         <div className="wallet-content">
           {/* <span>{address}</span> */}
-          {WALLET_LIST.map((wallet, index) => (
+          {WALLET_LIST.map((wallet, index, all) => (
             <React.Fragment key={index}>
               <div className="wallet-item" onClick={() => connectTo(wallet.link)}>
                 <img src={wallet.icon} width="25px" rounded="10px" alt="wallet" className="item-image" />
@@ -110,6 +110,9 @@ export default function ConnectWallet() {
                   {wallet.name}
                 </span>
               </div>
+              {index < all.length - 1 &&
+                <div className="wallet-item-splitter" />
+              }
             </React.Fragment>
           ))}
         </div>

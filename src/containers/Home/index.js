@@ -52,24 +52,24 @@ const Home = () => {
         prevArrow: <PrevArrow />,
         responsive: [
             {
-              breakpoint: 1200,
-              settings: {
-                slidesToShow: 2.15,
-                slidesToScroll: 1,
-              }
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 2.15,
+                    slidesToScroll: 1,
+                }
             },
             {
                 breakpoint: 768,
                 settings: {
-                  slidesToShow: 1.15,
-                  slidesToScroll: 1,
+                    slidesToShow: 1.15,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 576,
                 settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             },
         ]
@@ -79,25 +79,25 @@ const Home = () => {
         autoplay: true,
         animationData: AnimationOne,
         renderer: 'svg'
-      }
-      const impactanimationLottie = {
+    }
+    const impactanimationLottie = {
         loop: true,
         autoplay: true,
         animationData: AnimationTwo,
         renderer: 'svg'
-      }
-      const aboutanimationLottie = {
+    }
+    const aboutanimationLottie = {
         loop: true,
         autoplay: true,
         animationData: AnimationThree,
         renderer: 'svg'
-      }
-      const becomeanimationLottie = {
+    }
+    const becomeanimationLottie = {
         loop: true,
         autoplay: true,
         animationData: AnimationFour,
         renderer: 'svg'
-      }
+    }
     return (
         <>
             <div className='home2-wrapper'>
@@ -119,8 +119,8 @@ const Home = () => {
                                 <div className='slide-icon'>
                                     <svg className="circle">
                                         <g>
-                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2"/>
-                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3"/>
+                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2" />
+                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3" />
                                         </g>
                                     </svg>
                                     <Lottie
@@ -157,8 +157,8 @@ const Home = () => {
                                 <div className='slide-icon'>
                                     <svg className="circle">
                                         <g>
-                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2"/>
-                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3"/>
+                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2" />
+                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3" />
                                         </g>
                                     </svg>
                                     <Lottie
@@ -169,8 +169,8 @@ const Home = () => {
                                     />
                                 </div>
                                 <div className='desc-text'>
-                                    <h2>Impact through Traccy </h2>
-                                    <h3>Impact through Traccy</h3>
+                                    <h2>Traccy Impact</h2>
+                                    <h3>Traccy Impact</h3>
                                     <p>
                                         Better then Ou tum Completely Merging of Computer Science
                                     </p>
@@ -195,8 +195,8 @@ const Home = () => {
                                 <div className='slide-icon'>
                                     <svg className="circle">
                                         <g>
-                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2"/>
-                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3"/>
+                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2" />
+                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3" />
                                         </g>
                                     </svg>
                                     <Lottie
@@ -233,8 +233,8 @@ const Home = () => {
                                 <div className='slide-icon'>
                                     <svg className="circle">
                                         <g>
-                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2"/>
-                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3"/>
+                                            <ellipse className="background" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="2" />
+                                            <ellipse className="foreground" ry="55" rx="55" cy="55.2" cx="55.2" strokeWidth="3" />
                                         </g>
                                     </svg>
                                     <Lottie
