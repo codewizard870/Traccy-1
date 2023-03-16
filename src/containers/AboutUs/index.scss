@@ -417,7 +417,7 @@
             }
         }   
     }
-    .ourteam-section{
+    .coreteam-section{
         padding: 5rem 0;
         position: relative;
         .title-bg{
@@ -593,6 +593,70 @@
                             img {
                                 width: 100%;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .ourteam-section{
+        margin-top: 200px;
+        .ourteam-wrapper{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: space-evenly;
+            .card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+                width: 319px;
+                background: #320B3E;
+                &:hover{
+                    background: #220535;
+                }
+                .card-name, .card-role{
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 30px;
+                }
+                .card-name {
+                    margin-top: 17px;
+                }
+                .card-role{
+                    display: flex;
+                    margin-top: 10px;
+                }
+                .mark{
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 10px;
+                    background: #fff;
+                    display: block;
+                    border: 2px solid #B90B5F;
+                    margin-right: 8px;
+                }
+                .card-description{
+                    margin-top: 21px;
+                    overflow-wrap: break-word;
+                    font-size: 18px;
+                    line-height: 27px;
+                    text-align: center;
+                }
+                .card-social{
+                    display: flex;
+                    gap: 10px;
+                    margin-top: 40px;
+                    margin-bottom: 30px;
+                    .icon {
+                        cursor: pointer;
+                        width: 21px;
+                        height: auto;
+                        fill: #ffffff;
+                        transition: fill 0.3s;
+                        &:hover{
+                            fill:#911658;
                         }
                     }
                 }

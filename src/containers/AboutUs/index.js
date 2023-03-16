@@ -15,6 +15,8 @@ import TeamThumb1 from '../../assets/images/team-thumb-1.png';
 import TeamThumb2 from '../../assets/images/team-thumb-2.png';
 import TeamThumb3 from '../../assets/images/team-thumb-3.png';
 import TeamThumb4 from '../../assets/images/team-thumb-4.png';
+import TeamThumb5 from '../../assets/images/team-thumb-5.png';
+import TeamThumb6 from '../../assets/images/team-thumb-6.png';
 import Partner1 from '../../assets/images/partner-1.png';
 import Partner2 from '../../assets/images/partner-2.png';
 import Partner3 from '../../assets/images/partner-3.png';
@@ -27,54 +29,54 @@ import HeaderBg2 from '../../assets/images/title-bg2.svg';
 
 const InfoModal = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
     const showModal = () => {
-      setIsModalOpen(true);
+        setIsModalOpen(true);
     };
-  
+
     const handleOk = () => {
-      setIsModalOpen(false);
+        setIsModalOpen(false);
     };
-  
+
     const handleCancel = () => {
-      setIsModalOpen(false);
+        setIsModalOpen(false);
     };
-  
+
     return (
-      <>
-        <SvgIcon className='modal-arrow-icon' onClick={showModal} name='logout-icon' viewbox='0 0 35.549 35.648' />
-        <Modal title="19 November" centered footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-          <div className='pt-3'>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-            <p>Some contents...</p>
-          </div>
-        </Modal>
-      </>
+        <>
+            <SvgIcon className='modal-arrow-icon' onClick={showModal} name='logout-icon' viewbox='0 0 35.549 35.648' />
+            <Modal title="19 November" centered footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <div className='pt-3'>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </div>
+            </Modal>
+        </>
     );
 };
 
 function NextArrow(props) {
     const { className, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-        <SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' />
-    </div>
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' />
+        </div>
     );
-  }
-  
-  function PrevArrow(props) {
+}
+
+function PrevArrow(props) {
     const { className, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-        <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
-    </div>
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+        </div>
     );
 }
 
@@ -84,8 +86,8 @@ const AboutUs = () => {
         infinite: true,
         slidesToShow: 1,
         speed: 500
-      };
-      const settings2 = {
+    };
+    const settings2 = {
         dots: true,
         infinite: false,
         speed: 1000,
@@ -94,25 +96,29 @@ const AboutUs = () => {
         nextArrow: <NextArrow />,
         prevArrow: <PrevArrow />,
         appendDots: dots => (
-          <div className='thumb-col-main'>
-            <ul style={{ margin: "0px" }}> {dots} </ul>
-          </div>
+            <div className='thumb-col-main'>
+                <ul style={{ margin: "0px" }}> {dots} </ul>
+            </div>
         ),
         customPaging: i => (
-          <div className='thumb-col-main'
-          >
-            {i === 0 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb1} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Mick Misamu</div>
-            <div className='thumb-designation'><span></span> CTO</div></div>}
-            {i === 1 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
-            <div className='thumb-designation'><span></span> CMO</div></div>}
-            {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb3} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Dedry  Misamu</div>
-            <div className='thumb-designation'><span></span> CFO</div></div>}
-            {i === 3 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb4} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Joas Fischer</div>
-            <div className='thumb-designation'><span></span> CEO</div></div>}
-          </div>
+            <div className='thumb-col-main'
+            >
+                {i === 0 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb1} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Mick Misamu</div>
+                    <div className='thumb-designation'><span></span> CTO</div></div>}
+                {i === 1 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
+                    <div className='thumb-designation'><span></span> CMO</div></div>}
+                {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb3} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Dedry  Misamu</div>
+                    <div className='thumb-designation'><span></span> CFO</div></div>}
+                {i === 3 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb4} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Joas Fischer</div>
+                    <div className='thumb-designation'><span></span> CEO</div></div>}
+                {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
+                    <div className='thumb-designation'><span></span> COO</div></div>}
+                {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>IKA NUR AFFIFAH</div>
+                    <div className='thumb-designation'><span></span> CBDO</div></div>}
+            </div>
         )
-      };
-      const settings3 = {
+    };
+    const settings3 = {
         infinite: false,
         dots: true,
         slidesToShow: 4,
@@ -121,14 +127,14 @@ const AboutUs = () => {
         arrows: false,
         responsive: [
             {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-              }
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
             },
         ]
-      };
+    };
     return (
         <div className='aboutus-wrapper'>
             <section className='banner-section'>
@@ -138,7 +144,7 @@ const AboutUs = () => {
                         <Col lg='6' className="banner-left">
                             <h1>Inspiration <span>about us</span> </h1>
                             <p>
-                               Buy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and BravBuy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and Brave e 
+                                Buy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and BravBuy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and Brave e
                             </p>
                         </Col>
                     </Row>
@@ -169,26 +175,26 @@ const AboutUs = () => {
                                 <img src={TraccyIcon} alt="Traccy" />
                                 <h4>Traccy connects the world</h4>
                                 <p>Secure, Manage, and Exchange cryptocurrency on desktop, mobile and hardware wallets.</p>
-                            </div>  
+                            </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Vision </span></h2>
                             <p className='vission-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 
-                                across multiple networks on Chrome and BravBuy NFTS, 
-                                access Defi dApps, and explore Web3 
-                                across multiple networks on Chrome and Brave e 
+                                Buy NFTS, access Defi dApps, and explore Web3
+                                across multiple networks on Chrome and BravBuy NFTS,
+                                access Defi dApps, and explore Web3
+                                across multiple networks on Chrome and Brave e
                             </p>
                         </Col>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Mission </span></h2>
                             <p className='vission-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 
-                                across multiple networks on Chrome and BravBuy NFTS, 
-                                access Defi dApps, and explore Web3 
-                                across multiple networks on Chrome and Brave e 
+                                Buy NFTS, access Defi dApps, and explore Web3
+                                across multiple networks on Chrome and BravBuy NFTS,
+                                access Defi dApps, and explore Web3
+                                across multiple networks on Chrome and Brave e
                             </p>
                         </Col>
                     </Row>
@@ -227,9 +233,9 @@ const AboutUs = () => {
                     <Row className="statics-row">
                         <svg className='flat-icon' width="24.86" height="30" viewBox="0 0 24.86 30">
                             <g transform="translate(-228.75 -2694)">
-                                <rect width="1" height="30" transform="translate(228.75 2694)" fill="#c9c9c9" opacity="0.71"/>
-                                <path d="M8553.555,8485h22.86l-6.983,10.008h-15.877Z" transform="translate(-8322.805 -5791)" fill="#c9c9c9" opacity="0.743"/>
-                                <path d="M22.862,0H0L6.983,10.008H22.862Z" transform="translate(253.552 2714.314) rotate(-180)" fill="#c9c9c9" opacity="0.383"/>
+                                <rect width="1" height="30" transform="translate(228.75 2694)" fill="#c9c9c9" opacity="0.71" />
+                                <path d="M8553.555,8485h22.86l-6.983,10.008h-15.877Z" transform="translate(-8322.805 -5791)" fill="#c9c9c9" opacity="0.743" />
+                                <path d="M22.862,0H0L6.983,10.008H22.862Z" transform="translate(253.552 2714.314) rotate(-180)" fill="#c9c9c9" opacity="0.383" />
                             </g>
                         </svg>
                         <Col lg='3' md='6' className='stat-col'>
@@ -272,7 +278,7 @@ const AboutUs = () => {
                             <h1 className='main-heading text-center'><span>Roadmap</span></h1>
                             <p className='main-heading-text'>
                                 Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave 
+                                across multiple networks on Chrome and Brave
                             </p>
                         </Col>
                     </Row>
@@ -286,7 +292,7 @@ const AboutUs = () => {
                                         <div className='roadmap-card'>
                                             <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
                                             <div className='action'>
-                                                19 November 
+                                                19 November
                                                 <InfoModal />
                                             </div>
                                         </div>
@@ -295,7 +301,7 @@ const AboutUs = () => {
                                         <div className='roadmap-card'>
                                             <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
                                             <div className='action'>
-                                                19 November 
+                                                19 November
                                                 <InfoModal />
                                             </div>
                                         </div>
@@ -304,7 +310,7 @@ const AboutUs = () => {
                                         <div className='roadmap-card'>
                                             <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
                                             <div className='action'>
-                                                19 November 
+                                                19 November
                                                 <InfoModal />
                                             </div>
                                         </div>
@@ -313,7 +319,7 @@ const AboutUs = () => {
                                         <div className='roadmap-card'>
                                             <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
                                             <div className='action'>
-                                                19 November 
+                                                19 November
                                                 <InfoModal />
                                             </div>
                                         </div>
@@ -324,16 +330,16 @@ const AboutUs = () => {
                     </Row>
                 </Container>
             </section>
-            <section className='ourteam-section'>
+            <section className='coreteam-section'>
                 <img className='title-bg' src={HeaderBg2} alt='BG' />
                 <img className='right-hexa' src={RightHexa3} alt='Hexa' />
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className='main-heading text-center'>Our <span>Team</span></h1>
+                            <h1 className='main-heading text-center'>Core <span>Team</span></h1>
                             <p className='main-heading-text'>
                                 Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave 
+                                across multiple networks on Chrome and Brave
                             </p>
                         </Col>
                     </Row>
@@ -413,10 +419,75 @@ const AboutUs = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Joas Fischer </h3>
+                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
+                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Joas Fischer </h3>
+                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
+                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </Slider>
                             </div>
                         </Col>
                     </Row>
+                </Container>
+            </section>
+            <section className="ourteam-section">
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1 className='main-heading text-center'>Our <span>Team</span></h1>
+                        </Col>
+                    </Row>
+                    <div className="ourteam-wrapper">
+                        {OURTEAM.map(team => (
+                            <div className="card">
+                                <img src={team.image} height="143px" alt="team" />
+                                <span className="card-name">{team.name}</span>
+                                <div className="card-role">
+                                    <span className="mark" />
+                                    <span>{team.role}</span>
+                                </div>
+                                <span className="card-description">{team.description}</span>
+
+                                <div className="card-social">
+                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </Container>
             </section>
             <section className='partner-section'>
@@ -432,7 +503,7 @@ const AboutUs = () => {
                             <h1 className='main-heading text-center'><span>Partner</span></h1>
                             <p className='main-heading-text'>
                                 Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave 
+                                across multiple networks on Chrome and Brave
                             </p>
                         </Col>
                     </Row>
@@ -481,3 +552,12 @@ const AboutUs = () => {
 };
 
 export default AboutUs
+
+const OURTEAM = new Array(8).fill(
+    {
+        image: "/our-team/team-thumb-4.png",
+        name: "Joas Fischer",
+        role: "CEO",
+        description: "Founder and CEO at Traccy. We are a deep tech Web3 startup building decentralized world."
+    },
+);
