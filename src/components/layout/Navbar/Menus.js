@@ -82,6 +82,14 @@ const Menus = () => {
               Contact
             </Link>
           </li>
+          <li>
+            <Link to='/invest'>
+              <div className='menu-icon'>
+                <img src="/invest-form/crypto-wallet-bitcoin-icon.svg" width="26px" height="26px" alt="bitcoin" />
+              </div>
+              Purchase TRCY token
+            </Link>
+          </li>
         </ul>
       </Drawer>
       <ul className="web-menu">
@@ -104,8 +112,7 @@ const Menus = () => {
           <NavLink to='/contact'>LIBRARY</NavLink>
         </li>
         <li>
-          <NavLink to='/invest'>PURCHASE<br/>
-            TRCY TOKEN</NavLink>
+          <NavLink to='/invest'>PURCHASE TRCY TOKEN</NavLink>
         </li>
       </ul>
       <ConnectWallet />
