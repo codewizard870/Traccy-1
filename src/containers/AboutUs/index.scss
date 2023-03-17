@@ -611,7 +611,7 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 1rem;
-                width: 319px;
+                width: 241px;
                 background: #320B3E;
                 &:hover{
                     background: #220535;
@@ -627,15 +627,19 @@
                 .card-role{
                     display: flex;
                     margin-top: 10px;
-                }
-                .mark{
-                    width: 8px;
-                    height: 8px;
-                    border-radius: 10px;
-                    background: #fff;
-                    display: block;
-                    border: 2px solid #B90B5F;
-                    margin-right: 8px;
+                    position: relative;
+                    &::before{
+                        position: absolute;
+                        left: -10px;
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 10px;
+                        background: #fff;
+                        display: block;
+                        border: 2px solid #B90B5F;
+                        margin-right: 8px;
+                        content: "";
+                    }
                 }
                 .card-description{
                     margin-top: 21px;

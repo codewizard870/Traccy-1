@@ -473,10 +473,7 @@ const AboutUs = () => {
                             <div className="card">
                                 <img src={team.image} height="143px" alt="team" />
                                 <span className="card-name">{team.name}</span>
-                                <div className="card-role">
-                                    <span className="mark" />
-                                    <span>{team.role}</span>
-                                </div>
+                                <span className="card-role">{team.role}</span>
                                 <span className="card-description">{team.description}</span>
 
                                 <div className="card-social">
