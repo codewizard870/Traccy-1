@@ -144,43 +144,28 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <Button onClick={() => history.push('/traccy-token')}> <div className='btn-text'>Learn more</div> <div className='btn-icon'><SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></div></Button>
-                        {/* <div id="row3" style="position: relative;">
-                           <div style="position: absolute; width: 100%;">
-                              <div style="height: 47px; width: 100%; cursor: pointer; position: relative;">
-                                 <div style="line-height: 1.92vh; width: 100%; height: 100%; position: absolute; display: flex; z-index: 10; font-weight: 700; letter-spacing: 0.025em; align-items: center; font-size: 1.92vh;">
-                                    <div style="display: flex; width: 66.66%; justify-content: center; align-items: center; clip-path: inset(0%);">
-                                       BIO COMPUTER
-                                    </div>
-                                 </div>
-                                 <div style="width: 100%; position: absolute; display: flex;">
-                                    <div style="width: 50%;">
-                                       <svg width="100%" viewBox="0 0 100 50">
-                                          <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h100 v50 h-100"></path>
-                                       </svg>
-                                    </div>
-                                    <div style="width: 50%;">
-                                       <svg width="100%" viewBox="0 0 100 50">
-                                          <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h100 v50 h-100"></path>
-                                       </svg>
-                                    </div>
-                                 </div>
-                                 <div style="width: 100%; position: absolute;">
-                                    <div style="width: 100%; height: 47px;">
-                                       <svg width="100%" height="100%">
-                                          <rect x="66.66%" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
-                                       </svg>
-                                    </div>
-                                 </div>
-                              </div>
+                        <div className="learn-more">
+                           <div className="left-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
                            </div>
-                           <div style="position: absolute; font-size: 0.6rem; margin-top: calc(12.5% - 0.3rem); margin-left: 80%;">
+                           <div className="right-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <svg className="redfill" width="100%" >
+                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
+                           </svg>
+                           <div className="arrow">
                               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
                                  </path>
                               </svg>
                            </div>
-                        </div> */}
+                           <div className="content">learn more</div>
+                        </div>
                      </div>
                   </div>
                   <div>
@@ -219,7 +204,28 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <Button onClick={() => history.push('/impact-through-traccy')}> <div className='btn-text'>Learn more</div> <div className='btn-icon'><SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></div></Button>
+                        <div className="learn-more">
+                           <div className="left-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <div className="right-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <svg className="redfill" width="100%" >
+                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
+                           </svg>
+                           <div className="arrow">
+                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
+                                 </path>
+                              </svg>
+                           </div>
+                           <div className="content">learn more</div>
+                        </div>
                      </div>
                   </div>
                   <div>
@@ -258,7 +264,28 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <Button onClick={() => history.push('/about')}> <div className='btn-text'>Learn more</div> <div className='btn-icon'><SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></div></Button>
+                        <div className="learn-more">
+                           <div className="left-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <div className="right-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <svg className="redfill" width="100%" >
+                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
+                           </svg>
+                           <div className="arrow">
+                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
+                                 </path>
+                              </svg>
+                           </div>
+                           <div className="content">learn more</div>
+                        </div>
                      </div>
                   </div>
                   <div>
@@ -297,12 +324,28 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <Button onClick={() => history.push('/become-part')}>
-                           <div className='btn-text'>Learn more</div>
-                           <div className='btn-icon'>
-                              <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' />
+                        <div className="learn-more">
+                           <div className="left-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
                            </div>
-                        </Button>
+                           <div className="right-rect">
+                              <svg height="100%" viewBox="0 0 300 50">
+                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
+                              </svg>
+                           </div>
+                           <svg className="redfill" width="100%" >
+                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
+                           </svg>
+                           <div className="arrow">
+                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
+                                 </path>
+                              </svg>
+                           </div>
+                           <div className="content">learn more</div>
+                        </div>
                      </div>
                   </div>
                </Slider>

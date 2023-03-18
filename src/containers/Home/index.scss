@@ -651,8 +651,56 @@
             opacity: 0;
             transition: opacity 1s ease;
           }
+          .learn-more {
+            width: 100%;
+            height: 73px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            .left-rect{
+              position: absolute;
+              height: 100%;
+              left: 0px;
+              max-width: 0px;
+              overflow: hidden;
+              visibility: hidden;
+              transition: max-width 1s linear;
+            }
+            .right-rect{
+              position: absolute;
+              height: 100%;
+              right: 0px;
+              max-width: 0px;
+              overflow: hidden;
+              visibility: hidden;
+              transition: max-width 1s linear;
+            }
+            .content {
+              position: absolute;
+              margin: 0px 30px;
+              text-transform: uppercase;
+              white-space: nowrap;
+              max-width: 0px;
+              overflow: hidden;
+              visibility: hidden;
+              transition: max-width 1s linear;
+            }
+            .redfill {
+              position: absolute;
+              max-width: 0px;
+              right: 0;
+              visibility: hidden;
+              transition: max-width 1s ease;
+            }
+            .arrow {
+              position: absolute;
+              width: 100%;
+              transition: transform .5s linear;
+            }
+          }
         }
-        
+
         &:hover {
           .home2-slide-card {
             .fog-img {
@@ -750,8 +798,34 @@
                 }
               }
             }
-            .home2-slide-overlay{
+            .home2-slide-overlay {
               opacity: 1;
+            }
+            .learn-more {
+              .left-rect{
+                max-width: 800px;
+                visibility: visible;
+              }
+              .right-rect{
+                max-width: 400px;
+                visibility: visible;
+              }
+              .content{
+                max-width: 200px;
+                visibility: visible;
+              }
+              .redfill{
+                max-width: 85px;
+                visibility: visible;
+              }
+              .arrow {
+                transform: translateX(calc(100% - 54px));
+              }
+              &:hover {
+                .redfill {
+                  max-width: 100%;
+                }
+              }
             }
           }
         }
