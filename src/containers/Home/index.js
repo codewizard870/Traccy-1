@@ -45,7 +45,7 @@ const Home = () => {
       infinite: false,
       dots: false,
       slidesToShow: 3.99,
-      slidesToScroll: 2,
+      slidesToScroll: 1,
       speed: 500,
       arrows: true,
       nextArrow: <NextArrow />,
@@ -151,28 +151,7 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <div className="learn-more">
-                           <div className="left-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <div className="right-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <svg className="redfill" width="100%" >
-                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
-                           </svg>
-                           <div className="arrow">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
-                                 </path>
-                              </svg>
-                           </div>
-                           <div className="content">learn more</div>
-                        </div>
+                        <LearnMore />
                      </div>
                   </div>
                   <div>
@@ -211,28 +190,7 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <div className="learn-more">
-                           <div className="left-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <div className="right-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <svg className="redfill" width="100%" >
-                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
-                           </svg>
-                           <div className="arrow">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
-                                 </path>
-                              </svg>
-                           </div>
-                           <div className="content">learn more</div>
-                        </div>
+                        <LearnMore />
                      </div>
                   </div>
                   <div>
@@ -271,28 +229,7 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <div className="learn-more">
-                           <div className="left-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <div className="right-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <svg className="redfill" width="100%" >
-                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
-                           </svg>
-                           <div className="arrow">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
-                                 </path>
-                              </svg>
-                           </div>
-                           <div className="content">learn more</div>
-                        </div>
+                        <LearnMore />
                      </div>
                   </div>
                   <div>
@@ -331,28 +268,7 @@ const Home = () => {
                               <li>Viennes sentis motesir</li>
                            </ul>
                         </div>
-                        <div className="learn-more">
-                           <div className="left-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path transform="scale(-1, 1)" transform-origin="center" stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <div className="right-rect">
-                              <svg height="100%" viewBox="0 0 300 50">
-                                 <path stroke="#E31E53" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h300 v50 h-300"></path>
-                              </svg>
-                           </div>
-                           <svg className="redfill" width="100%" >
-                              <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
-                           </svg>
-                           <div className="arrow">
-                              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                 <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z">
-                                 </path>
-                              </svg>
-                           </div>
-                           <div className="content">learn more</div>
-                        </div>
+                        <LearnMore />
                      </div>
                   </div>
                </Slider>
@@ -362,4 +278,34 @@ const Home = () => {
    )
 };
 
-export default Home
+export default Home;
+
+const LearnMore = () => {
+   return (
+      <div className="learn-more">
+         <svg className="redfill" width="100%" >
+            <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
+         </svg>
+         {/* <div className="left-rect">
+            <svg height="100%" viewBox="0 0 150 50">
+               <path transform="scale(-1, 1)" transform-origin="center" stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
+            </svg>
+         </div>
+         <div className="right-rect">
+            <svg height="100%" viewBox="0 0 150 50">
+               <path stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
+            </svg>
+         </div> */}
+
+         <div className="arrow">
+            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="1.5" cy="7.5" r="1.5" fill="#FFFBFB" />
+               <path d="M18.2851 7.60132L5.43483 14.3036L5.31311 1.13775L18.2851 7.60132Z" fill="white" />
+               <path d="M11.2837 7.46846L5.33433 9.43879L5.31395 5.56078L11.2837 7.46846Z" fill="#541349" />
+               <line x1="10" y1="7.5" x2="15" y2="7.5" stroke="black" />
+            </svg>
+         </div>
+         <div className="content">learn more</div>
+      </div>
+   )
+}
