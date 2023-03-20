@@ -280,7 +280,7 @@ const Home = () => {
 
 export default Home;
 
-const LearnMore = () => {
+export const LearnMore = () => {
    return (
       <div className="learn-more">
          <svg className="redfill" width="100%" >

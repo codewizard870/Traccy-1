@@ -49,26 +49,26 @@ const TraccyToken = () => {
     const onDownload = () => {
         const xhr = new XMLHttpRequest();
         const a = document.createElement("a");
-    
+
         xhr.open(
-          "GET",
-          "/2022-09-23 09-34-14.mp4",
-          true
+            "GET",
+            "/2022-09-23 09-34-14.mp4",
+            true
         );
-    
+
         xhr.responseType = "blob";
-        xhr.onprogress = function(pr) {
-            console.log(pr.loaded, pr.total, Math.floor(pr.loaded/pr.total * 1000)/10);
-            setPercent(Math.floor(pr.loaded/pr.total * 1000)/10);
+        xhr.onprogress = function (pr) {
+            console.log(pr.loaded, pr.total, Math.floor(pr.loaded / pr.total * 1000) / 10);
+            setPercent(Math.floor(pr.loaded / pr.total * 1000) / 10);
         };
         xhr.onload = function () {
-          const file = new Blob([xhr.response], {
-            type: "application/octet-stream",
-          });
-          window.URL = window.URL || window.webkitURL;
-          a.href = window.URL.createObjectURL(file);
-          a.download = "1.mp4";
-          a.click();
+            const file = new Blob([xhr.response], {
+                type: "application/octet-stream",
+            });
+            window.URL = window.URL || window.webkitURL;
+            a.href = window.URL.createObjectURL(file);
+            a.download = "1.mp4";
+            a.click();
         };
         xhr.send();
 
@@ -103,16 +103,21 @@ const TraccyToken = () => {
                             </ul>
                             <div className='learn-more-row'>
                                 <Button onClick={() => history.push("/invest")}>
-                                    Purchase TRCY token 
-                                    <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' />
+                                    Purchase TRCY token
+                                    <svg className="icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="1.5" cy="7.5" r="1.5" fill="#FFFBFB" />
+                                        <path d="M18.2851 7.60132L5.43483 14.3036L5.31311 1.13775L18.2851 7.60132Z" fill="white" />
+                                        <path d="M11.2837 7.46846L5.33433 9.43879L5.31395 5.56078L11.2837 7.46846Z" fill="#541349" />
+                                        <line x1="10" y1="7.5" x2="15" y2="7.5" stroke="black" />
+                                    </svg>
                                 </Button>
                                 <div className='white-paper'>
                                     <div>
                                         <h4>White paper </h4>
-                                        {percent > 0 && <p>Download {percent}%</p> }
+                                        {percent > 0 && <p>Download {percent}%</p>}
                                     </div>
-                                    <div className="download"  onClick={onDownload}>
-                                        <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87'/>
+                                    <div className="download" onClick={onDownload}>
+                                        <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87' />
                                     </div>
                                 </div>
                             </div>

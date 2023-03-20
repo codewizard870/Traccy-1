@@ -819,8 +819,24 @@
                 transform: translateX(calc(100% - 54px));
               }
               &:hover {
+                .left-rect {
+                  max-width: 100%;
+                  visibility: visible;
+                }
+                .right-rect {
+                  max-width: 100%;
+                  visibility: visible;
+                }
+                .content {
+                  max-width: 200px;
+                  visibility: visible;
+                }
                 .redfill {
                   max-width: 100%;
+                  visibility: visible;
+                }
+                .arrow {
+                  transform: translateX(calc(100% - 54px));
                 }
               }
             }
