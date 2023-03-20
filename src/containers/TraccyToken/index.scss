@@ -113,7 +113,7 @@
                 }
 
                 .ant-btn {
-                    border: 1px solid #93165B;
+                    border: 1px solid #BE1E73;
                     background: none;
                     color: $white;
                     border-radius: 0;
@@ -127,15 +127,15 @@
                     }
 
                     &::before {
-                        width: 0;
+                        width: 60px;
                         height: 100%;
                         content: ' ';
                         position: absolute;
                         top: 0;
                         bottom: 0;
                         right: 0;
-                        background: #94175B;
-                        transition: all ease-in 0.2s;
+                        background: #E31E5380;
+                        transition: all ease-in 1s;
                         opacity: 1;
                         max-height: 60px;
                         z-index: 0;
@@ -153,7 +153,7 @@
                     }
 
                     .icon {
-                        background: #94175B;
+                        background: transparent;
                         fill: $white;
                         width: 60px;
                         height: 100%;
