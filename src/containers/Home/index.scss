@@ -371,6 +371,7 @@
       align-items: center;
       justify-content: center;
       border: 2px solid $primary-color;
+
       transition: all ease-in 0.1s;
 
       @media screen and (max-width: 576px) {
@@ -423,25 +424,26 @@
     }
 
     .slick-list {
+      border-left: 1px solid #6b1b5e80;
       .slick-slide {
         // min-height: calc(100vh - 6rem);
-        max-height: 900px;
-        background: -moz-radial-gradient(
-          121.17% 144.74% at 49.96% 3.67%,
-          #460e3d 0%,
-          #150727 100%
-        );
-        background: -webkit-radial-gradient(
-          121.17% 144.74% at 49.96% 3.67%,
-          #460e3d 0%,
-          #150727 100%
-        );
-        background: radial-gradient(
-          121.17% 144.74% at 49.96% 3.67%,
-          #460e3d 0%,
-          #150727 100%
-        );
-        border-right: 1px solid rgba($white, 0.05);
+        // max-height: 900px;
+        // background: -moz-radial-gradient(
+        //   121.17% 144.74% at 49.96% 3.67%,
+        //   #460e3d 0%,
+        //   #150727 100%
+        // );
+        // background: -webkit-radial-gradient(
+        //   121.17% 144.74% at 49.96% 3.67%,
+        //   #460e3d 0%,
+        //   #150727 100%
+        // );
+        // background: radial-gradient(
+        //   121.17% 144.74% at 49.96% 3.67%,
+        //   #460e3d 0%,
+        //   #150727 100%
+        // );
+        border-right: 1px solid #6b1b5e80;
 
         .home2-slide-card {
           min-height: 85vh;
@@ -453,7 +455,7 @@
           overflow: hidden;
 
           @media screen and (max-width: 991px) {
-            max-height: 90vh;
+            // max-height: 90vh;
           }
 
           @media screen and (max-width: 576px) {
@@ -485,7 +487,7 @@
               border-block-start: 4px solid rgba(#c2aeeb, 0.5);
               min-width: 15px;
               max-width: 15px;
-              margin-top: 30px;
+              margin-top: 8px;
               transition: max-width 2s ease-out;
               @media screen and (max-width: 576px) {
                 margin-bottom: 5px;
@@ -548,27 +550,29 @@
                 font-size: 22px;
               }
             }
-
-            h3 {
-              font-size: 20px;
-              color: $primary-color;
-              text-transform: uppercase;
-              overflow: hidden;
-              max-height: 30px;
-              transition: max-height 1s linear;
-              @media screen and (max-width: 576px) {
-                font-size: 18px;
+            .desc-content {
+              height: 30px;
+              margin-top: 14px;
+              h3 {
+                font-size: 12px;
+                color: $primary-color;
+                text-transform: uppercase;
+                overflow: hidden;
+                max-height: 30px;
+                transition: max-height .5s linear;
+                @media screen and (max-width: 576px) {
+                  font-size: 18px;
+                }
               }
             }
-
             p {
               color: $white;
-              font-size: 15px;
+              font-size: 12px;
               max-width: 280px;
               line-height: 1.5;
               visibility: hidden;
               opacity: 0;
-              transition: visibility 1s, opacity 1s, transform 2s ease;
+              transition: visibility 1s, opacity 1s, transform 1s ease;
               @media screen and (max-width: 576px) {
                 font-size: 13px;
               }
@@ -579,7 +583,7 @@
               padding: 0;
               visibility: hidden;
               opacity: 0;
-              transition: visibility 1s, opacity 1s, transform 2s ease;
+              transition: visibility 1s, opacity 1s, transform 1.5s ease;
               li {
                 padding: 5px 0 5px 15px;
                 font-size: 14px;
@@ -652,15 +656,17 @@
             transition: opacity 1s ease;
           }
           .learn-more {
-            width: 100%;
-            min-height: 73px;
-            position: relative;
+            width: calc(100% - 30px);
+            min-height: 55px;
+            position: absolute;
+            bottom: 20px;
             display: flex;
+
             align-items: center;
             font-size: 16px;
             font-weight: 700;
             overflow: hidden;
-            .left-rect{
+            .left-rect {
               position: absolute;
               height: 100%;
               left: 0px;
@@ -669,7 +675,7 @@
               visibility: hidden;
               transition: max-width 1s linear;
             }
-            .right-rect{
+            .right-rect {
               position: absolute;
               height: 100%;
               right: 0px;
@@ -698,7 +704,7 @@
             .arrow {
               position: absolute;
               width: 100%;
-              transition: transform .5s linear;
+              transition: transform 0.5s linear;
             }
           }
         }
@@ -804,19 +810,19 @@
               opacity: 1;
             }
             .learn-more {
-              .left-rect{
+              .left-rect {
                 max-width: 800px;
                 visibility: visible;
               }
-              .right-rect{
+              .right-rect {
                 max-width: 400px;
                 visibility: visible;
               }
-              .content{
+              .content {
                 max-width: 200px;
                 visibility: visible;
               }
-              .redfill{
+              .redfill {
                 max-width: 85px;
                 visibility: visible;
               }

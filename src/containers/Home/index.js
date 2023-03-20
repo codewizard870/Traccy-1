@@ -44,24 +44,31 @@ const Home = () => {
    const settings = {
       infinite: false,
       dots: false,
-      slidesToShow: 3.5,
-      slidesToScroll: 1,
+      slidesToShow: 3.99,
+      slidesToScroll: 2,
       speed: 500,
       arrows: true,
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       responsive: [
          {
-            breakpoint: 1200,
+            breakpoint: 1379,
             settings: {
-               slidesToShow: 2.15,
+               slidesToShow: 3.5,
+               slidesToScroll: 1,
+            }
+         },
+         {
+            breakpoint: 1255,
+            settings: {
+               slidesToShow: 3.15,
                slidesToScroll: 1,
             }
          },
          {
             breakpoint: 768,
             settings: {
-               slidesToShow: 1.15,
+               slidesToShow: 2.15,
                slidesToScroll: 1,
             }
          },
@@ -131,7 +138,7 @@ const Home = () => {
                         </div>
                         <div className='desc-text'>
                            <h2>TRCY Token</h2>
-                           <div style={{ height: "30px" }}>
+                           <div className="desc-content">
                               <h3>TRCY Token</h3>
                            </div>
                            <p>
@@ -192,7 +199,7 @@ const Home = () => {
                         </div>
                         <div className='desc-text'>
                            <h2>Traccy Impact</h2>
-                           <div style={{ height: "30px" }}>
+                           <div className="desc-content">
                               <h3>Traccy Impact</h3>
                            </div>
                            <p>
@@ -252,7 +259,7 @@ const Home = () => {
                         </div>
                         <div className='desc-text'>
                            <h2>About Us</h2>
-                           <div style={{ height: "30px" }}>
+                           <div className="desc-content">
                               <h3>About Us</h3>
                            </div>
                            <p>
@@ -312,7 +319,7 @@ const Home = () => {
                         </div>
                         <div className='desc-text'>
                            <h2>Become a part </h2>
-                           <div style={{ height: "30px" }}>
+                           <div className="desc-content">
                               <h3>Become a part </h3>
                            </div>
                            <p>
