@@ -24,7 +24,7 @@ const Library = () => {
             <div className='traccy-icon'>
                <img src={Traccyicon} alt='Logo' />
             </div>
-            <div className="function-icon-list">
+            {/* <div className="function-icon-list">
                <div className="function-icon">
                   <div className="icon-wrapper">
                      <img src="/library/home.svg" alt="home" />
@@ -55,7 +55,7 @@ const Library = () => {
                   </div>
                   <span>Back</span>
                </div>
-            </div>
+            </div> */}
             <div className='social-icon-list'>
                <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -71,7 +71,7 @@ const Library = () => {
                <div className='dtl-section'>
                   <div className="content-panel">
                      <Title />
-                     <FunctionTitle />
+                     {/* <FunctionTitle /> */}
                      <FilesWrapper />
                   </div>
                   <Information />

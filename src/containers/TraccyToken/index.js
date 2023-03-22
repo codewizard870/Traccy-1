@@ -213,39 +213,7 @@ const TraccyToken = () => {
                     </Row>
                 </Container>
             </section>
-            <section className='video-section'>
-                <Container>
-                    <Row>
-                        <Col>
-                            <h1 className='main-heading text-center'>Your smart <span>Token</span> </h1>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col className='video-colum'>
-                            <p>How it works</p>
-                            <div className='video-inner'>
-                                <div className='upper-action'>
-                                    <div className='action-left'>
-                                        Traccy + trésor hardware Wallet Advanced security made easy (Tracy wallet 1 Trevor model 1 )
-                                    </div>
-                                    <div className='action-right'>
-                                        <Button type='link'>
-                                            <SvgIcon name='refresh' viewbox='0 0 22 22' />
-                                            Épater ans …
-                                        </Button>
-                                        <Button type='link'>
-                                            <SvgIcon name='expand' viewbox='0 0 36 36' />
-                                            Épater ans …
-                                        </Button>
-                                    </div>
-                                </div>
-                                <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div>
-                                <img src={videoimg} alt='video-img' />
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section>
+
             <section className='whytraccy-section'>
                 <img className='title-bg' src={HeaderBg1} alt='BG' />
                 <Container>

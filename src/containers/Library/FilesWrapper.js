@@ -22,7 +22,7 @@ const FilesWrapper = () => {
 
 export default FilesWrapper;
 
-const Files = new Array(30).fill({
+const Files = new Array(8).fill({
   fileName: "Drone Virtual Tour.mp4",
   preview: "/library/file-preview.svg",
   fileSize: "18.98M"

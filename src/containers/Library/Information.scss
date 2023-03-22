@@ -8,9 +8,10 @@
 
   .function-title {
     display: flex;
+    align-items: center;
     gap: 28px;
     span {
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 400;
     }
   }
@@ -22,20 +23,20 @@
     margin-bottom: 18px;
   }
   .preview {
-    width: 195px;
-    height: 201px;
+    width: 120px;
+    height: 120px;
   }
   .file-info {
     display: flex;
     flex-direction: column;
     width: 100%;
     .filename {
-      font-size: 24px;
+      font-size: 16px;
       font-weight: 400;
     }
     .filesize {
       margin-top: 30px;
-      font-size: 18px;
+      font-size: 12px;
       font-weight: 400;
     }
   }
