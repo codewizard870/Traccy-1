@@ -1,0 +1,58 @@
+.information-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  min-width: 20%;
+  height: 100%;
+  align-items: center;
+
+  .function-title {
+    display: flex;
+    gap: 28px;
+    span {
+      font-size: 28px;
+      font-weight: 400;
+    }
+  }
+  .splitter {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #838086;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+  .preview {
+    width: 195px;
+    height: 201px;
+  }
+  .file-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .filename {
+      font-size: 24px;
+      font-weight: 400;
+    }
+    .filesize {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .share-icon-wrapper {
+    height: 54px;
+    .share-icon {
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      &:hover {
+        width: 54px;
+        height: 54px;
+      }
+    }
+  }
+  .share {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}

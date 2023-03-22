@@ -44,7 +44,7 @@ const Invest = () => {
 
     const items = steps.map((item) => ({ key: item.title, title: item.title }));
     return (
-        <div className='becomepart-wrapper0'>
+        <div className='investform-wrapper'>
             <div className="polygon-effect">
                 <img src="/invest-form/left-hexa.svg" alt="polygon-left"/>
                 <img src="/invest-form/right-hexa.svg" alt="polygon-right"/>

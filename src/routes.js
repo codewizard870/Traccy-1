@@ -10,6 +10,7 @@ import TraccyToken from "./containers/TraccyToken";
 import { authLayout, defaultaboutLayout, defaultdarkdetailsheaderLayout, defaultdarkheaderLayout, defaultLayout } from "./layouts";
 
 import Invest from "./containers/Invest";
+import Library from "./containers/Library";
 
 // Route Views
 
@@ -71,5 +72,11 @@ export const rotues = [
     exact: true,
     layout: authLayout,
     component: () => <Invest />
+  },
+  {
+    path: "/library",
+    exact: true,
+    layout: authLayout,
+    component: () => <Library />
   },
 ];
