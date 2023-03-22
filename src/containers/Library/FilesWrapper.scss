@@ -1,0 +1,50 @@
+.files-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow-y: scroll;
+  .file {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #130122;
+    border-radius: 10px;
+    padding: 28px 25px;
+    width: 267px;
+    height: 328px;
+    
+    .more {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+    .preview {
+      width: 74px;
+      height: 89px;
+      margin-top: 22px;
+    }
+    .filename{
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 12px;
+    }
+    .splitter{
+      margin-top: 48px;
+      width: 100%;
+      height: 1px;
+      border-bottom: 1px solid #838086;
+    }
+    .filesize{
+      display: flex;
+      width: 100%;
+      padding-left: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      margin-top: 29px;
+    }
+  }
+}

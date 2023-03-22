@@ -1,0 +1,40 @@
+.title-wrapper {
+  display: flex;
+  padding-bottom: 57px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  height: 100px;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+
+  span {
+    color: black;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .finder-input {
+    border: 0px;
+    // border-bottom: 1px solid black;
+    height: 57px;
+    width: 100%;
+    color: black;
+    padding-left: 10px;
+    &:focus-visible{
+      outline: 0;
+    }
+  }
+  img {
+    position: absolute;
+    right: 0px;
+    width: 46px;
+    height: 41px;
+
+  }
+  &:hover {
+    img {
+      width: 48px;
+      height: 43px;
+    }
+  }
+}

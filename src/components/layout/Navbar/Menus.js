@@ -75,7 +75,7 @@ const Menus = () => {
             </Link>
           </li>
           <li>
-            <Link to='/contact'>
+            <Link to='/library'>
               <div className='menu-icon'>
                 <SvgIcon name='docs-icon' viewbox='0 0 26 18' />
               </div>
@@ -109,7 +109,7 @@ const Menus = () => {
           <NavLink to='/become-part'>BECOME A PART</NavLink>
         </li>
         <li>
-          <NavLink to='/contact'>LIBRARY</NavLink>
+          <NavLink to='/library'>LIBRARY</NavLink>
         </li>
         <li>
           <NavLink to='/invest'>BUY TOKEN</NavLink>
