@@ -10,6 +10,7 @@ import { Navbar } from '../../components/layout';
 import Title from './Title';
 import FunctionTitle from './FunctionTitle';
 import FilesWrapper from './FilesWrapper';
+import Information from './Information';
 
 const Library = () => {
 
@@ -73,7 +74,7 @@ const Library = () => {
                      <FunctionTitle />
                      <FilesWrapper />
                   </div>
-                  <div className="information-panel">information</div>
+                  <Information />
                </div>
             </div>
          </div>
