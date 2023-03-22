@@ -543,23 +543,25 @@ a{
 
 ::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba($primary-color, .3);
-  border-radius: 6px;
-  height: 3px;
+  opacity: 50%;
+  border-radius: 3px;
+  height: 1px;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 3px;
-  background-color: #ffffff;
-  border-radius: 6px;
+  width: 3px;
+  height: 2px;
+  background-color: #15011f;
+  opacity: 90%;
+  border-radius: 2px;
   @media screen and (max-width: 991px) {
-    width: 3px;
+    width: 1px;
     background: none;
   }
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
+  background-color: rgba($primary-color, .5);
   border-radius: 6px;
 }
 

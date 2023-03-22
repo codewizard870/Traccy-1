@@ -278,7 +278,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4b1446", endColorstr="#0d0b17", GradientType=1);
   min-height: 100vh;
   position: relative;
-  padding: 3rem 4rem 3rem 4rem;
+  padding: 3rem 4rem;
   display: flex;
   align-items: center;
 
@@ -364,9 +364,9 @@
     .slick-arrow {
       position: absolute;
       z-index: 2;
-      width: 48px;
-      height: 48px;
-      border-radius: 48px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
       display: flex !important;
       align-items: center;
       justify-content: center;
@@ -389,14 +389,14 @@
       }
 
       &.slick-prev {
-        left: -180px;
+        left: -185px;
         @media screen and (max-width: 1200px) {
-          left: -140px;
+          left: -150px;
         }
       }
 
       &.slick-next {
-        left: -128px;
+        left: -138px;
         right: auto;
 
         @media screen and (max-width: 1200px) {
@@ -503,7 +503,7 @@
 
               .foreground {
                 fill: transparent;
-                stroke-width: 3 !important;
+                stroke-width: 2 !important;
                 stroke: $primary-color !important;
                 stroke-dasharray: 1;
                 stroke-dashoffset: 1;
@@ -542,7 +542,8 @@
                 font-size: 12px;
                 color: $primary-color;
                 text-transform: uppercase;
-                letter-spacing: 0.3em;
+                letter-spacing: 0.49vw;
+                font-weight: 500;
                 overflow: hidden;
                 max-height: 30px;
                 transition: max-height 0.5s linear;
@@ -643,7 +644,7 @@
           }
           .learn-more {
             width: calc(100% - 30px);
-            min-height: 55px;
+            min-height: 67px;
             position: absolute;
             bottom: 20px;
             display: flex;
@@ -672,6 +673,8 @@
               transition: max-width 1s linear;
             }
             .content {
+              font-size: 16px;
+              font-weight: 500;
               position: absolute;
               margin: 0px 30px;
               text-transform: uppercase;
@@ -798,7 +801,7 @@
               opacity: 1;
             }
             .learn-more {
-              border: 1px solid #BE1E73;
+              // border: 1px solid #BE1E73;
               .left-rect {
                 max-width: 100%;
                 visibility: visible;

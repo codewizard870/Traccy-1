@@ -22,7 +22,9 @@ function NextArrow(props) {
          className={className}
          onClick={onClick}
       >
-         <SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' />
+         <svg width="7" height="9" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.55542 1.52734L4.75181 4.72374L1.73367 7.74188" stroke="white" stroke-width="2" stroke-linecap="round" />
+         </svg>
       </div>
    );
 }
@@ -34,7 +36,9 @@ function PrevArrow(props) {
          className={className}
          onClick={onClick}
       >
-         <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+         <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.71191 8.07715L1.51552 4.88075L4.53366 1.86261" stroke="white" stroke-width="2" stroke-linecap="round" />
+         </svg>
       </div>
    );
 }
@@ -127,7 +131,7 @@ const Home = () => {
                         <div className='slide-icon'>
                            <svg viewBox="0 0 100 100" className='circle'>
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
-                              <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
+                              <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
                            <Lottie
                               options={trcytokenanimationLottie}
@@ -286,7 +290,7 @@ export const LearnMore = () => {
          <svg className="redfill" width="100%" >
             <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
          </svg>
-         {/* <div className="left-rect">
+         <div className="left-rect">
             <svg height="100%" viewBox="0 0 150 50">
                <path transform="scale(-1, 1)" transform-origin="center" stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
             </svg>
@@ -295,15 +299,15 @@ export const LearnMore = () => {
             <svg height="100%" viewBox="0 0 150 50">
                <path stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
             </svg>
-         </div> */}
+         </div>
 
          <div className="arrow">
-            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <circle cx="1.5" cy="7.5" r="1.5" fill="#FFFBFB" />
-               <path d="M18.2851 7.60132L5.43483 14.3036L5.31311 1.13775L18.2851 7.60132Z" fill="white" />
-               <path d="M11.2837 7.46846L5.33433 9.43879L5.31395 5.56078L11.2837 7.46846Z" fill="#541349" />
-               <line x1="10" y1="7.5" x2="15" y2="7.5" stroke="black" />
+            <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M12.9819 5.99099L1.49951 0L3.71187 4.94669L12.9819 5.99099Z" fill="white" />
+               <path d="M13.0003 6.00879L1.7373 11.9998L3.80339 6.99813L13.0003 6.00879Z" fill="white" />
+               <path d="M0.987319 7.20036C1.53261 7.20036 1.97466 6.75741 1.97466 6.21102C1.97466 5.66462 1.53261 5.22168 0.987319 5.22168C0.442028 5.22168 0 5.66462 0 6.21102C0 6.75741 0.442028 7.20036 0.987319 7.20036Z" fill="white" />
             </svg>
+
          </div>
          <div className="content">learn more</div>
       </div>
