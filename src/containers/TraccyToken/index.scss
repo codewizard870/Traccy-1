@@ -158,10 +158,12 @@
                         width: 60px;
                         height: 100%;
                         margin-left: 20px;
-                        padding: 15px;
                         position: relative;
                         z-index: 1;
-
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
                         @media screen and (max-width:640px) {
                             padding: 10px;
                         }

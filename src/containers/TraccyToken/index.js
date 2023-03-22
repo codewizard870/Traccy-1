@@ -104,12 +104,13 @@ const TraccyToken = () => {
                             <div className='learn-more-row'>
                                 <Button onClick={() => history.push("/invest")}>
                                     Purchase TRCY token
-                                    <svg className="icon" width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="1.5" cy="7.5" r="1.5" fill="#FFFBFB" />
-                                        <path d="M18.2851 7.60132L5.43483 14.3036L5.31311 1.13775L18.2851 7.60132Z" fill="white" />
-                                        <path d="M11.2837 7.46846L5.33433 9.43879L5.31395 5.56078L11.2837 7.46846Z" fill="#541349" />
-                                        <line x1="10" y1="7.5" x2="15" y2="7.5" stroke="black" />
-                                    </svg>
+                                    <div className="icon">
+                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12.9819 5.99099L1.49951 0L3.71187 4.94669L12.9819 5.99099Z" fill="white" />
+                                            <path d="M13.0003 6.00879L1.7373 11.9998L3.80339 6.99813L13.0003 6.00879Z" fill="white" />
+                                            <path d="M0.987319 7.20036C1.53261 7.20036 1.97466 6.75741 1.97466 6.21102C1.97466 5.66462 1.53261 5.22168 0.987319 5.22168C0.442028 5.22168 0 5.66462 0 6.21102C0 6.75741 0.442028 7.20036 0.987319 7.20036Z" fill="white" />
+                                        </svg>
+                                    </div>
                                 </Button>
                                 <div className='white-paper'>
                                     <div>
