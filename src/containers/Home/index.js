@@ -296,9 +296,11 @@ export const LearnMore = () => {
             </svg>
          </div>
          <div className="right-rect">
-            <svg height="100%" viewBox="0 0 150 50">
-               <path stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
-            </svg>
+            <div style={{width: "201px"}}>
+               <svg height="100%" viewBox="0 0 150 50">
+                  <path stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
+               </svg>
+            </div>
          </div>
 
          <div className="arrow">
