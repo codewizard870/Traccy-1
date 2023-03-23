@@ -21,7 +21,6 @@ module.exports = {
         http: false,
         https: false
     }
-    console.log(config)
     return config;
   },
 }
