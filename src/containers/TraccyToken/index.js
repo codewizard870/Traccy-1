@@ -81,11 +81,9 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>We integrate Real economy Into the <span>Digital one</span> </h1>
+                            <h1>THE ECOSYSTEM THAT OPTIMALLY COMBINES DIGITAL AND REAL ASSETS</h1>
                             <p>
-                                Buy NFTS, access Defi dApps, and explore Web3 across multiple
-                                networks on Chrome and BravBuy NFTS, access Defi dApps,
-                                and explore Web3 across multiple networks on Chrome and Brave e
+                                Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform
                             </p>
                             <ul>
                                 <li>
@@ -103,7 +101,7 @@ const TraccyToken = () => {
                             </ul>
                             <div className='learn-more-row'>
                                 <Button onClick={() => history.push("/invest")}>
-                                    Purchase TRCY token
+                                    WHITEPAPER
                                     <div className="icon">
                                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M12.9819 5.99099L1.49951 0L3.71187 4.94669L12.9819 5.99099Z" fill="white" />
@@ -114,7 +112,7 @@ const TraccyToken = () => {
                                 </Button>
                                 <div className='white-paper'>
                                     <div>
-                                        <h4>White paper </h4>
+                                        {/* <h4>White paper </h4> */}
                                         {percent > 0 && <p>Download {percent}%</p>}
                                     </div>
                                     <div className="download" onClick={onDownload}>
@@ -221,9 +219,7 @@ const TraccyToken = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'>Why <span>Traccy</span> ?  </h1>
-                            <p className='main-heading-text'>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and
-                                BravBuy NFTS, access Defi dApps, and explore Web3 across multiple networks
-                                on Chrome and Brave e </p>
+                            <p className='main-heading-text'>Traccy business model is supported by the following 4 pillars</p>
                         </Col>
                     </Row>
                     <Row>
@@ -232,9 +228,9 @@ const TraccyToken = () => {
                                 <div className='icon-circle'>
                                     <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
                                 </div>
-                                <h4>Community Access </h4>
+                                <h4>TRCY LAB</h4>
                                 <p>
-                                    Buy NFTS, access Defi dApps, and explore Web3 across
+                                    This is where impact is created, our projects are developed and third-party projects are reviewed
                                 </p>
                             </div>
                         </Col>
@@ -243,9 +239,9 @@ const TraccyToken = () => {
                                 <div className='icon-circle'>
                                     <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                 </div>
-                                <h4>Staking rewards</h4>
+                                <h4>TRCommunitY</h4>
                                 <p>
-                                    Buy NFTS, access Defi dApps, and explore Web3 across
+                                    The community of impact investors invest globally in proven high-demand business models using the blockchain technology
                                 </p>
                             </div>
                         </Col>
@@ -254,9 +250,9 @@ const TraccyToken = () => {
                                 <div className='icon-circle'>
                                     <SvgIcon name='voting-power-icon' viewbox='0 0 50.148 59.189' />
                                 </div>
-                                <h4>Voting Power</h4>
+                                <h4>TRCY TOKEN</h4>
                                 <p>
-                                    Buy NFTS, access Defi dApps, and explore Web3 across
+                                    The utility token allows the unrestricted use of the Traccy platform
                                 </p>
                             </div>
                         </Col>
@@ -265,9 +261,9 @@ const TraccyToken = () => {
                                 <div className='icon-circle'>
                                     <SvgIcon name='platform-icon' viewbox='0 0 62.216 54.826' />
                                 </div>
-                                <h4>Platform</h4>
+                                <h4>TRCY CONNECT</h4>
                                 <p>
-                                    Buy NFTS, access Defi dApps, and explore Web3 across
+                                    Our platform offers coaching, remittance services, project participations and much more
                                 </p>
                             </div>
                         </Col>
@@ -357,9 +353,11 @@ const TraccyToken = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span> Platform  </span> </h1>
-                            <p className='main-heading-text'>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and
-                                BravBuy NFTS, access Defi dApps, and explore Web3 across multiple networks
-                                on Chrome and Brave e </p>
+                            <p className='main-heading-text'>After registration, imeediate access to services such as
+                                Peer to Peer Payments, 
+                                Remittance Services, 
+                                Customisable credit cards 
+                                Only possible with TRCY token</p>
                         </Col>
                     </Row>
                     <Row>
@@ -367,7 +365,7 @@ const TraccyToken = () => {
                             <div className='platform-img'>
                                 <img src={PlatformImg} alt='Platform' />
                             </div>
-                            <p className='bottom-text'>A few reasons why <span>Be Pay</span> <br /> Might the right fit</p>
+                            <p className='bottom-text'>This is why <span>Traccy</span> is <br />the right fit</p>
                         </Col>
                     </Row>
                 </Container>

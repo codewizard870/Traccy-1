@@ -27,9 +27,9 @@ const ImpactThroughTraccy = () => {
         customPaging: i => (
             <div className='thumb-col-main'
             >
-                {i === 0 && <div className='thumb-col'><span>01</span> Summer revival</div>}
-                {i === 1 && <div className='thumb-col'><span>02</span> Winer edition</div>}
-                {i === 2 && <div className='thumb-col'><span>03</span> Winer edition</div>}
+                {i === 0 && <div className='thumb-col'><span>Phase 1</span>Planting</div>}
+                {i === 1 && <div className='thumb-col'><span>Phase 2</span>Plant Protection & Maintenance</div>}
+                {i === 2 && <div className='thumb-col'><span>Phase 3</span>Harvest</div>}
             </div>
         )
     };
@@ -55,7 +55,7 @@ const ImpactThroughTraccy = () => {
                                     <p>
                                         Yosemite national park -- 4 day trip
                                     </p>
-                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Get now <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Read More<SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
                                 </Col>
                                 <Col sm='12' className='arrow-action'>
                                     <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
@@ -76,7 +76,7 @@ const ImpactThroughTraccy = () => {
                                     <p>
                                         Yosemite national park -- 4 day trip
                                     </p>
-                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Get now <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Read More<SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
                                 </Col>
                                 <Col sm='12' className='arrow-action'>
                                     <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
@@ -97,7 +97,7 @@ const ImpactThroughTraccy = () => {
                                     <p>
                                         Yosemite national park -- 4 day trip
                                     </p>
-                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Get now <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Read More<SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
                                 </Col>
                                 <Col sm='12' className='arrow-action'>
                                     <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>

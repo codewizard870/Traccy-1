@@ -146,13 +146,13 @@ const Home = () => {
                               <h3>TRCY Token</h3>
                            </div>
                            <p>
-                              Better then Ou tum Completely Merging of Computer Science
+                              Buy our TRCY Token and profit from unlimited access to our upcoming products and exclusive services
                            </p>
 
                            <ul>
-                              <li>Orchid wer nehmen Personen of meine</li>
-                              <li>Perdurent montes, necetur ridodus</li>
-                              <li>Viennes sentis motesir</li>
+                              <li>Community Access</li>
+                              <li>Voting Power</li>
+                              <li>Platform and much more</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -186,12 +186,12 @@ const Home = () => {
                               <h3>Traccy Impact</h3>
                            </div>
                            <p>
-                              Better then Ou tum Completely Merging of Computer Science
+                              Believe in a bright future - invest in impact, achieve change
                            </p>
                            <ul>
-                              <li>Orchid wer nehmen Personen of meine</li>
-                              <li>Perdurent montes, necetur ridodus</li>
-                              <li>Viennes sentis motesir</li>
+                              <li>We launch 3 new projects a year</li>
+                              <li>Access to projects through our platform</li>
+                              <li>3 ongoing projects</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -225,12 +225,12 @@ const Home = () => {
                               <h3>About Us</h3>
                            </div>
                            <p>
-                              Better then Ou tum Completely Merging of Computer Science
+                              Through blockchain technology we solve socio-economic problems of existential importance worldwide
                            </p>
                            <ul>
-                              <li>Orchid wer nehmen Personen of meine</li>
-                              <li>Perdurent montes, necetur ridodus</li>
-                              <li>Viennes sentis motesir</li>
+                              <li>Sustainable impact and financial equality</li>
+                              <li>Decentralization and transparency thanks to blockchain</li>
+                              <li>Our team of experts</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -264,12 +264,12 @@ const Home = () => {
                               <h3>Become a part </h3>
                            </div>
                            <p>
-                              Better then Ou tum Completely Merging of Computer Science
+                              Your contribution brings change. Become a part of the TRComunitY.
                            </p>
                            <ul>
-                              <li>Orchid wer nehmen Personen of meine</li>
-                              <li>Perdurent montes, necetur ridodus</li>
-                              <li>Viennes sentis motesir</li>
+                              <li>Realize your preferred impact investing projects with us</li>
+                              <li>With our community you create social equality</li>
+                              <li>You profit from our knowledge, experience network and participation in exciting projects</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -296,7 +296,7 @@ export const LearnMore = () => {
             </svg>
          </div>
          <div className="right-rect">
-            <div style={{width: "201px"}}>
+            <div style={{ width: "201px" }}>
                <svg height="100%" viewBox="0 0 150 50">
                   <path stroke="#BE1E73" fill="transparent" stroke-width="3" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" d="M0 0 h150 v50 h-150"></path>
                </svg>
@@ -309,7 +309,6 @@ export const LearnMore = () => {
                <path d="M13.0003 6.00879L1.7373 11.9998L3.80339 6.99813L13.0003 6.00879Z" fill="white" />
                <path d="M0.987319 7.20036C1.53261 7.20036 1.97466 6.75741 1.97466 6.21102C1.97466 5.66462 1.53261 5.22168 0.987319 5.22168C0.442028 5.22168 0 5.66462 0 6.21102C0 6.75741 0.442028 7.20036 0.987319 7.20036Z" fill="white" />
             </svg>
-
          </div>
          <div className="content">learn more</div>
       </div>

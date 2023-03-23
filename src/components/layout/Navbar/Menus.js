@@ -35,7 +35,7 @@ const Menus = () => {
         <Button className="menu-close" onClick={onClose}><SvgIcon name="close" viewbox="0 0 10.357 10.357" /></Button>
         <ul>
           <li>
-            <a href="http://techadopts.com/traccy/indexx.html">
+            <a href="https://traccy-1.vercel.app/">
               <div className='menu-icon'>
                 <SvgIcon name='home-icon' viewbox='0 0 18 20' />
               </div>
@@ -94,7 +94,7 @@ const Menus = () => {
       </Drawer>
       <ul className="web-menu">
         <li>
-          <a href="http://techadopts.com/traccy/indexx.html">Home</a>
+          <a href="https://traccy-1.vercel.app/">Home</a>
         </li>
         <li>
           <NavLink to='/traccy-token'>TRCY TOKEN</NavLink>
