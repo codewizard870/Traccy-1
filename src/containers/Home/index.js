@@ -48,7 +48,7 @@ const Home = () => {
    const settings = {
       infinite: false,
       dots: false,
-      slidesToShow: 3.99,
+      slidesToShow: 4,
       slidesToScroll: 1,
       speed: 500,
       arrows: true,
@@ -262,6 +262,46 @@ const Home = () => {
                            <h2>Become a part </h2>
                            <div className="desc-content">
                               <h3>Become a part </h3>
+                           </div>
+                           <p>
+                              Your contribution brings change. Become a part of the TRComunitY.
+                           </p>
+                           <ul>
+                              <li>Realize your preferred impact investing projects with us</li>
+                              <li>With our community you create social equality</li>
+                              <li>You profit from our knowledge, experience network and participation in exciting projects</li>
+                           </ul>
+                        </div>
+                        <LearnMore />
+                     </div>
+                  </div>
+                  <div>
+                     <div className='home2-slide-card'>
+                        <div className="home2-slide-overlay" />
+                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
+                           <source src={hoverVideo} />
+                        </video>
+                        <div className='slide-number'>
+                           <h4>05</h4>
+                           <Divider />
+                        </div>
+                        <div className='slide-icon'>
+                           <svg viewBox="0 0 100 100" className='circle'>
+                              <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
+                              <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
+                           </svg>
+                           {/* <Lottie
+                              options={becomeanimationLottie}
+                              height={66}
+                              width={66}
+                              className='animation-icon'
+                           /> */}
+                           <img src="/main-menu/token.png" className="animation-icon" alt="animation" />
+                        </div>
+                        <div className='desc-text'>
+                           <h2>Buy Token</h2>
+                           <div className="desc-content">
+                              <h3>PURCHASE TRCY </h3>
                            </div>
                            <p>
                               Your contribution brings change. Become a part of the TRComunitY.
