@@ -340,7 +340,7 @@
     .backarrow {
       position: absolute;
       left: 20px;
-      top: 53px;
+      top: 31px;
       color: $white;
       font-size: 15px;
       display: flex;
@@ -437,7 +437,7 @@
         .home2-slide-card {
           min-height: 85vh;
           max-height: 85vh;
-          padding: 53px 15px 40px 15px;
+          padding: 31px 15px 40px 15px;
           display: flex;
           flex-direction: column;
           position: relative;
@@ -472,6 +472,8 @@
             z-index: 1;
             letter-spacing: 4px;
             & > h4 {
+              font-size: 12px;
+              font-weight: 800;
               margin-bottom: 0px;
             }
             .ant-divider {
@@ -552,7 +554,7 @@
                 font-size: 12px;
                 color: $primary-color;
                 text-transform: uppercase;
-                letter-spacing: 0.49vw;
+                letter-spacing: 0.4em;
                 font-weight: 500;
                 overflow: hidden;
                 max-height: 30px;

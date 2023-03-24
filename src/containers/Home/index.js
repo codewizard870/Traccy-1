@@ -110,14 +110,12 @@ const Home = () => {
       animationData: AnimationFour,
       renderer: 'svg'
    }
-   const beforeChange = (prev, next) => {
-      if (prev === 0 && next === 0.5)
-         slider.slickGoTo(0)
-      if (prev === 1.5 && next === 0.8)
-         slider.slickGoTo(1.5)
+   const beforeChange = () => {
+
    }
    const slickGoTo = (slick) => {
-      slider.slickGoTo(slick)
+      if (slider.state.breakpoint == null || slider.state.breakpoint >= 1255)
+         slider.slickGoTo(slick)
    }
    return (
       <>
@@ -172,7 +170,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div onMouseMove={() => slickGoTo(0.5)} >
+                  <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-300deg)" }}>
@@ -250,7 +248,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(0.8)}>
+                  <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
@@ -270,6 +268,7 @@ const Home = () => {
                               height={66}
                               width={66}
                               className='animation-icon'
+                              style={{marginBottom: "10px"}}
                            />
                         </div>
                         <div className='desc-text'>
@@ -289,7 +288,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(1.5)}>
+                  <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
