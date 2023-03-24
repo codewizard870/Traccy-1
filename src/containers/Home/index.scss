@@ -393,10 +393,16 @@
         @media screen and (max-width: 1200px) {
           left: -150px;
         }
+        &.slick-disabled {
+          left: -170px;
+          @media screen and (max-width: 1200px) {
+            left: -130px;
+          }
+        }
       }
 
       &.slick-next {
-        left: -138px;
+        left: -120px;
         right: auto;
 
         @media screen and (max-width: 1200px) {

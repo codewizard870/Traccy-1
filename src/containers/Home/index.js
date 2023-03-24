@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SvgIcon } from '../../components/common';
 import { Button, Divider } from 'antd';
 import { useHistory } from 'react-router-dom';
@@ -45,10 +45,11 @@ function PrevArrow(props) {
 
 const Home = () => {
    const history = useHistory();
+   const [slider, setSlider] = useState();
    const settings = {
       infinite: false,
       dots: false,
-      slidesToShow: 4,
+      slidesToShow: 3.5,
       slidesToScroll: 1,
       speed: 500,
       arrows: true,
@@ -109,6 +110,15 @@ const Home = () => {
       animationData: AnimationFour,
       renderer: 'svg'
    }
+   const beforeChange = (prev, next) => {
+      if (prev === 0 && next === 0.5)
+         slider.slickGoTo(0)
+      if (prev === 1.5 && next === 0.8)
+         slider.slickGoTo(1.5)
+   }
+   const slickGoTo = (slick) => {
+      slider.slickGoTo(slick)
+   }
    return (
       <>
          <div className='home2-wrapper'>
@@ -117,8 +127,12 @@ const Home = () => {
                   <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
                   Back
                </Link>
-               <Slider {...settings}>
-                  <div>
+               <Slider
+                  ref={e => setSlider(e)}
+                  beforeChange={beforeChange}
+                  {...settings}
+               >
+                  <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-90deg)" }}>
@@ -158,7 +172,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div>
+                  <div onMouseMove={() => slickGoTo(0.5)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-300deg)" }}>
@@ -236,7 +250,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div>
+                  <div onMouseOver={() => slickGoTo(0.8)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
@@ -275,7 +289,7 @@ const Home = () => {
                         <LearnMore />
                      </div>
                   </div>
-                  <div>
+                  <div onMouseOver={() => slickGoTo(1.5)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
