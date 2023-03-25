@@ -5,6 +5,11 @@
   min-width: 20%;
   height: 100%;
   align-items: center;
+  position: relative;
+  
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 
   .connect-wallet {
     width: 100%;
@@ -28,7 +33,12 @@
       }
     }
   }
-
+  .logo{
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+    padding: 0px 16px;
+  }
   .function-title {
     display: flex;
     align-items: center;

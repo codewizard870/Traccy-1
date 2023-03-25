@@ -64,9 +64,9 @@ const Library = () => {
             </div>
          </div>
          <div className='right-section'>
-            <div className='header-bar'>
+            {/* <div className='header-bar'>
                <Navbar />
-            </div>
+            </div> */}
             <div className='rightbar-inner'>
                <div className='dtl-section'>
                   <div className="content-panel">
