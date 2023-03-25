@@ -1,10 +1,33 @@
 .information-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1rem 44px;
   min-width: 20%;
   height: 100%;
   align-items: center;
+
+  .connect-wallet {
+    width: 100%;
+  }
+  .web-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    margin-top: 25px;
+    position: relative;
+    font-size: 14px;
+
+    .title {
+      color: white;
+    }
+    a {
+      color: #B8B6B6;
+      &:hover{
+        color: white;
+      }
+    }
+  }
 
   .function-title {
     display: flex;

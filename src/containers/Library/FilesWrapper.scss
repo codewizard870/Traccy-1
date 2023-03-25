@@ -5,7 +5,7 @@
   row-gap: 60px;
 
   align-items: center;
-  margin-top: 80px;
+  margin-top: 50px;
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow-y: auto;
@@ -41,6 +41,7 @@
       font-weight: 400;
       margin-top: 10px;
       text-align: center;
+      padding: 0px 10px;
     }
     .splitter{
       margin-top: 11px;
