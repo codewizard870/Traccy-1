@@ -69,6 +69,10 @@ const Menus = [
     link: "/become-part",
   },
   {
+    label: "Library",
+    linke: "/library"
+  },
+  {
     label: "Buy Token",
     link: "/invest",
   },
