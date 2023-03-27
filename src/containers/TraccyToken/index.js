@@ -83,7 +83,7 @@ const TraccyToken = () => {
                         <Col lg='6' className="banner-left">
                             <h1>THE ECOSYSTEM THAT OPTIMALLY COMBINES DIGITAL AND REAL ASSETS</h1>
                             <p>
-                                Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform
+                            Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform.
                             </p>
                             <ul>
                                 <li>
@@ -226,7 +226,7 @@ const TraccyToken = () => {
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
+                                    <SvgIcon name='lab' viewbox='0 0 76.732 48.846' />
                                 </div>
                                 <h4>TRCY LAB</h4>
                                 <p>
@@ -237,7 +237,7 @@ const TraccyToken = () => {
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
+                                    <SvgIcon name='community' viewbox='0 0 63.185 49.33' />
                                 </div>
                                 <h4>TRCommunitY</h4>
                                 <p>
@@ -248,7 +248,7 @@ const TraccyToken = () => {
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    <SvgIcon name='voting-power-icon' viewbox='0 0 50.148 59.189' />
+                                    <SvgIcon name='token' viewbox='0 0 50.148 59.189' />
                                 </div>
                                 <h4>TRCY TOKEN</h4>
                                 <p>
@@ -259,7 +259,7 @@ const TraccyToken = () => {
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    <SvgIcon name='platform-icon' viewbox='0 0 62.216 54.826' />
+                                    <SvgIcon name='connect' viewbox='0 0 62.216 54.826' />
                                 </div>
                                 <h4>TRCY CONNECT</h4>
                                 <p>
