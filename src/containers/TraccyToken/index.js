@@ -290,8 +290,8 @@ const TraccyToken = () => {
                                                     <div className='icon-circle'>
                                                         <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
                                                     </div>
-                                                    <h3>Community Access</h3>
-                                                    <p>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks</p>
+                                                    <h3>Direcrt Participation</h3>
+                                                    <p>Get actively involved, influence project goals, decisions and outcomes of impact projects.</p>
                                                 </div>
                                             </div>
                                         </Col>
