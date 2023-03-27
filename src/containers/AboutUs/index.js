@@ -142,9 +142,9 @@ const AboutUs = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>Inspiration <span>about us</span> </h1>
+                            <h1> <span>About us</span> </h1>
                             <p>
-                                Buy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and BravBuy NFTS, access Defi dApps, and explore Web3 across multiple networks on Chrome and Brave e
+                            We are committed to the key business principles of: Safety, Transparency and Sustainable Growth.
                             </p>
                         </Col>
                     </Row>
@@ -173,8 +173,8 @@ const AboutUs = () => {
                         <Col>
                             <div className='header-row'>
                                 <img src={TraccyIcon} alt="Traccy" />
-                                <h4>Traccy connects the world</h4>
-                                <p>Secure, Manage, and Exchange cryptocurrency on desktop, mobile and hardware wallets.</p>
+                                <h4>Traccy using Blockchain Impactful</h4>
+                                <p>Cryptocurrencies are changing the world for the better and Traccy is about to become a major player in this revolution. </p>
                             </div>
                         </Col>
                     </Row>
@@ -182,19 +182,14 @@ const AboutUs = () => {
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Vision </span></h2>
                             <p className='vission-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3
-                                across multiple networks on Chrome and BravBuy NFTS,
-                                access Defi dApps, and explore Web3
-                                across multiple networks on Chrome and Brave e
+                            Sustainable impact and financial equality
+Our vision is to help everyone achieve financial stability and security regardless of their background or social class.
                             </p>
                         </Col>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Mission </span></h2>
                             <p className='vission-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3
-                                across multiple networks on Chrome and BravBuy NFTS,
-                                access Defi dApps, and explore Web3
-                                across multiple networks on Chrome and Brave e
+                            Decentralization and transparency thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply, and many more via blockchain technology. We create a bridge between the digital and the real world to make a big contribution to achieving the UN SDGs. 
                             </p>
                         </Col>
                     </Row>
@@ -242,28 +237,29 @@ const AboutUs = () => {
                             <h4>FOUNDED IN</h4>
                             <h1>2022</h1>
                             <p>
-                                By JP Richardson and Daniel Castagnoli
+           
+By Joas Fischer, Dedry Misamu and Mick Misamu
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
                             <h4>PRODUCT UPDATES</h4>
-                            <h1>200+</h1>
+                            <h1>6+</h1>
                             <p>
-                                By JP Richardson and Daniel Castagnoli
+                            New products and services across platform and mobile
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
                             <h4>NEW RELEASE EVERY</h4>
-                            <h1>2 Weeks</h1>
+                            <h1>4 Months</h1>
                             <p>
-                                By JP Richardson and Daniel Castagnoli
+                            We launch 3 new projects a year
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
-                            <h4>DIGITAL ASSETS</h4>
-                            <h1>240+</h1>
+                            <h4>PROJECTS</h4>
+                            <h1>3+</h1>
                             <p>
-                                By JP Richardson and Daniel Castagnoli
+                            Supported projects through our platform 
                             </p>
                         </Col>
                     </Row>
@@ -276,10 +272,7 @@ const AboutUs = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span>Roadmap</span></h1>
-                            <p className='main-heading-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave
-                            </p>
+                            
                         </Col>
                     </Row>
                     <Row>
@@ -336,10 +329,10 @@ const AboutUs = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className='main-heading text-center'>Core <span>Team</span></h1>
+                            <h1 className='main-heading text-center'>Managament-<span>Team</span></h1>
                             <p className='main-heading-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave
+                            Our team consists of experts in the fields of IT, cybersecurity and crypto-economics, as well as talent from banking and corporate communications. We strive every day to be at the forefront of innovation in the industry.
+                                
                             </p>
                         </Col>
                     </Row>
@@ -352,6 +345,78 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Joas Fischer </h3>
                                                 <div className='designation'><Divider /> CEO & Co-Founder</div>
+                                                <p>Joas is a crypto investor and experienced entrepreneur from the financial sector. He is responsible for bringing together key partners within Traccy. His expertise, leadership, network and positive mindset help the company to establish itself as a major player in the market.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Mick Misamu </h3>
+                                                <div className='designation'><Divider /> CTO</div>
+                                                <p>Mick is a crypto investor with over 7 years of experience in the IT industry in systems and network technology. Mick has experience in blockchain technology, IT and cyber security.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Farrah Mettler </h3>
+                                                <div className='designation'><Divider /> CMO</div>
+                                                <p>Farrah is a marketing and communications expert with over 5 years of experience in strategic marketing, corporate communications, and product management. She specializes in international business relations, especially in the Asian market.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Dedry Misamu </h3>
+                                                <div className='designation'><Divider /> CFO</div>
+                                                <p>Dedryis a crypto investor and former banker with over 10 years of trading experience. Dedryis responsible for finance and business development with strategic partners in the developing world. He has a large network in both Asia and Africa, which he makes available to the company.</p>
+                                                <div className='social-icons'>
+                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                </div>
+                                            </div>
+                                            <div className='slider-right'>
+                                                <img src={Team1} alt='Joas Fischer' />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='slider-card'>
+                                            <div className='slider-left'>
+                                                <h3>Andrea Bello </h3>
+                                                <div className='designation'><Divider /> COO</div>
                                                 <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
@@ -368,80 +433,8 @@ const AboutUs = () => {
                                     <div>
                                         <div className='slider-card'>
                                             <div className='slider-left'>
-                                                <h3>Joas Fischer </h3>
-                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
-                                                <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
-                                                </div>
-                                            </div>
-                                            <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='slider-card'>
-                                            <div className='slider-left'>
-                                                <h3>Joas Fischer </h3>
-                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
-                                                <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
-                                                </div>
-                                            </div>
-                                            <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='slider-card'>
-                                            <div className='slider-left'>
-                                                <h3>Joas Fischer </h3>
-                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
-                                                <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
-                                                </div>
-                                            </div>
-                                            <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='slider-card'>
-                                            <div className='slider-left'>
-                                                <h3>Joas Fischer </h3>
-                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
-                                                <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
-                                                </div>
-                                            </div>
-                                            <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='slider-card'>
-                                            <div className='slider-left'>
-                                                <h3>Joas Fischer </h3>
-                                                <div className='designation'><Divider /> CEO & Co-Founder</div>
+                                                <h3>Ika Nur Affifah </h3>
+                                                <div className='designation'><Divider /> </div>
                                                 <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
@@ -499,8 +492,7 @@ const AboutUs = () => {
                         <Col>
                             <h1 className='main-heading text-center'><span>Partner</span></h1>
                             <p className='main-heading-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave
+                            In valued collaboration with
                             </p>
                         </Col>
                     </Row>
