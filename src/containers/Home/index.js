@@ -4,16 +4,11 @@ import { Button, Divider } from 'antd';
 import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
-import Lottie from 'react-lottie';
 import "../../assets/scss/plugins/slick-slider/slick.min.scss";
 import "../../assets/scss/plugins/slick-slider/slick-theme.min.scss"
 import './index.scss';
 
 import hoverVideo from '../../assets/images/hover-video.webm';
-import AnimationOne from '../../assets/animation/traccy-token-icon.json';
-import AnimationTwo from '../../assets/animation/impact-icon.json';
-import AnimationThree from '../../assets/animation/about-icon.json';
-import AnimationFour from '../../assets/animation/becomepart-icon.json';
 
 function NextArrow(props) {
    const { className, onClick } = props;
@@ -86,30 +81,7 @@ const Home = () => {
          },
       ]
    };
-   const trcytokenanimationLottie = {
-      loop: true,
-      autoplay: true,
-      animationData: AnimationOne,
-      renderer: 'svg'
-   }
-   const impactanimationLottie = {
-      loop: true,
-      autoplay: true,
-      animationData: AnimationTwo,
-      renderer: 'svg'
-   }
-   const aboutanimationLottie = {
-      loop: true,
-      autoplay: true,
-      animationData: AnimationThree,
-      renderer: 'svg'
-   }
-   const becomeanimationLottie = {
-      loop: true,
-      autoplay: true,
-      animationData: AnimationFour,
-      renderer: 'svg'
-   }
+
    const beforeChange = () => {
 
    }
