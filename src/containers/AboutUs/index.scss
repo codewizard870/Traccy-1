@@ -346,6 +346,8 @@
         }
         .roadmap-wrapper{
             margin-top: 7rem;
+            position: relative;
+
             .circle-icon-upper{
                 position: absolute;
                 top: 47%;
@@ -372,6 +374,15 @@
                 left: -8%;
                 @media screen and (max-width:576px) {
                     top: 37%;
+                }
+                .roadmap-point{
+                    cursor: pointer;
+                    .point-outline{
+                        stroke: #FEFCFC;
+                        &:hover{
+                            stroke-opacity: 1;
+                        }
+                    }
                 }
             }
             .slick-slider{
