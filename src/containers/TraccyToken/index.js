@@ -219,7 +219,7 @@ const TraccyToken = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'>Why <span>Traccy</span> ?  </h1>
-                            <p className='main-heading-text'>Traccy business model is supported by the following 4 pillars</p>
+                            <p className='main-heading-text'>Our business model is supported by the following 4 pillars</p>
                         </Col>
                     </Row>
                     <Row>
@@ -263,7 +263,7 @@ const TraccyToken = () => {
                                 </div>
                                 <h4>TRCY CONNECT</h4>
                                 <p>
-                                    Our platform offers coaching, remittance services, project participations and much more
+                                    Our platform will offers coaching, remittance services, project participations and much more
                                 </p>
                             </div>
                         </Col>
@@ -310,7 +310,7 @@ const TraccyToken = () => {
                                                     <div className='icon-circle'>
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
-                                                    <h3>Staking Rewards</h3>
+                                                    <h3>Traccy Impact</h3>
                                                     <p>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks</p>
                                                 </div>
                                             </div>
@@ -353,11 +353,7 @@ const TraccyToken = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span> Platform  </span> </h1>
-                            <p className='main-heading-text'>After registration, imeediate access to services such as
-                                Peer to Peer Payments, 
-                                Remittance Services, 
-                                Customisable credit cards 
-                                Only possible with TRCY token</p>
+                            <p className='main-heading-text'>After registration you will get immediate access to all our services such as peer to peer payments, remittance services, project participation and much more.</p>
                         </Col>
                     </Row>
                     <Row>
@@ -365,7 +361,9 @@ const TraccyToken = () => {
                             <div className='platform-img'>
                                 <img src={PlatformImg} alt='Platform' />
                             </div>
-                            <p className='bottom-text'>This is why <span>Traccy</span> is <br />the right fit</p>
+                            <p className='bottom-text'>This is, why <span>Traccy</span> is <br />the right fit</p>
+
+                            
                         </Col>
                     </Row>
                 </Container>
