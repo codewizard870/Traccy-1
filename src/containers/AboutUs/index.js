@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../components/common';
 import { Divider, Button, Modal } from 'antd';
 import Slider from 'react-slick';
@@ -135,6 +135,35 @@ const AboutUs = () => {
             },
         ]
     };
+
+    const roadmapWrapperRef = useRef();
+    const hoverRoadmap = (e, index) => {
+        const descs = document.getElementsByClassName("roadmap-desc");
+        console.log(index)
+        for (let i = 0; i < descs.length; i++) {
+            if (i === index){
+                descs[i].style.visibility = "visible";
+                descs[i].style.maxHeight = "100%";
+            }
+            else{
+                descs[i].style.visibility = "hidden";
+                descs[i].style.maxHeight = "0px";
+            }
+        }
+    }
+    useEffect(() => {
+        const parentRect = roadmapWrapperRef.current.getBoundingClientRect();
+        const points = document.getElementsByClassName("roadmap-point");
+        const descs = document.getElementsByClassName("roadmap-desc");
+        for (let i = 0; i < points.length; i++) {
+            const childRect = points[i].getBoundingClientRect();
+            const left = childRect.left - parentRect.left - descs[i].clientWidth / 2;
+            const top = childRect.top - parentRect.top - descs[i].clientHeight / 2;
+            descs[i].style.left = `${left}px`;
+            descs[i].style.top = `${top}px`;
+        }
+    }, [])
+
     return (
         <div className='aboutus-wrapper'>
             <section className='banner-section'>
@@ -144,7 +173,7 @@ const AboutUs = () => {
                         <Col lg='6' className="banner-left">
                             <h1> <span>About us</span> </h1>
                             <p>
-                            We are committed to the key business principles of: Safety, Transparency and Sustainable Growth.
+                                We are committed to the key business principles of: Safety, Transparency and Sustainable Growth.
                             </p>
                         </Col>
                     </Row>
@@ -182,14 +211,14 @@ const AboutUs = () => {
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Vision </span></h2>
                             <p className='vission-text'>
-                            Sustainable impact and financial equality
-Our vision is to help everyone achieve financial stability and security regardless of their background or social class.
+                                Sustainable impact and financial equality
+                                Our vision is to help everyone achieve financial stability and security regardless of their background or social class.
                             </p>
                         </Col>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Mission </span></h2>
                             <p className='vission-text'>
-                            Decentralization and transparency thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply, and many more via blockchain technology. We create a bridge between the digital and the real world to make a big contribution to achieving the UN SDGs. 
+                                Decentralization and transparency thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply, and many more via blockchain technology. We create a bridge between the digital and the real world to make a big contribution to achieving the UN SDGs.
                             </p>
                         </Col>
                     </Row>
@@ -237,29 +266,29 @@ Our vision is to help everyone achieve financial stability and security regardle
                             <h4>FOUNDED IN</h4>
                             <h1>2022</h1>
                             <p>
-           
-By Joas Fischer, Dedry Misamu and Mick Misamu
+
+                                By Joas Fischer, Dedry Misamu and Mick Misamu
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
                             <h4>PRODUCT UPDATES</h4>
                             <h1>6+</h1>
                             <p>
-                            New products and services across platform and mobile
+                                New products and services across platform and mobile
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
                             <h4>NEW RELEASE EVERY</h4>
                             <h1>4 Months</h1>
                             <p>
-                            We launch 3 new projects a year
+                                We launch 3 new projects a year
                             </p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
                             <h4>PROJECTS</h4>
                             <h1>3+</h1>
                             <p>
-                            Supported projects through our platform 
+                                Supported projects through our platform
                             </p>
                         </Col>
                     </Row>
@@ -272,32 +301,44 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span>Roadmap</span></h1>
-                            
+
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                            <div className='roadmap-wrapper'>
+                            <div className='roadmap-wrapper' ref={roadmapWrapperRef} >
                                 <svg className="roadmap-path" viewBox="0 0 1826 345" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M424.5 101.575C283.785 259.81 125.167 192.908 41 123.575V159.075C125.167 228.409 294.941 294.283 432.5 133.296C628 -95.5 814 178 887.5 223C961 268 1123 381.575 1365.5 193.075C1559.5 42.2752 1723.67 162.409 1785.5 239.076V203.575C1723.67 126.909 1551.5 11.2752 1357.5 162.075C1115 350.575 957.31 231.611 887.5 181.075C821.5 133.297 619.5 -117.705 424.5 101.575Z" fill="url(#paint0_linear_763_63)" stroke="black" />
-                                    <ellipse cx="41" cy="141" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="41" cy="140" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="41" cy="140" r="8" fill="#FFFBFB" fill-opacity="0.2" />
-                                    <ellipse cx="241" cy="214" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="241" cy="213" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="241" cy="213" r="8" fill="#FFFBFB" fill-opacity="0.2" />
-                                    <ellipse cx="591" cy="26" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="591" cy="25" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="591" cy="25" r="8" fill="#FFFBFB" fill-opacity="0.2" />
-                                    <ellipse cx="1097" cy="284" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="1097" cy="283" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="1097" cy="283" r="8" fill="#FFFBFB" fill-opacity="0.2" />
-                                    <ellipse cx="1556" cy="106" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="1556" cy="105" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="1556" cy="105" r="8" fill="#FFFBFB" fill-opacity="0.2" />
-                                    <ellipse cx="1786" cy="205" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
-                                    <circle cx="1786" cy="204" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
-                                    <circle cx="1786" cy="204" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 0)}>
+                                        <ellipse cx="41" cy="141" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="41" cy="140" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="41" cy="140" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 1)}>
+                                        <ellipse cx="241" cy="214" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="241" cy="213" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="241" cy="213" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 2)}>
+                                        <ellipse cx="591" cy="26" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="591" cy="25" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="591" cy="25" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 3)}>
+                                        <ellipse cx="1097" cy="284" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="1097" cy="283" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="1097" cy="283" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 4)}>
+                                        <ellipse cx="1556" cy="106" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="1556" cy="105" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="1556" cy="105" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
+                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 5)}>
+                                        <ellipse cx="1786" cy="205" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
+                                        <circle className="point-outline" cx="1786" cy="204" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
+                                        <circle className="point-center" cx="1786" cy="204" r="8" fill="#FFFBFB" fill-opacity="0.2" />
+                                    </g>
                                     <path d="M552.319 81V78.336C552.703 77.904 553.215 77.32 553.855 76.584C554.863 75.464 555.607 74.616 556.087 74.04C557.159 72.76 557.831 71.888 558.103 71.424C558.375 70.944 558.511 70.416 558.511 69.84C558.511 69.36 558.335 68.96 557.983 68.64C557.631 68.32 557.183 68.16 556.639 68.16C555.695 68.16 554.655 68.544 553.519 69.312L552.199 67.392C553.799 66.128 555.471 65.496 557.215 65.496C558.607 65.496 559.719 65.872 560.551 66.624C561.367 67.36 561.775 68.376 561.775 69.672C561.775 70.632 561.455 71.64 560.815 72.696C560.191 73.736 558.967 75.288 557.143 77.352C556.695 77.864 556.367 78.24 556.159 78.48H561.607V81H552.319ZM569.259 65.52C571.115 65.52 572.603 66.408 573.723 68.184C574.667 69.656 575.139 71.408 575.139 73.44C575.139 75.888 574.539 77.848 573.339 79.32C572.283 80.632 570.923 81.288 569.259 81.288C567.355 81.288 565.867 80.44 564.795 78.744C563.899 77.336 563.451 75.568 563.451 73.44C563.451 71.072 564.043 69.128 565.227 67.608C566.299 66.216 567.643 65.52 569.259 65.52ZM569.307 68.208C567.579 68.208 566.715 69.904 566.715 73.296C566.715 75.008 566.963 76.352 567.459 77.328C567.907 78.208 568.499 78.648 569.235 78.648C570.051 78.648 570.691 78.176 571.155 77.232C571.635 76.272 571.875 74.96 571.875 73.296C571.875 69.904 571.019 68.208 569.307 68.208ZM577.023 81V78.336C577.407 77.904 577.919 77.32 578.559 76.584C579.567 75.464 580.311 74.616 580.791 74.04C581.863 72.76 582.535 71.888 582.807 71.424C583.079 70.944 583.215 70.416 583.215 69.84C583.215 69.36 583.039 68.96 582.687 68.64C582.335 68.32 581.887 68.16 581.343 68.16C580.399 68.16 579.359 68.544 578.223 69.312L576.903 67.392C578.503 66.128 580.175 65.496 581.919 65.496C583.311 65.496 584.423 65.872 585.255 66.624C586.071 67.36 586.479 68.376 586.479 69.672C586.479 70.632 586.159 71.64 585.519 72.696C584.895 73.736 583.671 75.288 581.847 77.352C581.399 77.864 581.071 78.24 580.863 78.48H586.311V81H577.023ZM592.69 74.208H590.41V71.664H592.69C593.33 71.664 593.77 71.576 594.01 71.4C594.378 71.128 594.562 70.64 594.562 69.936C594.562 69.392 594.402 68.96 594.082 68.64C593.762 68.304 593.33 68.136 592.786 68.136C591.81 68.136 590.794 68.584 589.738 69.48L588.586 67.464C589.914 66.168 591.418 65.52 593.098 65.52C594.506 65.52 595.658 65.912 596.554 66.696C597.418 67.464 597.85 68.456 597.85 69.672C597.85 71.176 597.226 72.184 595.978 72.696C597.594 73.32 598.402 74.52 598.402 76.296C598.402 78.168 597.762 79.528 596.482 80.376C595.586 80.968 594.466 81.264 593.122 81.264C592.386 81.264 591.546 81.072 590.602 80.688C589.674 80.288 588.914 79.808 588.322 79.248L589.594 77.352C590.458 78.136 591.562 78.528 592.906 78.528C593.594 78.528 594.138 78.336 594.538 77.952C594.938 77.552 595.138 77.016 595.138 76.344C595.138 74.92 594.322 74.208 592.69 74.208ZM614.174 81.192C613.726 81.256 613.31 81.288 612.926 81.288C610.574 81.288 608.774 80.44 607.526 78.744C606.534 77.384 606.038 75.696 606.038 73.68C606.038 71.168 606.71 69.152 608.054 67.632C609.286 66.224 610.91 65.52 612.926 65.52C615.262 65.52 617.062 66.464 618.326 68.352C619.318 69.824 619.814 71.6 619.814 73.68C619.814 76.656 618.83 78.84 616.862 80.232C617.79 81.272 618.806 82.384 619.91 83.568H616.238L614.174 81.192ZM612.926 78.648C615.326 78.648 616.526 76.992 616.526 73.68C616.526 71.888 616.182 70.504 615.494 69.528C614.854 68.648 613.998 68.208 612.926 68.208C611.774 68.208 610.878 68.688 610.238 69.648C609.614 70.608 609.302 71.952 609.302 73.68C609.302 76.992 610.51 78.648 612.926 78.648ZM627.717 65.808V81H624.573V69.384C624.349 69.528 624.021 69.728 623.589 69.984C622.965 70.352 622.517 70.632 622.245 70.824C622.037 70.472 621.685 69.888 621.189 69.072L621.045 68.856C620.933 68.648 620.845 68.496 620.781 68.4C621.293 68.032 622.101 67.48 623.205 66.744C623.781 66.36 624.237 66.048 624.573 65.808H627.717Z" fill="white" fill-opacity="0.5" />
                                     <path d="M1057.16 335V332.336C1057.54 331.904 1058.06 331.32 1058.7 330.584C1059.7 329.464 1060.45 328.616 1060.93 328.04C1062 326.76 1062.67 325.888 1062.94 325.424C1063.22 324.944 1063.35 324.416 1063.35 323.84C1063.35 323.36 1063.18 322.96 1062.82 322.64C1062.47 322.32 1062.02 322.16 1061.48 322.16C1060.54 322.16 1059.5 322.544 1058.36 323.312L1057.04 321.392C1058.64 320.128 1060.31 319.496 1062.06 319.496C1063.45 319.496 1064.56 319.872 1065.39 320.624C1066.21 321.36 1066.62 322.376 1066.62 323.672C1066.62 324.632 1066.3 325.64 1065.66 326.696C1065.03 327.736 1063.81 329.288 1061.98 331.352C1061.54 331.864 1061.21 332.24 1061 332.48H1066.45V335H1057.16ZM1074.1 319.52C1075.95 319.52 1077.44 320.408 1078.56 322.184C1079.51 323.656 1079.98 325.408 1079.98 327.44C1079.98 329.888 1079.38 331.848 1078.18 333.32C1077.12 334.632 1075.76 335.288 1074.1 335.288C1072.19 335.288 1070.71 334.44 1069.63 332.744C1068.74 331.336 1068.29 329.568 1068.29 327.44C1068.29 325.072 1068.88 323.128 1070.07 321.608C1071.14 320.216 1072.48 319.52 1074.1 319.52ZM1074.15 322.208C1072.42 322.208 1071.55 323.904 1071.55 327.296C1071.55 329.008 1071.8 330.352 1072.3 331.328C1072.75 332.208 1073.34 332.648 1074.07 332.648C1074.89 332.648 1075.53 332.176 1075.99 331.232C1076.47 330.272 1076.71 328.96 1076.71 327.296C1076.71 323.904 1075.86 322.208 1074.15 322.208ZM1081.86 335V332.336C1082.25 331.904 1082.76 331.32 1083.4 330.584C1084.41 329.464 1085.15 328.616 1085.63 328.04C1086.7 326.76 1087.37 325.888 1087.65 325.424C1087.92 324.944 1088.05 324.416 1088.05 323.84C1088.05 323.36 1087.88 322.96 1087.53 322.64C1087.17 322.32 1086.73 322.16 1086.18 322.16C1085.24 322.16 1084.2 322.544 1083.06 323.312L1081.74 321.392C1083.34 320.128 1085.01 319.496 1086.76 319.496C1088.15 319.496 1089.26 319.872 1090.09 320.624C1090.91 321.36 1091.32 322.376 1091.32 323.672C1091.32 324.632 1091 325.64 1090.36 326.696C1089.73 327.736 1088.51 329.288 1086.69 331.352C1086.24 331.864 1085.91 332.24 1085.7 332.48H1091.15V335H1081.86ZM1097.53 328.208H1095.25V325.664H1097.53C1098.17 325.664 1098.61 325.576 1098.85 325.4C1099.22 325.128 1099.4 324.64 1099.4 323.936C1099.4 323.392 1099.24 322.96 1098.92 322.64C1098.6 322.304 1098.17 322.136 1097.63 322.136C1096.65 322.136 1095.63 322.584 1094.58 323.48L1093.43 321.464C1094.75 320.168 1096.26 319.52 1097.94 319.52C1099.35 319.52 1100.5 319.912 1101.39 320.696C1102.26 321.464 1102.69 322.456 1102.69 323.672C1102.69 325.176 1102.07 326.184 1100.82 326.696C1102.43 327.32 1103.24 328.52 1103.24 330.296C1103.24 332.168 1102.6 333.528 1101.32 334.376C1100.43 334.968 1099.31 335.264 1097.96 335.264C1097.23 335.264 1096.39 335.072 1095.44 334.688C1094.51 334.288 1093.75 333.808 1093.16 333.248L1094.43 331.352C1095.3 332.136 1096.4 332.528 1097.75 332.528C1098.43 332.528 1098.98 332.336 1099.38 331.952C1099.78 331.552 1099.98 331.016 1099.98 330.344C1099.98 328.92 1099.16 328.208 1097.53 328.208ZM1119.01 335.192C1118.57 335.256 1118.15 335.288 1117.77 335.288C1115.41 335.288 1113.61 334.44 1112.37 332.744C1111.37 331.384 1110.88 329.696 1110.88 327.68C1110.88 325.168 1111.55 323.152 1112.89 321.632C1114.13 320.224 1115.75 319.52 1117.77 319.52C1120.1 319.52 1121.9 320.464 1123.17 322.352C1124.16 323.824 1124.65 325.6 1124.65 327.68C1124.65 330.656 1123.67 332.84 1121.7 334.232C1122.63 335.272 1123.65 336.384 1124.75 337.568H1121.08L1119.01 335.192ZM1117.77 332.648C1120.17 332.648 1121.37 330.992 1121.37 327.68C1121.37 325.888 1121.02 324.504 1120.33 323.528C1119.69 322.648 1118.84 322.208 1117.77 322.208C1116.61 322.208 1115.72 322.688 1115.08 323.648C1114.45 324.608 1114.14 325.952 1114.14 327.68C1114.14 330.992 1115.35 332.648 1117.77 332.648ZM1126.58 335V332.336C1126.97 331.904 1127.48 331.32 1128.12 330.584C1129.13 329.464 1129.87 328.616 1130.35 328.04C1131.42 326.76 1132.09 325.888 1132.37 325.424C1132.64 324.944 1132.77 324.416 1132.77 323.84C1132.77 323.36 1132.6 322.96 1132.25 322.64C1131.89 322.32 1131.45 322.16 1130.9 322.16C1129.96 322.16 1128.92 322.544 1127.78 323.312L1126.46 321.392C1128.06 320.128 1129.73 319.496 1131.48 319.496C1132.87 319.496 1133.98 319.872 1134.81 320.624C1135.63 321.36 1136.04 322.376 1136.04 323.672C1136.04 324.632 1135.72 325.64 1135.08 326.696C1134.45 327.736 1133.23 329.288 1131.41 331.352C1130.96 331.864 1130.63 332.24 1130.42 332.48H1135.87V335H1126.58Z" fill="white" fill-opacity="0.5" />
                                     <path d="M1515.21 157V154.336C1515.6 153.904 1516.11 153.32 1516.75 152.584C1517.76 151.464 1518.5 150.616 1518.98 150.04C1520.05 148.76 1520.73 147.888 1521 147.424C1521.27 146.944 1521.41 146.416 1521.41 145.84C1521.41 145.36 1521.23 144.96 1520.88 144.64C1520.53 144.32 1520.08 144.16 1519.53 144.16C1518.59 144.16 1517.55 144.544 1516.41 145.312L1515.09 143.392C1516.69 142.128 1518.37 141.496 1520.11 141.496C1521.5 141.496 1522.61 141.872 1523.45 142.624C1524.26 143.36 1524.67 144.376 1524.67 145.672C1524.67 146.632 1524.35 147.64 1523.71 148.696C1523.09 149.736 1521.86 151.288 1520.04 153.352C1519.59 153.864 1519.26 154.24 1519.05 154.48H1524.5V157H1515.21ZM1532.15 141.52C1534.01 141.52 1535.5 142.408 1536.62 144.184C1537.56 145.656 1538.03 147.408 1538.03 149.44C1538.03 151.888 1537.43 153.848 1536.23 155.32C1535.18 156.632 1533.82 157.288 1532.15 157.288C1530.25 157.288 1528.76 156.44 1527.69 154.744C1526.79 153.336 1526.35 151.568 1526.35 149.44C1526.35 147.072 1526.94 145.128 1528.12 143.608C1529.19 142.216 1530.54 141.52 1532.15 141.52ZM1532.2 144.208C1530.47 144.208 1529.61 145.904 1529.61 149.296C1529.61 151.008 1529.86 152.352 1530.35 153.328C1530.8 154.208 1531.39 154.648 1532.13 154.648C1532.95 154.648 1533.59 154.176 1534.05 153.232C1534.53 152.272 1534.77 150.96 1534.77 149.296C1534.77 145.904 1533.91 144.208 1532.2 144.208ZM1539.92 157V154.336C1540.3 153.904 1540.81 153.32 1541.45 152.584C1542.46 151.464 1543.21 150.616 1543.69 150.04C1544.76 148.76 1545.43 147.888 1545.7 147.424C1545.97 146.944 1546.11 146.416 1546.11 145.84C1546.11 145.36 1545.93 144.96 1545.58 144.64C1545.23 144.32 1544.78 144.16 1544.24 144.16C1543.29 144.16 1542.25 144.544 1541.12 145.312L1539.8 143.392C1541.4 142.128 1543.07 141.496 1544.81 141.496C1546.21 141.496 1547.32 141.872 1548.15 142.624C1548.97 143.36 1549.37 144.376 1549.37 145.672C1549.37 146.632 1549.05 147.64 1548.41 148.696C1547.79 149.736 1546.57 151.288 1544.74 153.352C1544.29 153.864 1543.97 154.24 1543.76 154.48H1549.21V157H1539.92ZM1555.58 150.208H1553.3V147.664H1555.58C1556.22 147.664 1556.66 147.576 1556.9 147.4C1557.27 147.128 1557.46 146.64 1557.46 145.936C1557.46 145.392 1557.3 144.96 1556.98 144.64C1556.66 144.304 1556.22 144.136 1555.68 144.136C1554.7 144.136 1553.69 144.584 1552.63 145.48L1551.48 143.464C1552.81 142.168 1554.31 141.52 1555.99 141.52C1557.4 141.52 1558.55 141.912 1559.45 142.696C1560.31 143.464 1560.74 144.456 1560.74 145.672C1560.74 147.176 1560.12 148.184 1558.87 148.696C1560.49 149.32 1561.3 150.52 1561.3 152.296C1561.3 154.168 1560.66 155.528 1559.38 156.376C1558.48 156.968 1557.36 157.264 1556.02 157.264C1555.28 157.264 1554.44 157.072 1553.5 156.688C1552.57 156.288 1551.81 155.808 1551.22 155.248L1552.49 153.352C1553.35 154.136 1554.46 154.528 1555.8 154.528C1556.49 154.528 1557.03 154.336 1557.43 153.952C1557.83 153.552 1558.03 153.016 1558.03 152.344C1558.03 150.92 1557.22 150.208 1555.58 150.208ZM1577.07 157.192C1576.62 157.256 1576.2 157.288 1575.82 157.288C1573.47 157.288 1571.67 156.44 1570.42 154.744C1569.43 153.384 1568.93 151.696 1568.93 149.68C1568.93 147.168 1569.6 145.152 1570.95 143.632C1572.18 142.224 1573.8 141.52 1575.82 141.52C1578.16 141.52 1579.96 142.464 1581.22 144.352C1582.21 145.824 1582.71 147.6 1582.71 149.68C1582.71 152.656 1581.72 154.84 1579.76 156.232C1580.68 157.272 1581.7 158.384 1582.8 159.568H1579.13L1577.07 157.192ZM1575.82 154.648C1578.22 154.648 1579.42 152.992 1579.42 149.68C1579.42 147.888 1579.08 146.504 1578.39 145.528C1577.75 144.648 1576.89 144.208 1575.82 144.208C1574.67 144.208 1573.77 144.688 1573.13 145.648C1572.51 146.608 1572.2 147.952 1572.2 149.68C1572.2 152.992 1573.4 154.648 1575.82 154.648ZM1589.12 150.208H1586.84V147.664H1589.12C1589.76 147.664 1590.2 147.576 1590.44 147.4C1590.81 147.128 1591 146.64 1591 145.936C1591 145.392 1590.84 144.96 1590.52 144.64C1590.2 144.304 1589.76 144.136 1589.22 144.136C1588.24 144.136 1587.23 144.584 1586.17 145.48L1585.02 143.464C1586.35 142.168 1587.85 141.52 1589.53 141.52C1590.94 141.52 1592.09 141.912 1592.99 142.696C1593.85 143.464 1594.28 144.456 1594.28 145.672C1594.28 147.176 1593.66 148.184 1592.41 148.696C1594.03 149.32 1594.84 150.52 1594.84 152.296C1594.84 154.168 1594.2 155.528 1592.92 156.376C1592.02 156.968 1590.9 157.264 1589.56 157.264C1588.82 157.264 1587.98 157.072 1587.04 156.688C1586.11 156.288 1585.35 155.808 1584.76 155.248L1586.03 153.352C1586.89 154.136 1588 154.528 1589.34 154.528C1590.03 154.528 1590.57 154.336 1590.97 153.952C1591.37 153.552 1591.57 153.016 1591.57 152.344C1591.57 150.92 1590.76 150.208 1589.12 150.208Z" fill="white" fill-opacity="0.5" />
@@ -314,7 +355,16 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                                         </linearGradient>
                                     </defs>
                                 </svg>
-
+                                {RoadmapDescs.map((roadmap) => (
+                                    <div className="roadmap-desc" >
+                                        <h3>
+                                            {roadmap.title}
+                                        </h3>
+                                        <p>
+                                            {roadmap.content}
+                                        </p>
+                                    </div>
+                                ))}
                                 {/* <img className='roadmap-path' src={RoadmapPath} alt='Roadmap Path' />
                                 <SvgIcon className='circle-icon-upper' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
                                 <Slider {...settings}>
@@ -368,8 +418,8 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                         <Col>
                             <h1 className='main-heading text-center'>Managament-<span>Team</span></h1>
                             <p className='main-heading-text'>
-                            Our team consists of experts in the fields of IT, cybersecurity and crypto-economics, as well as talent from banking and corporate communications. We strive every day to be at the forefront of innovation in the industry.
-                                
+                                Our team consists of experts in the fields of IT, cybersecurity and crypto-economics, as well as talent from banking and corporate communications. We strive every day to be at the forefront of innovation in the industry.
+
                             </p>
                         </Col>
                     </Row>
@@ -529,7 +579,7 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                         <Col>
                             <h1 className='main-heading text-center'><span>Partner</span></h1>
                             <p className='main-heading-text'>
-                            In valued collaboration with
+                                In valued collaboration with
                             </p>
                         </Col>
                     </Row>
@@ -587,3 +637,30 @@ const OURTEAM = new Array(8).fill(
         description: "Founder and CEO at Traccy. We are a deep tech Web3 startup building decentralized world."
     },
 );
+
+const RoadmapDescs = [
+    {
+        title: "2022 Q3",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+    {
+        title: "2022 Q4",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+    {
+        title: "2023 Q1",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+    {
+        title: "2023 Q2",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+    {
+        title: "2023 Q3",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+    {
+        title: "2023 Q4",
+        content: "Having a succes STO, startPlatform TestnetCommunity FormingEcosystem Partnership3 Projects Launching5 Projects Incubation2 Project Monitoring"
+    },
+]
