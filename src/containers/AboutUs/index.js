@@ -309,32 +309,32 @@ const AboutUs = () => {
                             <div className='roadmap-wrapper' ref={roadmapWrapperRef} >
                                 <svg className="roadmap-path" viewBox="0 0 1826 345" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M424.5 101.575C283.785 259.81 125.167 192.908 41 123.575V159.075C125.167 228.409 294.941 294.283 432.5 133.296C628 -95.5 814 178 887.5 223C961 268 1123 381.575 1365.5 193.075C1559.5 42.2752 1723.67 162.409 1785.5 239.076V203.575C1723.67 126.909 1551.5 11.2752 1357.5 162.075C1115 350.575 957.31 231.611 887.5 181.075C821.5 133.297 619.5 -117.705 424.5 101.575Z" fill="url(#paint0_linear_763_63)" stroke="black" />
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 0)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 0)}>
                                         <ellipse cx="41" cy="141" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="41" cy="140" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="41" cy="140" r="8" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 1)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 1)}>
                                         <ellipse cx="241" cy="214" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="241" cy="213" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="241" cy="213" r="8" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 2)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 2)}>
                                         <ellipse cx="591" cy="26" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="591" cy="25" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="591" cy="25" r="8" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 3)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 3)}>
                                         <ellipse cx="1097" cy="284" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="1097" cy="283" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="1097" cy="283" r="8" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 4)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 4)}>
                                         <ellipse cx="1556" cy="106" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="1556" cy="105" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="1556" cy="105" r="8" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseDown={(e) => hoverRoadmap(e, 5)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 5)}>
                                         <ellipse cx="1786" cy="205" rx="25" ry="26" fill="#D9D9D9" fill-opacity="0.01" />
                                         <circle className="point-outline" cx="1786" cy="204" r="23.5" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="3" />
                                         <circle className="point-center" cx="1786" cy="204" r="8" fill="#FFFBFB" fill-opacity="0.2" />
