@@ -181,15 +181,17 @@ const AboutUs = () => {
                     <Row>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Vision </span></h2>
+                            <h4 className='Sub-Title'>Sustainable impact and financial equality </h4>
                             <p className='vission-text'>
-                            Sustainable impact and financial equality
+                            
 Our vision is to help everyone achieve financial stability and security regardless of their background or social class.
                             </p>
                         </Col>
                         <Col md="6">
                             <h2 className='main-heading'>Our <span>Mission </span></h2>
+                            <h4 className='Sub-Title'>Decentralization and transparency  </h4>
                             <p className='vission-text'>
-                            Decentralization and transparency thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply, and many more via blockchain technology. We create a bridge between the digital and the real world to make a big contribution to achieving the UN SDGs. 
+                            Thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply and many more via blockchain technology. We create a bridge between the digital and the real world to contribute to the UN SDGs. 
                             </p>
                         </Col>
                     </Row>
@@ -382,7 +384,7 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                                             <div className='slider-left'>
                                                 <h3>Joas Fischer </h3>
                                                 <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Joas is a crypto investor and experienced entrepreneur from the financial sector. He is responsible for bringing together key partners within Traccy. His expertise, leadership, network and positive mindset help the company to establish itself as a major player in the market.</p>
+                                                <p>Joas is a crypto investor and entrepreneur. He is responsible for networking key partners with Traccy. His leadership, network and positive mindset help the company to establish itself as a major player in the market.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -400,7 +402,7 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                                             <div className='slider-left'>
                                                 <h3>Mick Misamu </h3>
                                                 <div className='designation'><Divider /> CTO</div>
-                                                <p>Mick is a crypto investor with over 7 years of experience in the IT industry in systems and network technology. Mick has experience in blockchain technology, IT and cyber security.</p>
+                                                <p>Mick is a crypto investor with over eight years of experience in the IT industry in systems and network technology. Mick has experience in blockchain technology, IT and cyber security.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -418,7 +420,7 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                                             <div className='slider-left'>
                                                 <h3>Farrah Mettler </h3>
                                                 <div className='designation'><Divider /> CMO</div>
-                                                <p>Farrah is a marketing and communications expert with over 5 years of experience in strategic marketing, corporate communications, and product management. She specializes in international business relations, especially in the Asian market.</p>
+                                                <p>Farrah is a marketing and communications expert with over six years of experience in strategic marketing, corporate communications and product management. She specializes in international business relations, especially in the Asian market.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -436,7 +438,7 @@ By Joas Fischer, Dedry Misamu and Mick Misamu
                                             <div className='slider-left'>
                                                 <h3>Dedry Misamu </h3>
                                                 <div className='designation'><Divider /> CFO</div>
-                                                <p>Dedryis a crypto investor and former banker with over 10 years of trading experience. Dedryis responsible for finance and business development with strategic partners in the developing world. He has a large network in both Asia and Africa, which he makes available to the company.</p>
+                                                <p>Dedry is a crypto investor and former banker with over 10 years of trading experience. Dedryis responsible for finance and business development with strategic partners in the developing world. He has a large network in both Asia and Africa, which he makes available to the company.</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />

@@ -63,8 +63,8 @@ const BecomePart = () => {
                             <h3>Location Switzerland</h3>
                             <p>
                                 TRACCY AG <br />
-                                Grabenstrasse 15b, <br />
-                                6340 Baar <br />
+                                Chaltenbodenstrasse 6a, <br />
+                                8834 Schindellegi  <br />
                                 info@traccy.ch <br />
                                 +41 44 045 45 45
                             </p>
@@ -73,8 +73,8 @@ const BecomePart = () => {
                             <h3>Location Switzerland</h3>
                             <p>
                                 TRACCY AG <br />
-                                Grabenstrasse 15b, <br />
-                                6340 Baar <br />
+                                Chaltenbodenstrasse 6a, <br />
+                                8834 Schindellegi  <br />
                                 info@traccy.ch <br />
                                 +41 44 045 45 45
                             </p>
