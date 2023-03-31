@@ -10,23 +10,13 @@ import './index.scss';
 import Traccyicon from '../../assets/images/icon.png';
 import LogoLight from '../../assets/images/logo-light.png';
 import { Navbar } from '../../components/layout';
+import { useTranslation } from 'react-i18next';
 
-const steps = [
-    {
-        title: 'Form Information',
-        content: <FormInformationStep />,
-    },
-    {
-        title: 'Review & Confirm',
-        content: <ReviewConfirmStep />,
-    },
-    {
-        title: 'Sent',
-        content: <SentStep />,
-    },
-];
+
 
 const BecomePart = () => {
+    const {t} = useTranslation();
+
     const [current, setCurrent] = useState(0);
 
     const next = () => {
@@ -36,6 +26,20 @@ const BecomePart = () => {
     const prev = () => {
         setCurrent(current - 1);
     };
+    const steps = [
+        {
+            title: t("become:form"),
+            content: <FormInformationStep />,
+        },
+        {
+            title: t("become:review"),
+            content: <ReviewConfirmStep />,
+        },
+        {
+            title: t("become:send"),
+            content: <SentStep />,
+        },
+    ];
     const items = steps.map((item) => ({ key: item.title, title: item.title }));
     return (
         <div className='becomepart-wrapper'>
@@ -60,7 +64,7 @@ const BecomePart = () => {
                             <img src={LogoLight} alt='Logo' />
                         </div>
                         <div className='address-col'>
-                            <h3>Location Switzerland</h3>
+                            <h3>{t("become:location")}</h3>
                             <p>
                                 TRACCY AG <br />
                                 Grabenstrasse 15b, <br />
@@ -70,7 +74,7 @@ const BecomePart = () => {
                             </p>
                         </div>
                         <div className='address-col'>
-                            <h3>Location Switzerland</h3>
+                            <h3>{t("become:location")}</h3>
                             <p>
                                 TRACCY AG <br />
                                 Grabenstrasse 15b, <br />
@@ -80,7 +84,7 @@ const BecomePart = () => {
                             </p>
                         </div>
                         <div className='bottom-link'>
-                            <Link to='/'>Terms of Use</Link>  I  <Link to='/'> Privacy Policy </Link>
+                            <Link to='/'>{t("become:terms")}</Link>  I  <Link to='/'>{t("become:privacy")}</Link>
                         </div>
                     </div>
                     <div className='dtl-section'>
@@ -113,7 +117,7 @@ const BecomePart = () => {
                 </div>
             </div>
         </div>
-    )
+    );
 };
 
 export default BecomePart

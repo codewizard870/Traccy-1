@@ -147,6 +147,7 @@
                 }
                 .bottom-link{
                     display: flex;
+                    flex-wrap: wrap;
                     align-items: center;
                     color: rgba($white, 0.5);
                     margin-top: 5rem;
