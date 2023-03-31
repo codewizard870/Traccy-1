@@ -4,15 +4,12 @@ import { Button } from "antd";
 import { useHistory } from 'react-router-dom';
 import InvestWrapper from "./InvestWrapper";
 import "./InvestStep1.scss";
+import { useTranslation } from "react-i18next";
 
 const InvestStep1 = ({ onNext }) => {
+  const {t} = useTranslation();
   const history = useHistory();
-  const [agree, setAgree] = useState(false);
-  const handleCheck = (e) => {
-    setAgree(!agree)
-  }
   const handleNext = () => {
-    // if (agree)
       onNext();
   }
   const handleDecline = () => {
@@ -22,19 +19,19 @@ const InvestStep1 = ({ onNext }) => {
   return (
     <InvestWrapper>
       <div className="invest-step1-body0">
-        <span>SAFT FORM</span>
-        <span>Please check and confirm the form and go next step</span>
+        <span>{t("buy:saft")}&nbsp;{t("buy:form")}</span>
+        <span>{t("buy:terms")}</span>
 
         <div className="invest-document">
           <TERMS />
         </div>
         <div className="steps-action">
           <Button type="primary" onClick={() => handleNext()}>
-            Accept
+            {t("buy:accept")}
           </Button>
 
           <Button onClick={() => handleDecline()} className="decline">
-            Decline
+            {t("buy:decline")}
           </Button>
         </div>
       </div>

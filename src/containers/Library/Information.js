@@ -20,7 +20,7 @@ const Information = () => {
         <span className="title">Social Media</span>
         {Socials.map(social => <Link to={social.link}>{social.label}</Link>)}
       </div>
-      <img src="/library/logo.png" className="logo" alt="logo"/>
+      <img src="/logo.png" className="logo" alt="logo"/>
     </div>
   )
   // return (

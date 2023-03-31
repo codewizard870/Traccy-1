@@ -8,8 +8,10 @@ import "./InvestStep3.scss";
 import { useTrackedState, useDispatch, useWallet } from "../../contexts/store";
 import { ERROR_OPTION, REQUEST_ENDPOINT, SUCCESS_OPTION } from "../../config/constants";
 import { LookForTokenInfo } from "../../config/utilitiy";
+import { useTranslation } from "react-i18next";
 
 const InvestStep3 = ({ onNext, onPrev }) => {
+  const { t } = useTranslation();
   const state = useTrackedState();
   const dispatch = useDispatch();
   const wallet = useWallet();
@@ -158,21 +160,21 @@ const InvestStep3 = ({ onNext, onPrev }) => {
         <div className="input-parts">
           <div className="input-contents">
             <div className="input-name">
-              <span>Full Name <span style={{color:"red"}}>*</span></span>
+              <span>{t("become:name")}<span style={{ color: "red" }}>*</span></span>
               <input onChange={handleName} placeholder="Mick Misamu" />
             </div>
             <div className="input-title">
-              <span>Title <span style={{color:"red"}}>*</span></span>
+              <span>{t("buy:title")} <span style={{ color: "red" }}>*</span></span>
               <input onChange={handleTitle} placeholder="Invest Name" />
             </div>
             <div className="input-email">
-              <span>Email <span style={{color:"red"}}>*</span></span>
+              <span>Email <span style={{ color: "red" }}>*</span></span>
               <input onChange={handleEmail} placeholder="example@gmail.com" />
             </div>
           </div>
           <div className="splitter" />
           <div className="input-signature">
-            <span>Signature</span>
+            <span>{t("buy:signature")}</span>
             <div className="signature-wrapper">
               <SignatureCanvas
                 ref={canvasRef}
@@ -188,15 +190,15 @@ const InvestStep3 = ({ onNext, onPrev }) => {
               onChange={(e) => onChangeSignature(e)}
             />
             <div className="button-wrapper">
-              <Button type="primary" onClick={handleClear}>Clear</Button>
-              <Button type="primary" onClick={openUpload}>Open Signature</Button>
+              <Button type="primary" onClick={handleClear}>{t("buy:clear")}</Button>
+              <Button type="primary" onClick={openUpload}>{t("buy:open")}</Button>
             </div>
           </div>
         </div>
         <div className="steps-action">
           <div>
             <Button type="primary" onClick={() => handleNext()}>
-              Invest
+              {t("buy:invest")}
             </Button>
           </div>
         </div>

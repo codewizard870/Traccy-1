@@ -2,10 +2,12 @@ import React from 'react';
 import { Input, Form, Select } from 'antd';
 import { SvgIcon, Row, Col } from '../../components/common';
 import './index.scss';
+import { useTranslation } from 'react-i18next';
 
 const { TextArea } = Input;
 
 const FormInformationStep = () => {
+    const {t} = useTranslation();
     return (
         <Form
             name="normal_login"
@@ -17,7 +19,7 @@ const FormInformationStep = () => {
                 <Col lg='6'>
                     <Form.Item
                         name="name"
-                        label="Full Name"
+                        label={t("become:name")}
                         rules={[{ required: true, message: 'Please Enter Full Name!' }]}
                     >
                         <Input defaultValue='Mick Misamu' />
@@ -36,9 +38,9 @@ const FormInformationStep = () => {
             <Row>
                 <Col lg='6'>
                     <Form.Item
-                        name="username"
-                        label="Full Name"
-                        rules={[{ required: true, message: 'Please Enter Full Name!' }]}
+                        name="gender"
+                        label={t("become:gender")}
+                        rules={[{ required: true, message: 'Please Enter gender' }]}
                     >
                         <Select
                             defaultValue="m"
@@ -60,8 +62,8 @@ const FormInformationStep = () => {
                 <Col lg='6'>
                     <Form.Item
                         name="interestedas"
-                        label="Interested as"
-                        rules={[{ required: true, message: 'Please Enter Full Name!' }]}
+                        label={t("interest")}
+                        rules={[{ required: true, message: 'Please Enter intertests!' }]}
                     >
                         <Select
                             defaultValue="v1"
@@ -94,7 +96,7 @@ const FormInformationStep = () => {
                     <Form.Item
                         name="message"
                     >
-                        <TextArea placeholder='Please leave a message ' rows={6} />
+                        <TextArea placeholder={t("become:message")} rows={6} />
                     </Form.Item>
                 </Col>
             </Row>

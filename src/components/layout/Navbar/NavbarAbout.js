@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, SvgIcon } from "../../common";
+import { Container } from "../../common";
 import Menus from "./Menus";
 import "./Navbar.scss";
 import "./ConnectWallet.scss";

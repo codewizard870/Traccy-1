@@ -330,6 +330,10 @@
     .roadmap-section{
         padding: 12rem 0;
         position: relative;
+        @media screen and (max-width:576px) {
+            padding: 3rem 0;
+        }
+
         .left-hexa{
             position: absolute;
             left: -8%;
@@ -347,7 +351,10 @@
         .roadmap-wrapper{
             margin-top: 7rem;
             position: relative;
-
+            height: 300px;
+            @media screen and (max-width:576px) {
+                height: 150px;
+            }
             .circle-icon-upper{
                 position: absolute;
                 top: 47%;
@@ -379,9 +386,42 @@
                     cursor: pointer;
                     .point-outline{
                         stroke: #FEFCFC;
-                        &:hover{
+                    }
+                    .point-center{
+                        fill: FFFBFB;
+                    }
+                    &:hover{
+                        .point-outline{
                             stroke-opacity: 1;
                         }
+                        .point-center{
+                            fill-opacity: 1;
+                        }
+                    }
+                }
+
+            }
+            .roadmap-desc{
+                position: absolute;
+                width: 200px;
+                // height: 300px;
+                z-index: 99;
+                background: linear-gradient(180deg, rgba(227, 15, 174, 0.7) 0%, rgba(227, 15, 174, 0) 100%);
+                border-radius: 6px;
+                text-align: center;
+                padding: 1rem;
+                max-height: 0px;
+                overflow: hidden;
+                visibility: hidden;
+                transition: max-height .5s ease;
+
+                @media screen and (max-width:576px) {
+                    width: 100px;
+                    & > h3 {
+                        font-size: 12px;
+                    }
+                    & > p {
+                        font-size:10px;
                     }
                 }
             }

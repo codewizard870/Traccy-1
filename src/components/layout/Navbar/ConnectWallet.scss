@@ -28,25 +28,19 @@
 }
 
 .connect-wallet {
-  // border-radius: 13px !important;
   width: 150px;
   height: 40px !important;
   background: #93054f !important;
   color: white !important;
   border-radius: 5px !important;
-
+  margin: 0px 10px 0px 0px;
+  
   &:hover {
     color: rgb(175, 169, 169) !important;
   }
 
   @media (max-width: 768px) {
     display: none;
-  }
-
-  @media (max-width: 992px) {
-  }
-
-  @media (max-width: 1200px) {
   }
 
   @media (max-width: 1300px) {
@@ -56,42 +50,7 @@
     font-size: 12px !important;
   }
 
-  @media (max-width: 1400px) {
-  }
-
-  @media (max-width: 1500px) {
-  }
-
-  @media (max-width: 1650px) {
-  }
 }
-// .modal-button {
-//   display: none;
-// }
-// .ant-modal-content{
-//   padding : 6em 2px !important;
-// }
-
-// .modal-content {
-//   .modal-item {
-//     display: flex;
-//     padding: 10px 72px;
-//     border-radius: 10px;
-//     gap: 30px;
-//     align-items: center;
-//     cursor: pointer;
-
-//     &:hover {
-//       background: #cfd0ff9c;
-//     }
-//     .item-image{
-//       border-radius: 13px;
-//     }
-//     .item-text{
-//       font-size: 24px;
-//     }
-//   }
-// }
 
 $white: #ffffff;
 
@@ -169,50 +128,53 @@ $white: #ffffff;
   }
 }
 
-@media (max-width: 767px) {
-  .container-with-connect-wallet {
-    max-width: 94% !important;
-  }
+.container-with-connect-wallet {
+  max-width: 100% !important;
 }
+// @media (max-width: 767px) {
+//   .container-with-connect-wallet {
+//     max-width: 94% !important;
+//   }
+// }
 
-@media (min-width: 768px) {
-  .container-with-connect-wallet {
-    max-width: 96% !important;
-  }
-}
+// @media (min-width: 768px) {
+//   .container-with-connect-wallet {
+//     max-width: 96% !important;
+//   }
+// }
 
-@media (min-width: 992px) {
-  .container-with-connect-wallet {
-    max-width: 96% !important;
-  }
-}
+// @media (min-width: 992px) {
+//   .container-with-connect-wallet {
+//     max-width: 96% !important;
+//   }
+// }
 
-@media (min-width: 1200px) {
-  .container-with-connect-wallet {
-    max-width: 1140px !important;
-  }
-}
+// @media (min-width: 1200px) {
+//   .container-with-connect-wallet {
+//     max-width: 1140px !important;
+//   }
+// }
 
-@media (min-width: 1300px) {
-  .container-with-connect-wallet {
-    max-width: 1220px !important;
-  }
-}
+// @media (min-width: 1300px) {
+//   .container-with-connect-wallet {
+//     max-width: 1220px !important;
+//   }
+// }
 
-@media (min-width: 1400px) {
-  .container-with-connect-wallet {
-    max-width: 1340px !important;
-  }
-}
+// @media (min-width: 1400px) {
+//   .container-with-connect-wallet {
+//     max-width: 1340px !important;
+//   }
+// }
 
-@media (min-width: 1500px) {
-  .container-with-connect-wallet {
-    max-width: 1400px !important;
-  }
-}
+// @media (min-width: 1500px) {
+//   .container-with-connect-wallet {
+//     max-width: 1400px !important;
+//   }
+// }
 
-@media (min-width: 1650px) {
-  .container-with-connect-wallet {
-    max-width: 1520px !important;
-  }
-}
+// @media (min-width: 1650px) {
+//   .container-with-connect-wallet {
+//     max-width: 1520px !important;
+//   }
+// }

@@ -18,7 +18,7 @@ const Library = () => {
       <div className='library-wrapper'>
          <div className="polygon-effect">
             <img src="/invest-form/left-hexa.svg" alt="polygon-left" />
-            <img src="/invest-form/right-hexa.svg" alt="polygon-right" />
+            {/* <img src="/invest-form/right-hexa.svg" alt="polygon-right" /> */}
          </div>
          <div className='leftbar'>
             <div className='traccy-icon'>

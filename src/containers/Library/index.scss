@@ -99,6 +99,7 @@
       }
     }
     .social-icon-list {
+      height: calc(100vh - 180px);
       display: flex;
       align-items: center;
       flex-direction: column;

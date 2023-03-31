@@ -8,7 +8,7 @@ const { Content } = Layout;
 const DefaultAboutLayout = ({ children }) => {
   return (
     <React.Fragment>
-      <div className="main-wrapper">
+      <div className="main-wrapper  dark-header">
         <NavbarAbout />
           <Content>
             <main>
