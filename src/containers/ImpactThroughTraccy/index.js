@@ -25,11 +25,11 @@ const ImpactThroughTraccy = () => {
             </div>
         ),
         customPaging: i => (
-            <div className='thumb-col-main'
-            >
-                {i === 0 && <div className='thumb-col'><span>Phase 1</span>Planting</div>}
-                {i === 1 && <div className='thumb-col'><span>Phase 2</span>Plant Protection & Maintenance</div>}
-                {i === 2 && <div className='thumb-col'><span>Phase 3</span>Harvest</div>}
+            <div className='thumb-col-main'>
+                {i === 0 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
+                {i === 1 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
+                {i === 2 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
+                {i === 3 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
             </div>
         )
     };
@@ -46,22 +46,61 @@ const ImpactThroughTraccy = () => {
                     <div>
                         <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
                         <Container>
-                            <Row>
-                                <Col lg='6' className="banner-left">
-                                    <p>
-                                        NEXT EVENT
-                                    </p>
-                                    <h1>Epicurrence Summer Revival</h1>
-                                    <p>
-                                        Yosemite national park -- 4 day trip
-                                    </p>
-                                    <Button type='primary' onClick={() => history.push('/impact-through-traccy-details')}>Read More<SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
-                                </Col>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <h1>
+                                            Selection Stage
+                                        </h1>
+                                        <div className="first-section">
+                                            <span>Projects under Selection</span>
+                                            <span>&nbsp;7&nbsp;</span>
+                                        </div>
+                                        <div className="first-section">
+                                            <span>Numbers of Countries</span>
+                                            <span>&nbsp;6&nbsp;</span>
+                                        </div>
+                                    </div>
+                                    <div className="stage-right">
+                                        <div className="project-list">
+                                            <span>Project List</span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <Col sm='12' className='arrow-action'>
                                     <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
                                     <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
                                 </Col>
-                            </Row>
+                            </div>
+                        </Container>
+                    </div>
+                    <div>
+                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                        <Container>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <h1>
+                                            Incubation Stage
+                                        </h1>
+                                        <div className="first-section">
+                                            <span>Projects under Incubation</span>
+                                            <span>&nbsp;3&nbsp;</span>
+                                        </div>
+                                        <div className="first-section">
+                                            <span>Numbers of Countries</span>
+                                            <span>&nbsp;2&nbsp;</span>
+                                        </div>
+                                    </div>
+                                    <div className="stage-right">
+
+                                    </div>
+                                </div>
+                                <Col sm='12' className='arrow-action'>
+                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                                </Col>
+                            </div>
                         </Container>
                     </div>
                     <div>

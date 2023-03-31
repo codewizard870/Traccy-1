@@ -330,6 +330,10 @@
     .roadmap-section{
         padding: 12rem 0;
         position: relative;
+        @media screen and (max-width:576px) {
+            padding: 3rem 0;
+        }
+
         .left-hexa{
             position: absolute;
             left: -8%;
@@ -348,6 +352,9 @@
             margin-top: 7rem;
             position: relative;
             height: 300px;
+            @media screen and (max-width:576px) {
+                height: 150px;
+            }
             .circle-icon-upper{
                 position: absolute;
                 top: 47%;

@@ -14,7 +14,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 20px 30px;
         position: absolute;
         width: 100%;
         margin: auto;
@@ -22,7 +22,7 @@
         right: 0;
 
         .dark-header & {
-            background: #160D20;
+            background: #0A090980;
             left: 0;
             padding: 20px 30px;
             @media screen and (max-width:991px) {

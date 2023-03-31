@@ -139,7 +139,6 @@ const AboutUs = () => {
     const roadmapWrapperRef = useRef();
     const hoverRoadmap = (e, index) => {
         const descs = document.getElementsByClassName("roadmap-desc");
-        console.log(index)
         for (let i = 0; i < descs.length; i++) {
             if (i === index){
                 descs[i].style.visibility = "visible";
