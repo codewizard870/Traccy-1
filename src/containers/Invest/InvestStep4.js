@@ -7,8 +7,10 @@ import "./InvestStep4.scss";
 import { useTrackedState } from "../../contexts/store";
 import { toast } from "react-toastify";
 import { REQUEST_ENDPOINT, SUCCESS_OPTION } from "../../config/constants";
+import { useTranslation } from "react-i18next";
 
 const InvestStep4 = ({ onNext, onPrev }) => {
+  const {t} = useTranslation();
   const history = useHistory();
   const state = useTrackedState();
 
@@ -50,24 +52,24 @@ const InvestStep4 = ({ onNext, onPrev }) => {
       <div className="invest-step4-body0">
         <div className="congrat-wrapper">
           <img src="/invest-form/congrat.png" alt="congrat" />
-          <span>Congratulations!!</span>
+          <span>{t("buy:congrat")}</span>
           <img src="/invest-form/congrat1.png" alt="congrat" />
         </div>
-        <span>You have invested in TRACCY</span>
-        <span>For more update, please get in touch with us</span>
-        <span>Transaction History</span>
+        <span>{t("buy:invested")}</span>
+        <span>{t("buy:more")}</span>
+        <span>{t("buy:history")}</span>
         <div className="grid-wrapper">
-          <div className="grid-header">DATE</div>
-          <div className="grid-header">YOU INVESTED</div>
-          <div className="grid-header">TRCY YOU WILL GET</div>
-          <div className="grid-header">SAFT READY</div>
+          <div className="grid-header">{t("buy:date")}</div>
+          <div className="grid-header">{t("buy:youinvest")}</div>
+          <div className="grid-header">{t("buy:get")}</div>
+          <div className="grid-header">{t("buy:saftready")}</div>
           <div className="grid-data">{state.investDate}</div>
           <div className="grid-data">{state.investAmount}</div>
           <div className="grid-data">{state.investTrcyAmount}</div>
           <div className="grid-data download" onClick={download_pdf}>Download</div>
         </div>
-        <span className="span-auto">Your download has been procced automatically.</span>
-        <span className="span-download">Do you want to download again? Click on <span className="download">Download</span></span>
+        <span className="span-auto">{t("buy:yourdownload")}</span>
+        <span className="span-download">{t("buy:again")} <span className="download">{t("buy:download")}</span></span>
         <div className="steps-action">
           <div>
             <Button type="primary" onClick={() => handleNext()}>

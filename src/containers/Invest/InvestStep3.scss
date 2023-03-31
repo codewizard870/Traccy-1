@@ -104,6 +104,7 @@
         button {
           width: 150px;
           font-size: 13px;
+          white-space: break-spaces;
           @media screen and (max-width: 576px) {
             font-size: 13px;
             width: 100px;

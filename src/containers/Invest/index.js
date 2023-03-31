@@ -11,8 +11,10 @@ import './index.scss';
 import Traccyicon from '../../assets/images/icon.png';
 import LogoLight from '../../assets/images/logo-light.png';
 import { Navbar } from '../../components/layout';
+import { useTranslation } from 'react-i18next';
 
 const Invest = () => {
+    const {t} = useTranslation();
     const [current, setCurrent] = useState(0);
 
     const next = () => {
@@ -25,19 +27,19 @@ const Invest = () => {
 
     const steps = [
         {
-            title: 'SAFT Agreement',
+            title: `${t("buy:saft")} ${t("buy:agreement")}`,
             content: <InvestStep1 onNext={next} />,
         },
         {
-            title: 'Choose Token',
+            title: t("buy:choose"),
             content: <InvestStep2 onNext={next} onPrev={prev} />,
         },
         {
-            title: 'Fill the form',
+            title: t("buy:fill"),
             content: <InvestStep3 onNext={next} onPrev={prev} />,
         },
         {
-            title: 'Confirmation',
+            title: t("buy:confirmation"),
             content: <InvestStep4 onPrev={prev} />,
         },
     ];
