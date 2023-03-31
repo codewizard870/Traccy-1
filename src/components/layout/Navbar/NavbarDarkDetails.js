@@ -1,22 +1,26 @@
 import React from "react";
-import { Container, SvgIcon } from "../../common";
-import { Button } from "antd";
+import { Container } from "../../common";
 import Menus from "./Menus";
 import "./Navbar.scss";
+import "./ConnectWallet.scss";
 
-import TraccyLogo from '../../../assets/images/icon.png'; 
+import TraccyLogo from '../../../assets/images/logo.png';
 
-const NavbarDarkDetails = () => {
+const NavbarDark = () => {
   return (
     <header className="main-header">
-      <Container>
+      <Container className="container-with-connect-wallet">
         <div className="header-inner">
           <div className="logo">
-            <img src={TraccyLogo} alt="logo" />            
+            <img src={TraccyLogo} alt="logo" />
+            <p>
+              USING <br />
+              BLOCKCHAIN <br />
+              IMPACTFUL
+            </p>
           </div>
           <div className="right-header">
             <Menus />
-            <Button type="primary" className="brochure-btn">Brochure <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
           </div>
         </div>
       </Container>
@@ -24,4 +28,4 @@ const NavbarDarkDetails = () => {
   );
 }
 
-export default NavbarDarkDetails;
+export default NavbarDark;

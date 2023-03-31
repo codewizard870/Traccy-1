@@ -5,6 +5,9 @@ import { useMediaQuery } from 'react-responsive'
 import HTMLFlipBook from 'react-pageflip';
 import './index.scss';
 
+import { useHistory } from 'react-router-dom';
+import Slider from 'react-slick';
+
 import BannerImg from '../../assets/images/itt-slide.jpg';
 import MapImg from '../../assets/images/map.png';
 import PopupImg1 from '../../assets/images/popup-img1.jpg';
@@ -56,6 +59,30 @@ const ImpactThroughTraccyDetails = () => {
         setShowContent1(false);
         setShowContent2(false);
     };
+
+    const history = useHistory();
+    const slider = React.useRef(null);
+    const settings2 = {
+        dots: true,
+        infinite: false,
+        speed: 900,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        appendDots: dots => (
+            <div className='thumb-col-main'>
+                <ul style={{ margin: "0px" }}> {dots} </ul>
+            </div>
+        ),
+        customPaging: i => (
+            <div className='thumb-col-main'>
+                {i === 0 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
+                {i === 1 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
+                {i === 2 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
+                {i === 3 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
+            </div>
+        )
+    };
     return (
         <div className='itt-dtl-wrapper'>
             <section className='banner-section'>
@@ -66,39 +93,224 @@ const ImpactThroughTraccyDetails = () => {
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
                 </div>
                 <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                <Container>
-                    <Row>
-                        <Col lg='6' className="banner-left">
-                            <p>
-                                This building
-                            </p>
-                            <h1>We are planning to Construction</h1>
-                            <div className='left-bottom'>
-                                <div>
-                                    <p>Building area </p>
-                                    <h2>2,986 <span>m<sup>2</sup></span></h2>
+                <Slider {...settings2} ref={slider}>
+                    <div>
+                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                        <Container>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <div className="stage-card">
+                                            <h1>
+                                                Selection Stage
+                                            </h1>
+                                            <div className="first-section">
+                                                <span>Projects under Selection</span>
+                                                <span>&nbsp;7&nbsp;</span>
+                                            </div>
+                                            <div className="first-section">
+                                                <span>Numbers of Countries</span>
+                                                <span>&nbsp;6&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="stage-right">
+                                        <div className="project-list">
+                                            <span>Project List</span>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Location</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                                <tr className="custom">
+                                                    <td>Galactic Minears</td>
+                                                    <td>New York, USA</td>
+                                                    <td>Green Mining</td>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom">
+                                                    <td>Galactic Minears</td>
+                                                    <td>New York, USA</td>
+                                                    <td>Green Mining</td>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" />
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
-                                <SvgIcon name='line-circle' viewbox='0 0 488.004 10.996' />
+                                <Col sm='12' className='arrow-action'>
+                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                                </Col>
                             </div>
-                        </Col>
-                        <Col lg='6' className="banner-right">
-                            <div className='right-upper'>
-                                <p>Building Value</p>
-                                <h2>25 986 000<span>$</span></h2>
+                        </Container>
+                    </div>
+                    <div>
+                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                        <Container>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <div className="stage-card">
+                                            <h1>
+                                                Incubation Stage
+                                            </h1>
+                                            <div className="first-section">
+                                                <span>Projects under Incubation</span>
+                                                <span>&nbsp;3&nbsp;</span>
+                                            </div>
+                                            <div className="first-section">
+                                                <span>Numbers of Countries</span>
+                                                <span>&nbsp;2&nbsp;</span>
+                                            </div>
+                                        </div>
+                                        <button>STO REGISTRATION</button>
+                                    </div>
+                                    <div className="stage-right">
+                                        <div className="project-list">
+                                            <span>Project List</span>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Location</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom">
+                                                    <td>Galactic Minears</td>
+                                                    <td>New York, USA</td>
+                                                    <td>Green Mining</td>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" />
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Col sm='12' className='arrow-action'>
+                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                                </Col>
                             </div>
-                            <div className='right-bottom'>
-                                <p>Building Value </p>
-                                <h2>7 <span>years</span></h2>
+                        </Container>
+                    </div>
+                    <div>
+                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                        <Container>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <div className="stage-card">
+                                            <h1>
+                                                Launch Stage
+                                            </h1>
+                                            <div className="first-section">
+                                                <span>Projects under Launch</span>
+                                                <span>&nbsp;1&nbsp;</span>
+                                            </div>
+                                            <div className="first-section">
+                                                <span>Numbers of Countries</span>
+                                                <span>&nbsp;1&nbsp;</span>
+                                            </div>
+                                        </div>
+                                        <button>Buy Token</button>
+                                    </div>
+                                    <div className="stage-right">
+                                        <div className="project-list">
+                                            <span>Project List</span>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Location</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                                <tr className="custom">
+                                                    <td>Galactic Minears</td>
+                                                    <td>New York, USA</td>
+                                                    <td>Green Mining</td>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" />
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Col sm='12' className='arrow-action'>
+                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                                </Col>
                             </div>
-                            <div className='build-arrow'>
-                                <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
-                                <span>
-                                    Building  Value
-                                </span>
+                        </Container>
+                    </div>
+                    <div>
+                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                        <Container>
+                            <div className="stage-wrapper">
+                                <div className="stage-main">
+                                    <div className="stage-left">
+                                        <div className="stage-card">
+                                            <h1>
+                                                Monitoring Stage
+                                            </h1>
+                                            <div className="first-section">
+                                                <span>Projects under Monitoring</span>
+                                                <span>&nbsp;2&nbsp;</span>
+                                            </div>
+                                            <div className="first-section">
+                                                <span>Numbers of Countries</span>
+                                                <span>&nbsp;2&nbsp;</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="stage-right">
+                                        <div className="project-list">
+                                            <span>Project List</span>
+                                            <table>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Location</th>
+                                                    <th>Category</th>
+                                                </tr>
+                                                <tr className="custom">
+                                                    <td>Galactic Minears</td>
+                                                    <td>New York, USA</td>
+                                                    <td>Green Mining</td>
+                                                </tr>
+                                                <tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" /><tr className="gap" />
+                                                <tr className="custom" />
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <Col sm='12' className='arrow-action'>
+                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                                </Col>
                             </div>
-                        </Col>
-                    </Row>
-                </Container>
+                        </Container>
+                    </div>
+                </Slider>
             </section>
             <section className='book-section'>
                 <Container>
