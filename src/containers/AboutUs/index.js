@@ -26,6 +26,7 @@ import RightHexa from '../../assets/images/right-hexa-small.svg';
 import RightHexa3 from '../../assets/images/right-hexa3.svg'
 import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
+import { useTranslation } from 'react-i18next';
 
 const InfoModal = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,6 +82,8 @@ function PrevArrow(props) {
 }
 
 const AboutUs = () => {
+    const { t } = useTranslation();
+
     const settings = {
         className: "center",
         infinite: true,
@@ -140,11 +143,11 @@ const AboutUs = () => {
     const hoverRoadmap = (e, index) => {
         const descs = document.getElementsByClassName("roadmap-desc");
         for (let i = 0; i < descs.length; i++) {
-            if (i === index){
+            if (i === index) {
                 descs[i].style.visibility = "visible";
                 descs[i].style.maxHeight = "100%";
             }
-            else{
+            else {
                 descs[i].style.visibility = "hidden";
                 descs[i].style.maxHeight = "0px";
             }
@@ -170,10 +173,8 @@ const AboutUs = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1> <span>About us</span> </h1>
-                            <p>
-                                We are committed to the key business principles of: Safety, Transparency and Sustainable Growth.
-                            </p>
+                            <h1> <span>{t("about_us:title")}</span> </h1>
+                            <p>{t("about_us:label")}</p>
                         </Col>
                     </Row>
                 </Container>
@@ -202,22 +203,21 @@ const AboutUs = () => {
                             <div className='header-row'>
                                 <img src={TraccyIcon} alt="Traccy" />
                                 <h4>Traccy using Blockchain Impactful</h4>
-                                <p>Cryptocurrencies are changing the world for the better and Traccy is about to become a major player in this revolution. </p>
+                                <p>{t("about_us:impactful")}</p>
                             </div>
                         </Col>
                     </Row>
                     <Row>
                         <Col md="6">
-                            <h2 className='main-heading'>Our <span>Vision </span></h2>
+                            <h2 className='main-heading'>{t("our")} <span>{t("vision")}</span></h2>
                             <p className='vission-text'>
-                                Sustainable impact and financial equality
-                                Our vision is to help everyone achieve financial stability and security regardless of their background or social class.
+                                {t("about_us:vision_cnt")}
                             </p>
                         </Col>
                         <Col md="6">
-                            <h2 className='main-heading'>Our <span>Mission </span></h2>
+                            <h2 className='main-heading'>{t("our")} <span>{t("mission")} </span></h2>
                             <p className='vission-text'>
-                                Decentralization and transparency thanks to blockchain Traccy invests in proven business models such as agriculture, real estate, energy supply, and many more via blockchain technology. We create a bridge between the digital and the real world to make a big contribution to achieving the UN SDGs.
+                                {t("about_us:mission_cnt")}
                             </p>
                         </Col>
                     </Row>
@@ -262,33 +262,24 @@ const AboutUs = () => {
                             </g>
                         </svg>
                         <Col lg='3' md='6' className='stat-col'>
-                            <h4>FOUNDED IN</h4>
+                            <h4>{t("about_us:foundin")}</h4>
                             <h1>2022</h1>
-                            <p>
-
-                                By Joas Fischer, Dedry Misamu and Mick Misamu
-                            </p>
+                            <p>{t("about_us:foundin_cnt")}</p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
-                            <h4>PRODUCT UPDATES</h4>
+                            <h4>{t("about_us:updates")}</h4>
                             <h1>6+</h1>
-                            <p>
-                                New products and services across platform and mobile
-                            </p>
+                            <p>{t("about_us:updates_cnt")}</p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
-                            <h4>NEW RELEASE EVERY</h4>
-                            <h1>4 Months</h1>
-                            <p>
-                                We launch 3 new projects a year
-                            </p>
+                            <h4>{t("about_us:release")}</h4>
+                            <h1>4 {t("about_us:months")}</h1>
+                            <p>{t("about_us:release_cnt")}</p>
                         </Col>
                         <Col lg='3' md='6' className='stat-col'>
-                            <h4>PROJECTS</h4>
+                            <h4>{t("about_us:projects")}</h4>
                             <h1>3+</h1>
-                            <p>
-                                Supported projects through our platform
-                            </p>
+                            <p>{t("about_us:projects_cnt")}</p>
                         </Col>
                     </Row>
                 </Container>
@@ -416,10 +407,7 @@ const AboutUs = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'>Managament-<span>Team</span></h1>
-                            <p className='main-heading-text'>
-                                Our team consists of experts in the fields of IT, cybersecurity and crypto-economics, as well as talent from banking and corporate communications. We strive every day to be at the forefront of innovation in the industry.
-
-                            </p>
+                            <p className='main-heading-text'>{t("about_us:management")} </p>
                         </Col>
                     </Row>
                     <Row>
@@ -431,7 +419,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Joas Fischer </h3>
                                                 <div className='designation'><Divider /> CEO & Co-Founder</div>
-                                                <p>Joas is a crypto investor and experienced entrepreneur from the financial sector. He is responsible for bringing together key partners within Traccy. His expertise, leadership, network and positive mindset help the company to establish itself as a major player in the market.</p>
+                                                <p>{t("about_us:joas")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -449,7 +437,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Mick Misamu </h3>
                                                 <div className='designation'><Divider /> CTO</div>
-                                                <p>Mick is a crypto investor with over 7 years of experience in the IT industry in systems and network technology. Mick has experience in blockchain technology, IT and cyber security.</p>
+                                                <p>{t("about_us:mick")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -467,7 +455,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Farrah Mettler </h3>
                                                 <div className='designation'><Divider /> CMO</div>
-                                                <p>Farrah is a marketing and communications expert with over 5 years of experience in strategic marketing, corporate communications, and product management. She specializes in international business relations, especially in the Asian market.</p>
+                                                <p>{t("about_us:farrah")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -485,7 +473,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Dedry Misamu </h3>
                                                 <div className='designation'><Divider /> CFO</div>
-                                                <p>Dedryis a crypto investor and former banker with over 10 years of trading experience. Dedryis responsible for finance and business development with strategic partners in the developing world. He has a large network in both Asia and Africa, which he makes available to the company.</p>
+                                                <p>{t("about_us:dedry")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -503,7 +491,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Andrea Bello </h3>
                                                 <div className='designation'><Divider /> COO</div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
+                                                <p>{t("about_us:andrea")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -521,7 +509,7 @@ const AboutUs = () => {
                                             <div className='slider-left'>
                                                 <h3>Ika Nur Affifah </h3>
                                                 <div className='designation'><Divider /> </div>
-                                                <p>Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting ndustry. Lorem Ipsum is simply dummy text the printing and typesetting Lorem Ipsum is simply dummy text the printing and typesetting ndustry.</p>
+                                                <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />

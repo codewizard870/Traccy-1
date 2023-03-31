@@ -9,10 +9,12 @@ import EnIcon from '../../../assets/images/en.png';
 import GermanIcon from '../../../assets/images/german.png';
 import FrenchIcon from '../../../assets/images/french.png';
 import ConnectWallet from "./ConnectWallet";
+import { useTranslation } from "react-i18next";
 
 const Menus = () => {
-  const history = useLocation();
   const [open, setOpen] = useState(false);
+  const { i18n, t } = useTranslation();
+
   const showDrawer = () => {
     setOpen(true);
   };
@@ -21,6 +23,9 @@ const Menus = () => {
     setOpen(false);
   };
 
+  const handleLanguage = (lang_code) => {
+      i18n.changeLanguage(lang_code);
+  }
   return (
     <>
       <Drawer
@@ -110,17 +115,18 @@ const Menus = () => {
         className='lang-select'
         popupClassName='lang-select-drop'
         placement='bottomRight'
+        onChange={(e) => handleLanguage(e)}
         options={[
           {
             value: 'en',
             label: <div className="lang-item"><div className="flag-icon"><img src={EnIcon} alt="en" /></div>EN </div>,
           },
           {
-            value: 'german',
+            value: 'ge',
             label: <div className="lang-item"><div className="flag-icon"><img src={GermanIcon} alt="german" /></div>German </div>,
           },
           {
-            value: 'french',
+            value: 'fr',
             label: <div className="lang-item"><div className="flag-icon"><img src={FrenchIcon} alt="french" /></div>French </div>,
           },
         ]}

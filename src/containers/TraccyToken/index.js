@@ -226,8 +226,8 @@ const TraccyToken = () => {
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    {/* <SvgIcon name='lab' viewbox='0 0 76.732 48.846' /> */}
-                                    <img src="/traccy-token/lab.svg" alt="lab" />
+                                    {/* <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' /> */}
+                                    <img className="icon" src="/traccy-token/lab.svg" alt="lab" />
                                 </div>
                                 <h4>TRCY LAB</h4>
                                 <p>
@@ -239,7 +239,7 @@ const TraccyToken = () => {
                             <div className='why-card'>
                                 <div className='icon-circle'>
                                     {/* <SvgIcon name='community' viewbox='0 0 63.185 49.33' /> */}
-                                    <img src="/traccy-token/community.svg" alt="community" />
+                                    <img className="icon" src="/traccy-token/community.svg" alt="community" />
                                 </div>
                                 <h4>TRCommunitY</h4>
                                 <p>
@@ -251,7 +251,7 @@ const TraccyToken = () => {
                             <div className='why-card'>
                                 <div className='icon-circle'>
                                     {/* <SvgIcon name='token' viewbox='0 0 50.148 59.189' /> */}
-                                    <img src="/traccy-token/token.svg" alt="token" />
+                                    <img className="icon" src="/traccy-token/token.svg" alt="token" />
                                 </div>
                                 <h4>TRCY TOKEN</h4>
                                 <p>
@@ -263,7 +263,7 @@ const TraccyToken = () => {
                             <div className='why-card'>
                                 <div className='icon-circle'>
                                     {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
-                                    <img src="/traccy-token/connect.svg" alt="lab" />
+                                    <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
                                 <h4>TRCY CONNECT</h4>
                                 <p>

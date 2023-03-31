@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 
 //Svg Sprite
 import svgFile from "./assets/images/svg/svg-sprite.svg";
+import "./i18nextConf";
 
 function App() {
   useEffect(() => {
