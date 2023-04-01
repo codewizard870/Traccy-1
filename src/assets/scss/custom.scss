@@ -541,8 +541,12 @@ a{
   }
 }
 
+body {
+  overflow: overlay;
+}
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba($primary-color, .3);
+  // -webkit-box-shadow: inset 0 0 6px rgba($primary-color, .3);
+  background: transparent;
   opacity: 50%;
   border-radius: 3px;
   height: 1px;
@@ -551,7 +555,7 @@ a{
 ::-webkit-scrollbar {
   width: 3px;
   height: 2px;
-  background-color: #15011f;
+  background: transparent;
   opacity: 70%;
   border-radius: 2px;
   @media screen and (max-width: 991px) {
@@ -561,7 +565,7 @@ a{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba($primary-color, .5);
+  background: gray;
   border-radius: 6px;
 }
 

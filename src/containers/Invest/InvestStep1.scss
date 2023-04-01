@@ -58,56 +58,8 @@
     }
   }
 
-  .check-group {
-    display: flex;
-    margin-top: 42px;
-    @media screen and (max-width: 576px) {
-      margin-top: 25px;
-    }
-
-    & > input[type="checkbox"] {
-      display: none;
-    }
-    & > input[type="checkbox"] + *::before {
-      content: "";
-      display: inline-block;
-      vertical-align: bottom;
-      width: 32px;
-      height: 32px;
-      margin-right: 0.3rem;
-      border-radius: 10%;
-      border-style: solid;
-      border-width: 4px;
-      border-color: #be1e73;
-      flex-shrink: 0;
-      @media screen and (max-width: 576px) {
-        width: 20px;
-        height: 20px;
-        border-width: 1px;
-      }
-    }
-
-    & > input[type="checkbox"]:checked + *::before {
-      content: "✓";
-      color: #be1e73;
-      text-align: center;
-    }
-
-    & > input[type="checkbox"] + * {
-      display: inline-flex;
-      padding: 0.5rem 1rem;
-    }
-
-    .checkbox-label {
-      font-size: 24px;
-      text-align: center;
-      color: #ffffff;
-      @media screen and (max-width: 576px) {
-        font-size: 15px;
-      }
-    }
-  }
   .steps-action {
+    margin-top: 30px !important;
     justify-content: center !important;
     .decline {
       background: white !important;
