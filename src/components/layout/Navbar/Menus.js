@@ -122,12 +122,12 @@ const Menus = () => {
             label: <div className="lang-item"><div className="flag-icon"><img src={EnIcon} alt="en" /></div>EN </div>,
           },
           {
-            value: 'ge',
-            label: <div className="lang-item"><div className="flag-icon"><img src={GermanIcon} alt="german" /></div>German </div>,
+            value: 'de',
+            label: <div className="lang-item"><div className="flag-icon"><img src={GermanIcon} alt="german" /></div>DE</div>,
           },
           {
             value: 'fr',
-            label: <div className="lang-item"><div className="flag-icon"><img src={FrenchIcon} alt="french" /></div>French </div>,
+            label: <div className="lang-item"><div className="flag-icon"><img src={FrenchIcon} alt="french" /></div>FR </div>,
           },
         ]}
       />

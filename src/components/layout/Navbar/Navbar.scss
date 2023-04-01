@@ -20,6 +20,9 @@
         margin: auto;
         left: 0;
         right: 0;
+        @media screen and (max-width:991px) {
+            padding: 20px 10px;
+        }
 
         .dark-header & {
             background: #0A090980;
@@ -107,6 +110,7 @@
 
             .lang-select{
                 min-width: 105px;
+
                 .ant-select-selector{
                     background: none;
                     border: 0;
@@ -115,7 +119,7 @@
                     outline: none;
                     padding: 0;
                     outline: none;
-                    box-shadow: none;
+                    box-shadow: none !important;
                 }
                 .ant-select-arrow{
                     svg {
@@ -128,15 +132,9 @@
                     color: $white;
                     justify-content: center;
                     .flag-icon{
-                        width: 25px;
-                        height: 25px;
-                        min-width: 25px;
-                        min-height: 25px;
-                        border-radius: 25px;
-                        overflow: hidden;
+                        border-radius: 50%;
                         margin-right: 10px;
                         img {
-                            width: 100%;
                             width: 25px;
                             height: 25px;
                         }
@@ -224,6 +222,8 @@
 
 .lang-select-drop{
     min-width: 110px !important;
+    border-radius: 0px;
+
     .lang-item{
         display: flex;
         align-items: center;

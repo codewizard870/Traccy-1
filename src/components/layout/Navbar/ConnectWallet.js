@@ -10,9 +10,11 @@ import { WalletOutlined, CheckOutlined } from "@ant-design/icons";
 import "./ConnectWallet.scss"
 import { WALLET_LIST } from "../../../config/constants";
 import { SvgIcon } from '../../../components/common';
+import { useTranslation } from "react-i18next";
 // import WalletIcon from "/wallet/wallet.svg";
 
 export default function ConnectWallet() {
+  const { t }= useTranslation();
   const dispatch = useDispatch();
   const state = useTrackedState();
   const keplr = useKeplrWallet();
@@ -65,7 +67,7 @@ export default function ConnectWallet() {
         </div>
       </div>
       <Button type="ghost" className="connect-wallet" onClick={onConnect}>
-        {!connected && <span>Connect Wallet</span>}
+        {!connected && <span>{t("general:connectwallet")}</span>}
         {(connected && !initialized) && <span>Loading</span>}
         {(connected && initialized) && <><WalletOutlined /><CheckOutlined /><span>{address}</span></>}
       </Button>
