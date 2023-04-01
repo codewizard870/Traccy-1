@@ -53,7 +53,7 @@ const Invest = () => {
             </div>
             <div className='leftbar'>
                 <div className='traccy-icon'>
-                    <img src={Traccyicon} alt='Logo' />
+                    {/* <img src={Traccyicon} alt='Logo' /> */}
                 </div>
                 <div className='social-icon-list'>
                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
