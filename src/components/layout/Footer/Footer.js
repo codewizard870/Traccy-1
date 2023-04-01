@@ -44,6 +44,7 @@ const Footer = () => {
                   <li>Investors </li>
                   <li>Careers  </li>
                   <li>Contact Us </li>
+                  <li>Documentations</li>
                 </ul>
               </Col>
             </Row>
@@ -59,7 +60,7 @@ const Footer = () => {
           <Col lg='8'>
             <div className="left-inner">
               <img src={Logo} alt='Logo' />
-              <p>Copyright ©  Traccy  Movement, Inc. <br /> Traccy was co-founded by Dedry Misamu, Mick Misamu and Joas Fischer.</p>
+              <p>Copyright ©  Traccy AG. <br /> Traccy was co-founded by Dedry Misamu, Mick Misamu and Joas Fischer.</p>
             </div>
           </Col>
           <Col lg='4'>
