@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SvgIcon } from '../../components/common';
 import { Button, Divider } from 'antd';
 import { useHistory } from 'react-router-dom';
@@ -9,6 +9,7 @@ import "../../assets/scss/plugins/slick-slider/slick-theme.min.scss"
 import './index.scss';
 
 import hoverVideo from '../../assets/images/hover-video.webm';
+import { useTranslation } from 'react-i18next';
 
 function NextArrow(props) {
    const { className, onClick } = props;
@@ -39,6 +40,7 @@ function PrevArrow(props) {
 }
 
 const Home = () => {
+   const { t, i18n } = useTranslation();
    const history = useHistory();
    const [slider, setSlider] = useState();
    const settings = {
@@ -89,6 +91,13 @@ const Home = () => {
       if (slider.state.breakpoint == null || slider.state.breakpoint >= 1255)
          slider.slickGoTo(slick)
    }
+
+   const lang = localStorage.getItem("lang")??"en";
+   useEffect(() => {
+     if (lang) 
+       i18n.changeLanguage(lang);
+   }, [i18n, lang]);
+
    return (
       <>
          <div className='home2-wrapper'>
@@ -125,13 +134,13 @@ const Home = () => {
                               <h3>TRCY Token</h3>
                            </div>
                            <p>
-                              Buy our TRCY Token and profit from unlimited access to our upcoming products and exclusive services
+                              {t("main_menu:trcy")}
                            </p>
 
                            <ul>
-                              <li>Community Access</li>
-                              <li>Voting Power</li>
-                              <li>Platform and much more</li>
+                              <li>{t("main_menu:trcy_1")}</li>
+                              <li>{t("main_menu:trcy_2")}</li>
+                              <li>{t("main_menu:trcy_3")}</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -160,12 +169,12 @@ const Home = () => {
                               <h3>Traccy Impact</h3>
                            </div>
                            <p>
-                              Believe in a bright future - invest in impact, achieve change
+                              {t("main_menu:impact")}
                            </p>
                            <ul>
-                              <li>We launch 3 new projects a year</li>
-                              <li>Access to projects through our platform</li>
-                              <li>3 ongoing projects</li>
+                              <li>{t("main_menu:impact_1")}</li>
+                              <li>{t("main_menu:impact_2")}</li>
+                              <li>{t("main_menu:impact_3")}</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -194,12 +203,12 @@ const Home = () => {
                               <h3>About Us</h3>
                            </div>
                            <p>
-                              Through blockchain technology we solve socio-economic problems of existential importance worldwide
+                              {t("main_menu:about")}
                            </p>
                            <ul>
-                              <li>Sustainable impact and financial equality</li>
-                              <li>Decentralization and transparency thanks to blockchain</li>
-                              <li>Our team of experts</li>
+                              <li>{t("main_menu:about_1")}</li>
+                              <li>{t("main_menu:about_2")}</li>
+                              <li>{t("main_menu:about_3")}</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -228,12 +237,12 @@ const Home = () => {
                               <h3>Become a part </h3>
                            </div>
                            <p>
-                              Your contribution brings change. Become a part of the TRComunitY.
+                              {t("main_menu:become")}
                            </p>
                            <ul>
-                              <li>Realize your preferred impact investing projects with us</li>
-                              <li>With our community you create social equality</li>
-                              <li>You profit from our knowledge, experience network and participation in exciting projects</li>
+                              <li>{t("main_menu:become_1")}</li>
+                              <li>{t("main_menu:become_2")}</li>
+                              <li>{t("main_menu:become_3")}</li>
                            </ul>
                         </div>
                         <LearnMore />
@@ -262,12 +271,12 @@ const Home = () => {
                               <h3>PURCHASE TRCY </h3>
                            </div>
                            <p>
-                              Your contribution brings change. Become a part of the TRComunitY.
+                              {t("main_menu:buy")}
                            </p>
                            <ul>
-                              <li>Realize your preferred impact investing projects with us</li>
-                              <li>With our community you create social equality</li>
-                              <li>You profit from our knowledge, experience network and participation in exciting projects</li>
+                              <li>{t("main_menu:buy_1")}</li>
+                              <li>{t("main_menu:buy_2")}</li>
+                              <li>{t("main_menu:buy_3")}</li>
                            </ul>
                         </div>
                         <LearnMore />

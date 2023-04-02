@@ -16,7 +16,7 @@ i18n
       escapeValue: false, // no need for react. it escapes by default
     },
     lng: "en",
-    ns: ['general', 'about_us', 'become', "buy", "library"],
+    ns: ['general', 'about_us', 'become', "buy", "library", "main_menu", "token"],
     defaultNS: 'about_us',
     backend: {
       loadPath: '/locales/{{lng}}/{{ns}}.json',

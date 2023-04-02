@@ -10,10 +10,11 @@ import GermanIcon from '../../../assets/images/german.png';
 import FrenchIcon from '../../../assets/images/french.png';
 import ConnectWallet from "./ConnectWallet";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 const Menus = () => {
   const [open, setOpen] = useState(false);
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
 
   const showDrawer = () => {
     setOpen(true);
@@ -24,8 +25,18 @@ const Menus = () => {
   };
 
   const handleLanguage = (lang_code) => {
-      i18n.changeLanguage(lang_code);
+    localStorage.setItem("lang", lang_code);
+    setDefaultLang(lang_code);
+    i18n.changeLanguage(lang_code);
   }
+
+  const lang = localStorage.getItem("lang")??"en";
+  const [defaultLang, setDefaultLang] = useState(lang);
+  useEffect(() => {
+    if (lang) 
+      i18n.changeLanguage(lang);
+  }, [i18n, lang]);
+
   return (
     <>
       <Drawer
@@ -111,7 +122,8 @@ const Menus = () => {
       </ul>
       <ConnectWallet />
       <Select
-        defaultValue="en"
+        defaultValue={defaultLang}
+        value={defaultLang}
         className='lang-select'
         popupClassName='lang-select-drop'
         placement='bottomRight'

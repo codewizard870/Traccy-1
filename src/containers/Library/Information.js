@@ -1,19 +1,82 @@
 import { Link } from "react-router-dom";
 import ConnectWallet from "../../components/layout/Navbar/ConnectWallet";
 import "./Information.scss";
+import { useTranslation } from "react-i18next";
 
 const Information = () => {
+  const { t } = useTranslation();
+
+  const Menus = [
+    {
+      label: "Home",
+      link: "/home",
+    },
+    {
+      label: "Trcy Token",
+      link: "/traccy-token",
+    },
+    {
+      label: "Trccy Impact",
+      link: "/impact-through-traccy",
+    },
+    {
+      label: t("library:aboutus"),
+      link: "/about",
+    },
+    {
+      label: t("library:become"),
+      link: "/become-part",
+    },
+    {
+      label: t("library:library"),
+      linke: "/library"
+    },
+    {
+      label: t("library:buy"),
+      link: "/invest",
+    },
+  ]
+  
+  const Companies = [
+    {
+      label: "Contact Us",
+      link: "#",
+    },
+    {
+      label: t("library:documentations"),
+      link: "#",
+    },
+  ]
+  
+  const Socials = [
+    {
+      label: "Facebook",
+      link: "#",
+    },
+    {
+      label: "Instagram",
+      link: "#",
+    },
+    {
+      label: "Twitter",
+      link: "#",
+    },
+    {
+      label: "Linkedin",
+      link: "#",
+    },
+  ]
   return (
     <div className="information-wrapper">
       <div className="connect-wallet">
         <ConnectWallet />
       </div>
       <div className="web-menu">
-        <span className="title">Website</span>
+        <span className="title">{t("library:website")}</span>
         {Menus.map(menu => <Link to={menu.link}>{menu.label}</Link>)}
       </div>
       <div className="web-menu">
-        <span className="title">Company</span>
+        <span className="title">{t("library:company")}</span>
         {Companies.map(company => <Link to={company.link}>{company.label}</Link>)}
       </div>
       <div className="web-menu">
@@ -46,64 +109,3 @@ const Information = () => {
 }
 
 export default Information;
-
-const Menus = [
-  {
-    label: "Home",
-    link: "/home",
-  },
-  {
-    label: "Trcy Token",
-    link: "/traccy-token",
-  },
-  {
-    label: "Trccy Impact",
-    link: "/impact-through-traccy",
-  },
-  {
-    label: "About Us",
-    link: "/about",
-  },
-  {
-    label: "Become a part",
-    link: "/become-part",
-  },
-  {
-    label: "Library",
-    linke: "/library"
-  },
-  {
-    label: "Buy Token",
-    link: "/invest",
-  },
-]
-
-const Companies = [
-  {
-    label: "Contact Us",
-    link: "#",
-  },
-  {
-    label: "Documentations",
-    link: "#",
-  },
-]
-
-const Socials = [
-  {
-    label: "Facebook",
-    link: "#",
-  },
-  {
-    label: "Instagram",
-    link: "#",
-  },
-  {
-    label: "Twitter",
-    link: "#",
-  },
-  {
-    label: "Linkedin",
-    link: "#",
-  },
-]
