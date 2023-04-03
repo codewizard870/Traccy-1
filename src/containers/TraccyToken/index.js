@@ -294,8 +294,8 @@ const TraccyToken = () => {
                                                     <div className='icon-circle'>
                                                         <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
                                                     </div>
-                                                    <h3>Direcrt Participation</h3>
-                                                    <p>Get actively involved, influence project goals, decisions and outcomes of impact projects.</p>
+                                                    <h3>Community Access</h3>
+                                                    <p> We will give you full access to the platform and became part of our community</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -314,8 +314,8 @@ const TraccyToken = () => {
                                                     <div className='icon-circle'>
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
-                                                    <h3>Traccy Impact</h3>
-                                                    <p>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks</p>
+                                                    <h3>Direct Partecipation</h3>
+                                                    <p> We give you access to all the new projects STO</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -335,7 +335,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='voting-power-icon' viewbox='0 0 50.148 59.189' />
                                                     </div>
                                                     <h3>Voting Power</h3>
-                                                    <p>Buy NFTS, access Defi dApps, and explore Web3 across multiple networks</p>
+                                                    <p>You will be able to vote and decide on Tracct Connect</p>
                                                 </div>
                                             </div>
                                         </Col>
