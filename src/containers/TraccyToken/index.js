@@ -81,7 +81,7 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>THE ECOSYSTEM THAT OPTIMALLY COMBINES DIGITAL AND REAL ASSETS</h1>
+                            <h1>The <span style={{fontWeight: 'bold'}}>Ecosystem</span> that optimally combines <span style={{fontWeight: 'bold'}}>digital</span> and <span style={{fontWeight: 'bold'}}>real Assets</span></h1>
                             <p>
                             Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform.
                             </p>
