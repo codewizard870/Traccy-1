@@ -411,6 +411,7 @@
     .arrow-action {
       display: flex;
       margin-top: 20px;
+      padding: 0px;
       @media screen and (max-width: 767px) {
         margin-top: 20px;
         margin-bottom: 100px;
@@ -464,7 +465,7 @@
           flex-grow: 1;
 
           @media screen and (max-width: 767px) {
-            padding: 8px 10px;
+            padding: 8px 10px 0px 0px;
             margin-top: 0px;
           }
           h1 {
@@ -549,14 +550,14 @@
           .project-list-button {
             display: flex;
             margin-top: 34px;
-            margin-left: -300px;
+            margin-left: -165px;
             align-items: center;
             gap: 7px;
             cursor: pointer;
             .list-indicator {
               border: 0px;
               border-bottom: 2px solid #bab8b8;
-              width: 300px;
+              width: 158px;
             }
             span {
               font-size: 18px;
@@ -564,6 +565,18 @@
               color: #aac3e1;
               @media screen and (max-width: 767px) {
                 font-size: 12px;
+              }
+            }
+            @media screen and (max-width: 1339px) {
+              margin-left: -127px;
+              .list-indicator{
+                width: 120px;
+              }
+            }
+            @media screen and (max-width: 1339px) {
+              margin-left: -26px;
+              .list-indicator{
+                width: 19px;
               }
             }
           }

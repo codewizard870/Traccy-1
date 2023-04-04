@@ -45,6 +45,7 @@ const Footer = () => {
                   <li>Careers  </li>
                   <li>Contact Us </li>
                   <li>Documentations</li>
+                  <li>Impact</li>
                 </ul>
               </Col>
             </Row>
