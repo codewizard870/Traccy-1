@@ -27,12 +27,12 @@ const Invest = () => {
 
     const steps = [
         {
-            title: `${t("buy:saft")} ${t("buy:agreement")}`,
-            content: <InvestStep1 onNext={next} />,
-        },
-        {
             title: t("buy:choose"),
             content: <InvestStep2 onNext={next} onPrev={prev} />,
+        },
+        {
+            title: `${t("buy:saft")} ${t("buy:agreement")}`,
+            content: <InvestStep1 onNext={next} />,
         },
         {
             title: t("buy:fill"),
