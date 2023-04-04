@@ -86,12 +86,12 @@ const ImpactThroughTraccyDetails = () => {
     return (
         <div className='itt-dtl-wrapper'>
             <section className='banner-section'>
-                <div className='social-media'>
+                {/* <div className='social-media'>
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></Button>
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='facebook' viewbox='0 0 34.875 34.664' /></Button>
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></Button>
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
-                </div>
+                </div> */}
                 <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
                 <Link to='/impact-through-traccy' className='backarrow'>
                   <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />

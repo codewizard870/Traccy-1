@@ -39,6 +39,7 @@
             max-height: 45px;
             display: flex;
             align-items: center;
+            cursor: pointer;
 
             p{
                 margin-left: 15px;
@@ -69,6 +70,10 @@
                 @media screen and (max-width:1400px) {
                     max-height: 36px;
                 }
+            }
+
+            &:hover p {
+                color: #BE1E73;
             }
         }
 

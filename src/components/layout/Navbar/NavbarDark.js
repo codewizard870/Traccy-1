@@ -5,13 +5,15 @@ import "./Navbar.scss";
 import "./ConnectWallet.scss";
 
 import TraccyLogo from '../../../assets/images/logo.png';
+import { useHistory } from "react-router-dom";
 
 const NavbarDark = () => {
+  const history = useHistory();
   return (
     <header className="main-header">
       <Container className="container-with-connect-wallet">
         <div className="header-inner">
-          <div className="logo">
+          <div className="logo" onClick={() => history.push("/")}>
             <img src={TraccyLogo} alt="logo" />
             <p>
               Using <br />

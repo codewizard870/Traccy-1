@@ -29,6 +29,21 @@
   position: relative;
   display: flex;
   overflow: hidden;
+
+  .polygon-effect {
+    & > img {
+      &:nth-child(1) {
+        position: absolute;
+        top: 176px;
+      }
+      &:nth-child(2) {
+        position: absolute;
+        right: 0;
+        top: 197px;
+      }
+    }
+  }
+
   .leftbar {
     width: 140px;
     border-right: 1px solid #292828;
@@ -162,33 +177,19 @@
         align-items: center;
         padding: 10px 10px;
         width: 100%;
-        
-        .content-panel{
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-            height: calc(100vh - 20px);
-            background: white;
-            position: relative;
-            padding-top: 60px;
-            padding-left: 34px;
-            padding-right: 30px;
+
+        .content-panel {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          height: calc(100vh - 20px);
+          background: white;
+          position: relative;
+          padding-top: 60px;
+          padding-left: 34px;
+          padding-right: 30px;
         }
       }
-    }
-  }
-}
-
-.polygon-effect {
-  & > img {
-    &:nth-child(1) {
-      position: absolute;
-      top: 176px;
-    }
-    &:nth-child(2) {
-      position: absolute;
-      right: 0;
-      top: 197px;
     }
   }
 }

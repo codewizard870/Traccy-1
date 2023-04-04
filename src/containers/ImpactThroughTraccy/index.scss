@@ -530,6 +530,17 @@
               border: 0px;
               border-bottom: 2px solid #fff9f9;
               margin-left: 48px;
+              position: relative;
+              &::after{
+                width: 6px;
+                height: 6px;
+                background: #fff9f9;
+                border-radius: 50%;
+                content: "";
+                position: absolute;
+                right: -5px;
+                top: -2px;
+              }
               @media screen and (max-width: 767px) {
                 margin-left: 10px;
               }
@@ -886,6 +897,7 @@
   left: auto;
   width: 300px;
 
+
   .ant-drawer-mask {
     opacity: 0;
   }
@@ -922,8 +934,9 @@
       }
       .project-list {
         width: 100%;
+        height: 100vh;
         backdrop-filter: blur(10px);
-
+        
         .title {
           display: flex;
           align-items: center;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../components/common';
 import { Button, Drawer, Tabs } from 'antd';
 import './index.scss';
@@ -45,17 +45,19 @@ const ImpactThroughTraccy = () => {
    }
 
    const onClose = () => {
-      setOpen(false)
+      if(openModal)
+         setOpen(false)
    }
+
    return (
-      <div className='itt-wrapper'>
+      <div className='itt-wrapper' onClick={onClose}>
          <section className='banner-section'>
-            <div className='social-media'>
+            {/* <div className='social-media'>
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></Button>
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='facebook' viewbox='0 0 34.875 34.664' /></Button>
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></Button>
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
-            </div>
+            </div> */}
             <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
             <Slider {...settings2} ref={slider}>
                {Sliders.map((data, index) => (
@@ -73,7 +75,7 @@ const ImpactThroughTraccy = () => {
                                  <div className="selection">
                                     <span className="number">{data.application_number}</span>
                                     <span className="selection-desc">selection</span>
-                                    <div className="indicator " />
+                                    <div className="indicator" />
                                  </div>
                                  <div className="project-list-button" onClick={() => onConnect(index)}>
                                     <div className="list-indicator" />
@@ -112,9 +114,9 @@ const ImpactThroughTraccy = () => {
                open={openModal}
                rootClassName='project-sidebar'
             >
-               <Button className="menu-close" onClick={onClose}>
+               {/* <Button className="menu-close" >
                   <SvgIcon name="close" viewbox="0 0 10.357 10.357" />
-               </Button>
+               </Button> */}
                <div className="project-list">
                   <div className="title">
                      <span>Project List</span>

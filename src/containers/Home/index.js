@@ -126,7 +126,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/trcy-token1.gif" className="animation-icon" alt="animation" />
+                           <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" />
                         </div>
                         <div className='desc-text'>
                            <h2>TRCY Token</h2>
@@ -161,7 +161,8 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/impact.gif" className="animation-icon" alt="animation" />
+                           <img src="/main-menu/impact.gif" className="animation-icon" alt="animation" 
+                           style={{width: "50px", height: "50px"}}/>
                         </div>
                         <div className='desc-text'>
                            <h2>Traccy Impact</h2>
@@ -229,7 +230,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/become3.gif" className="animation-icon" alt="animation" style={{marginBottom: "10px"}}/>
+                           <img src="/main-menu/become.gif" className="animation-icon" alt="animation" style={{marginBottom: "10px"}}/>
                         </div>
                         <div className='desc-text'>
                            <h2>Become a part </h2>
@@ -263,7 +264,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/trcy-token2.gif" className="animation-icon" alt="animation" />
+                           <img src="/main-menu/buy-token.gif" className="animation-icon" alt="animation" />
                         </div>
                         <div className='desc-text'>
                            <h2>Buy Token</h2>

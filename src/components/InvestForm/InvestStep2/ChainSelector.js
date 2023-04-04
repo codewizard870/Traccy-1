@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect } from "react"
-import { Col, Dropdown, Form, Row, Select, Input } from "antd"
-import { DownOutlined } from "@ant-design/icons"
+import { Form, Select } from "antd"
 
 import "./ChainSelector.scss"
 import { CHAINS, TOKEN_LIST, CHAINS_CONFIG, ERROR_OPTION } from "../../../config/constants"
@@ -10,8 +9,6 @@ import { useMetamaskWallet } from "../../../contexts/metamask"
 import { useTronLink } from "../../../contexts/tronLink"
 import { toast } from "react-toastify"
 import { SvgIcon } from '../../common';
-import TextArea from "antd/es/input/TextArea"
-import { useCallback } from "react"
 
 const ChainSelector = () => {
   const state = useTrackedState();
@@ -113,40 +110,70 @@ const ChainSelector = () => {
   return (
     <Form
       name="normal_login"
-      className="login-form selector-wrapper"
+      className="login-form"
       initialValues={{ remember: true }}
       layout='vertical'
     >
-      <Form.Item
-        name="chain"
-        label="Select Chain"
-        style={{ width: "100%" }}
-      >
-        <Select
-          defaultValue={0}
-          suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
-          popupClassName="select-drop"
-          options={chainItems}
-          onChange={handleChainSelect}
-        />
-      </Form.Item>
-      <Form.Item
-        name="tokens"
-        label="Tokens"
-        style={{ width: "100%", position: "relative" }}
-      >
-        <input
-          value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
-        />
-        <Select
-          value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
-          suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
-          popupClassName="select-drop"
-          options={tokenItems}
-          onChange={(e) => console.log(e)}
-        />
-
-      </Form.Item>
+      <div className="selector-wrapper">
+        <Form.Item
+          name="project"
+          label="Select Project"
+          style={{ width: "100%" }}
+        >
+          <Select
+            defaultValue={"Traccy"}
+            suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+            popupClassName="select-drop"
+            options={[{value: "Traccy", label: "Traccy Connect"}]}
+          />
+        </Form.Item>
+        <Form.Item
+          name="prjtoken"
+          label="Project Token"
+          style={{ width: "100%", position: "relative" }}
+        >
+          <input
+            value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
+          />
+          <Select
+            defaultValue={"trcyc"}
+            suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+            popupClassName="select-drop"
+            options={[{value: "trcyc", label: "TRCYC"}]}
+          />
+        </Form.Item>
+      </div>
+      <div className="selector-wrapper">
+        <Form.Item
+          name="chain"
+          label="Select Chain"
+          style={{ width: "100%" }}
+        >
+          <Select
+            defaultValue={0}
+            suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+            popupClassName="select-drop"
+            options={chainItems}
+            onChange={handleChainSelect}
+          />
+        </Form.Item>
+        <Form.Item
+          name="tokens"
+          label="Tokens"
+          style={{ width: "100%", position: "relative" }}
+        >
+          <input
+            value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
+          />
+          <Select
+            value={token_list.length>tokenKey ? token_list[tokenKey].name : ""}
+            suffixIcon={<SvgIcon name='select-arrow' viewbox='0 0 9.42 7.186' />}
+            popupClassName="select-drop"
+            options={tokenItems}
+            onChange={(e) => console.log(e)}
+          />
+        </Form.Item>
+      </div>
     </Form>
   )
 }
