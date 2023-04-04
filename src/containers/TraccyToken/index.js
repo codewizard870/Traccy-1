@@ -212,7 +212,6 @@ const TraccyToken = () => {
                     </Row>
                 </Container>
             </section>
-
             <section className='whytraccy-section'>
                 <img className='title-bg' src={HeaderBg1} alt='BG' />
                 <Container>

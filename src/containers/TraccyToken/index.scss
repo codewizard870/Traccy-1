@@ -8,15 +8,22 @@
 
         .left-hexx-img {
             position: absolute;
-            left: -8%;
-            top: 5%;
+            top: 476px;
+            left: -200px;
+
+            @media screen and (max-width: 580px) {
+                left: -275px;
+            }
         }
 
         .right-hexx-img {
             position: absolute;
-            right: -14%;
-            top: 54%;
-            max-width: 400px;
+            right: -300px;
+            top: 497px;
+
+            @media screen and (max-width: 580px) {
+                right: -425px;
+            }
         }
 
         .banner-left {
@@ -1049,16 +1056,22 @@
 
     .left-hexx-img {
         position: absolute;
-        left: -5%;
-        top: -2%;
-        max-width: 360px;
+        top: 476px;
+        left: -200px;
+
+        @media screen and (max-width: 580px) {
+            left: -200px;
+        }
     }
 
     .right-hexx-img {
         position: absolute;
-        right: -10%;
-        top: -8%;
-        max-width: 420px;
+        right: -300px;
+        top: 497px;
+
+        @media screen and (max-width: 580px) {
+            right: -340px;
+        }
     }
 
     .slick-slider {

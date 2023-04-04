@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Layout } from 'antd';
-import NavbarDarkDetails from "../components/layout/Navbar/NavbarDarkDetails";
-import { Footer } from "../components/layout";
+import { Navbar, Footer } from "../components/layout";
 
 const { Content } = Layout;
 
@@ -10,7 +9,7 @@ const DefaultDarkDetailsHeaderLayout = ({ children }) => {
   return (
     <React.Fragment>
       <div className="main-wrapper dark-header">
-        <NavbarDarkDetails />
+        <Navbar />
           <Content>
             <main>
               {children}

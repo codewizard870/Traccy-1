@@ -4,6 +4,7 @@ import Menus from "./Menus";
 import "./Navbar.scss";
 import "./ConnectWallet.scss";
 import TraccyLogo from '../../../assets/images/logo.png'; 
+import TraccyLogoSmall from '../../../assets/images/icon.png'; 
 import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
@@ -14,6 +15,7 @@ const Navbar = () => {
         <div className="header-inner">
           <div className="logo" onClick={() => history.push("/")}>
             <img src={TraccyLogo} alt="logo" />
+            <img src={TraccyLogoSmall} alt="logo" />
             <p>
               Using <br />
               Blockchain <br />

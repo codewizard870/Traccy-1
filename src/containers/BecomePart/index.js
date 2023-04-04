@@ -44,9 +44,6 @@ const BecomePart = () => {
     return (
         <div className='becomepart-wrapper'>
             <div className='leftbar'>
-                <div className='traccy-icon'>
-                    {/* <img src={Traccyicon} alt='Logo' /> */}
-                </div>
                 <div className='social-icon-list'>
                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -55,9 +52,9 @@ const BecomePart = () => {
                 </div>
             </div>
             <div className='right-section'>
-                <div className='header-bar'>
+                {/* <div className='header-bar'>
                     <Navbar />
-                </div>
+                </div> */}
                 <div className='rightbar-inner'>
                     <div className='address-bar'>
                         <div className='logo-section'>

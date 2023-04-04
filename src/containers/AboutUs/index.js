@@ -9,7 +9,6 @@ import './index.scss';
 import BannerImg from '../../assets/images/about-banner.png';
 import videoimg from '../../assets/images/video-img.jpg';
 import TraccyIcon from '../../assets/images/tracy-icon.png';
-import RoadmapPath from '../../assets/images/raodmap-line.svg';
 import Team1 from '../../assets/images/team1.png';
 import TeamThumb1 from '../../assets/images/team-thumb-1.png';
 import TeamThumb2 from '../../assets/images/team-thumb-2.png';
@@ -27,35 +26,6 @@ import RightHexa3 from '../../assets/images/right-hexa3.svg'
 import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import { useTranslation } from 'react-i18next';
-
-const InfoModal = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
-
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
-
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
-
-    return (
-        <>
-            <SvgIcon className='modal-arrow-icon' onClick={showModal} name='logout-icon' viewbox='0 0 35.549 35.648' />
-            <Modal title="19 November" centered footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
-                <div className='pt-3'>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                    <p>Some contents...</p>
-                </div>
-            </Modal>
-        </>
-    );
-};
 
 function NextArrow(props) {
     const { className, onClick } = props;
@@ -84,12 +54,6 @@ function PrevArrow(props) {
 const AboutUs = () => {
     const { t } = useTranslation();
 
-    const settings = {
-        className: "center",
-        infinite: true,
-        slidesToShow: 1,
-        speed: 500
-    };
     const settings2 = {
         dots: true,
         infinite: false,
@@ -538,7 +502,7 @@ const AboutUs = () => {
                     <div className="ourteam-wrapper">
                         {OURTEAM.map(team => (
                             <div className="card">
-                                <img src={team.image} height="143px" alt="team" />
+                                <img src={team.image} alt="team" />
                                 <span className="card-name">{team.name}</span>
                                 <span className="card-role">{team.role}</span>
                                 <span className="card-description">{team.description}</span>

@@ -21,7 +21,6 @@
         left: 0;
         right: 0;
         max-height: 80px;
-        overflow: hidden;
         @media screen and (max-width:991px) {
             padding: 20px 10px;
         }
@@ -57,12 +56,12 @@
                     position: absolute;
                     left: 0;
                 }
-                @media screen and (max-width:420px) {
+                @media screen and (max-width: 768px) {
                     display: none;
                 }
             }
 
-            img {
+            img:nth-child(1) {
                 max-height: 45px;
                 @media screen and (max-width:1650px) {
                     max-height: 40px;
@@ -70,8 +69,17 @@
                 @media screen and (max-width:1400px) {
                     max-height: 36px;
                 }
+                @media screen and (max-width: 568px) {
+                    display: none;
+                }
             }
-
+            img:nth-child(2) {
+                max-height: 36px;
+                display: none;
+                @media screen and (max-width: 568px) {
+                    display: block;
+                }
+            }
             &:hover p {
                 color: #BE1E73;
             }

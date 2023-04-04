@@ -49,7 +49,7 @@ export const rotues = [
   },
   {
     path: "/become-part",
-    layout: authLayout,
+    layout: defaultLayout,
     component: () => <BecomePart />
   },
   {
@@ -70,7 +70,7 @@ export const rotues = [
   {
     path: "/invest",
     exact: true,
-    layout: authLayout,
+    layout: defaultLayout,
     component: () => <Invest />
   },
   {

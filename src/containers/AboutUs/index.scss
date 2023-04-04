@@ -652,6 +652,9 @@
     }
     .ourteam-section{
         margin-top: 200px;
+        @media screen and (max-width:767px) {
+            margin-top: 0px;
+        }
         .ourteam-wrapper{
             display: flex;
             flex-wrap: wrap;
@@ -664,16 +667,31 @@
                 padding: 1rem;
                 width: 241px;
                 background: #320B3E;
+                @media screen and (max-width:767px) {
+                    width: 180px;
+                }
+                img {
+                    height: 143px;
+                    @media screen and (max-width:767px) {
+                        height: 120px;
+                    }
+                }
                 &:hover{
                     background: #220535;
                 }
                 .card-name, .card-role{
                     font-size: 25px;
                     font-weight: 700;
-                    line-height: 30px;
+                    line-height: 120%;
+                    @media screen and (max-width:767px) {
+                        font-size: 16px;
+                    }
                 }
                 .card-name {
                     margin-top: 17px;
+                    @media screen and (max-width:767px) {
+                        margin-top: 10px;
+                    }
                 }
                 .card-role{
                     display: flex;
@@ -698,6 +716,10 @@
                     font-size: 18px;
                     line-height: 27px;
                     text-align: center;
+                    @media screen and (max-width:767px) {
+                        font-size: 12px;
+                        margin-top: 12px;
+                    }
                 }
                 .card-social{
                     display: flex;
@@ -713,6 +735,10 @@
                         &:hover{
                             fill:#911658;
                         }
+                    }
+                    @media screen and (max-width:767px) {
+                        margin-top: 20px;
+                        margin-bottom: 10px;
                     }
                 }
             }

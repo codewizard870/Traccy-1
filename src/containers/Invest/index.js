@@ -52,9 +52,6 @@ const Invest = () => {
                 <img src="/invest-form/right-hexa.svg" alt="polygon-right"/>
             </div>
             <div className='leftbar'>
-                <div className='traccy-icon'>
-                    {/* <img src={Traccyicon} alt='Logo' /> */}
-                </div>
                 <div className='social-icon-list'>
                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -63,9 +60,6 @@ const Invest = () => {
                 </div>
             </div>
             <div className='right-section'>
-                <div className='header-bar'>
-                    <Navbar />
-                </div>
                 <div className='rightbar-inner'>
                     <div className='dtl-section'>
                         <Steps current={current} items={items} />
