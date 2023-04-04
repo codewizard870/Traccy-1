@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import HTMLFlipBook from 'react-pageflip';
 import './index.scss';
 
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import BannerImg from '../../assets/images/itt-slide.jpg';
@@ -93,224 +93,40 @@ const ImpactThroughTraccyDetails = () => {
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
                 </div>
                 <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                <Slider {...settings2} ref={slider}>
-                    <div>
-                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                        <Container>
-                            <div className="stage-wrapper">
-                                <div className="stage-main">
-                                    <div className="stage-left">
-                                        <div className="stage-card">
-                                            <h1>
-                                                Selection Stage
-                                            </h1>
-                                            <div className="first-section">
-                                                <span>Projects under Selection</span>
-                                                <span>&nbsp;7&nbsp;</span>
-                                            </div>
-                                            <div className="first-section">
-                                                <span>Numbers of Countries</span>
-                                                <span>&nbsp;6&nbsp;</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="stage-right">
-                                        <div className="project-list">
-                                            <span>Project List</span>
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Location</th>
-                                                    <th>Category</th>
-                                                </tr>
-                                                <tr className="custom">
-                                                    <td>Galactic Minears</td>
-                                                    <td>New York, USA</td>
-                                                    <td>Green Mining</td>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom">
-                                                    <td>Galactic Minears</td>
-                                                    <td>New York, USA</td>
-                                                    <td>Green Mining</td>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" />
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <Col sm='12' className='arrow-action'>
-                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
-                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
-                                </Col>
-                            </div>
-                        </Container>
-                    </div>
-                    <div>
-                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                        <Container>
-                            <div className="stage-wrapper">
-                                <div className="stage-main">
-                                    <div className="stage-left">
-                                        <div className="stage-card">
-                                            <h1>
-                                                Incubation Stage
-                                            </h1>
-                                            <div className="first-section">
-                                                <span>Projects under Incubation</span>
-                                                <span>&nbsp;3&nbsp;</span>
-                                            </div>
-                                            <div className="first-section">
-                                                <span>Numbers of Countries</span>
-                                                <span>&nbsp;2&nbsp;</span>
-                                            </div>
-                                        </div>
-                                        <button>STO REGISTRATION</button>
-                                    </div>
-                                    <div className="stage-right">
-                                        <div className="project-list">
-                                            <span>Project List</span>
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Location</th>
-                                                    <th>Category</th>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom">
-                                                    <td>Galactic Minears</td>
-                                                    <td>New York, USA</td>
-                                                    <td>Green Mining</td>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" />
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <Col sm='12' className='arrow-action'>
-                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
-                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
-                                </Col>
-                            </div>
-                        </Container>
-                    </div>
-                    <div>
-                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                        <Container>
-                            <div className="stage-wrapper">
-                                <div className="stage-main">
-                                    <div className="stage-left">
-                                        <div className="stage-card">
-                                            <h1>
-                                                Launch Stage
-                                            </h1>
-                                            <div className="first-section">
-                                                <span>Projects under Launch</span>
-                                                <span>&nbsp;1&nbsp;</span>
-                                            </div>
-                                            <div className="first-section">
-                                                <span>Numbers of Countries</span>
-                                                <span>&nbsp;1&nbsp;</span>
-                                            </div>
-                                        </div>
-                                        <button>Buy Token</button>
-                                    </div>
-                                    <div className="stage-right">
-                                        <div className="project-list">
-                                            <span>Project List</span>
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Location</th>
-                                                    <th>Category</th>
-                                                </tr>
-                                                <tr className="custom">
-                                                    <td>Galactic Minears</td>
-                                                    <td>New York, USA</td>
-                                                    <td>Green Mining</td>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" />
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <Col sm='12' className='arrow-action'>
-                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
-                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
-                                </Col>
-                            </div>
-                        </Container>
-                    </div>
-                    <div>
-                        <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
-                        <Container>
-                            <div className="stage-wrapper">
-                                <div className="stage-main">
-                                    <div className="stage-left">
-                                        <div className="stage-card">
-                                            <h1>
-                                                Monitoring Stage
-                                            </h1>
-                                            <div className="first-section">
-                                                <span>Projects under Monitoring</span>
-                                                <span>&nbsp;2&nbsp;</span>
-                                            </div>
-                                            <div className="first-section">
-                                                <span>Numbers of Countries</span>
-                                                <span>&nbsp;2&nbsp;</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="stage-right">
-                                        <div className="project-list">
-                                            <span>Project List</span>
-                                            <table>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Location</th>
-                                                    <th>Category</th>
-                                                </tr>
-                                                <tr className="custom">
-                                                    <td>Galactic Minears</td>
-                                                    <td>New York, USA</td>
-                                                    <td>Green Mining</td>
-                                                </tr>
-                                                <tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" /><tr className="gap" />
-                                                <tr className="custom" />
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                                <Col sm='12' className='arrow-action'>
-                                    <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
-                                    <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
-                                </Col>
-                            </div>
-                        </Container>
-                    </div>
-                </Slider>
+                <Link to='/impact-through-traccy' className='backarrow'>
+                  <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+                  Back
+               </Link>
+                <div>
+                     <Container>
+                        <div className="stage-wrapper">
+                           <div className="stage-main">
+                              <div className="stage-left">
+                                 <h1>
+                                    Traccy Solar
+                                 </h1>
+                                 <span className="desc">We are changing theSolar Technology</span>
+                                 <span className="application">Fundraising required</span>
+                                 <div className="selection">
+                                    <span className="number">3’230’000 $</span>
+                                 </div>
+                              </div>
+                              <div className="stage-right">
+                                 <div className="processing"><span>Processing Time</span></div>
+                                 <div className="processing-desc">
+                                    <span>9</span>
+                                    <span>month</span>
+                                 </div>
+                                 <div className="world"><span>Break Event Point</span></div>
+                                 <div className="world-desc">
+                                    <span>18</span>
+                                    <span>months</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </Container>
+                  </div>
             </section>
             <section className='book-section'>
                 <Container>

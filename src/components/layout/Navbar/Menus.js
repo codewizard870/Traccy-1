@@ -67,7 +67,7 @@ const Menus = () => {
             </Link>
           </li>
           <li>
-            <Link to='/impact-through-traccy-details'>
+            <Link to='/impact-through-traccy'>
               <div className='menu-icon'>
                 <SvgIcon name='itc-icon' viewbox='0 0 22.018 17.733' />
               </div>
@@ -108,7 +108,7 @@ const Menus = () => {
           <NavLink to='/traccy-token'>TRCY TOKEN</NavLink>
         </li>
         <li>
-          <NavLink to='/impact-through-traccy-details'>TRACCY IMPACT</NavLink>
+          <NavLink to='/impact-through-traccy'>TRACCY IMPACT</NavLink>
         </li>
         <li>
           <NavLink to='/about'>ABOUT US</NavLink>
