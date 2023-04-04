@@ -66,16 +66,16 @@ const ImpactThroughTraccyDetails = () => {
     const [openModal, setOpen] = useState(false);
     const [stageIndex, setStageIndex] = useState(0);
     const onConnect = (index) => {
-       setOpen(true);
-       setStageIndex(index)
+        setOpen(true);
+        setStageIndex(index)
     }
- 
+
     const onClose = () => {
-       if(openModal)
-          setOpen(false)
+        if (openModal)
+            setOpen(false)
     }
     return (
-        <div className='itt-dtl-wrapper'>
+        <div className='itt-dtl-wrapper' onClick={onClose}>
             <section className='banner-section'>
                 {/* <div className='social-media'>
                     <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></Button>
@@ -101,7 +101,7 @@ const ImpactThroughTraccyDetails = () => {
                                     <div className="selection">
                                         <span className="number">3’230’000 $</span>
                                     </div>
-                                    <div className="project-list-button" onClick={() => onConnect()}>
+                                    <div className="project-list-button" onClick={() => onConnect(0)}>
                                         <div className="list-indicator" />
                                         <span>Project List</span>
                                     </div>
