@@ -1,12 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, SvgIcon } from '../../components/common';
-import { Button, Tabs } from 'antd';
+import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
 import HTMLFlipBook from 'react-pageflip';
 import './index.scss';
 
 import { Link, useHistory } from 'react-router-dom';
-import Slider from 'react-slick';
 
 import BannerImg from '../../assets/images/itt-slide.jpg';
 import MapImg from '../../assets/images/map.png';
@@ -14,6 +13,8 @@ import PopupImg1 from '../../assets/images/popup-img1.jpg';
 import PopupImg2 from '../../assets/images/popup-img2.jpg';
 import PopupImg3 from '../../assets/images/popup-img3.jpg';
 import BookImg1 from '../../assets/images/bookimg1.png'
+import { useState } from 'react';
+import { Sliders } from '../ImpactThroughTraccy';
 
 const items = [
     {
@@ -35,6 +36,8 @@ const items = [
 ];
 
 const ImpactThroughTraccyDetails = () => {
+    const router = useHistory();
+
     const [showContent1, setShowContent1] = React.useState(false);
     const [showContent2, setShowContent2] = React.useState(false);
     const [showContent3, setShowContent3] = React.useState(false);
@@ -60,29 +63,17 @@ const ImpactThroughTraccyDetails = () => {
         setShowContent2(false);
     };
 
-    const history = useHistory();
-    const slider = React.useRef(null);
-    const settings2 = {
-        dots: true,
-        infinite: false,
-        speed: 900,
-        arrows: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        appendDots: dots => (
-            <div className='thumb-col-main'>
-                <ul style={{ margin: "0px" }}> {dots} </ul>
-            </div>
-        ),
-        customPaging: i => (
-            <div className='thumb-col-main'>
-                {i === 0 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
-                {i === 1 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
-                {i === 2 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
-                {i === 3 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
-            </div>
-        )
-    };
+    const [openModal, setOpen] = useState(false);
+    const [stageIndex, setStageIndex] = useState(0);
+    const onConnect = (index) => {
+       setOpen(true);
+       setStageIndex(index)
+    }
+ 
+    const onClose = () => {
+       if(openModal)
+          setOpen(false)
+    }
     return (
         <div className='itt-dtl-wrapper'>
             <section className='banner-section'>
@@ -94,39 +85,64 @@ const ImpactThroughTraccyDetails = () => {
                 </div> */}
                 <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
                 <Link to='/impact-through-traccy' className='backarrow'>
-                  <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
-                  Back
-               </Link>
+                    <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+                    Back
+                </Link>
                 <div>
-                     <Container>
+                    <Container>
                         <div className="stage-wrapper">
-                           <div className="stage-main">
-                              <div className="stage-left">
-                                 <h1>
-                                    Traccy Solar
-                                 </h1>
-                                 <span className="desc">We are changing theSolar Technology</span>
-                                 <span className="application">Fundraising required</span>
-                                 <div className="selection">
-                                    <span className="number">3’230’000 $</span>
-                                 </div>
-                              </div>
-                              <div className="stage-right">
-                                 <div className="processing"><span>Processing Time</span></div>
-                                 <div className="processing-desc">
-                                    <span>9</span>
-                                    <span>month</span>
-                                 </div>
-                                 <div className="world"><span>Break Event Point</span></div>
-                                 <div className="world-desc">
-                                    <span>18</span>
-                                    <span>months</span>
-                                 </div>
-                              </div>
-                           </div>
+                            <div className="stage-main">
+                                <div className="stage-left">
+                                    <h1>
+                                        Traccy Solar
+                                    </h1>
+                                    <span className="desc">We are changing theSolar Technology</span>
+                                    <span className="application">Fundraising required</span>
+                                    <div className="selection">
+                                        <span className="number">3’230’000 $</span>
+                                    </div>
+                                    <div className="project-list-button" onClick={() => onConnect()}>
+                                        <div className="list-indicator" />
+                                        <span>Project List</span>
+                                    </div>
+                                </div>
+                                <div className="stage-right">
+                                    <div className="processing"><span>Processing Time</span></div>
+                                    <div className="processing-desc">
+                                        <span>9</span>
+                                        <span>month</span>
+                                    </div>
+                                    <div className="world"><span>Break Event Point</span></div>
+                                    <div className="world-desc">
+                                        <span>18</span>
+                                        <span>months</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                     </Container>
-                  </div>
+                    </Container>
+                </div>
+                <Drawer
+                    title={false}
+                    placement='right'
+                    width={"100%"}
+                    onClose={onClose}
+                    closeIcon={false}
+                    open={openModal}
+                    rootClassName='project-sidebar'
+                >
+                    <div className="project-list">
+                        <div className="title">
+                            <span>Project List</span>
+                        </div>
+                        {Sliders[stageIndex].projects.map(project => (
+                            <div className="item" onClick={() => router.push("/impact-through-traccy-details")}>
+                                <span>{project.number}</span>
+                                <span>{project.desc}</span>
+                            </div>
+                        ))}
+                    </div>
+                </Drawer>
             </section>
             <section className='book-section'>
                 <Container>

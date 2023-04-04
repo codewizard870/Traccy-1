@@ -114,9 +114,25 @@ $white: #ffffff;
             font-size: 15px;
             font-weight: 400;
           }
-          &:hover .item-text {
-            font-weight: 700;
+          .item-image {
+            width: 25px;
+            fill-opacity: 0.5;
           }
+          img:nth-child(2) {
+            display: none
+          }
+          &:hover {
+            .item-text {
+              font-weight: 700;
+            }
+            img:nth-child(1) {
+              display: none;
+            }
+            img:nth-child(2) {
+              display: block;
+            }
+          }
+          
         }
         .wallet-item-splitter {
           width: 100%;

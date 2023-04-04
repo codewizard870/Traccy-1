@@ -71,6 +71,7 @@
     ]
   },
   "devDependencies": {
+    "@svgr/webpack": "^7.0.0",
     "html-loader": "^4.2.0"
   }
 }

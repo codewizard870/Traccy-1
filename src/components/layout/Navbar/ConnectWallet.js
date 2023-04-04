@@ -11,7 +11,6 @@ import "./ConnectWallet.scss"
 import { WALLET_LIST } from "../../../config/constants";
 import { SvgIcon } from '../../../components/common';
 import { useTranslation } from "react-i18next";
-// import WalletIcon from "/wallet/wallet.svg";
 
 export default function ConnectWallet() {
   const { t }= useTranslation();
@@ -107,7 +106,8 @@ export default function ConnectWallet() {
           {WALLET_LIST.map((wallet, index, all) => (
             <React.Fragment key={index}>
               <div className="wallet-item" onClick={() => connectTo(wallet.link)}>
-                <img src={wallet.icon} width="25px" rounded="10px" alt="wallet" className="item-image" />
+                <img src={wallet.icon} alt="wallet" className="item-image" />
+                <img src={wallet.icon_hover} alt="wallet" className="item-image" />
                 <span className="item-text">
                   {wallet.name}
                 </span>

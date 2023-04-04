@@ -157,7 +157,7 @@ const ImpactThroughTraccy = () => {
       </div>
    )
 };
-const Sliders = [
+export const Sliders = [
    {
       stage: "Selection",
       desc: "We are selecting new Project",

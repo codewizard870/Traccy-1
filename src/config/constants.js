@@ -241,26 +241,31 @@ export const WALLET_LIST = [
   {
     name: "Metamask",
     icon: "/wallet/metamask-fox.svg",
+    icon_hover: "/wallet/metamask-fox-hover.svg",
     link: "metamask",
   },
   {
     name: "TrustWallet",
     icon: "/wallet/trust_platform.svg",
+    icon_hover: "/wallet/trust_platform_hover.svg",
     link: "trust",
   },
   {
     name: "Keplr",
     icon: "/wallet/keplr.svg",
+    icon_hover: "/wallet/keplr_hover.svg",
     link: "keplr",
   },
   {
     name: "TronLink",
     icon: "/wallet/tron_link.svg",
+    icon_hover: "/wallet/tron_link_hover.svg",
     link: "tron",
   },
   {
     name: "ElrondWeb",
-    icon: "/wallet/elrond-wallet-logo.png",
+    icon: "/wallet/elrond-logo.svg",
+    icon_hover: "/wallet/elrond-logo-hover.svg",
     link: "elrond",
   },
 ];
