@@ -8,7 +8,7 @@ import "../../assets/scss/plugins/slick-slider/slick.min.scss";
 import "../../assets/scss/plugins/slick-slider/slick-theme.min.scss"
 import './index.scss';
 
-import hoverVideo from '../../assets/images/hover-video.webm';
+import hoverVideo from '../../assets/images/BG-Gif-Trial2.webm';
 import { useTranslation } from 'react-i18next';
 
 function NextArrow(props) {

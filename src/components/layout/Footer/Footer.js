@@ -52,9 +52,9 @@ const Footer = () => {
           </Col>
           <Col lg='1'></Col>
           <Col lg='4' className="subscribe-col">
-            <h3>Subscribe to Traccy </h3>
-            <p>Sign up to receive our newsletter with updates About your wallet.  </p>
-            <Link to='/subscription'><Button type="primary">Sign me up</Button></Link>
+            <h3>Connect your Wallet </h3>
+            <p>Connect you wallet for partecipate to STO  </p>
+            <Link to='/subscription'><Button type="primary">Connect Wallet</Button></Link>
           </Col>
         </Row>
         <Row className='footer-bottom'>

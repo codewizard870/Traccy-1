@@ -19,19 +19,19 @@ import { Sliders } from '../ImpactThroughTraccy';
 const items = [
     {
         key: '1',
-        label: `Planing`,
+        label: `Roadmap`,
     },
     {
         key: '2',
-        label: `Engineering`,
+        label: `Business`,
     },
     {
         key: '3',
-        label: `Architecture`,
+        label: `Financial`,
     },
     {
         key: '4',
-        label: `Locations`,
+        label: `Impact`,
     },
 ];
 
@@ -153,12 +153,12 @@ const ImpactThroughTraccyDetails = () => {
                                     <div className='bookpage-inner-left'>
                                         <div className='uppaer-row'>
                                             <p>
-                                                Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodus
+                                                Traccy Solar AG
                                             </p>
                                         </div>
                                         <div className='bottom-row'>
-                                            <h2>Aura</h2>
-                                            <h4>Modern engineering</h4>
+                                            <h2>Traccy Solar</h2>
+                                            <h4>Revolution of Solar impact</h4>
                                             <Tabs defaultActiveKey="1" items={items} />
                                         </div>
                                         <div className='arrow-right-sm'>
@@ -175,7 +175,7 @@ const ImpactThroughTraccyDetails = () => {
                                             <div className='left-upper'>
                                                 <h4>We are planning to Construction</h4>
                                                 <p>
-                                                    Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodus
+                                                    200'000 square mater of Solar Pannel
                                                 </p>
                                             </div>
                                             <div className='left-bottom'>
@@ -207,7 +207,7 @@ const ImpactThroughTraccyDetails = () => {
                                             </p>
                                         </div>
                                         <div className='bottom-row'>
-                                            <h2>Aura</h2>
+                                            <h2>Traccy Solar</h2>
                                             <h4>Modern engineering</h4>
                                             <Tabs defaultActiveKey="1" items={items} />
                                         </div>
@@ -355,9 +355,9 @@ const ImpactThroughTraccyDetails = () => {
                             01.
                         </div>
                         <div className='right-content'>
-                            <h4>OUR GLOBAL PROJECTS Colmarien, Sweden, Europe</h4>
+                            <h4>FlyOut</h4>
                             <p>
-                                Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodusViennes sentis motesir Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodus Viennes sentis motesir Orchid wer nehmen Personen of meine
+                                Automatic Misting System for reduce the Fly problem (mosquito, fly, etc) in organic way
                             </p>
                         </div>
                     </div>
@@ -369,9 +369,9 @@ const ImpactThroughTraccyDetails = () => {
                             02.
                         </div>
                         <div className='right-content'>
-                            <h4>OUR GLOBAL PROJECTS Colmarien, Sweden, Europe</h4>
+                            <h4>Traccy Solar</h4>
                             <p>
-                                Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodusViennes sentis motesir Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodus Viennes sentis motesir Orchid wer nehmen Personen of meine
+                                A new way to use Solar energy for enpower Green Endergy and reduce Carbos emission
                             </p>
                         </div>
                     </div>
@@ -383,18 +383,18 @@ const ImpactThroughTraccyDetails = () => {
                             03.
                         </div>
                         <div className='right-content'>
-                            <h4>OUR GLOBAL PROJECTS Colmarien, Sweden, Europe</h4>
+                            <h4>DecentralCity</h4>
                             <p>
-                                Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodusViennes sentis motesir Orchid wer nehmen Personen of meine Perdurent montes, necetur ridodus Viennes sentis motesir Orchid wer nehmen Personen of meine
+                                Make 100% autonomus a city from Food, Water, Energy and the main resources
                             </p>
                         </div>
                     </div>
                 }
                 <div className='right-numbers'>
                     <ul>
-                        <li className={showContent1 === true ? 'selected' : ''} onClick={showModal1}>01 <span>Realization</span></li>
-                        <li className={showContent2 === true ? 'selected' : ''} onClick={showModal2}>02 <span>Realization</span></li>
-                        <li className={showContent3 === true ? 'selected' : ''} onClick={showModal3}>03 <span>Realization</span></li>
+                        <li className={showContent1 === true ? 'selected' : ''} onClick={showModal1}>01 <span>FlyOut</span></li>
+                        <li className={showContent2 === true ? 'selected' : ''} onClick={showModal2}>02 <span>Traccy Solar</span></li>
+                        <li className={showContent3 === true ? 'selected' : ''} onClick={showModal3}>03 <span>DecentralCity</span></li>
                     </ul>
                 </div>
             </section>
