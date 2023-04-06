@@ -8,7 +8,7 @@ import "../../assets/scss/plugins/slick-slider/slick.min.scss";
 import "../../assets/scss/plugins/slick-slider/slick-theme.min.scss"
 import './index.scss';
 
-import hoverVideo from '../../assets/images/hover-video.webm';
+import hoverVideo from '../../assets/images/hover-video.gif';
 import { useTranslation } from 'react-i18next';
 
 function NextArrow(props) {
@@ -114,9 +114,10 @@ const Home = () => {
                   <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-90deg)" }}>
+                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-90deg)" }}>
                            <source src={hoverVideo} />
-                        </video>
+                        </video> */}
+                        <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>01</h4>
                            <Divider />
@@ -149,9 +150,10 @@ const Home = () => {
                   <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-300deg)" }}>
+                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-300deg)" }}>
                            <source src={hoverVideo} />
-                        </video>
+                        </video> */}
+                        <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>02</h4>
                            <Divider />
@@ -184,9 +186,10 @@ const Home = () => {
                   <div>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(200deg)" }}>
+                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(200deg)" }}>
                            <source src={hoverVideo} />
-                        </video>
+                        </video> */}
+                        <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>03</h4>
                            <Divider />
@@ -218,9 +221,10 @@ const Home = () => {
                   <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
+                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
                            <source src={hoverVideo} />
-                        </video>
+                        </video> */}
+                        <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>04</h4>
                            <Divider />
@@ -252,9 +256,10 @@ const Home = () => {
                   <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
+                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
                            <source src={hoverVideo} />
-                        </video>
+                        </video> */}
+                        <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>05</h4>
                            <Divider />

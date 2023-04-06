@@ -6,7 +6,6 @@ import './index.scss';
 import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 
-import BannerImg from '../../assets/images/itt-slide.jpg';
 import MapImg from '../../assets/images/map.png';
 
 const ImpactThroughTraccy = () => {
@@ -58,11 +57,11 @@ const ImpactThroughTraccy = () => {
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></Button>
                <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
             </div> */}
-            <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+            <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
             <Slider {...settings2} ref={slider}>
                {Sliders.map((data, index) => (
                   <div key={index}>
-                     <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                     <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div>
                      <Container>
                         <div className="stage-wrapper">
                            <div className="stage-main">
@@ -165,7 +164,8 @@ export const Sliders = [
       application_number: 7,
       month: 1,
       world: 6,
-      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
+      banner: "/impact/5309059.jpg",
+      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" }),
    },
    {
       stage: "Incubation",
@@ -174,6 +174,7 @@ export const Sliders = [
       application_number: 2,
       month: 3,
       world: 2,
+      banner: "/impact/5335415.jpg",
       projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
    },
    {
@@ -183,6 +184,7 @@ export const Sliders = [
       application_number: 2,
       month: 2,
       world: 2,
+      banner: "/impact/5072310.jpg",
       projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
    },
    {
@@ -192,6 +194,7 @@ export const Sliders = [
       application_number: 2,
       month: 6,
       world: 2,
+      banner: "/impact/2328116.jpg",
       projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
    }
 ]
