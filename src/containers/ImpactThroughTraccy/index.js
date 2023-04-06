@@ -113,15 +113,12 @@ const ImpactThroughTraccy = () => {
                open={openModal}
                rootClassName='project-sidebar'
             >
-               {/* <Button className="menu-close" >
-                  <SvgIcon name="close" viewbox="0 0 10.357 10.357" />
-               </Button> */}
                <div className="project-list">
                   <div className="title">
                      <span>Project List</span>
                   </div>
-                  {Sliders[stageIndex].projects.map(project => (
-                     <div className="item" onClick={() => router.push("/impact-through-traccy-details")}>
+                  {Sliders[stageIndex].projects.map((project, index) => (
+                     <div className="item" onClick={() => router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)}>
                         <span>{project.number}</span>
                         <span>{project.desc}</span>
                      </div>

@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive'
 import HTMLFlipBook from 'react-pageflip';
 import './index.scss';
 
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 
 import BannerImg from '../../assets/images/itt-slide.jpg';
 import MapImg from '../../assets/images/map.png';
@@ -37,6 +37,8 @@ const items = [
 
 const ImpactThroughTraccyDetails = () => {
     const router = useHistory();
+    const {index, pIndex} = useParams();
+console.log(index, pIndex, Sliders, Sliders[index??0])
 
     const [showContent1, setShowContent1] = React.useState(false);
     const [showContent2, setShowContent2] = React.useState(false);
@@ -77,13 +79,7 @@ const ImpactThroughTraccyDetails = () => {
     return (
         <div className='itt-dtl-wrapper' onClick={onClose}>
             <section className='banner-section'>
-                {/* <div className='social-media'>
-                    <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></Button>
-                    <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='facebook' viewbox='0 0 34.875 34.664' /></Button>
-                    <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></Button>
-                    <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
-                </div> */}
-                <div className='about-banner' style={{ backgroundImage: `url(${BannerImg})` }}></div>
+                <div className='about-banner' style={{ backgroundImage: `url(${Sliders[index??0].banner})` }}></div>
                 <Link to='/impact-through-traccy' className='backarrow'>
                     <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
                     Back
