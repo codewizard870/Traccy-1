@@ -1,9 +1,7 @@
-import defaultLayout from "./default";
 import authLayout from "./auth";
-import defaultexfooterLayout from "./defaultexfooter";
+import defaultLayout from "./default";
+import defaultheaderLayout from "./defaultheader";
+import defaultdarkLayout from "./defaultdark";
 import defaultdarkheaderLayout from './defaultdarkheader';
-import defaultdarkheaderfooterLayout from "./defaultdarkheaderfooter";
-import defaultaboutLayout from "./defaultabout";
-import defaultdarkdetailsheaderLayout from "./defaultdarkdetailsheader";
 
-export { defaultLayout, authLayout, defaultexfooterLayout, defaultdarkheaderLayout, defaultdarkheaderfooterLayout, defaultaboutLayout, defaultdarkdetailsheaderLayout };
+export { authLayout, defaultLayout, defaultheaderLayout, defaultdarkLayout, defaultdarkheaderLayout };

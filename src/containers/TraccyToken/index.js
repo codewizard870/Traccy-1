@@ -101,7 +101,6 @@ const TraccyToken = () => {
                                 </li>
                             </ul>
                             <div className='learn-more-row'>
-                                <LearnMore />
                                 <Button onClick={() => history.push("/invest")}>
                                     WHITEPAPER
                                     <div className="icon">

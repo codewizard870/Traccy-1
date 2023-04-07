@@ -7,7 +7,7 @@ import ImpactThroughTraccy from "./containers/ImpactThroughTraccy";
 import ImpactThroughTraccyDetails from "./containers/ImpactThroughTraccyDetails";
 import TraccyToken from "./containers/TraccyToken";
 // Layout Types
-import { authLayout, defaultaboutLayout, defaultdarkdetailsheaderLayout, defaultdarkheaderLayout, defaultLayout } from "./layouts";
+import { authLayout, defaultLayout, defaultheaderLayout, defaultdarkLayout, defaultdarkheaderLayout } from "./layouts";
 
 import Invest from "./containers/Invest";
 import Library from "./containers/Library";
@@ -29,7 +29,7 @@ export const rotues = [
   },
   {
     path: "/about",
-    layout: defaultaboutLayout,
+    layout: defaultdarkLayout,
     component: () => <AboutUs />
   },
   {
@@ -49,7 +49,7 @@ export const rotues = [
   },
   {
     path: "/become-part",
-    layout: defaultdarkheaderLayout,
+    layout: defaultheaderLayout,
     component: () => <BecomePart />
   },
   {
@@ -64,19 +64,19 @@ export const rotues = [
   },
   {
     path: "/impact-through-traccy-details/:index/:pIndex",
-    layout: defaultdarkdetailsheaderLayout,
+    layout: defaultdarkheaderLayout,
     component: () => <ImpactThroughTraccyDetails />
   },
   {
     path: "/invest",
     exact: true,
-    layout: defaultdarkheaderLayout,
+    layout: defaultheaderLayout,
     component: () => <Invest />
   },
   {
     path: "/library",
     exact: true,
-    layout: defaultdarkheaderLayout,
+    layout: defaultheaderLayout,
     component: () => <Library />
   },
 ];
