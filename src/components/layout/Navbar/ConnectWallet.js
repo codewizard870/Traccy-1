@@ -56,8 +56,19 @@ export default function ConnectWallet() {
   const initialized = wallet ? wallet.initialized : false;
   const address = wallet.account ? wallet.account.slice(0, 5) + "..." + wallet.account.slice(-5) : undefined;
 
+  useEffect(() => {
+    function handleClick(e) {
+      const sidebar = document.getElementById("wallet-sidebar");
+      if (!sidebar?.contains(e.target))
+        onClose();
+    }
+
+    window.addEventListener("click", handleClick);
+    return () => window.removeEventListener("click", handleClick);
+  });
+
   return (
-    <>
+    <div id ="wallet-sidebar">
       <div className="connect-wallet-mobile" onClick={onConnect}>
         <img src="/wallet/wallet.svg" alt="wallet" />
         <div className="connect-status">
@@ -70,25 +81,6 @@ export default function ConnectWallet() {
         {(connected && !initialized) && <span>Loading</span>}
         {(connected && initialized) && <><WalletOutlined /><CheckOutlined /><span>{address}</span></>}
       </Button>
-      {/* <Modal
-        open={openModal}
-        onOk={onOk}
-        onCancel={onOk}
-        okButtonProps={{ className: "modal-button" }}
-        cancelButtonProps={{ className: "modal-button" }}
-        width={400}
-      >
-        <div className="modal-content">
-          {WALLET_LIST.map((wallet, index) => (
-            <div className="modal-item" key={index} onClick={() => connectTo(wallet.link)}>
-              <img src={wallet.icon} width="50px" rounded="10px" alt="wallet" className="item-image" />
-              <span className="item-text">
-                {wallet.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </Modal> */}
       <Drawer
         title={false}
         placement='right'
@@ -98,9 +90,9 @@ export default function ConnectWallet() {
         open={openModal}
         rootClassName='wallet-sidebar'
       >
-        <Button className="menu-close" onClick={onClose}>
+        {/* <Button className="menu-close" onClick={onClose}>
           <SvgIcon name="close" viewbox="0 0 10.357 10.357" />
-        </Button>
+        </Button> */}
         <div className="wallet-content">
           {/* <span>{address}</span> */}
           {WALLET_LIST.map((wallet, index, all) => (
@@ -119,6 +111,6 @@ export default function ConnectWallet() {
           ))}
         </div>
       </Drawer>
-    </>
+    </div>
   );
 }

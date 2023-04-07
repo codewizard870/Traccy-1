@@ -1,7 +1,7 @@
 .selector-wrapper {
   display: flex;
   gap: 50px;
-  margin-top: 40px;
+  margin-top: 20px;
   @media screen and (max-width: 576px) {
     flex-direction: column;
     gap: 30px;
@@ -9,4 +9,8 @@
   input{
     display: none;
   }
+}
+
+.selector-wrapper:nth-child(2) {
+  margin-top: 0px;
 }

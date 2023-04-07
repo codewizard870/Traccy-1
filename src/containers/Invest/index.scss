@@ -90,6 +90,18 @@
                     transform: scale(1.15);
                 }
             }
+            &::before {
+                position: absolute;
+                content: ' ';
+                right: -4.8px;
+                width: 9px;
+                height: 9px;
+                border-radius: 9px;
+                background: #A7A7A7;
+                display: inline-block;
+                z-index: 2;
+                top: 60px;
+            }
         }
     }   
     .right-section{

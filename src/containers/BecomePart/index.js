@@ -57,9 +57,9 @@ const BecomePart = () => {
                 </div> */}
                 <div className='rightbar-inner'>
                     <div className='address-bar'>
-                        <div className='logo-section'>
+                        {/* <div className='logo-section'>
                             <img src={LogoLight} alt='Logo' />
-                        </div>
+                        </div> */}
                         <div className='address-col'>
                             <h3>{t("become:location")}</h3>
                             <p>
