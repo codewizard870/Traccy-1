@@ -38,7 +38,6 @@ const items = [
 const ImpactThroughTraccyDetails = () => {
     const router = useHistory();
     const {index, pIndex} = useParams();
-console.log(index, pIndex, Sliders, Sliders[index??0])
 
     const [showContent1, setShowContent1] = React.useState(false);
     const [showContent2, setShowContent2] = React.useState(false);

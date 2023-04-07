@@ -19,6 +19,7 @@ import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import VotingPower from '../../assets/images/voting-power.svg';
 import { useTranslation } from 'react-i18next';
+import { LearnMore } from '../Home';
 
 const TraccyToken = () => {
     const { t } = useTranslation();
@@ -100,7 +101,8 @@ const TraccyToken = () => {
                                 </li>
                             </ul>
                             <div className='learn-more-row'>
-                                <Button onClick={() => history.push("/invest")}>
+                                <LearnMore />
+                                {/* <Button onClick={() => history.push("/invest")}>
                                     WHITEPAPER
                                     <div className="icon">
                                         <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -109,7 +111,7 @@ const TraccyToken = () => {
                                             <path d="M0.987319 7.20036C1.53261 7.20036 1.97466 6.75741 1.97466 6.21102C1.97466 5.66462 1.53261 5.22168 0.987319 5.22168C0.442028 5.22168 0 5.66462 0 6.21102C0 6.75741 0.442028 7.20036 0.987319 7.20036Z" fill="white" />
                                         </svg>
                                     </div>
-                                </Button>
+                                </Button> */}
                                 <div className='white-paper'>
                                     <div>
                                         {/* <h4>White paper </h4> */}
