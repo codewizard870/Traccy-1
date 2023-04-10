@@ -84,7 +84,7 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>{t("token:title")}</h1>
+                            <h1>The <span style={{ fontWeight: 'bold' }}>Ecosystem</span> that optimally combines <span style={{ fontWeight: 'bold' }}>digital</span> and <span style={{ fontWeight: 'bold' }}>real Assets</span></h1>
                             <p>{t("token:desc")}</p>
                             <ul>
                                 <li>

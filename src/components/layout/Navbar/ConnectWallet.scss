@@ -131,8 +131,10 @@ $white: #ffffff;
             img:nth-child(2) {
               display: block;
             }
+            & + .wallet-item-splitter {
+              border-bottom: 1px solid #ffffff;
+            }
           }
-          
         }
         .wallet-item-splitter {
           width: 100%;

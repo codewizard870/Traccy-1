@@ -97,7 +97,7 @@ export default function ConnectWallet() {
           {/* <span>{address}</span> */}
           {WALLET_LIST.map((wallet, index, all) => (
             <React.Fragment key={index}>
-              <div className="wallet-item" onClick={() => connectTo(wallet.link)}>
+              <div className={`wallet-item`} onClick={() => connectTo(wallet.link)}>
                 <img src={wallet.icon} alt="wallet" className="item-image" />
                 <img src={wallet.icon_hover} alt="wallet" className="item-image" />
                 <span className="item-text">

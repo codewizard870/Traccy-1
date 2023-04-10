@@ -16,9 +16,9 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className="footer-upper">
-          <Col lg='7'>
+          <Col lg='12'>
             <Row>
-              <Col lg='4'>
+              <Col lg='3'>
                 <h3>Products</h3>
                 <ul>
                   <li>Desktop Wallet</li>
@@ -28,7 +28,7 @@ const Footer = () => {
                   <li>Traccy Crypto Apps</li>
                 </ul>
               </Col>
-              <Col lg='4'>
+              <Col lg='3'>
                 <h3>Crypto News</h3>
                 <ul>
                   <li>Crypto Prices</li>
@@ -37,7 +37,7 @@ const Footer = () => {
                   <li>Newsletter </li>
                 </ul>
               </Col>
-              <Col lg='4'>
+              <Col lg='3'>
                 <h3>Company</h3>
                 <ul>
                   <li>About Us</li>
@@ -48,14 +48,23 @@ const Footer = () => {
                   <li>Impact</li>
                 </ul>
               </Col>
+              <Col lg='3'>
+                <h3>Social Media</h3>
+                <ul>
+                  <li>Facebook</li>
+                  <li>Telegram</li>
+                  <li>Twitter</li>
+                  <li>Linkedin</li>
+                </ul>
+              </Col>
             </Row>
           </Col>
-          <Col lg='1'></Col>
+          {/* <Col lg='1'></Col>
           <Col lg='4' className="subscribe-col">
             <h3>Connect your Wallet </h3>
             <p>Connect you wallet for partecipate to STO  </p>
             <Link to='/subscription'><Button type="primary">Connect Wallet</Button></Link>
-          </Col>
+          </Col> */}
         </Row>
         <Row className='footer-bottom'>
           <Col lg='8'>
@@ -66,10 +75,10 @@ const Footer = () => {
           </Col>
           <Col lg='4'>
             <div className='social-icon-list'>
-                <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
-                <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+              <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+              <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+              <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+              <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
             </div>
           </Col>
         </Row>

@@ -173,13 +173,15 @@ const AboutUs = () => {
                     </Row>
                     <Row>
                         <Col md="6">
-                            <h2 className='main-heading'>{t("our")} <span>{t("vision")}</span></h2>
+                            <h2 className='main-heading'>{t("about_us:our")}&nbsp;<span>{t("vision")}</span></h2>
+                            <h2>{t("about_us:vision_sub")}</h2>
                             <p className='vission-text'>
                                 {t("about_us:vision_cnt")}
                             </p>
                         </Col>
                         <Col md="6">
-                            <h2 className='main-heading'>{t("our")} <span>{t("mission")} </span></h2>
+                            <h2 className='main-heading'>{t("about_us:our")}&nbsp;<span>{t("mission")} </span></h2>
+                            <h2>{t("about_us:mission_sub")}</h2>
                             <p className='vission-text'>
                                 {t("about_us:mission_cnt")}
                             </p>
@@ -518,7 +520,7 @@ const AboutUs = () => {
                     </div>
                 </Container>
             </section>
-            <section className='partner-section'>
+            {/* <section className='partner-section'>
                 <img className='title-bg' src={HeaderBg1} alt='BG' />
                 <img className='left-hexa' src={LeftHexa} alt='Hexa' />
                 <img className='right-hexa' src={RightHexa} alt='Hexa' />
@@ -573,7 +575,7 @@ const AboutUs = () => {
                         </Col>
                     </Row>
                 </Container>
-            </section>
+            </section> */}
         </div>
     )
 };
