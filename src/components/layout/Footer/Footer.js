@@ -16,45 +16,34 @@ const Footer = () => {
           </Col>
         </Row>
         <Row className="footer-upper">
-          <Col lg='12'>
+          <Col lg='7'>
             <Row>
-              <Col lg='3'>
-                <h3>Products</h3>
+              <Col lg='4'>
+                <h3>Website</h3>
                 <ul>
-                  <li>Desktop Wallet</li>
-                  <li>Mobile Wallet</li>
-                  <li>Browser Extension</li>
-                  <li>Trezor Hardware Wallet</li>
-                  <li>Traccy Crypto Apps</li>
+                  <li>Home</li>
+                  <li>Traccy Token</li>
+                  <li>Traccy Impact</li>
+                  <li>About Us</li>
+                  <li>Bacome a Part</li>
+                  <li>But Token</li>
                 </ul>
               </Col>
-              <Col lg='3'>
-                <h3>Crypto News</h3>
-                <ul>
-                  <li>Crypto Prices</li>
-                  <li>News and Insights </li>
-                  <li>YouTube </li>
-                  <li>Newsletter </li>
-                </ul>
-              </Col>
-              <Col lg='3'>
+              <Col lg='4'>
                 <h3>Company</h3>
                 <ul>
-                  <li>About Us</li>
-                  <li>Investors </li>
-                  <li>Careers  </li>
-                  <li>Contact Us </li>
-                  <li>Documentations</li>
-                  <li>Impact</li>
+                  <li>Contact Us</li>
+                  <li>Documents </li>
+                 
                 </ul>
               </Col>
-              <Col lg='3'>
+              <Col lg='4'>
                 <h3>Social Media</h3>
                 <ul>
-                  <li>Facebook</li>
-                  <li>Telegram</li>
-                  <li>Twitter</li>
-                  <li>Linkedin</li>
+                  <li>FaceBook</li>
+                  <li>Telegram </li>
+                  <li>Twitter  </li>
+                  <li>Linkedin </li>
                 </ul>
               </Col>
             </Row>
