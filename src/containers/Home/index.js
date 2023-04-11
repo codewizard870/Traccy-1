@@ -114,9 +114,6 @@ const Home = () => {
                   <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-90deg)" }}>
-                           <source src={hoverVideo} />
-                        </video> */}
                         <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>01</h4>
@@ -144,15 +141,12 @@ const Home = () => {
                               <li>{t("main_menu:trcy_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore />
+                        <LearnMore onClick = {() => history.push("/traccy-token")}/>
                      </div>
                   </div>
                   <div onMouseMove={() => slickGoTo(0)} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(-300deg)" }}>
-                           <source src={hoverVideo} />
-                        </video> */}
                         <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>02</h4>
@@ -180,15 +174,12 @@ const Home = () => {
                               <li>{t("main_menu:impact_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore />
+                        <LearnMore onClick = {() => history.push("/impact-through-traccy")}/>
                      </div>
                   </div>
                   <div>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(200deg)" }}>
-                           <source src={hoverVideo} />
-                        </video> */}
                         <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>03</h4>
@@ -215,15 +206,12 @@ const Home = () => {
                               <li>{t("main_menu:about_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore />
+                        <LearnMore onClick = {() => history.push("/about")}/>
                      </div>
                   </div>
                   <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
-                           <source src={hoverVideo} />
-                        </video> */}
                         <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>04</h4>
@@ -250,15 +238,12 @@ const Home = () => {
                               <li>{t("main_menu:become_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore />
+                        <LearnMore onClick = {() => history.push("/become-part")}/>
                      </div>
                   </div>
                   <div onMouseOver={() => slickGoTo(4)}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        {/* <video playsInline autoPlay muted loop className="fog-img" style={{ filter: "hue-rotate(20deg)" }} >
-                           <source src={hoverVideo} />
-                        </video> */}
                         <img src={hoverVideo} className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>05</h4>
@@ -285,7 +270,7 @@ const Home = () => {
                               <li>{t("main_menu:buy_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore />
+                        <LearnMore onClick = {() => history.push("/invest")}/>
                      </div>
                   </div>
                </Slider>
@@ -297,9 +282,9 @@ const Home = () => {
 
 export default Home;
 
-export const LearnMore = () => {
+export const LearnMore = (props) => {
    return (
-      <div className="learn-more">
+      <div className="learn-more" {...props}>
          <svg className="redfill" width="100%" >
             <rect x="0" width="100%" height="100%" fill="#E31E53" opacity="0.5"></rect>
          </svg>

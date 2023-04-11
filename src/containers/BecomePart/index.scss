@@ -6,9 +6,10 @@
     background: -webkit-linear-gradient(170deg, rgba(53,28,47,1) 0%, rgba(21,12,31,1) 18%, rgba(27,11,38,1) 39%, rgba(32,8,45,1) 100%);
     background: linear-gradient(170deg, rgba(53,28,47,1) 0%, rgba(21,12,31,1) 18%, rgba(27,11,38,1) 39%, rgba(32,8,45,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#351c2f",endColorstr="#20082d",GradientType=1);
-    min-height: 100vh;
+    min-height: 90vh;
     position: relative;
     display: flex;
+    
     .leftbar{
         width: 140px;
         padding-top: 80px;
@@ -164,7 +165,7 @@
                     max-width: 900px;
                 }
                 @media screen and (max-width:1440px) {
-                    height: calc(100vh - 70px);
+                    height: calc(100vh - 85px);
                 }
                 @media screen and (max-width:991px) {
                     height: auto;

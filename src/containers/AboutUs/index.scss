@@ -681,6 +681,7 @@
               width: 50%;
               img {
                 width: 100%;
+                height: 100%;
               }
             }
           }
@@ -691,49 +692,81 @@
   .ourteam-section {
     position: relative;
     margin-top: 200px;
+    margin-bottom: 200px;
+    @media screen and (max-width: 767px) {
+      margin-top: 0px;
+      margin-bottom: 50px;
+    }
+
     .left-hexa {
       position: absolute;
-      left: -8%;
-      bottom: 0;
+      left: -160px;
+      top: 60%;
+      z-index: 0;
+      max-width: 390px;
+      @media screen and (max-width: 776px) {
+        display: none;
+      }
+    }
+    .right-hexa {
+      position: absolute;
+      right: -140px;
+      top: 35%;
       z-index: 0;
       max-width: 350px;
+      @media screen and (max-width: 776px) {
+        display: none;
+      }
     }
-    .blur-1{
+    .blur-1 {
       position: absolute;
       width: 600px;
       height: 600px;
       left: 0px;
       bottom: -93.36px;
-      
-      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+
+      background: linear-gradient(
+        142deg,
+        #7e384f 0%,
+        #934d74 48%,
+        #0c395b 100%
+      );
       opacity: 0.09;
       filter: blur(25px);
     }
-    .blur-2{
+    .blur-2 {
       position: absolute;
       width: 600px;
       height: 600px;
       left: 420px;
       bottom: -49.79px;
 
-      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+      background: linear-gradient(
+        142deg,
+        #7e384f 0%,
+        #934d74 48%,
+        #0c395b 100%
+      );
       opacity: 0.09;
       filter: blur(25px);
     }
-    .blur-3{
+    .blur-3 {
       position: absolute;
       width: 600px;
       height: 600px;
       right: 0px;
       bottom: 0px;
 
-      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+      background: linear-gradient(
+        142deg,
+        #7e384f 0%,
+        #934d74 48%,
+        #0c395b 100%
+      );
       opacity: 0.09;
       filter: blur(25px);
     }
-    @media screen and (max-width: 767px) {
-      margin-top: 0px;
-    }
+
     .ourteam-wrapper {
       display: flex;
       flex-wrap: wrap;
@@ -746,6 +779,7 @@
         padding: 1rem;
         width: 241px;
         background: #320b3e;
+        cursor: pointer;
         @media screen and (max-width: 767px) {
           width: 180px;
         }
@@ -851,12 +885,12 @@
             display: none;
           }
           &.slick-prev {
-            left: calc((100% - 180px)/2 - 60px);
+            left: calc((100% - 180px) / 2 - 60px);
             right: auto;
           }
           &.slick-next {
             left: auto;
-            right: calc((100% - 180px)/2 - 60px);
+            right: calc((100% - 180px) / 2 - 60px);
           }
           &.slick-disabled {
             width: 34px;
@@ -877,6 +911,7 @@
             padding: 1rem;
             width: 241px;
             background: #320b3e;
+            cursor: pointer;
             @media screen and (max-width: 767px) {
               width: 180px;
             }
@@ -962,7 +997,6 @@
       }
     }
   }
-
 }
 
 .modal-arrow-icon {

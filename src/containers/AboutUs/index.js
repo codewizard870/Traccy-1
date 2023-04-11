@@ -592,6 +592,7 @@ const AboutUs = () => {
             </section>
             <section className="ourteam-section">
                 <img className='left-hexa' src={LeftHexa} alt='Hexa' />
+                <img className='right-hexa' src={RightHexa3} alt='Hexa' />
                 <div className="blur-1" />
                 <div className="blur-2" />
                 <div className="blur-3" />

@@ -2,12 +2,16 @@
 
 .main-header {
     background: none !important;
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 3;
 
     .container {
         position: relative;
+    }
+
+    .dark-header {
+        background: #0A090980;
     }
 
     .header-inner {
@@ -25,7 +29,7 @@
             padding: 20px 10px;
         }
 
-        .dark-header & {
+        .dark-header {
             background: #0A090980;
             left: 0;
             padding: 20px 30px;

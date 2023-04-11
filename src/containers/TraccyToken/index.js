@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../components/common';
 import { Button } from 'antd';
 import Slider from "react-slick";
@@ -84,9 +84,9 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>The <span style={{fontWeight: 'bold'}}>Ecosystem</span> that optimally combines <span style={{fontWeight: 'bold'}}>digital</span> and <span style={{fontWeight: 'bold'}}>real Assets</span></h1>
+                            <h1>The <span style={{ fontWeight: 'bold' }}>Ecosystem</span> that optimally combines <span style={{ fontWeight: 'bold' }}>digital</span> and <span style={{ fontWeight: 'bold' }}>real Assets</span></h1>
                             <p>
-                            Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform.
+                                Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform.
                             </p>
                             <ul>
                                 <li>
@@ -103,23 +103,14 @@ const TraccyToken = () => {
                                 </li>
                             </ul>
                             <div className='learn-more-row'>
-                                <Button onClick={() => history.push("/invest")}>
-                                    WHITEPAPER
-                                    <div className="icon">
-                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12.9819 5.99099L1.49951 0L3.71187 4.94669L12.9819 5.99099Z" fill="white" />
-                                            <path d="M13.0003 6.00879L1.7373 11.9998L3.80339 6.99813L13.0003 6.00879Z" fill="white" />
-                                            <path d="M0.987319 7.20036C1.53261 7.20036 1.97466 6.75741 1.97466 6.21102C1.97466 5.66462 1.53261 5.22168 0.987319 5.22168C0.442028 5.22168 0 5.66462 0 6.21102C0 6.75741 0.442028 7.20036 0.987319 7.20036Z" fill="white" />
-                                        </svg>
-                                    </div>
-                                </Button>
-                                <div className='white-paper'>
+                                <Button onClick={() => history.push("/invest")}>BUY TOKEN <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                <div className='white-paper' onClick={onDownload}>
+                                    <h4>White paper </h4>
                                     <div>
-                                        {/* <h4>White paper </h4> */}
-                                        {percent > 0 && <p>Download {percent}%</p>}
-                                    </div>
-                                    <div className="download" onClick={onDownload}>
-                                        <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87' />
+                                        <p>Download {percent}%</p>
+                                        <div className="icon-wrapper">
+                                            <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87' />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
