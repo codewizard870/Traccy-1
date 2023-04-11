@@ -671,7 +671,48 @@
     }
   }
   .ourteam-section {
+    position: relative;
     margin-top: 200px;
+    .left-hexa {
+      position: absolute;
+      left: -8%;
+      bottom: 0;
+      z-index: 0;
+      max-width: 350px;
+    }
+    .blur-1{
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      left: 0px;
+      bottom: -93.36px;
+      
+      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+      opacity: 0.09;
+      filter: blur(25px);
+    }
+    .blur-2{
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      left: 420px;
+      bottom: -49.79px;
+
+      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+      opacity: 0.09;
+      filter: blur(25px);
+    }
+    .blur-3{
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: 0px;
+      bottom: 0px;
+
+      background: linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%);
+      opacity: 0.09;
+      filter: blur(25px);
+    }
     @media screen and (max-width: 767px) {
       margin-top: 0px;
     }

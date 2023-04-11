@@ -501,6 +501,10 @@ const AboutUs = () => {
                 </Container>
             </section>
             <section className="ourteam-section">
+                <img className='left-hexa' src={LeftHexa} alt='Hexa' />
+                <div className="blur-1" />
+                <div className="blur-2" />
+                <div className="blur-3" />
                 <Container>
                     <Row>
                         <Col>
@@ -577,7 +581,7 @@ const OURTEAM = [
     {
         image: "/our-team/julia.png",
         name: "Julia Neumann",
-        role: "Business                 Developper",
+        role: "Business Developper",
     },
     {
         image: "/our-team/yves.png",
