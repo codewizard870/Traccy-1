@@ -16,10 +16,6 @@ import TeamThumb3 from '../../assets/images/team-thumb-3.png';
 import TeamThumb4 from '../../assets/images/team-thumb-4.png';
 import TeamThumb5 from '../../assets/images/team-thumb-5.png';
 import TeamThumb6 from '../../assets/images/team-thumb-6.png';
-import Partner1 from '../../assets/images/partner-1.png';
-import Partner2 from '../../assets/images/partner-2.png';
-import Partner3 from '../../assets/images/partner-3.png';
-import Partner4 from '../../assets/images/partner-4.png';
 import LeftHexa from '../../assets/images/left-hexa-small.svg';
 import RightHexa from '../../assets/images/right-hexa-small.svg';
 import RightHexa3 from '../../assets/images/right-hexa3.svg'
@@ -70,14 +66,14 @@ const AboutUs = () => {
         customPaging: i => (
             <div className='thumb-col-main'
             >
-                {i === 0 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb1} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Mick Misamu</div>
-                    <div className='thumb-designation'><span></span> CTO</div></div>}
-                {i === 1 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
-                    <div className='thumb-designation'><span></span> CMO</div></div>}
-                {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb3} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Dedry  Misamu</div>
-                    <div className='thumb-designation'><span></span> CFO</div></div>}
-                {i === 3 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb4} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Joas Fischer</div>
+                {i === 0 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb4} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Joas Fischer</div>
                     <div className='thumb-designation'><span></span> CEO</div></div>}
+                {i === 1 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb1} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Mick Misamu</div>
+                    <div className='thumb-designation'><span></span> CTO</div></div>}
+                {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
+                    <div className='thumb-designation'><span></span> CMO</div></div>}
+                {i === 3 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb3} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Dedry  Misamu</div>
+                    <div className='thumb-designation'><span></span> CFO</div></div>}
                 {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
                     <div className='thumb-designation'><span></span> COO</div></div>}
                 {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>IKA NUR AFFIFAH</div>
@@ -101,6 +97,16 @@ const AboutUs = () => {
                 }
             },
         ]
+    };
+    const settings4 = {
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
     };
 
     const roadmapWrapperRef = useRef();
@@ -378,7 +384,7 @@ const AboutUs = () => {
                     </Row>
                     <Row>
                         <Col>
-                            <div className='ourteam-wrapper'>
+                            <div className='coreteam-wrapper'>
                                 <Slider {...settings2}>
                                     <div>
                                         <div className='slider-card'>
@@ -412,7 +418,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
+                                                <img src="/our-team/mike.png" alt='mike' />
                                             </div>
                                         </div>
                                     </div>
@@ -430,7 +436,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
+                                                <img src="/our-team/farrah.png" alt='farrah' />
                                             </div>
                                         </div>
                                     </div>
@@ -448,7 +454,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
+                                                <img src="/our-team/dedry.png" alt='dedry' />
                                             </div>
                                         </div>
                                     </div>
@@ -466,7 +472,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
+                                                <img src="/our-team/andrea.png" alt='andrea' />
                                             </div>
                                         </div>
                                     </div>
@@ -484,7 +490,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src={Team1} alt='Joas Fischer' />
+                                                <img src="/our-team/ika.png" alt='ika' />
                                             </div>
                                         </div>
                                     </div>
@@ -506,8 +512,8 @@ const AboutUs = () => {
                             <div className="card">
                                 <img src={team.image} alt="team" />
                                 <span className="card-name">{team.name}</span>
-                                <span className="card-role">{team.role}</span>
-                                <span className="card-description">{team.description}</span>
+                                {/* <span className="card-role">{team.role}</span> */}
+                                <span className="card-description">{team.role}</span>
 
                                 <div className="card-social">
                                     <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -518,78 +524,67 @@ const AboutUs = () => {
                             </div>
                         ))}
                     </div>
+                    <div className="ourteam-wrapper-mobile">
+                        <Slider {...settings4}>
+                            {OURTEAM.map(team => (
+                                <div>
+                                    <div className="card">
+                                        <img src={team.image} alt="team" />
+                                        <span className="card-name">{team.name}</span>
+                                        {/* <span className="card-role">{team.role}</span> */}
+                                        <span className="card-description">{team.role}</span>
+
+                                        <div className="card-social">
+                                            <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                            <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                            <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                            <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
                 </Container>
             </section>
-            {/* <section className='partner-section'>
-                <img className='title-bg' src={HeaderBg1} alt='BG' />
-                <img className='left-hexa' src={LeftHexa} alt='Hexa' />
-                <img className='right-hexa' src={RightHexa} alt='Hexa' />
-                <div className='blur-circle1'></div>
-                <div className='blur-circle2'></div>
-                <div className='blur-circle3'></div>
-                <Container>
-                    <Row>
-                        <Col>
-                            <h1 className='main-heading text-center'><span>Partner</span></h1>
-                            <p className='main-heading-text'>
-                                In valued collaboration with
-                            </p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <div className='partner-wrapper'>
-                                <Slider {...settings3}>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner1} alt='Partner' />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner2} alt='Partner' />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner3} alt='Partner' />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner4} alt='Partner' />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner1} alt='Partner' />
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='partner-img'>
-                                            <img src={Partner2} alt='Partner' />
-                                        </div>
-                                    </div>
-                                </Slider>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </section> */}
         </div>
     )
 };
 
 export default AboutUs
 
-const OURTEAM = new Array(8).fill(
+const OURTEAM = [
     {
-        image: "/our-team/team-thumb-4.png",
-        name: "Joas Fischer",
-        role: "CEO",
-        description: "Founder and CEO at Traccy. We are a deep tech Web3 startup building decentralized world."
+        image: "/our-team/marko.png",
+        name: "Marko Vitez",
+        role: "Full stack developer & smart contracts",
     },
-);
+    {
+        image: "/our-team/pirda.png",
+        name: "Pirda Fajirati",
+        role: "Graphic Designer and Ui/Ux",
+    },
+    {
+        image: "/our-team/fidelius.png",
+        name: "Fidelius Schüpfer",
+        role: "Financial Relations Specialist",
+    },
+    {
+        image: "/our-team/gianluca.png",
+        name: "Gian-Luca Grüter",
+        role: "Investor Relations Specialist",
+    },
+    {
+        image: "/our-team/julia.png",
+        name: "Julia Neumann",
+        role: "Business                 Developper",
+    },
+    {
+        image: "/our-team/yves.png",
+        name: "Yves Gloggner",
+        role: "Financial Relations Specialist",
+    },
+];
 
 const RoadmapDescs = [
     {
