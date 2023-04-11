@@ -8,6 +8,7 @@ import './index.scss';
 
 import BannerImg from '../../assets/images/about-banner.png';
 import videoimg from '../../assets/images/video-img.jpg';
+import RoadmapPath from '../../assets/images/raodmap-line.svg';
 import TraccyIcon from '../../assets/images/tracy-icon.png';
 import Team1 from '../../assets/images/team1.png';
 import TeamThumb1 from '../../assets/images/team-thumb-1.png';
@@ -23,6 +24,34 @@ import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import { useTranslation } from 'react-i18next';
 
+const InfoModal = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
+    return (
+        <>
+            <SvgIcon className='modal-arrow-icon' onClick={showModal} name='logout-icon' viewbox='0 0 35.549 35.648' />
+            <Modal title="19 November" centered footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
+                <div className='pt-3'>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </div>
+            </Modal>
+        </>
+    );
+};
 function NextArrow(props) {
     const { className, onClick } = props;
     return (
@@ -49,7 +78,12 @@ function PrevArrow(props) {
 
 const AboutUs = () => {
     const { t } = useTranslation();
-
+    const settings = {
+        className: "center",
+        infinite: true,
+        slidesToShow: 1,
+        speed: 500
+    };
     const settings2 = {
         dots: true,
         infinite: false,
@@ -259,11 +293,10 @@ const AboutUs = () => {
             <section className='roadmap-section'>
                 <img className='left-hexa' src={LeftHexa} alt='Hexa' />
                 <img className='right-hexa' src={RightHexa} alt='Hexa' />
-                <Container>
+                <Container className="desktop">
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span>Roadmap</span></h1>
-
                         </Col>
                     </Row>
                     <Row>
@@ -367,6 +400,63 @@ const AboutUs = () => {
                                         </div>
                                     </div>
                                 </Slider> */}
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container className="mobile">
+                    <Row>
+                        <Col>
+                            <h1 className='main-heading text-center'><span>Roadmap</span></h1>
+                            <p className='main-heading-text'>
+                                Buy NFTS, access Defi dApps, and explore Web3 <br />
+                                across multiple networks on Chrome and Brave
+                            </p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+                            <div className='roadmap-wrapper'>
+                                <img className='roadmap-path' src={RoadmapPath} alt='Roadmap Path' />
+                                <SvgIcon className='circle-icon-upper' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
+                                <Slider {...settings}>
+                                    <div>
+                                        <div className='roadmap-card'>
+                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
+                                            <div className='action'>
+                                                2022 Q3
+                                                <InfoModal />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='roadmap-card'>
+                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
+                                            <div className='action'>
+                                                2022 Q4
+                                                <InfoModal />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='roadmap-card'>
+                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
+                                            <div className='action'>
+                                                2023 Q1
+                                                <InfoModal />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className='roadmap-card'>
+                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
+                                            <div className='action'>
+                                                2023 Q2
+                                                <InfoModal />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Slider>
                             </div>
                         </Col>
                     </Row>

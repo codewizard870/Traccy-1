@@ -355,6 +355,9 @@
       top: 62%;
       z-index: 0;
       max-width: 350px;
+      @media screen and (max-width: 776px) {
+        display: none;
+      }
     }
     .right-hexa {
       position: absolute;
@@ -362,14 +365,26 @@
       top: 10%;
       z-index: 0;
       max-width: 320px;
+      @media screen and (max-width: 776px) {
+        display: none;
+      }
+    }
+    .mobile {
+      display: none;
+    }
+    @media screen and (max-width: 776px) {
+      .desktop {
+        display: none;
+      }
+      .mobile {
+        display: block;
+      }
     }
     .roadmap-wrapper {
-      margin-top: 7rem;
+      margin-top: 1rem;
       position: relative;
-      height: 300px;
-      @media screen and (max-width: 576px) {
-        height: 150px;
-      }
+      height: 330px;
+
       .circle-icon-upper {
         position: absolute;
         top: 47%;
@@ -506,6 +521,9 @@
       top: 0;
       z-index: 0;
       max-width: 390px;
+      @media screen and (max-width: 776px) {
+        display: none;
+      }
     }
     .coreteam-wrapper {
       .slick-slider {

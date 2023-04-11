@@ -70,16 +70,6 @@ const BecomePart = () => {
                                 +41 44 045 45 45
                             </p>
                         </div>
-                        <div className='address-col'>
-                            <h3>{t("become:location")}</h3>
-                            <p>
-                                TRACCY AG <br />
-                                Chaltenbodenstrasse 6a, <br />
-                                8834 Schindellegi  <br />
-                                info@traccy.ch <br />
-                                +41 44 045 45 45
-                            </p>
-                        </div>
                         <div className='bottom-link'>
                             <Link to='/'>{t("become:terms")}</Link>  I  <Link to='/'>{t("become:privacy")}</Link>
                         </div>
