@@ -111,7 +111,7 @@ const Home = () => {
                   beforeChange={beforeChange}
                   {...settings}
                >
-                  <div onMouseMove={() => slickGoTo(0)} >
+                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/traccy-token")} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src={hoverVideo} className="fog-img" alt="hover" />
@@ -127,9 +127,9 @@ const Home = () => {
                            <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" />
                         </div>
                         <div className='desc-text'>
-                           <h2>TRCY Token</h2>
+                           <h2>TRCY Connect</h2>
                            <div className="desc-content">
-                              <h3>TRCY Token</h3>
+                              <h3>TRCY Connect</h3>
                            </div>
                            <p>
                               {t("main_menu:trcy")}
@@ -141,10 +141,10 @@ const Home = () => {
                               <li>{t("main_menu:trcy_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore onClick = {() => history.push("/traccy-token")}/>
+                        <LearnMore/>
                      </div>
                   </div>
-                  <div onMouseMove={() => slickGoTo(0)} >
+                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/impact-through-traccy")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src={hoverVideo} className="fog-img" alt="hover" />
@@ -161,9 +161,9 @@ const Home = () => {
                            style={{width: "50px", height: "50px"}}/>
                         </div>
                         <div className='desc-text'>
-                           <h2>Traccy Impact</h2>
+                           <h2>Impact</h2>
                            <div className="desc-content">
-                              <h3>Traccy Impact</h3>
+                              <h3>Impact</h3>
                            </div>
                            <p>
                               {t("main_menu:impact")}
@@ -174,10 +174,10 @@ const Home = () => {
                               <li>{t("main_menu:impact_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore onClick = {() => history.push("/impact-through-traccy")}/>
+                        <LearnMore/>
                      </div>
                   </div>
-                  <div>
+                  <div  onClick = {() => history.push("/about")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src={hoverVideo} className="fog-img" alt="hover" />
@@ -206,10 +206,10 @@ const Home = () => {
                               <li>{t("main_menu:about_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore onClick = {() => history.push("/about")}/>
+                        <LearnMore/>
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(4)}>
+                  <div onMouseOver={() => slickGoTo(4)}  onClick = {() => history.push("/become-part")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src={hoverVideo} className="fog-img" alt="hover" />
@@ -238,10 +238,10 @@ const Home = () => {
                               <li>{t("main_menu:become_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore onClick = {() => history.push("/become-part")}/>
+                        <LearnMore/>
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(4)}>
+                  <div onMouseOver={() => slickGoTo(4)} onClick = {() => history.push("/invest")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src={hoverVideo} className="fog-img" alt="hover" />
@@ -270,7 +270,7 @@ const Home = () => {
                               <li>{t("main_menu:buy_3")}</li>
                            </ul>
                         </div>
-                        <LearnMore onClick = {() => history.push("/invest")}/>
+                        <LearnMore />
                      </div>
                   </div>
                </Slider>

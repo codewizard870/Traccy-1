@@ -7,6 +7,10 @@ import Logo from '../../../assets/images/logo.png';
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const handleClick = () => {
+    const buttons = document.getElementsByClassName("connect-wallet-mobile")
+    buttons[0].click();
+  }
   return (
     <footer className="footer">
       <Container>
@@ -52,7 +56,7 @@ const Footer = () => {
           <Col lg='4' className="subscribe-col">
             <h3>Connect your Wallet </h3>
             <p>Connect you wallet for partecipate to STO  </p>
-            <Link to='/subscription'><Button type="primary">Connect Wallet</Button></Link>
+            <Button type="primary" onClick={handleClick} id="footer-wallet">Connect Wallet</Button>
           </Col>
         </Row>
         <Row className='footer-bottom'>

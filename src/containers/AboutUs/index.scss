@@ -63,7 +63,7 @@
       p {
         font-size: 20px;
         line-height: 1.6;
-        color: rgba($white, 0.5);
+        color: $white;
         @media screen and (max-width: 1600px) {
           font-size: 18px;
         }
@@ -342,167 +342,7 @@
       }
     }
   }
-  .roadmap-section {
-    padding: 12rem 0;
-    position: relative;
-    @media screen and (max-width: 576px) {
-      padding: 3rem 0;
-    }
 
-    .left-hexa {
-      position: absolute;
-      left: -8%;
-      top: 62%;
-      z-index: 0;
-      max-width: 350px;
-      @media screen and (max-width: 776px) {
-        display: none;
-      }
-    }
-    .right-hexa {
-      position: absolute;
-      right: -10%;
-      top: 10%;
-      z-index: 0;
-      max-width: 320px;
-      @media screen and (max-width: 776px) {
-        display: none;
-      }
-    }
-    .mobile {
-      display: none;
-    }
-    @media screen and (max-width: 776px) {
-      .desktop {
-        display: none;
-      }
-      .mobile {
-        display: block;
-      }
-    }
-    .roadmap-wrapper {
-      margin-top: 1rem;
-      position: relative;
-      height: 330px;
-
-      .circle-icon-upper {
-        position: absolute;
-        top: 47%;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 2;
-        fill: $white;
-        width: 70px;
-        @media screen and (min-width: 1520px) {
-          top: 44%;
-        }
-        @media screen and (max-width: 1441px) {
-          top: 39%;
-        }
-        @media screen and (max-width: 1400px) {
-          top: 38%;
-        }
-      }
-      .roadmap-path {
-        position: absolute;
-        width: 116%;
-        z-index: 1;
-        left: -8%;
-        @media screen and (max-width: 576px) {
-          top: 37%;
-        }
-        .roadmap-point {
-          cursor: pointer;
-          .point-outline {
-            stroke: #fefcfc;
-          }
-          .point-center {
-            fill: FFFBFB;
-          }
-          &:hover {
-            .point-outline {
-              stroke-opacity: 1;
-            }
-            .point-center {
-              fill-opacity: 1;
-            }
-          }
-        }
-      }
-      .roadmap-desc {
-        position: absolute;
-        width: 200px;
-        // height: 300px;
-        z-index: 99;
-        background: linear-gradient(
-          180deg,
-          rgba(227, 15, 174, 0.7) 0%,
-          rgba(227, 15, 174, 0) 100%
-        );
-        border-radius: 6px;
-        text-align: center;
-        padding: 1rem;
-        max-height: 0px;
-        overflow: hidden;
-        visibility: hidden;
-        transition: max-height 0.5s ease;
-
-        @media screen and (max-width: 576px) {
-          width: 100px;
-          & > h3 {
-            font-size: 12px;
-          }
-          & > p {
-            font-size: 10px;
-          }
-        }
-      }
-      .slick-slider {
-        .slick-arrow {
-          position: absolute;
-          height: 100%;
-          width: 20%;
-          z-index: 2;
-          &::before {
-            display: none;
-          }
-        }
-        .slick-slide {
-          .roadmap-card {
-            background: transparent
-              linear-gradient(180deg, #911658 0%, #7d0244 100%) 0% 0% no-repeat
-              padding-box;
-            max-width: 280px;
-            text-align: center;
-            padding: 80px 20px 40px 20px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 3%;
-            .circle-icon {
-              fill: $white;
-              width: 70px;
-              position: relative;
-              z-index: 3;
-              opacity: 0;
-            }
-            .action {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 26px;
-              margin-top: 25px;
-              .icon {
-                fill: $white;
-                width: 32px;
-                margin-left: 15px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   .coreteam-section {
     padding: 5rem 0;
     position: relative;
@@ -718,60 +558,51 @@
         display: none;
       }
     }
-    .blur-1 {
-      position: absolute;
+    .blur-circle1 {
+      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+      opacity: 0.09;
+      filter: blur(50px);
       width: 600px;
       height: 600px;
-      left: 0px;
-      bottom: -93.36px;
-
-      background: linear-gradient(
-        142deg,
-        #7e384f 0%,
-        #934d74 48%,
-        #0c395b 100%
-      );
-      opacity: 0.09;
-      filter: blur(25px);
-    }
-    .blur-2 {
       position: absolute;
+      bottom: -15%;
+      left: 0;
+      display: inline-block;
+      z-index: 0;
+  }
+  .blur-circle2 {
+      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+      opacity: 0.09;
+      filter: blur(50px);
       width: 600px;
       height: 600px;
-      left: 420px;
-      bottom: -49.79px;
-
-      background: linear-gradient(
-        142deg,
-        #7e384f 0%,
-        #934d74 48%,
-        #0c395b 100%
-      );
-      opacity: 0.09;
-      filter: blur(25px);
-    }
-    .blur-3 {
       position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      z-index: 0;
+      bottom: -8%;
+  }
+  .blur-circle3 {
+      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+      opacity: 0.09;
+      filter: blur(50px);
       width: 600px;
       height: 600px;
-      right: 0px;
-      bottom: 0px;
-
-      background: linear-gradient(
-        142deg,
-        #7e384f 0%,
-        #934d74 48%,
-        #0c395b 100%
-      );
-      opacity: 0.09;
-      filter: blur(25px);
-    }
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      z-index: 0;
+  }
 
     .ourteam-wrapper {
       display: flex;
       flex-wrap: wrap;
       gap: 32px;
-      justify-content: space-evenly;
+      justify-content: center;
       .card {
         display: flex;
         flex-direction: column;

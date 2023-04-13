@@ -5,11 +5,10 @@ import { useTrustWallet } from "../../../contexts/trustWallet";
 import { useTronLink } from "../../../contexts/tronLink";
 import { useTrackedState, useDispatch } from "../../../contexts/store";
 
-import { Button, Drawer, Modal, Spin } from "antd";
+import { Button, Drawer, Spin } from "antd";
 import { WalletOutlined, CheckOutlined } from "@ant-design/icons";
 import "./ConnectWallet.scss"
 import { WALLET_LIST } from "../../../config/constants";
-import { SvgIcon } from '../../../components/common';
 import { useTranslation } from "react-i18next";
 
 export default function ConnectWallet() {
@@ -59,8 +58,11 @@ export default function ConnectWallet() {
   useEffect(() => {
     function handleClick(e) {
       const sidebar = document.getElementById("wallet-sidebar");
-      if (!sidebar?.contains(e.target))
+      const footer = document.getElementById("footer-wallet");
+      console.log(footer, ",", e.target)
+      if (!sidebar?.contains(e.target) && !footer?.contains(e.target))
         onClose();
+
     }
 
     window.addEventListener("click", handleClick);
@@ -90,11 +92,7 @@ export default function ConnectWallet() {
         open={openModal}
         rootClassName='wallet-sidebar'
       >
-        {/* <Button className="menu-close" onClick={onClose}>
-          <SvgIcon name="close" viewbox="0 0 10.357 10.357" />
-        </Button> */}
         <div className="wallet-content">
-          {/* <span>{address}</span> */}
           {WALLET_LIST.map((wallet, index, all) => (
             <React.Fragment key={index}>
               <div className={`wallet-item`} onClick={() => connectTo(wallet.link)}>
