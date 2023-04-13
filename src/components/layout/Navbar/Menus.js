@@ -63,7 +63,7 @@ const Menus = () => {
               <div className='menu-icon'>
                 <SvgIcon name='tccytoken-icon' viewbox='0 0 24.914 20.444' />
               </div>
-              TRCY Token
+              TRCY Connect
             </Link>
           </li>
           <li>
@@ -105,7 +105,7 @@ const Menus = () => {
           <a href="https://traccy-globe.vercel.app/">Home</a>
         </li>
         <li>
-          <NavLink to='/traccy-token'>TRCY TOKEN</NavLink>
+          <NavLink to='/traccy-token'>TRCY CONNECT</NavLink>
         </li>
         <li>
           <NavLink to='/impact-through-traccy'>IMPACT</NavLink>

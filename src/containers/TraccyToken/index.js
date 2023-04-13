@@ -211,7 +211,7 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className='main-heading text-center'>Why <span>Traccy</span> ?  </h1>
+                            <h1 className='main-heading text-center'>Why <span>Traccy</span> Connect?</h1>
                             <p className='main-heading-text'>Our business model is supported by the following 4 pillars</p>
                         </Col>
                     </Row>
@@ -246,7 +246,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='token' viewbox='0 0 50.148 59.189' /> */}
                                     <img className="icon" src="/traccy-token/token.svg" alt="token" />
                                 </div>
-                                <h4>TRCY TOKEN</h4>
+                                <h4>TRCY</h4>
                                 <p>
                                     {t("token:token")}
                                 </p>
@@ -258,7 +258,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
                                     <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
-                                <h4>TRCY CONNECT</h4>
+                                <h4>IMPACT</h4>
                                 <p>
                                     {t("token:connect")}
                                 </p>

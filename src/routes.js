@@ -11,6 +11,7 @@ import { authLayout, defaultLayout, defaultheaderLayout, defaultdarkLayout, defa
 
 import Invest from "./containers/Invest";
 import Library from "./containers/Library";
+import FlyOut from "./containers/ImpactThroughTraccyDetails/FlyOut";
 
 // Route Views
 
@@ -79,4 +80,9 @@ export const rotues = [
     layout: defaultheaderLayout,
     component: () => <Library />
   },
+  {
+    path: "/impact-through-traccy-details/flyout",
+    layout: defaultdarkLayout,
+    component: () => <FlyOut />
+  }
 ];

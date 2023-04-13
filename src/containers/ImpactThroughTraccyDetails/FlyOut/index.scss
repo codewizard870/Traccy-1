@@ -1,6 +1,6 @@
-@import "../../assets/scss/variables.scss";
+@import "../../../assets/scss/variables.scss";
 
-.itt-dtl-wrapper {
+.flyout-wrapper {
   position: relative;
   z-index: 0;
   background: rgb(84, 13, 86);
@@ -56,7 +56,10 @@
       transition: all ease-in 0.1s;
       z-index: 3;
       @media screen and (max-width: 767px) {
-        left: 0px;
+        left: 10px;
+        img {
+          width: 30px;
+        }
       }
 
       &:hover {
@@ -302,7 +305,7 @@
           .application {
             font-size: 28px;
             font-weight: 700;
-            color: #aac3e1;
+            color: #c7fbba;
             letter-spacing: 0.05em;
             margin-top: 85px;
             @media screen and (max-width: 767px) {
@@ -315,7 +318,7 @@
             .number {
               font-size: 100px;
               font-weight: 800;
-              color: #689ddc;
+              color: #c7fbba;
               @media screen and (max-width: 767px) {
                 font-size: 30px;
               }
@@ -323,7 +326,7 @@
             .selection-desc {
               font-size: 28px;
               font-weight: 700;
-              color: #689ddc;
+              color: #c7fbba;
               @media screen and (max-width: 767px) {
                 font-size: 14px;
               }
@@ -387,7 +390,7 @@
             span {
               font-size: 18px;
               font-weight: 700;
-              color: #aac3e1;
+              color: #c7fbba;
               @media screen and (max-width: 767px) {
                 font-size: 12px;
               }
@@ -416,7 +419,7 @@
             margin-top: 30px;
             font-size: 18px;
             font-weight: 700;
-            color: #aac3e1;
+            color: #c7fbba;
           }
           .world-desc {
             display: flex;
@@ -442,25 +445,37 @@
     }
   }
   .book-section {
-    margin-top: -100px;
-    // position: absolute;
+    // margin-top: -100px;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    transform: translateY(-50%);
     @media screen and (max-width: 1024px) {
-      margin-top: 30px;
+      // margin-top: 30px;
     }
     img {
       width: 100%;
     }
     .stf__parent {
       margin: auto;
+      min-height: 306px !important;
+      @media screen and (max-width: 767px) {
+        min-height: 200px !important;
+        height: 200px !important;
+
+      }
     }
     .demoPage {
       background: $white;
       color: $text-primary;
+      min-height: 306px;
+
       @media screen and (max-width: 991px) {
         width: 100% !important;
         min-width: 100% !important;
         left: 0 !important;
         right: 0 !important;
+        height: 200px !important;
       }
       .arrow-right {
         position: absolute;
@@ -535,32 +550,38 @@
       }
       .bookpage-inner-left {
         height: 100%;
-        padding: 26px 36px 26px 48px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-between;
-        @media screen and (max-width: 576px) {
-          padding: 26px 20px 26px 20px;
+
+        .left-section {
+          padding: 33px 0px 0px 54px;
+          @media screen and (max-width: 767px) {
+            padding: 33px 0px 0px 10px;
+          }
+          h2 {
+            color: $text-primary;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            line-height: 1.1;
+            @media screen and (max-width: 767px) {
+              font-size:30px;
+            }
+          }
+          img {
+            margin-top: 48px;
+            width: 100%;
+          }
         }
-        h2 {
-          color: $text-primary;
-          font-size: 50px;
-          margin-bottom: 6px;
-          line-height: 1.1;
-        }
-        h4 {
-          color: $text-primary;
-          font-size: 24px;
-        }
-        p {
-          max-width: 200px;
-          text-align: right;
-          margin-left: auto;
-          line-height: 1.4;
-          font-size: 14px;
-        }
-        .bottom-row {
-          margin-top: auto;
+        .right-section {
+          img {
+            width: 138px;
+            height: 100%;
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+          }
         }
         .ant-tabs {
           .ant-tabs-ink-bar {
@@ -588,62 +609,67 @@
         }
       }
       .bookpage-inner-right {
-        padding: 26px 36px 0 48px;
+        padding: 22px 41px 0 49px;
         display: flex;
         height: 100%;
         justify-content: space-between;
         @media screen and (max-width: 576px) {
-          padding: 26px 20px 0 20px;
+          padding: 56px 20px 0 20px;
         }
         .left-col {
-          max-width: 45%;
+          max-width: 50%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-          overflow: hidden;
+          position: relative;
           .left-upper {
-            padding-top: 15px;
             h4 {
               color: $text-primary;
-              font-size: 24px;
-              @media screen and (max-width: 1500px) {
-                font-size: 20px;
+              font-size: 20px;
+              @media screen and (max-width: 767px) {
+                font-size: 16px;
               }
             }
             p {
               line-height: 1.4;
-              @media screen and (max-width: 1500px) {
-                font-size: 13px;
+              font-size: 12px;
+              text-align: justify;
+              @media screen and (max-width: 767px) {
+                font-size: 9px;
               }
             }
           }
           .left-bottom {
             display: flex;
             align-items: flex-start;
+            position: absolute;
+            bottom: -50px;
+
             h1 {
-              font-size: 11rem;
+              font-size: 125px;
               color: $text-primary;
               font-weight: 700;
               line-height: 1;
-              font-family: "Cerco DEMO";
+              font-family: "Roboto";
               margin-bottom: 0;
               @media screen and (max-width: 1500px) {
                 font-size: 8rem;
               }
             }
-            p {
-              font-size: 14px;
-              margin-bottom: 0;
-            }
-            h4 {
-              font-size: 22px;
-              color: $text-primary;
-              margin-bottom: 0;
-            }
             .small-head {
-              line-height: 1.1;
+              p {
+                font-size: 12px;
+                margin-bottom: 0;
+                white-space: nowrap;
+              }
+              h4 {
+                font-size: 20px;
+                color: $text-primary;
+                margin-bottom: 0;
+              }
             }
           }
+
         }
         .right-col {
           max-width: 40%;
@@ -665,6 +691,7 @@
   .map-section {
     padding: 5rem 0 14rem 0;
     position: relative;
+    overflow: hidden;
     .blur-circle1 {
       background: transparent
         linear-gradient(142deg, #7e384f 0%, #934d74 48%, #0c395b 100%) 0% 0%
@@ -865,7 +892,7 @@
           max-width: 550px;
           width: 100%;
           z-index: 2;
-          top: 0;
+          top: 25px;
           right: 0;
           img {
             width: 100%;

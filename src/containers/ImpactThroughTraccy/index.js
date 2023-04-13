@@ -44,10 +44,16 @@ const ImpactThroughTraccy = () => {
    }
 
    const onClose = () => {
-      if(openModal)
+      if (openModal)
          setOpen(false)
    }
 
+   const goDetail = (project, index) => {
+      if(project.route)
+         router.push(`/impact-through-traccy-details/${project.route}`)
+      else
+      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
+   }
    return (
       <div className='itt-wrapper' onClick={onClose}>
          <section className='banner-section'>
@@ -118,7 +124,7 @@ const ImpactThroughTraccy = () => {
                      <span>Project List</span>
                   </div>
                   {Sliders[stageIndex].projects.map((project, index) => (
-                     <div className="item" onClick={() => router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)}>
+                     <div className="item" onClick={() => goDetail(project, index)}>
                         <span>{project.number}</span>
                         <span>{project.desc}</span>
                      </div>
@@ -143,6 +149,19 @@ const ImpactThroughTraccy = () => {
                            <div className='points'>
                               03 <span></span>
                            </div>
+                           <div className='points'>
+                              <span></span>
+                              <div>04</div>
+                           </div>
+                           <div className='points'>
+                              05 <span></span>
+                           </div>
+                           <div className='points'>
+                              <div>06</div> <span></span>
+                           </div>
+                           <div className='points'>
+                              07 <span></span>
+                           </div>
                         </div>
                         <img src={MapImg} alt='Map' />
                      </div>
@@ -162,7 +181,32 @@ export const Sliders = [
       month: 1,
       world: 6,
       banner: "/impact/5309059.jpg",
-      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" }),
+      projects: [
+         {
+            number: "01. Lynx Vr",
+            desc: "LynxVr is a cognitive therapist using Blockchain for increase privacy and clients confidential aboutmedical and therapist section",
+         },
+         {
+            number: "02. Green Protocol",
+            desc: "NFT tokenisation of green assets like renewable energy, agriculture, recycling and more. Crowdfunding modelling and co-ownership of real world asset for change the climatic changes."
+         },
+         {
+            number: "03. DecentaCity",
+            desc: "Creating a automated ecosystem in real world whereall the population is 100% independent to external sources, likeWater purification, Food and plant production, oil creation, energy production and green mobilitation"
+         },
+         {
+            number: "04. Traccy Solar",
+            desc: ""
+         },
+         {
+            number: "05. Traccy Lab",
+            desc: ""
+         },
+         {
+            number: "06. Tomato Project",
+            desc: ""
+         }
+      ],
    },
    {
       stage: "Incubation",
@@ -172,7 +216,14 @@ export const Sliders = [
       month: 3,
       world: 2,
       banner: "/impact/5335415.jpg",
-      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
+      projects: [
+         {
+            number: "01. FlyOut",
+            desc: "A mosquito solution system based on organicproduct reducing the mosquito population",
+            route: "flyout"
+
+         }
+      ]
    },
    {
       stage: "Launching",
@@ -182,7 +233,12 @@ export const Sliders = [
       month: 2,
       world: 2,
       banner: "/impact/5072310.jpg",
-      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
+      projects: [
+         {
+            number: "01. Traccy Connect",
+            desc: "Traccy Connect is the platform will provideSTOEducationImpact Score and Impact Credits"
+         }
+      ]
    },
    {
       stage: "Monitoring",
@@ -192,7 +248,7 @@ export const Sliders = [
       month: 6,
       world: 2,
       banner: "/impact/2328116.jpg",
-      projects: new Array(5).fill({ number: "01", desc: "BLA BLA BLA BLA BLA BLA BLA BLA BALBBALB BALB" })
+      projects: []
    }
 ]
 export default ImpactThroughTraccy

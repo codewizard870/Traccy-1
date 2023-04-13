@@ -569,17 +569,12 @@
               }
             }
             @media screen and (max-width: 1339px) {
-              margin-left: -127px;
+              margin-left: -107px;
               .list-indicator{
-                width: 120px;
+                width: 100px;
               }
             }
-            @media screen and (max-width: 1339px) {
-              margin-left: -26px;
-              .list-indicator{
-                width: 19px;
-              }
-            }
+
           }
           button {
             margin-top: 22px;
@@ -815,14 +810,11 @@
         width: 100%;
       }
       .project-center {
-        max-width: 390px;
-        max-height: 300px;
         height: 100%;
         margin: auto;
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 18%;
         .popup {
           position: absolute;
           max-width: 550px;
@@ -854,6 +846,10 @@
           font-weight: 700;
           font-family: "Cerco DEMO";
           transition: all ease-in 0.1s;
+          @media screen and (max-width: 767px) {
+            font-size: 1rem;
+          }
+
           cursor: pointer;
           &:hover {
             transform: scale(1.1);
@@ -870,32 +866,96 @@
           &:nth-child(1) {
             position: absolute;
             bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            left: 45%;
+            top: 55%;
             span {
               border-color: #1ffdf5;
+            }
+            @media screen and (max-width: 767px) {
+              left: 35%;
+              top: 63%;
             }
           }
           &:nth-child(2) {
             display: flex;
             align-items: center;
             position: absolute;
-            right: 8%;
-            top: 30%;
+            left: 56%;
+            top: 41%;
             span {
               border-color: #c73c86;
               margin-right: 10px;
+            }
+            @media screen and (max-width: 767px) {
+              left: 56%;
+              top: 41%;
             }
           }
           &:nth-child(3) {
             display: flex;
             align-items: center;
             position: absolute;
-            left: 8%;
-            top: 22%;
+            left: 34%;
+            top: 36%;
             span {
               border-color: #f4c867;
+              margin-left: 10px;
+            }
+            @media screen and (max-width: 767px) {
+              left: 32%;
+              top: 36%;
+            }
+          }
+          &:nth-child(4) {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 79%;
+            top: 56%;
+            span {
+              border-color: #6967f4;
+              margin-left: 10px;
+            }
+            @media screen and (max-width: 767px) {
+              left: 76%;
+              top: 56%;
+            }
+          }
+          &:nth-child(5) {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 13%;
+            top: 59%;
+            span {
+              border-color: #f4f267;
+              margin-left: 10px;
+            }
+          }
+          &:nth-child(6) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            left: 72%;
+            top: 46%;
+            span {
+              border-color: #f49f67;
+              margin-left: 10px;
+            }
+            @media screen and (max-width: 767px) {
+              left: 61%;
+              top: 44%;
+            }
+          }
+          &:nth-child(7) {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 7%;
+            top: 23%;
+            span {
+              border-color: #f47767;
               margin-left: 10px;
             }
           }
