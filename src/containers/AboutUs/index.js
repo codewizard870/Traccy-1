@@ -17,8 +17,6 @@ import TeamThumb4 from '../../assets/images/team-thumb-4.png';
 import TeamThumb5 from '../../assets/images/team-thumb-5.png';
 import TeamThumb6 from '../../assets/images/team-thumb-6.png';
 import LeftHexa from '../../assets/images/left-hexa-small.svg';
-import RightHexa from '../../assets/images/right-hexa-small.svg';
-import RightHexa3 from '../../assets/images/right-hexa3.svg'
 import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import { useTranslation } from 'react-i18next';
@@ -236,7 +234,7 @@ const AboutUs = () => {
             </section>
             <section className='coreteam-section'>
                 <img className='title-bg' src={HeaderBg2} alt='BG' />
-                <img className='right-hexa' src={RightHexa3} alt='Hexa' />
+                <img className='right-hexa' src="/about-us/core-right-hexa.svg" alt='Hexa' />
                 <Container>
                     <Row>
                         <Col>
@@ -280,7 +278,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src="/our-team/mike.png" alt='mike' />
+                                                <img src="/about-us/mike.png" alt='mike' />
                                             </div>
                                         </div>
                                     </div>
@@ -298,7 +296,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src="/our-team/farrah.png" alt='farrah' />
+                                                <img src="/about-us/farrah.png" alt='farrah' />
                                             </div>
                                         </div>
                                     </div>
@@ -316,7 +314,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src="/our-team/dedry.png" alt='dedry' />
+                                                <img src="/about-us/dedry.png" alt='dedry' />
                                             </div>
                                         </div>
                                     </div>
@@ -334,7 +332,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src="/our-team/andrea.png" alt='andrea' />
+                                                <img src="/about-us/andrea.png" alt='andrea' />
                                             </div>
                                         </div>
                                     </div>
@@ -352,7 +350,7 @@ const AboutUs = () => {
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
-                                                <img src="/our-team/ika.png" alt='ika' />
+                                                <img src="/about-us/ika.png" alt='ika' />
                                             </div>
                                         </div>
                                     </div>
@@ -364,7 +362,6 @@ const AboutUs = () => {
             </section>
             <section className="ourteam-section">
                 <img className='left-hexa' src={LeftHexa} alt='Hexa' />
-                <img className='right-hexa' src={RightHexa3} alt='Hexa' />
                 <div className='blur-circle1'></div>
                 <div className='blur-circle2'></div>
                 <div className='blur-circle3'></div>
@@ -422,32 +419,32 @@ export default AboutUs
 
 const OURTEAM = [
     {
-        image: "/our-team/marko.png",
+        image: "/about-us/marko.png",
         name: "Marko Vitez",
         role: "Full stack developer & smart contracts",
     },
     {
-        image: "/our-team/pirda.png",
+        image: "/about-us/pirda.png",
         name: "Pirda Fajirati",
         role: "Graphic Designer and Ui/Ux",
     },
     {
-        image: "/our-team/fidelius.png",
+        image: "/about-us/fidelius.png",
         name: "Fidelius Schüpfer",
         role: "Financial Relations Specialist",
     },
     {
-        image: "/our-team/gianluca.png",
+        image: "/about-us/gianluca.png",
         name: "Gian-Luca Grüter",
         role: "Investor Relations Specialist",
     },
     {
-        image: "/our-team/julia.png",
+        image: "/about-us/julia.png",
         name: "Julia Neumann",
         role: "Business Developper",
     },
     {
-        image: "/our-team/yves.png",
+        image: "/about-us/yves.png",
         name: "Yves Gloggner",
         role: "Financial Relations Specialist",
     },

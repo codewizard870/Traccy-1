@@ -344,7 +344,7 @@
   }
 
   .coreteam-section {
-    padding: 5rem 0;
+    margin-top: 175px;
     position: relative;
     .title-bg {
       position: absolute;
@@ -357,7 +357,7 @@
     }
     .right-hexa {
       position: absolute;
-      right: -10%;
+      right: 0;
       top: 0;
       z-index: 0;
       max-width: 390px;
@@ -540,8 +540,8 @@
 
     .left-hexa {
       position: absolute;
-      left: -160px;
-      top: 60%;
+      left: -177px;
+      top: 579px;
       z-index: 0;
       max-width: 390px;
       @media screen and (max-width: 776px) {

@@ -127,7 +127,7 @@ const TraccyToken = () => {
             const childRect = points[i].getBoundingClientRect();
             const left = childRect.left - parentRect.left - descs[i].clientWidth / 2;
             const top = childRect.top - parentRect.top - descs[i].clientHeight / 2;
-            descs[i].style.left = `${left > 0? left: 0}px`;
+            descs[i].style.left = `${left > 0 ? left : 0}px`;
             descs[i].style.top = `${top}px`;
         }
     }, [])
@@ -159,7 +159,10 @@ const TraccyToken = () => {
                                 </li>
                             </ul>
                             <div className='learn-more-row'>
-                                <Button onClick={() => history.push("/invest")}>BUY TOKEN <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' /></Button>
+                                <Button onClick={() => history.push("/invest")}>
+                                    BUY TOKEN
+                                    <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' />
+                                </Button>
                                 <div className='white-paper' onClick={onDownload}>
                                     <h4>White paper </h4>
                                     <div>
@@ -327,8 +330,8 @@ const TraccyToken = () => {
                 <div className='blur-circle-left'></div>
                 <div className='blur-circle-right'></div>
                 <img className='title-bg' src={HeaderBg1} alt='BG' />
-                <img className='left-hexx-img' src={leftHexa} alt='Traccy' />
-                <img className='right-hexx-img' src={righttHexa2} alt='Traccy' />
+                <img className='left-hexx-img' src="/traccy-token/csp-left-hexa.svg" alt='Traccy' />
+                <img className='right-hexx-img' src="/traccy-token/csp-right-hexa.svg" alt='Traccy' />
                 <Container>
                     <Row>
                         <Col>
@@ -399,8 +402,8 @@ const TraccyToken = () => {
                 </Container>
             </section>
             <section className='roadmap-section'>
-                <img className='left-hexa' src={leftHexa} alt='Hexa' />
-                <img className='right-hexa' src={righttHexa} alt='Hexa' />
+                <img className='left-hexa' src="/traccy-token/roadmap-left-hexa.svg" alt='Hexa' />
+                <img className='right-hexa' src="/traccy-token/roadmap-right-hexa.svg" alt='Hexa' />
                 <Container className="desktop">
                     <Row>
                         <Col>
@@ -455,11 +458,7 @@ const TraccyToken = () => {
                                         </h3>
                                         <ul>
                                             {roadmap.content.map(str => (
-                                                <li><p>
-                                                    {str}
-                                                </p>
-                                                </li>
-
+                                                <li><p> {str} </p> </li>
                                             ))}
                                         </ul>
                                     </div>

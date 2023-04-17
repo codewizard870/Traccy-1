@@ -118,32 +118,34 @@
         }
 
         .ant-btn {
-          border: 1px solid #93165b;
+          border: 2px solid #93165b;
           background: none;
           color: $white;
           border-radius: 0;
           text-transform: uppercase;
-          padding: 0 0 0 20px;
+          padding: 0 0 0 45px;
           display: flex;
           align-items: center;
-
+          width: 238px;
+          height: 60px;
+          
           @media screen and (max-width: 640px) {
             font-size: 13px;
           }
 
           &::before {
-            width: 0;
+            width: 60px;
             height: 100%;
             content: " ";
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
-            background: #94175b;
+            background: #E31E5380;
             transition: all ease-in 0.2s;
             opacity: 1;
             max-height: 60px;
-            z-index: 0;
+            z-index: 3;
           }
 
           &:hover {
@@ -154,18 +156,18 @@
 
           span {
             position: relative;
+            font-size: 14px;
+            font-weight: 700;
             z-index: 1;
           }
 
           .icon {
-            background: #94175b;
             fill: $white;
-            width: 42px;
-            height: 100%;
-            margin-left: 20px;
+            width: 13px;
+            height: 12px;
+            margin-left: 75px;
             position: relative;
-            z-index: 1;
-            padding: 0px 5px;
+            z-index: 4;
           }
         }
         .white-paper {
@@ -173,7 +175,7 @@
           flex-direction: column;
           margin-left: 1.5rem;
           z-index: 1000;
-          
+
           @media screen and (max-width: 480px) {
             margin-left: 0;
             margin-top: 1rem;
@@ -990,171 +992,7 @@
     font-size: 0.9rem;
   }
 }
-.roadmap-section {
-  padding: 12rem 0;
-  position: relative;
-  @media screen and (max-width: 576px) {
-    padding: 3rem 0;
-  }
 
-  .left-hexa {
-    position: absolute;
-    left: -8%;
-    top: 62%;
-    z-index: 0;
-    max-width: 350px;
-    @media screen and (max-width: 776px) {
-      display: none;
-    }
-  }
-  .right-hexa {
-    position: absolute;
-    right: -10%;
-    top: 10%;
-    z-index: 0;
-    max-width: 320px;
-    @media screen and (max-width: 776px) {
-      display: none;
-    }
-  }
-  .mobile {
-    display: none;
-  }
-  // @media screen and (max-width: 776px) {
-  //   .desktop {
-  //     display: none;
-  //   }
-  //   .mobile {
-  //     display: block;
-  //   }
-  // }
-  .roadmap-wrapper {
-    margin-top: 1rem;
-    position: relative;
-    height: 330px;
-
-    .circle-icon-upper {
-      position: absolute;
-      top: 47%;
-      left: 0;
-      right: 0;
-      margin: auto;
-      z-index: 2;
-      fill: $white;
-      width: 70px;
-      @media screen and (min-width: 1520px) {
-        top: 44%;
-      }
-      @media screen and (max-width: 1441px) {
-        top: 39%;
-      }
-      @media screen and (max-width: 1400px) {
-        top: 38%;
-      }
-    }
-    .roadmap-path {
-      position: absolute;
-      width: 116%;
-      z-index: 1;
-      left: -8%;
-      @media screen and (max-width: 576px) {
-        width: 176%;
-        left: -55%;
-      }
-      .roadmap-point {
-        cursor: pointer;
-        .point-outline {
-          stroke: #fefcfc;
-        }
-        .point-center {
-          fill: FFFBFB;
-        }
-        &:hover {
-          .point-outline {
-            stroke-opacity: 1;
-          }
-          .point-center {
-            fill-opacity: 1;
-          }
-        }
-      }
-    }
-    .roadmap-desc {
-      position: absolute;
-      width: 200px;
-      // height: 300px;
-      z-index: 99;
-      background: linear-gradient(
-        180deg,
-        rgba(227, 15, 174, 0.7) 0%,
-        rgba(227, 15, 174, 0) 100%
-      );
-      border-radius: 6px;
-      text-align: center;
-      padding: 1rem;
-      max-height: 0px;
-      overflow: hidden;
-      visibility: hidden;
-      transition: max-height 0.5s ease;
-
-      ul {
-        padding: 0 10px 0 30px;
-        li {
-          p {
-            font-size: 12px;
-            text-align: left;
-          }
-        }
-      }
-      @media screen and (max-width: 576px) {
-
-      }
-    }
-    .slick-slider {
-      .slick-arrow {
-        position: absolute;
-        height: 100%;
-        width: 20%;
-        z-index: 2;
-        &::before {
-          display: none;
-        }
-      }
-      .slick-slide {
-        .roadmap-card {
-          background: transparent
-            linear-gradient(180deg, #911658 0%, #7d0244 100%) 0% 0% no-repeat
-            padding-box;
-          max-width: 280px;
-          text-align: center;
-          padding: 80px 20px 40px 20px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 3%;
-          .circle-icon {
-            fill: $white;
-            width: 70px;
-            position: relative;
-            z-index: 3;
-            opacity: 0;
-          }
-          .action {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 26px;
-            margin-top: 25px;
-            .icon {
-              fill: $white;
-              width: 32px;
-              margin-left: 15px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 .csp-section {
   padding: 4rem 0;
   position: relative;
@@ -1240,21 +1078,21 @@
 
   .left-hexx-img {
     position: absolute;
-    top: 476px;
-    left: -200px;
+    top: 10px;
+    left: 0px;
 
     @media screen and (max-width: 580px) {
-      left: -200px;
+      display: none;
     }
   }
 
   .right-hexx-img {
     position: absolute;
-    right: -300px;
-    top: 497px;
+    right: 0px;
+    top: -96px;
 
     @media screen and (max-width: 580px) {
-      right: -340px;
+      display: none;
     }
   }
 
@@ -1413,6 +1251,168 @@
             margin: auto;
             max-width: 100%;
             max-height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+.roadmap-section {
+  padding: 12rem 0;
+  position: relative;
+  @media screen and (max-width: 576px) {
+    padding: 3rem 0;
+  }
+
+  .left-hexa {
+    position: absolute;
+    left: -102px;
+    top: 536px;
+    z-index: 0;
+    @media screen and (max-width: 776px) {
+      display: none;
+    }
+  }
+  .right-hexa {
+    position: absolute;
+    right: -178px;
+    top: 0;
+    z-index: 0;
+    @media screen and (max-width: 776px) {
+      display: none;
+    }
+  }
+  .mobile {
+    display: none;
+  }
+  // @media screen and (max-width: 776px) {
+  //   .desktop {
+  //     display: none;
+  //   }
+  //   .mobile {
+  //     display: block;
+  //   }
+  // }
+  .roadmap-wrapper {
+    margin-top: 1rem;
+    position: relative;
+    height: 330px;
+
+    .circle-icon-upper {
+      position: absolute;
+      top: 47%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 2;
+      fill: $white;
+      width: 70px;
+      @media screen and (min-width: 1520px) {
+        top: 44%;
+      }
+      @media screen and (max-width: 1441px) {
+        top: 39%;
+      }
+      @media screen and (max-width: 1400px) {
+        top: 38%;
+      }
+    }
+    .roadmap-path {
+      position: absolute;
+      width: 116%;
+      z-index: 1;
+      left: -8%;
+      @media screen and (max-width: 576px) {
+        width: 176%;
+        left: -55%;
+      }
+      .roadmap-point {
+        cursor: pointer;
+        .point-outline {
+          stroke: #fefcfc;
+        }
+        .point-center {
+          fill: FFFBFB;
+        }
+        &:hover {
+          .point-outline {
+            stroke-opacity: 1;
+          }
+          .point-center {
+            fill-opacity: 1;
+          }
+        }
+      }
+    }
+    .roadmap-desc {
+      position: absolute;
+      width: 200px;
+      // height: 300px;
+      z-index: 99;
+      background: linear-gradient(
+        180deg,
+        rgba(227, 15, 174, 0.7) 0%,
+        rgba(227, 15, 174, 0) 100%
+      );
+      border-radius: 6px;
+      text-align: center;
+      padding: 1rem;
+      max-height: 0px;
+      overflow: hidden;
+      visibility: hidden;
+      transition: max-height 0.5s ease;
+
+      ul {
+        padding: 0 10px 0 30px;
+        li {
+          p {
+            font-size: 12px;
+            text-align: left;
+          }
+        }
+      }
+      @media screen and (max-width: 576px) {
+      }
+    }
+    .slick-slider {
+      .slick-arrow {
+        position: absolute;
+        height: 100%;
+        width: 20%;
+        z-index: 2;
+        &::before {
+          display: none;
+        }
+      }
+      .slick-slide {
+        .roadmap-card {
+          background: transparent
+            linear-gradient(180deg, #911658 0%, #7d0244 100%) 0% 0% no-repeat
+            padding-box;
+          max-width: 280px;
+          text-align: center;
+          padding: 80px 20px 40px 20px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 3%;
+          .circle-icon {
+            fill: $white;
+            width: 70px;
+            position: relative;
+            z-index: 3;
+            opacity: 0;
+          }
+          .action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            margin-top: 25px;
+            .icon {
+              fill: $white;
+              width: 32px;
+              margin-left: 15px;
+            }
           }
         }
       }
