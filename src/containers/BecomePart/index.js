@@ -11,7 +11,7 @@ import { useTranslation } from 'react-i18next';
 
 
 const BecomePart = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
 
     const [current, setCurrent] = useState(0);
 
@@ -39,6 +39,10 @@ const BecomePart = () => {
     const items = steps.map((item) => ({ key: item.title, title: item.title }));
     return (
         <div className='becomepart-wrapper'>
+            <div className="polygon-effect">
+                <img src="/invest-form/left-hexa.png" alt="polygon-left" />
+                <img src="/invest-form/right-hexa.png" alt="polygon-right" />
+            </div>
             <div className='leftbar'>
                 <div className='social-icon-list'>
                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
@@ -69,7 +73,7 @@ const BecomePart = () => {
                         <div className='bottom-link'>
                             <a href='https://drive.google.com/file/d/1O2SMCDtlAMBvQZe9YbFcA16lXX7J9_Nl/view?usp=share_link' target='_blank' rel="noreferrer">
                                 {t("become:terms")}
-                            </a>  I  
+                            </a>  I
                             <a href='https://drive.google.com/file/d/1F21d_kCvsnBp3qfSFtXod3Z86p8jNCQJ/view?usp=share_link' target='_blank' rel="noreferrer">
                                 {t("become:privacy")}
                             </a>

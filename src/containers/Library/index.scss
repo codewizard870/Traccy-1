@@ -32,24 +32,23 @@
 
   .polygon-effect {
     & > img {
-      &:nth-child(1){
-          position: absolute;
-          top: 476px;
-          left: -200px;
+      &:nth-child(1) {
+        position: absolute;
+        top: 566px;
+        left: -267px;
 
-          @media screen and (max-width: 580px) {
-              left: -230px;
-          }
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
       }
       &:nth-child(2) {
-          position: absolute;
-          right: -300px;
-          top: 497px;
+        position: absolute;
+        right: -63px;
+        top: 451px;
 
-          
-          @media screen and (max-width: 580px) {
-              right: -330px;
-          }
+        @media screen and (max-width: 580px) {
+          display: none;
+        }
       }
     }
   }

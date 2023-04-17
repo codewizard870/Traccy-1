@@ -17,45 +17,13 @@ const Library = () => {
    return (
       <div className='library-wrapper'>
          <div className="polygon-effect">
-            <img src="/invest-form/left-hexa.svg" alt="polygon-left" />
-            {/* <img src="/invest-form/right-hexa.svg" alt="polygon-right" /> */}
+            <img src="/invest-form/left-hexa.png" alt="polygon-left"/>
+            <img src="/invest-form/right-hexa.png" alt="polygon-right"/>
          </div>
          <div className='leftbar'>
             <div className='traccy-icon'>
                <img src={Traccyicon} alt='Logo' />
             </div>
-            {/* <div className="function-icon-list">
-               <div className="function-icon">
-                  <div className="icon-wrapper">
-                     <img src="/library/home.svg" alt="home" />
-                  </div>
-                  <span>Home</span>
-               </div>
-               <div className="function-icon">
-                  <div className="icon-wrapper">
-                     <img src="/library/files.svg" alt="files" />
-                  </div>
-                  <span>Files</span>
-               </div>
-               <div className="function-icon">
-                  <div className="icon-wrapper">
-                     <img src="/library/recent.svg" alt="recent" />
-                  </div>
-                  <span>Recent</span>
-               </div>
-               <div className="function-icon">
-                  <div className="icon-wrapper">
-                     <img src="/library/favorite.svg" alt="favorite" />
-                  </div>
-                  <span>Favorite</span>
-               </div>
-               <div className="function-icon">
-                  <div className="icon-wrapper">
-                     <img src="/library/back.svg" alt="back" />
-                  </div>
-                  <span>Back</span>
-               </div>
-            </div> */}
             <div className='social-icon-list'>
                <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
@@ -64,9 +32,6 @@ const Library = () => {
             </div>
          </div>
          <div className='right-section'>
-            {/* <div className='header-bar'>
-               <Navbar />
-            </div> */}
             <div className='rightbar-inner'>
                <div className='dtl-section'>
                   <div className="content-panel">

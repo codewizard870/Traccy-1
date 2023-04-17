@@ -9,7 +9,29 @@
     min-height: 90vh;
     position: relative;
     display: flex;
-    
+    overflow: hidden;
+    .polygon-effect{
+        & > img {
+            &:nth-child(1){
+                position: absolute;
+                top: 566px;
+                left: -267px;
+
+                @media screen and (max-width: 580px) {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                position: absolute;
+                right: -63px;
+                top: 451px;
+                
+                @media screen and (max-width: 580px) {
+                    display: none;
+                }
+            }
+        }
+    }
     .leftbar{
         width: 140px;
         padding-top: 80px;

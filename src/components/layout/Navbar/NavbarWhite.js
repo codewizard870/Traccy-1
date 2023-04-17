@@ -32,11 +32,11 @@ const Navbar = () => {
           <div className="logo" onClick={() => history.push("/")}>
             <img src={TraccyLogo} alt="logo" />
             <img src={TraccyLogoSmall} alt="logo" />
-            {/* <p>
+            <p>
               Using <br />
               Blockchain <br />
               Impactful
-            </p> */}
+            </p>
           </div>
           <div className="right-header">
             <Menus />

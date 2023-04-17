@@ -25,20 +25,19 @@ const Footer = () => {
               <Col lg='4'>
                 <h3>Website</h3>
                 <ul>
-                  <li>Home</li>
-                  <li>Traccy Token</li>
-                  <li>Traccy Impact</li>
-                  <li>About Us</li>
-                  <li>Bacome a Part</li>
-                  <li>But Token</li>
+                  <a href="/home"><li>Home</li></a>
+                  <a href="/traccy-token"><li>Traccy Token</li></a>
+                  <a href="/impact-through-traccy"><li>Traccy Impact</li></a>
+                  <a href="/about"><li>About Us</li></a>
+                  <a href="/become-part"><li>Bacome a Part</li></a>
+                  <a href="/invest"><li>But Token</li></a>
                 </ul>
               </Col>
               <Col lg='4'>
                 <h3>Company</h3>
                 <ul>
-                  <li>Contact Us</li>
-                  <li>Documents </li>
-                 
+                  <a href="/become-part"><li>Contact Us</li></a>
+                  <a href="/library"><li>Documents </li></a>
                 </ul>
               </Col>
               <Col lg='4'>

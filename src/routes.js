@@ -77,7 +77,7 @@ export const rotues = [
   {
     path: "/library",
     exact: true,
-    layout: defaultheaderLayout,
+    layout: authLayout,
     component: () => <Library />
   },
   {

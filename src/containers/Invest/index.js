@@ -8,9 +8,6 @@ import InvestStep3 from './InvestStep3';
 import InvestStep4 from './InvestStep4';
 import './index.scss';
 
-import Traccyicon from '../../assets/images/icon.png';
-import LogoLight from '../../assets/images/logo-light.png';
-import { Navbar } from '../../components/layout';
 import { useTranslation } from 'react-i18next';
 
 const Invest = () => {
@@ -48,8 +45,8 @@ const Invest = () => {
     return (
         <div className='investform-wrapper'>
             <div className="polygon-effect">
-                <img src="/invest-form/left-hexa.svg" alt="polygon-left"/>
-                <img src="/invest-form/right-hexa.svg" alt="polygon-right"/>
+                <img src="/invest-form/left-hexa.png" alt="polygon-left"/>
+                <img src="/invest-form/right-hexa.png" alt="polygon-right"/>
             </div>
             <div className='leftbar'>
                 <div className='social-icon-list'>

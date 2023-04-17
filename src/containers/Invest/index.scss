@@ -15,8 +15,8 @@
         & > img {
             &:nth-child(1){
                 position: absolute;
-                top: 576px;
-                left: -200px;
+                top: 566px;
+                left: -267px;
 
                 @media screen and (max-width: 580px) {
                     display: none;
@@ -24,8 +24,8 @@
             }
             &:nth-child(2) {
                 position: absolute;
-                right: -400px;
-                top: 497px;
+                right: -63px;
+                top: 451px;
                 
                 @media screen and (max-width: 580px) {
                     display: none;
@@ -170,6 +170,9 @@
                     @media screen and (max-width:991px) {
                         flex-direction: row;
                     }
+                    @media screen and (max-width:390px) {
+                        margin-left: -10px;
+                    }
                     .ant-steps-item-tail {
                         @media screen and (max-width:991px) {
                             display: none;
@@ -190,7 +193,7 @@
                                     @media screen and (max-width:1440px) {
                                         font-size: 13px;
                                     }
-                                    @media screen and (max-width:430px) {
+                                    @media screen and (max-width:776px) {
                                         font-size: 10px;
                                     }
                                 }
