@@ -33,7 +33,7 @@ const items = [
   },
 ];
 
-const FlyOut = () => {
+const TraccyConnect = () => {
   const router = useHistory();
   const [showContent1, setShowContent1] = React.useState(false);
   const [showContent2, setShowContent2] = React.useState(false);
@@ -90,7 +90,7 @@ const FlyOut = () => {
   const [tab, setTab] = useState("1");
   console.log(tab)
   return (
-    <div className='flyout-wrapper' onClick={onClose}>
+    <div className='traccyconnect-wrapper' onClick={onClose}>
       <section className='banner-section'>
         <div className='about-banner' style={{ backgroundImage: "url(/impact/flyout.png)" }}></div>
         <Link to='/impact-through-traccy' className='backarrow'>
@@ -408,4 +408,4 @@ const FlyOut = () => {
   )
 };
 
-export default FlyOut
+export default TraccyConnect

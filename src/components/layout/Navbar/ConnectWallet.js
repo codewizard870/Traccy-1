@@ -59,7 +59,6 @@ export default function ConnectWallet() {
     function handleClick(e) {
       const sidebar = document.getElementById("wallet-sidebar");
       const footer = document.getElementById("footer-wallet");
-      console.log(footer, ",", e.target)
       if (!sidebar?.contains(e.target) && !footer?.contains(e.target))
         onClose();
 
