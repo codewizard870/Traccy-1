@@ -5,43 +5,55 @@ const BussinessModel = () => {
   const [index, setIndex] = useState(1)
   useEffect(() => {
     const arrange = () => {
-      const wrapper = document.getElementById("bussiness-model-wrapper");
       const width = 150;
       const r = 60;
       const step = 60;
 
       const models = document.getElementsByClassName("bussiness-model");
       for (let i = 0; i < models.length; i++) {
-        const angle = ((i-index) * step - 90) / 180 * Math.PI;
-        models[i].style.left = `${r * Math.cos(angle) + width / 2}px`;
-        models[i].style.top = `${r * Math.sin(angle) + width / 2}px`;
+        const angle = (i * step - 90) / 180 * Math.PI;
+
+        models[i].style.left = `${r * Math.cos(angle) + width / 2 - 15}px`;
+        models[i].style.top = `${r * Math.sin(angle) + width / 2 - 15}px`;
+      }
+    }
+    arrange();
+  }, [])
+
+  const handleHover = (_index) => {
+    const rotate = (index) => {
+      const wrapper = document.getElementById("bussiness-model-wrapper");
+      let angle = index * 60;
+      if (angle === 0) angle = 360;
+      wrapper.style.rotate = `${-angle}deg`;
+
+      const models = document.getElementsByClassName("bussiness-model");
+      for (let i = 0; i < models.length; i++) {
+        models[i].style.rotate = `${angle}deg`
 
         if (index === i)
           models[i].style.content = `url("${MODELS[i].hover}")`
         else
           models[i].style.content = `url("${MODELS[i].src}")`
       }
-
       const desc = document.getElementById("bussiness-desc");
       desc.innerHTML = MODELS[index].label;
-
     }
-    arrange();
-  }, [index])
-  const handleHover = (_index) => {
-    console.log(index)
-    setTimeout(() => setIndex(_index), 100);
+    console.log(_index)
+    setTimeout(() => rotate(_index), 100);
   }
   return (
-    <div className="bussiness-model-wrapper" id="bussiness-model-wrapper">
-      {MODELS.map((model, index) => (
-        <img
-          className="bussiness-model"
-          src={model.src}
-          alt="clock"
-          onMouseMove={() => handleHover(index)}
-        />
-      ))}
+    <div className="bussiness">
+      <div className="bussiness-model-wrapper" id="bussiness-model-wrapper">
+        {MODELS.map((model, index) => (
+          <img
+            className="bussiness-model"
+            src={model.src}
+            alt="clock"
+            onMouseMove={() => handleHover(index)}
+          />
+        ))}
+      </div>
       <span className="bussiness-desc" id="bussiness-desc">100% organic</span>
     </div>
   )

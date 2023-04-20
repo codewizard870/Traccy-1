@@ -1,13 +1,16 @@
-.bussiness-model-wrapper {
+.bussiness {
   position: relative;
-  width: 150px;
-  height: 150px;
-  .bussiness-model {
-    position: absolute;
-    width: 30px !important;
-    height: 30px !important;
-    transform: translate(-50%, -50%);
+  .bussiness-model-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
     transition: all 0.5s ease;
+    .bussiness-model {
+      position: absolute;
+      width: 30px !important;
+      height: 30px !important;
+      transition: all 0.5s ease;
+    }
   }
   .bussiness-desc {
     font-size: 12px;
@@ -17,7 +20,5 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-  .clock:hover{
   }
 }
