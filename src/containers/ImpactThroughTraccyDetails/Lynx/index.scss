@@ -1,6 +1,6 @@
 @import "../../../assets/scss/variables.scss";
 
-.flyout-wrapper {
+.lynx-wrapper {
   position: relative;
   z-index: 0;
   background: rgb(84, 13, 86);
@@ -268,6 +268,7 @@
           flex-direction: column;
           position: relative;
           z-index: 2;
+          max-width: 60%;
 
           @media screen and (max-width: 767px) {
             padding: 8px 10px;
@@ -292,12 +293,11 @@
             }
           }
           .desc {
-            font-size: 40px;
+            font-size: 22px;
             font-weight: 700;
-            line-height: 150%;
             width: 70%;
             @media screen and (max-width: 767px) {
-              font-size: 24px;
+              font-size: 18px;
               line-height: 150%;
               width: 100%;
             }
@@ -305,9 +305,9 @@
           .application {
             font-size: 28px;
             font-weight: 700;
-            color: #c7fbba;
+            color: #9BCFEC;
             letter-spacing: 0.05em;
-            margin-top: 85px;
+            margin-top: 58px;
             @media screen and (max-width: 767px) {
               font-size: 14px;
             }
@@ -318,7 +318,7 @@
             .number {
               font-size: 100px;
               font-weight: 800;
-              color: #c7fbba;
+              color: #9BCFEC;
               @media screen and (max-width: 767px) {
                 font-size: 30px;
               }
@@ -390,7 +390,7 @@
             span {
               font-size: 18px;
               font-weight: 700;
-              color: #c7fbba;
+              color: #9BCFEC;
               @media screen and (max-width: 767px) {
                 font-size: 12px;
               }
@@ -419,7 +419,7 @@
             margin-top: 30px;
             font-size: 18px;
             font-weight: 700;
-            color: #c7fbba;
+            color: #9BCFEC;
           }
           .world-desc {
             display: flex;
@@ -560,12 +560,13 @@
           flex-wrap: nowrap;
           .left-section {
             padding: 33px 10px 0px 54px;
-
+            background: #101650;
+            width: 100%;
             @media screen and (max-width: 767px) {
               padding: 33px 0px 0px 10px;
             }
             h2 {
-              color: $text-primary;
+              color: white;
               font-size: 40px;
               font-weight: 700;
               margin-bottom: 6px;
@@ -576,7 +577,32 @@
             }
             img {
               margin-top: 48px;
-              width: 100%;
+              width: 200px;
+            }
+            .ant-tabs {
+              .ant-tabs-ink-bar {
+                background: $text-primary;
+              }
+              .ant-tabs-nav {
+                margin-top: 45px;
+                margin-bottom: 15px;
+              }
+              .ant-tabs-nav-wrap {
+                width: 100%;
+                .ant-tabs-nav-list {
+                  width: 98%;
+                  justify-content: space-between;
+                  .ant-tabs-tab {
+                    @media screen and (max-width: 576px) {
+                      margin: 0 10px 0 0;
+                      font-size: 13px;
+                    }
+                  }
+                  .ant-tabs-tab-btn {
+                    color: #160d20;
+                  }
+                }
+              }
             }
             &.notfirst {
               padding: 83px 0px 0px 54px;
@@ -605,223 +631,116 @@
               font-weight: 300;
             }
           }
-          .tab-section.notfirst {
-            width: 100%;
-            padding: 36px 0px 0px 54px;
-            @media screen and (max-width: 767px) {
-              padding: 36px 0px 0px 10px;
-            }
-
-            .ant-tabs {
-              .ant-tabs-ink-bar {
-                background: $text-primary;
-              }
-              .ant-tabs-nav {
-                margin-bottom: 15px;
-              }
-              .ant-tabs-nav-wrap {
-                width: 100%;
-                .ant-tabs-nav-list {
-                  width: 98%;
-                  justify-content: space-between;
-                  .ant-tabs-tab {
-                    @media screen and (max-width: 576px) {
-                      margin: 0 10px 0 0;
-                      font-size: 13px;
-                    }
-                  }
-                  .ant-tabs-tab-btn {
-                    color: #160d20;
-                  }
-                }
-              }
-            }
-          }
         }
       }
       .bookpage-inner-right {
         padding: 22px 41px 0 49px;
-        display: flex;
         height: 100%;
-        justify-content: space-between;
+
         @media screen and (max-width: 576px) {
           padding: 56px 20px 0 20px;
         }
-        .left-col {
-          max-width: 50%;
+        .first {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          position: relative;
-          .left-upper {
-            h4 {
-              color: $text-primary;
-              font-size: 20px;
-              @media screen and (max-width: 767px) {
-                font-size: 16px;
-              }
-            }
-            p {
-              line-height: 1.4;
-              font-size: 12px;
-              text-align: justify;
-              @media screen and (max-width: 767px) {
-                font-size: 9px;
-              }
-            }
+          gap: 50px;
+          flex-wrap: nowrap;
+          height: 100%;
+          @media screen and (max-width: 767px) {
+            gap: 10px;
           }
-          .left-bottom {
+          .left-col {
+            max-width: 50%;
             display: flex;
-            align-items: flex-start;
-            position: absolute;
-            bottom: -30px;
-
-            h1 {
-              font-size: 125px;
-              color: $text-primary;
-              font-weight: 700;
-              line-height: 1;
-              font-family: "Roboto";
-              margin-bottom: 0;
-              @media screen and (max-width: 1500px) {
-                font-size: 8rem;
-              }
-            }
-            .small-head {
-              margin-top: 20px;
-              p {
-                font-size: 12px;
-                margin-bottom: 0;
-                white-space: nowrap;
-              }
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            .left-upper {
               h4 {
-                font-size: 20px;
                 color: $text-primary;
-                margin-bottom: 0;
-              }
-            }
-          }
-        }
-        .right-col {
-          max-width: 40%;
-          img {
-            margin-bottom: 20px;
-          }
-          h4 {
-            color: $text-primary;
-            font-size: 20px;
-          }
-          p {
-            color: #160d20;
-            line-height: 1.5;
-          }
-        }
-        .second {
-          h1 {
-            color: black;
-            font-size: 20px;
-            font-weight: 700;
-            @media screen and (max-width: 776px) {
-              font-size: 15px;
-            }
-          }
-          p {
-            margin-top: 18px;
-            font-size: 14px;
-            font-weight: 400;
-            @media screen and (max-width: 776px) {
-              font-size: 10px;
-              margin-top: 12px;
-            }
-          }
-          .second-row {
-            display: flex;
-            gap: 130px;
-            @media screen and (max-width: 776px) {
-              gap: 30px;
-            }
-
-            img {
-              width: 119px;
-              height: 124px;
-            }
-            .second-col {
-              h1 {
-                font-size: 22px;
-                font-weight: 700;
-                @media screen and (max-width: 776px) {
+                font-size: 18px;
+                @media screen and (max-width: 767px) {
                   font-size: 16px;
                 }
               }
               p {
-                font-size: 14px;
-                font-weight: 400;
-                margin: 12px 0 2px 0;
-                @media screen and (max-width: 776px) {
-                  font-size: 10px;
+                font-size: 10px;
+                text-align: justify;
+                margin: 0 20px;
+
+                @media screen and (max-width: 767px) {
+                  font-size: 9px;
+                  margin: 0 5px;
+                }
+                ul {
+                  padding: 0;
                 }
               }
-              h2 {
-                color: black;
-                font-size: 20px;
+            }
+            .left-bottom {
+              display: flex;
+              align-items: flex-start;
+              position: absolute;
+              bottom: -30px;
+
+              h1 {
+                font-size: 125px;
+                color: $text-primary;
                 font-weight: 700;
-                @media screen and (max-width: 776px) {
-                  font-size: 15px;
+                line-height: 1;
+                font-family: "Roboto";
+                margin-bottom: 0;
+                @media screen and (max-width: 1500px) {
+                  font-size: 8rem;
+                }
+                @media screen and (max-width: 767px) {
+                  font-size: 100px;
+                }
+              }
+              .small-head {
+                margin-top: 20px;
+                p {
+                  font-size: 12px;
+                  margin-bottom: 0;
+                  white-space: nowrap;
+                  @media screen and (max-width: 767px) {
+                    font-size: 8px;
+                  }
+                }
+                h4 {
+                  font-size: 20px;
+                  color: $text-primary;
+                  margin-bottom: 0;
+                  @media screen and (max-width: 767px) {
+                    font-size: 15px;
+                  }
                 }
               }
             }
           }
-        }
-        .third {
-          width: 100%;
-          h1 {
-            color: black;
-            font-size: 20px;
-            font-weight: 700;
-          }
-          .third-row {
-            display: flex;
-            margin-left: 10px;
-            font-size: 14px;
-            font-weight: 400;
-            width: 100%;
-            p {
-              font-size: 14px;
-              font-weight: 400;
-              width: 50%;
-              margin: 0;
+          .right-col {
+            max-width: 40%;
+            img {
+              width: 150px;
+              @media screen and (max-width: 767px) {
+                width: 100%;
+              }
+            }
+            h1 {
+              color: black;
+              font-size: 12px;
+              font-weight: 700;
+              margin-top: 10px;
             }
             h2 {
               color: black;
-              font-size: 22px;
-              font-weight: 700;
-              width: 50%;
-              text-decoration: underline;
-              span {
-                font-size: 30px;
-              }
+              font-size: 10px;
+              font-weight: 400;
             }
-          }
-          .third-row.first {
-            margin-top: 24px;
-          }
-        }
-        .four {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          img {
-            width: 300px;
-          }
-        }
-        .five {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 100%;
-          img {
-            width: 100%;
+            p {
+              font-family: Roboto;
+              font-size: 8px;
+              font-weight: 300;
+            }
           }
         }
       }
@@ -1048,6 +967,9 @@
               z-index: 2;
             }
           }
+        }
+        .popup.popup-second {
+          top: 250px;
         }
         .points {
           font-size: 3.4rem;

@@ -33,7 +33,7 @@ const items = [
   },
 ];
 
-const TraccyConnect = () => {
+const Lynx = () => {
   const router = useHistory();
   const [showContent1, setShowContent1] = React.useState(false);
   const [showContent2, setShowContent2] = React.useState(false);
@@ -89,9 +89,9 @@ const TraccyConnect = () => {
 
   const [tab, setTab] = useState("1");
   return (
-    <div className='traccyconnect-wrapper' onClick={onClose}>
+    <div className='lynx-wrapper' onClick={onClose}>
       <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-connect.png)" }}></div>
+        <div className='about-banner' style={{ backgroundImage: "url(/impact/lynx/lynx.png)" }}></div>
         <Link to='/impact-through-traccy' className='backarrow'>
           <img src="/impact/backarrow.svg" alt="backarrow" />
         </Link>
@@ -101,9 +101,14 @@ const TraccyConnect = () => {
               <div className="stage-main">
                 <div className="stage-left">
                   <h1>
-                    Traccy Connect
+                    LynxVerse
                   </h1>
-                  <span className="desc">Investment opportunity with Impact on environment and people</span>
+                  <span className="desc">Lynxverse is a metaverse game designed
+                    for mental health and well being with
+                    implementation of cognitive therapy behavior
+                    scenarios where users can experience a therapy
+                    in a safe and secure manner, without the need
+                    for constant human interaction.</span>
                   <span className="application">Fundraising required</span>
                   <div className="selection">
                     <span className="number">7’500’000 $</span>
@@ -160,11 +165,11 @@ const TraccyConnect = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>Traccy Connect</h2>
-                        <img src="/impact/traccy-connect-logo.png" alt="mosquito" />
+                        <h2>LynxVerse</h2>
+                        <img src="/impact/lynx/lynx-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
-                        <img src="/impact/traccy-connect-side.png" alt="mosquito" />
+                        <img src="/impact/lynx/lynx-side.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
@@ -180,13 +185,20 @@ const TraccyConnect = () => {
                     <div className="first">
                       <div className='left-col'>
                         <div className='left-upper'>
-                          <h4>Invest with Impact with Traccy Connect!</h4>
+                          <h4>What is the benefit of LynxVerse?</h4>
                           <p>
-                            Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues.
+                            <ul>
+                              <li>
+                                Anonymous game on the metaverse: Users can play the game scenarios without giving away any personal information
+                              </li>
+                              <li>
+                                Scenario-based dynamic gameplay: Scenarios are scientifically constructed to target specific mental health issues and can be targeted towards key groups.
+                              </li>
+                            </ul>
                           </p>
                         </div>
                         <div className='left-bottom'>
-                          <h1>4</h1>
+                          <h1>24</h1>
                           <div className='small-head'>
                             <p>Construction period</p>
                             <h4>Months</h4>
@@ -194,158 +206,16 @@ const TraccyConnect = () => {
                         </div>
                       </div>
                       <div className='right-col'>
-                        <img src="/impact/5335418.png" alt="machine" />
-                        <h1>Traccy Connect</h1>
-                        <h2>Invest in Impact, make changes!</h2>
+                        <img src="/impact/lynx/lynx21.png" alt="machine" />
+                        <h1>Metaverse for Mental Health & Well-Being</h1>
                         <p>
-                          We facilitate access to the international market for people in developing countries, allowing them to participate in projects and benefit from low-cost services, which have a positive impact on their daily lives.
+                          Decentralize Metaverse  Technology to increase the privacy & security and give better confidence between clients and Therapist
                         </p>
                       </div>
                     </div>
                     <div className='arrow-right' onClick={nextPage}>
                       <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
                     </div>
-                  </div>
-                </div>
-                <div className="demoPage">
-                  <div className='bookpage-inner-left'>
-                    <div className="row">
-                      <div className='arrow-left' onClick={prevPage}>
-                        <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
-                      </div>
-                      <div className="left-section notfirst">
-                        <h2>Traccy Connect</h2>
-                        <img src="/impact/traccy-connect-logo.png" alt="logo" />
-                        <Tabs defaultActiveKey="1" items={items} onChange={(activeKey) => setTab(activeKey)} />
-                      </div>
-                      <div className="right-section">
-                        <img src="/impact/traccy-connect-side.png" alt="mosquito" />
-                      </div>
-                      <div className='arrow-right-sm' onClick={nextPage}>
-                        <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="demoPage">
-                  <div className='bookpage-inner-right'>
-                    <div className='arrow-left-sm' onClick={prevPage}>
-                      <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
-                    </div>
-                    {tab === "1" &&
-                      <div className="second">
-                        <h1>Business Model</h1>
-                        <p>Traccy Connect is a innovative platform which is base in following pillars:</p>
-                        <div className="second-row">
-                          <div className="panel">
-                            <div className="second-col">
-                              <img src="/impact/traccy-connect/36231.png" alt="setting" />
-                              <span>Features</span>
-                            </div>
-                            <span>
-                              Impact<br />
-                              Education<br />
-                              Investment<br />
-                              Charity<br />
-                              Community<br />
-                              Carbon<br />
-                              offsetting
-                            </span>
-                          </div>
-                          <div className="panel">
-                            <div className="second-col">
-                              <img src="/impact/traccy-connect/circular.png" alt="setting" />
-                              <span>Sectors</span>
-                            </div>
-                            <span>
-                              Renewable Energy<br />
-                              Regenerative Agriculture<br />
-                              RecyclingWater supply<br />
-                              Affordable living space<br />
-                              Infrastructure<br />
-                              Access to education<br />
-                              Healtcare
-                            </span>
-                          </div>
-                          <div className="panel">
-                            <div className="second-col">
-                              <img src="/impact/traccy-connect/pie.png" alt="setting" />
-                              <span>Blockchain</span>
-                            </div>
-                            <span>
-                              Decentralisation<br />
-                              Scalability<br />
-                              Transparency<br />
-                              Security<br />
-                              Accessibility<br />
-                              Time Reduction<br />
-                              eduction
-                            </span>
-                          </div>
-                        </div>
-                        <div className="second-row second-p">
-                          <div className="second-bussiness-avatar">
-                            <img src="/impact/traccy-connect/archery-note.png" alt="archery" />
-                            <span>3 Years<br />Targets</span>
-                          </div>
-                          <div className="second-bussiness-col">
-                            <div className="second-bussiness-row">
-                              <span>Impact Projects</span>
-                              <span>Hospitality saving</span>
-                              <span>Community</span>
-                            </div>
-                            <div className="second-bussiness-row">
-                              <h1>30+</h1>
-                              <h1>660M </h1>
-                              <h1>100k+ </h1>
-                            </div>
-                            <div className="second-bussiness-row">
-                              <span>Employees</span>
-                              <span>Countries</span>
-                              <span>Investments</span>
-                            </div>
-                            <div className="second-bussiness-row">
-                              <h1>2000+</h1>
-                              <h1>15+</h1>
-                              <h1>200M</h1>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    }
-                    {tab === "2" &&
-                      <div className="third">
-                        <h1>Financial</h1>
-                        <div className="third-row margin">
-                          <p>First Round</p>
-                          <p>Estimate Profit</p>
-                        </div>
-                        <div className="third-row">
-                          <h2><span>$ 250’000</span></h2>
-                          <h2><span>$ 32.5M</span></h2>
-                        </div>
-
-                        <div className="third-row margin">
-                          <p>Est. ROI from 1st Round in 5Y</p>
-                          <p>Break Even Point</p>
-                        </div>
-                        <div className="third-row">
-                          <h2><span>130</span> X</h2>
-                          <h2><span>18</span> Months</h2>
-                        </div>
-                      </div>
-                    }
-                    {tab === "3" &&
-                      <div className="four">
-                        <h1>STO</h1>
-                        <img src="/impact/traccy-connect/tokenomics.png" alt="tokenomics" />
-                      </div>
-                    }
-                    {tab === "4" &&
-                      <div className="five">
-                        <img src="/impact/traccy-connect/roadmap.png" alt="roadmap" />
-                      </div>
-                    }
                   </div>
                 </div>
               </PageFlip>
@@ -386,22 +256,22 @@ const TraccyConnect = () => {
                   <div className='points'>
                     07 <span></span>
                   </div>
-                  {/* {showContent1 && */}
+                  {showContent1 &&
                     <div className='popup'>
                       <div className='popup-inner'>
                         <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
                         <img src="/impact/traccy-connect/ecosystem.png" alt="Popup" />
                       </div>
                     </div>
-                  {/* }
-                  {showContent2 && */}
+                  }
+                  {showContent2 &&
                     <div className='popup popup-second'>
                       <div className='popup-inner'>
                         <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
                         <img src="/impact/traccy-connect/popup2.png" alt="Popup" />
                       </div>
                     </div>
-                  {/* }
+                  }
                   {showContent3 &&
                     <div className='popup'>
                       <div className='popup-inner'>
@@ -409,7 +279,7 @@ const TraccyConnect = () => {
                         <img src={PopupImg3} alt="Popup" />
                       </div>
                     </div>
-                  } */}
+                  }
                 </div>
                 <img src={MapImg} alt='Map' />
               </div>
@@ -470,4 +340,4 @@ const TraccyConnect = () => {
   )
 };
 
-export default TraccyConnect
+export default Lynx

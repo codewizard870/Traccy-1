@@ -13,6 +13,7 @@ import Invest from "./containers/Invest";
 import Library from "./containers/Library";
 import FlyOut from "./containers/ImpactThroughTraccyDetails/FlyOut";
 import TraccyConnect from "./containers/ImpactThroughTraccyDetails/TraccyConnect";
+import Lynx from "./containers/ImpactThroughTraccyDetails/Lynx";
 
 // Route Views
 
@@ -90,5 +91,10 @@ export const rotues = [
     path: "/impact-through-traccy-details/traccyconnect",
     layout: defaultWhite,
     component: () => <TraccyConnect />
+  },
+  {
+    path: "/impact-through-traccy-details/lynx",
+    layout: defaultWhite,
+    component: () => <Lynx />
   }
 ];

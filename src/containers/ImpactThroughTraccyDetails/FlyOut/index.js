@@ -88,7 +88,6 @@ const FlyOut = () => {
   }
 
   const [tab, setTab] = useState("1");
-  console.log(tab)
   return (
     <div className='flyout-wrapper' onClick={onClose}>
       <section className='banner-section'>
@@ -178,29 +177,27 @@ const FlyOut = () => {
                     <div className='arrow-left-sm' onClick={prevPage}>
                       <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
                     </div>
-                    <div className="row">
-                      <div className='left-col'>
-                        <div className='left-upper'>
-                          <h4>Mosquito System</h4>
-                          <p>
-                            Our automatic misting system for mosquito control is a type of insect control system that uses a combination of water and insecticide to create a mist that kills mosquitoes and other flying insects. The misting system is installed in an outdoor area, such as a backyard or patio, and is typically controlled by a timer or a remote control.
-                          </p>
-                        </div>
-                        <div className='left-bottom'>
-                          <h1>18</h1>
-                          <div className='small-head'>
-                            <p>Construction period</p>
-                            <h4>Months</h4>
-                          </div>
+                    <div className='left-col'>
+                      <div className='left-upper'>
+                        <h4>Mosquito System</h4>
+                        <p>
+                          Our automatic misting system for mosquito control is a type of insect control system that uses a combination of water and insecticide to create a mist that kills mosquitoes and other flying insects. The misting system is installed in an outdoor area, such as a backyard or patio, and is typically controlled by a timer or a remote control.
+                        </p>
+                      </div>
+                      <div className='left-bottom'>
+                        <h1>18</h1>
+                        <div className='small-head'>
+                          <p>Construction period</p>
+                          <h4>Months</h4>
                         </div>
                       </div>
-                      <div className='right-col'>
-                        <img src="/impact/mosqmachine3.png" alt="machine" />
-                      </div>
                     </div>
-                    <div className='arrow-right' onClick={nextPage}>
-                      <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
+                    <div className='right-col'>
+                      <img src="/impact/mosqmachine3.png" alt="machine" />
                     </div>
+                  </div>
+                  <div className='arrow-right' onClick={nextPage}>
+                    <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
                   </div>
                 </div>
                 <div className="demoPage">
@@ -277,9 +274,9 @@ const FlyOut = () => {
                     {tab === "3" &&
                       <div className="four">
                         <img src="/impact/mosqfund.png" alt="mosqfund" />
-                      </div>  
+                      </div>
                     }
-                    {tab === "4" && 
+                    {tab === "4" &&
                       <div className="five">
                         <img src="/impact/roadmap.png" alt="roadmap" />
                       </div>

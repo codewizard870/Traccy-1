@@ -57,12 +57,6 @@ const ImpactThroughTraccy = () => {
    return (
       <div className='itt-wrapper' onClick={onClose}>
          <section className='banner-section'>
-            {/* <div className='social-media'>
-               <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></Button>
-               <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='facebook' viewbox='0 0 34.875 34.664' /></Button>
-               <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></Button>
-               <Button onClick={() => window.open('https://twitter.com/')}><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></Button>
-            </div> */}
             <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
             <Slider {...settings2} ref={slider}>
                {Sliders.map((data, index) => (
@@ -185,6 +179,7 @@ export const Sliders = [
          {
             number: "01. Lynx Vr",
             desc: "LynxVr is a cognitive therapist using Blockchain for increase privacy and clients confidential aboutmedical and therapist section",
+            route: "lynx"
          },
          {
             number: "02. Green Protocol",
@@ -221,7 +216,6 @@ export const Sliders = [
             number: "01. FlyOut",
             desc: "A mosquito solution system based on organicproduct reducing the mosquito population",
             route: "flyout"
-
          }
       ]
    },
@@ -236,7 +230,9 @@ export const Sliders = [
       projects: [
          {
             number: "01. Traccy Connect",
-            desc: "Traccy Connect is the platform will provideSTOEducationImpact Score and Impact Credits"
+            desc: "Traccy Connect is the platform will provideSTOEducationImpact Score and Impact Credits",
+            route: "traccyconnect"
+
          }
       ]
    },
