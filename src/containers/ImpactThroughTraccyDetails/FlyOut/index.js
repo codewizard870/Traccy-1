@@ -13,6 +13,7 @@ import PopupImg2 from '../../../assets/images/popup-img2.jpg';
 import PopupImg3 from '../../../assets/images/popup-img3.jpg';
 import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
+import BussinessModel from '../../../components/Impact/FlyOut/bussiness-model';
 
 const items = [
   {
@@ -238,7 +239,7 @@ const FlyOut = () => {
                         <h1>Business Model</h1>
                         <p>Reduce the mosquito population with habing in the same time reduction of sickness like Malaria or Dengue.</p>
                         <div className="second-row">
-                          <img src="/impact/business-model.png" alt="bussiness" />
+                          <BussinessModel />
                           <div className="second-col">
                             <h1>Estimation</h1>
                             <p>Sickness reduction</p>
