@@ -441,7 +441,7 @@ const OURTEAM = [
     {
         image: "/about-us/julia.png",
         name: "Julia Neumann",
-        role: "Business Developper",
+        role: "Business Developer",
     },
     {
         image: "/about-us/yves.png",

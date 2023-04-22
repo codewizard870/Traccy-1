@@ -808,7 +808,7 @@
           align-items: center;
           width: 100%;
           img {
-            width: 300px;
+            width: 378px;
           }
         }
         .five {
@@ -817,7 +817,10 @@
           align-items: center;
           width: 100%;
           img {
-            width: 100%;
+            width: 497px;
+            @media screen and (max-width: 776px) {
+              width: 100%;
+            }
           }
         }
       }

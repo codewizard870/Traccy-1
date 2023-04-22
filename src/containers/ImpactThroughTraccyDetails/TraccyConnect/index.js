@@ -337,13 +337,12 @@ const TraccyConnect = () => {
                     }
                     {tab === "3" &&
                       <div className="four">
-                        <h1>STO</h1>
-                        <img src="/impact/traccy-connect/tokenomics.png" alt="tokenomics" />
+                        <img src="/impact/traccy-connect/tokenomics.svg" alt="tokenomics" />
                       </div>
                     }
                     {tab === "4" &&
                       <div className="five">
-                        <img src="/impact/traccy-connect/roadmap.png" alt="roadmap" />
+                        <img src="/impact/traccy-connect/roadmap.svg" alt="roadmap" />
                       </div>
                     }
                   </div>

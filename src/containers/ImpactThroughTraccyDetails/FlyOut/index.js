@@ -162,10 +162,10 @@ const FlyOut = () => {
                     <div className="row">
                       <div className="left-section">
                         <h2>FlyOut</h2>
-                        <img src="/impact/mosquito-solution.png" alt="mosquito" />
+                        <img src="/impact/flyout/mosquito-solution.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
-                        <img src="/impact/mosquito7.png" alt="mosquito" />
+                        <img src="/impact/flyout/mosquito7.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
@@ -194,7 +194,7 @@ const FlyOut = () => {
                       </div>
                     </div>
                     <div className='right-col'>
-                      <img src="/impact/mosqmachine3.png" alt="machine" />
+                      <img src="/impact/flyout/mosqmachine3.png" alt="machine" />
                     </div>
                   </div>
                   <div className='arrow-right' onClick={nextPage}>
@@ -209,7 +209,7 @@ const FlyOut = () => {
                       </div>
                       <div className="left-section notfirst">
                         <h2>FlyOut</h2>
-                        <img src="/impact/mosquito-solution.png" alt="mosquito" />
+                        <img src="/impact/flyout/mosquito-solution.png" alt="mosquito" />
                       </div>
                       <div className="right-section notfirst">
                         <span>
@@ -274,12 +274,12 @@ const FlyOut = () => {
                     }
                     {tab === "3" &&
                       <div className="four">
-                        <img src="/impact/mosqfund.png" alt="mosqfund" />
+                        <img src="/impact/flyout/mosqfund.png" alt="mosqfund" />
                       </div>
                     }
                     {tab === "4" &&
                       <div className="five">
-                        <img src="/impact/roadmap.png" alt="roadmap" />
+                        <img src="/impact/flyout/roadmap.png" alt="roadmap" />
                       </div>
                     }
                   </div>

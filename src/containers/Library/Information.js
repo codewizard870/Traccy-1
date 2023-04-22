@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ConnectWallet from "../../components/layout/Navbar/ConnectWallet";
 import "./Information.scss";
 import { useTranslation } from "react-i18next";
+import TraccyLogo from '../../assets/images/logo.png';
 
 const Information = () => {
   const { t } = useTranslation();
@@ -36,7 +37,7 @@ const Information = () => {
       link: "/invest",
     },
   ]
-  
+
   const Companies = [
     {
       label: "Contact Us",
@@ -47,7 +48,7 @@ const Information = () => {
       link: "#",
     },
   ]
-  
+
   const Socials = [
     {
       label: "Facebook",
@@ -83,7 +84,14 @@ const Information = () => {
         <span className="title">Social Media</span>
         {Socials.map(social => <Link to={social.link}>{social.label}</Link>)}
       </div>
-      <img src="/logo.png" className="logo" alt="logo"/>
+      <div className="logo">
+        <img src={TraccyLogo} alt="logo" />
+        <p>
+          Using <br />
+          Blockchain <br />
+          Impactful
+        </p>
+      </div>
     </div>
   )
   // return (
