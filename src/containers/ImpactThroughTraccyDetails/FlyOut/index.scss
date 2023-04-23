@@ -882,7 +882,7 @@
     .right-numbers {
       position: absolute;
       right: 0;
-      bottom: 5%;
+      bottom: 15%;
       ul {
         padding-left: 0;
         li {
@@ -890,7 +890,6 @@
           display: flex;
           align-items: center;
           position: relative;
-          background: rgba(#4a4a4a, 0.3);
           padding: 0.8rem 0.8rem 0.8rem 1.8rem;
           font-weight: bold;
           transform: translateX(118px);
@@ -898,7 +897,7 @@
           cursor: pointer;
           &::before {
             content: " ";
-            width: 30px;
+            width: 100%;
             height: 3px;
             display: inline-block;
             position: absolute;
@@ -908,16 +907,14 @@
           }
           span {
             overflow: hidden;
-            font-size: 1rem;
+            font-size: 14px;
             font-weight: normal;
             margin-left: 20px;
             margin-right: 20px;
           }
           &:nth-child(1) {
             &::before {
-              background: transparent
-                linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-                padding-box;
+              background: linear-gradient(270deg, rgba(54, 255, 110, 0.7) 0%, rgba(6, 70, 24, 0.7) 47.4%, rgba(86, 255, 133, 0.7) 100%);
             }
           }
           &:nth-child(2) {
@@ -941,6 +938,9 @@
       }
     }
     .bottom-left-details {
+      position: absolute;
+      left: 0;
+      bottom: 0;
       display: flex;
       max-width: 850px;
       @media screen and (max-width: 767px) {
@@ -960,9 +960,7 @@
           width: 100%;
           height: 5px;
           display: block;
-          background: transparent
-            linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-            padding-box;
+          background: linear-gradient(270deg, rgba(54, 255, 74, 0.7) 0%, rgba(7, 79, 9, 0.7) 47.4%, rgba(86, 255, 103, 0.7) 100%);
           margin-bottom: 0.5rem;
         }
       }
@@ -985,33 +983,6 @@
           }
         }
       }
-      &.details1 {
-        .numbers {
-          .color-bar {
-            background: transparent
-              linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-              padding-box;
-          }
-        }
-      }
-      &.details2 {
-        .numbers {
-          .color-bar {
-            background: transparent
-              linear-gradient(90deg, #721d4b 0%, #c73c86 100%) 0% 0% no-repeat
-              padding-box;
-          }
-        }
-      }
-      &.details3 {
-        .numbers {
-          .color-bar {
-            background: transparent
-              linear-gradient(90deg, #866c33 0%, #f4c867 100%) 0% 0% no-repeat
-              padding-box;
-          }
-        }
-      }
     }
     .map-wrapper {
       position: relative;
@@ -1030,11 +1001,9 @@
           max-width: 550px;
           width: 100%;
           z-index: 2;
-          top: 25px;
-          right: 0;
-          img {
-            width: 100%;
-          }
+          top: 130px;
+          right: 50px;
+
           .popup-inner {
             position: relative;
             .icon {
@@ -1043,8 +1012,50 @@
               cursor: pointer;
               position: absolute;
               top: 18px;
-              left: 18px;
+              right: 30px;
               z-index: 2;
+            }
+            .content-wrapper {
+              display: flex;
+              .content-control {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 100px;
+                max-height: 50px;
+                .control-button {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 50px;
+                  height: 50px;
+                  background: linear-gradient(270.07deg, rgba(0, 0, 0, 0.79) 0.07%, rgba(30, 26, 38, 0.93) 97.22%);
+
+                  &:hover {
+                    img.nth1 {
+                      content: url("../../../assets/images/impact/flyout/content-control/1.svg");
+                    }
+                    img.nth2 {
+                      content: url("../../../assets/images/impact/flyout/content-control/2.svg");
+                    }
+                    img.nth3 {
+                      content: url("../../../assets/images/impact/flyout/content-control/3.svg");
+                    }
+                    img.nth4 {
+                      content: url("../../../assets/images/impact/flyout/content-control/4.svg");
+                    }
+                    img.nth5 {
+                      content: url("../../../assets/images/impact/flyout/content-control/5.svg");
+                    }
+                    img.nth6 {
+                      content: url("../../../assets/images/impact/flyout/content-control/6.svg");
+                    }
+                  }
+                }
+              }
+              .content {
+                padding: 10px 0;
+                background: linear-gradient(270.07deg, rgba(0, 0, 0, 0.7268) 0.07%, rgba(30, 26, 38, 0.8556) 97.22%);
+              }
             }
           }
         }

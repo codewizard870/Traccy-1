@@ -8,9 +8,6 @@ import './index.scss';
 import { Link, useHistory } from 'react-router-dom';
 
 import MapImg from '../../../assets/images/map.png';
-import PopupImg1 from '../../../assets/images/popup-img1.jpg';
-import PopupImg2 from '../../../assets/images/popup-img2.jpg';
-import PopupImg3 from '../../../assets/images/popup-img3.jpg';
 import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
 
@@ -35,29 +32,16 @@ const items = [
 
 const TraccyConnect = () => {
   const router = useHistory();
-  const [showContent1, setShowContent1] = React.useState(false);
-  const [showContent2, setShowContent2] = React.useState(false);
-  const [showContent3, setShowContent3] = React.useState(false);
+  const [showContent, setShowContent] = useState(0);
+  const [contentIndex, setContentIndex] = useState(0);
+  const [contentExpand, setContentExpan] = useState(false);
+
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
   const hideModal = () => {
-    setShowContent1(false);
-    setShowContent2(false);
-    setShowContent3(false);
+    setShowContent(-1);
   }
-  const showModal1 = () => {
-    setShowContent1(true);
-    setShowContent2(false);
-    setShowContent3(false);
-  };
-  const showModal2 = () => {
-    setShowContent2(true);
-    setShowContent1(false);
-    setShowContent3(false);
-  };
-  const showModal3 = () => {
-    setShowContent3(true);
-    setShowContent1(false);
-    setShowContent2(false);
+  const showModal = (index) => {
+    setShowContent(index);
   };
 
   const [openModal, setOpen] = useState(false);
@@ -362,14 +346,14 @@ const TraccyConnect = () => {
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
                 <div className='project-center'>
-                  <div className='points' onClick={showModal1}>
+                  <div className='points' onClick={() => showModal(0)}>
                     <span></span>
                     <div>01</div>
                   </div>
-                  <div className='points' onClick={showModal2}>
+                  <div className='points'>
                     <span></span>02
                   </div>
-                  <div className='points' onClick={showModal3}>
+                  <div className='points'>
                     03 <span></span>
                   </div>
                   <div className='points'>
@@ -385,83 +369,90 @@ const TraccyConnect = () => {
                   <div className='points'>
                     07 <span></span>
                   </div>
-                  {/* {showContent1 && */}
+                  {showContent === 0 &&
                     <div className='popup'>
                       <div className='popup-inner'>
                         <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src="/impact/traccy-connect/ecosystem.png" alt="Popup" />
+                        <div className="content-wrapper">
+                          <div className="content-control">
+                            <div className="control-button" onClick={() => setContentIndex(0)}>
+                              <img className="nth1" src="/impact/traccy-connect/content-control/1.svg" alt='1' style={{ width: "30px" }} />
+                            </div>
+                            <div className="control-button" onClick={() => setContentIndex(1)}>
+                              <img className="nth2" src="/impact/traccy-connect/content-control/2.svg" alt='2' style={{ width: "29px" }} />
+                            </div>
+                            <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
+                              <img className="nth3" src="/impact/traccy-connect/content-control/3.svg" alt='3' style={{ width: "30px" }} />
+                            </div>
+                            <div className="control-button" onClick={() => setContentIndex(3)}>
+                              <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />
+                            </div>
+                            {contentExpand &&
+                              <>
+                                <div className="control-button">
+                                  <img className="nth5" src="/impact/traccy-connect/content-control/5.svg" alt='4' style={{ width: "25px" }} />
+                                </div>
+                                <div className="control-button" onClick={() => setContentIndex(4)}>
+                                  <img className="nth6" src="/impact/traccy-connect/content-control/6.svg" alt='4' style={{ width: "28px" }} />
+                                </div>
+                                <div className="control-button" onClick={() => setContentIndex(5)}>
+                                  <img className="nth7" src="/impact/traccy-connect/content-control/7.svg" alt='4' style={{ width: "25px" }} />
+                                </div>
+                                <div className="control-button" onClick={() => setContentIndex(6)}>
+                                  <img className="nth8" src="/impact/traccy-connect/content-control/8.png" alt='4' style={{ width: "28px" }} />
+                                </div>
+                                <div className="control-button" onClick={() => setContentIndex(7)}>
+                                  <img className="nth9" src="/impact/traccy-connect/content-control/9.svg" alt='4' style={{ width: "25px" }} />
+                                </div>
+                                <div className="control-button" onClick={() => setContentIndex(8)}>
+                                  <img className="nth10" src="/impact/traccy-connect/content-control/10.png" alt='4' style={{ width: "28px" }} />
+                                </div>
+                              </>
+                            }
+                          </div>
+                          <div className="content">
+                            {contentIndex === 0 &&
+                              <img src="/impact/traccy-connect/content/1.svg" alt="1" />
+                            }
+                            {contentIndex === 1 &&
+                              <img src="/impact/traccy-connect/content/2.svg" alt="1" />
+                            }
+                            {contentIndex === 2 &&
+                              <img src="/impact/traccy-connect/content/3.svg" alt="1" />
+                            }
+                            {contentIndex === 3 &&
+                              <img src="/impact/traccy-connect/content/4.png" alt="1" />
+                            }
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  {/* }
-                  {showContent2 && */}
-                    <div className='popup popup-second'>
-                      <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src="/impact/traccy-connect/popup2.png" alt="Popup" />
-                      </div>
-                    </div>
-                  {/* }
-                  {showContent3 &&
-                    <div className='popup'>
-                      <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src={PopupImg3} alt="Popup" />
-                      </div>
-                    </div>
-                  } */}
+                  }
                 </div>
                 <img src={MapImg} alt='Map' />
               </div>
             </Col>
           </Row>
         </Container>
-        {showContent1 &&
-          <div className='bottom-left-details details1'>
+        {showContent === 0 &&
+          <div className='bottom-left-details details3'>
             <div className='numbers'>
               <div className='color-bar'></div>
               01.
             </div>
             <div className='right-content'>
-              <h4>FlyOut</h4>
+              <h4>Traccy Connect</h4>
               <p>
-                Automatic Misting System for reduce the Fly problem (mosquito, fly, etc) in organic way
-              </p>
-            </div>
-          </div>
-        }
-        {showContent2 &&
-          <div className='bottom-left-details details2'>
-            <div className='numbers'>
-              <div className='color-bar'></div>
-              02.
-            </div>
-            <div className='right-content'>
-              <h4>Traccy Solar</h4>
-              <p>
-                A new way to use Solar energy for enpower Green Endergy and reduce Carbos emission
-              </p>
-            </div>
-          </div>
-        }
-        {showContent3 &&
-          <div className='bottom-left-details details3'>
-            <div className='numbers'>
-              <div className='color-bar'></div>
-              03.
-            </div>
-            <div className='right-content'>
-              <h4>DecentralCity</h4>
-              <p>
-                Make 100% autonomus a city from Food, Water, Energy and the main resources
+                Building a community of Impact Investors that’s try to solve real world problems
               </p>
             </div>
           </div>
         }
         <div className='right-numbers'>
           <ul>
-            <li className={showContent1 === true ? 'selected' : ''} onClick={showModal1}>01 <span>FlyOut</span></li>
-            <li className={showContent2 === true ? 'selected' : ''} onClick={showModal2}>02 <span>Traccy Solar</span></li>
-            <li className={showContent3 === true ? 'selected' : ''} onClick={showModal3}>03 <span>DecentralCity</span></li>
+            <li className={showContent === 0 ? 'selected' : ''} onClick={() => showModal(0)}>
+              01 <span>TRACCY CONNECT</span>
+            </li>
           </ul>
         </div>
       </section>
