@@ -13,7 +13,6 @@ import Stakingimg from '../../assets/images/staking-img.svg';
 import PlatformImg from '../../assets/images/platform-img.png';
 import leftHexa from '../../assets/images/left-hexa.svg';
 import righttHexa from '../../assets/images/right-hexa.svg';
-import righttHexa2 from '../../assets/images/right-hexa2.svg';
 import HeaderBg1 from '../../assets/images/title-bg1.svg';
 import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import VotingPower from '../../assets/images/voting-power.svg';
@@ -425,7 +424,7 @@ const TraccyToken = () => {
                                         <path d="M801.422 215.884C810.904 215.884 818.59 208.473 818.59 199.331C818.59 190.19 810.904 182.779 801.422 182.779C791.94 182.779 784.254 190.19 784.254 199.331C784.254 208.473 791.94 215.884 801.422 215.884Z" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="2.11542" />
                                         <path d="M801.423 204.967C804.65 204.967 807.267 202.444 807.267 199.332C807.267 196.22 804.65 193.697 801.423 193.697C798.195 193.697 795.578 196.22 795.578 199.332C795.578 202.444 798.195 204.967 801.423 204.967Z" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 2)}>                                        
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 2)}>
                                         <path d="M1136.75 92.9737C1146.83 92.9737 1155.01 84.7747 1155.01 74.6607C1155.01 64.5467 1146.83 56.3477 1136.75 56.3477C1126.66 56.3477 1118.48 64.5467 1118.48 74.6607C1118.48 84.7747 1126.66 92.9737 1136.75 92.9737Z" fill="#D9D9D9" fill-opacity="0.01" />
                                         <path d="M1136.75 90.5086C1146.23 90.5086 1153.92 83.098 1153.92 73.9565C1153.92 64.815 1146.23 57.4043 1136.75 57.4043C1127.27 57.4043 1119.58 64.815 1119.58 73.9565C1119.58 83.098 1127.27 90.5086 1136.75 90.5086Z" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="2.11542" />
                                         <path d="M1136.75 79.5922C1139.97 79.5922 1142.59 77.0693 1142.59 73.9572C1142.59 70.8451 1139.97 68.3223 1136.75 68.3223C1133.52 68.3223 1130.9 70.8451 1130.9 73.9572C1130.9 77.0693 1133.52 79.5922 1136.75 79.5922Z" fill="#FFFBFB" fill-opacity="0.2" />
