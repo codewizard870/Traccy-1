@@ -75,7 +75,7 @@ const FlyOut = () => {
   return (
     <div className='flyout-wrapper' onClick={onClose}>
       <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/flyout.png)" }}></div>
+        <div className='about-banner' style={{ backgroundImage: "url(/impact/flyout/flyout.png)" }}></div>
         <Link to='/impact-through-traccy' className='backarrow'>
           <img src="/impact/backarrow.svg" alt="backarrow" />
         </Link>

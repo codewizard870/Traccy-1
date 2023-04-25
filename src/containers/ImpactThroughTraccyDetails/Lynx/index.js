@@ -35,30 +35,16 @@ const items = [
 
 const Lynx = () => {
   const router = useHistory();
-  const [showContent1, setShowContent1] = React.useState(false);
-  const [showContent2, setShowContent2] = React.useState(false);
-  const [showContent3, setShowContent3] = React.useState(false);
+  const [showContent, setShowContent] = useState(0);
+
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
   const hideModal = () => {
-    setShowContent1(false);
-    setShowContent2(false);
-    setShowContent3(false);
+    setShowContent(-1);
   }
-  const showModal1 = () => {
-    setShowContent1(true);
-    setShowContent2(false);
-    setShowContent3(false);
+  const showModal = (index) => {
+    setShowContent(index);
   };
-  const showModal2 = () => {
-    setShowContent2(true);
-    setShowContent1(false);
-    setShowContent3(false);
-  };
-  const showModal3 = () => {
-    setShowContent3(true);
-    setShowContent1(false);
-    setShowContent2(false);
-  };
+
 
   const [openModal, setOpen] = useState(false);
   const [stageIndex, setStageIndex] = useState(0);
@@ -87,7 +73,6 @@ const Lynx = () => {
     bookRef.current.pageFlip().flipNext()
   }
 
-  const [tab, setTab] = useState("1");
   return (
     <div className='lynx-wrapper' onClick={onClose}>
       <section className='banner-section'>
@@ -213,9 +198,6 @@ const Lynx = () => {
                         </p>
                       </div>
                     </div>
-                    <div className='arrow-right' onClick={nextPage}>
-                      <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
-                    </div>
                   </div>
                 </div>
               </PageFlip>
@@ -233,50 +215,66 @@ const Lynx = () => {
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
                 <div className='project-center'>
-                  <div className='points' onClick={showModal1}>
+                  <div className='points point-1'>
                     <span></span>
                     <div>01</div>
                   </div>
-                  <div className='points' onClick={showModal2}>
+                  <div className='points point-2'>
                     <span></span>02
                   </div>
-                  <div className='points' onClick={showModal3}>
+                  <div className='points point-3'>
                     03 <span></span>
                   </div>
-                  <div className='points'>
+                  <div className='points point-4'>
                     <span></span>
                     <div>04</div>
                   </div>
-                  <div className='points'>
+                  <div className='points point-5'>
                     05 <span></span>
                   </div>
-                  <div className='points'>
+                  <div className='points point-6'>
                     <div>06</div> <span></span>
                   </div>
-                  <div className='points'>
+                  <div className='points point-7'>
                     07 <span></span>
                   </div>
-                  {showContent1 &&
-                    <div className='popup'>
+                  {showContent === 0 &&
+                    <div className='popup popup-1'>
                       <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src="/impact/traccy-connect/ecosystem.png" alt="Popup" />
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/map/1.png" alt="Popup" />
                       </div>
                     </div>
                   }
-                  {showContent2 &&
-                    <div className='popup popup-second'>
+                  {showContent === 1 &&
+                    <div className='popup popup-2'>
                       <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src="/impact/traccy-connect/popup2.png" alt="Popup" />
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/map/2.png" alt="Popup" />
                       </div>
                     </div>
                   }
-                  {showContent3 &&
-                    <div className='popup'>
+                  {showContent === 2 &&
+                    <div className='popup popup-3'>
                       <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
-                        <img src={PopupImg3} alt="Popup" />
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/map/3.png" alt="Popup" />
+                      </div>
+                    </div>
+                  }
+                  {showContent === 3 &&
+                    <div className='popup popup-4'>
+                      <div className='popup-inner'>
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/map/4.png" alt="Popup" />
+                      </div>
+                    </div>
+                  }
+                  {showContent === 4 &&
+                    <div className='popup popup-5'>
+                      <div className='popup-inner'>
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/map/5.png" alt="Popup" />
                       </div>
                     </div>
                   }
@@ -286,53 +284,88 @@ const Lynx = () => {
             </Col>
           </Row>
         </Container>
-        {showContent1 &&
+        {showContent === 0 &&
           <div className='bottom-left-details details1'>
             <div className='numbers'>
               <div className='color-bar'></div>
-              01.
             </div>
             <div className='right-content'>
-              <h4>FlyOut</h4>
+              <h4>01 FlyOut</h4>
               <p>
-                Automatic Misting System for reduce the Fly problem (mosquito, fly, etc) in organic way
+                Automatic mosquito solution reducing the mosquito population in organic way
               </p>
             </div>
           </div>
         }
-        {showContent2 &&
+        {showContent === 1 &&
           <div className='bottom-left-details details2'>
             <div className='numbers'>
               <div className='color-bar'></div>
-              02.
             </div>
             <div className='right-content'>
-              <h4>Traccy Solar</h4>
+              <h4>02 Green Protocol</h4>
               <p>
-                A new way to use Solar energy for enpower Green Endergy and reduce Carbos emission
+                NFT tokenisation of real world impact solutions
               </p>
             </div>
           </div>
         }
-        {showContent3 &&
+        {showContent === 2 &&
           <div className='bottom-left-details details3'>
             <div className='numbers'>
               <div className='color-bar'></div>
-              03.
             </div>
             <div className='right-content'>
-              <h4>DecentralCity</h4>
+              <h4>03 Traccy Solar</h4>
               <p>
-                Make 100% autonomus a city from Food, Water, Energy and the main resources
+                Solar Impact
+              </p>
+            </div>
+          </div>
+        }
+        {showContent === 3 &&
+          <div className='bottom-left-details details4'>
+            <div className='numbers'>
+              <div className='color-bar'></div>
+            </div>
+            <div className='right-content'>
+              <h4>04 Traccy Lab</h4>
+              <p>
+                Automatic mosquito solution reducing the mosquito population in organic way
+              </p>
+            </div>
+          </div>
+        }
+        {showContent === 4 &&
+          <div className='bottom-left-details details5'>
+            <div className='numbers'>
+              <div className='color-bar'></div>
+            </div>
+            <div className='right-content'>
+              <h4>05 Traccy Agro</h4>
+              <p>
+                Automatic mosquito solution reducing the mosquito population in organic way
               </p>
             </div>
           </div>
         }
         <div className='right-numbers'>
           <ul>
-            <li className={showContent1 === true ? 'selected' : ''} onClick={showModal1}>01 <span>FlyOut</span></li>
-            <li className={showContent2 === true ? 'selected' : ''} onClick={showModal2}>02 <span>Traccy Solar</span></li>
-            <li className={showContent3 === true ? 'selected' : ''} onClick={showModal3}>03 <span>DecentralCity</span></li>
+            <li className={showContent === 0 ? 'selected' : ''} onClick={() => showModal(0)}>
+              01 <span>LYNXVR<br />JAKARTA, INDONESIA</span>
+            </li>
+            <li className={showContent === 1 ? 'selected' : ''} onClick={() => showModal(1)}>
+              02 <span>GREEN PROTOCOL<br />JAKARTA, INDONESIA</span>
+            </li>
+            <li className={showContent === 2 ? 'selected' : ''} onClick={() => showModal(2)}>
+              03 <span>TRACCY SOLAR<br />DRC CONGO</span>
+            </li>
+            <li className={showContent === 3 ? 'selected' : ''} onClick={() => showModal(3)}>
+              04 <span>TRACCY LAB<br />ZURICH, SWITZERLAN</span>
+            </li>
+            <li className={showContent === 4 ? 'selected' : ''} onClick={() => showModal(4)}>
+              05 <span>TRACCY AGRO<br /> DRC CONGO</span>
+            </li>
           </ul>
         </div>
       </section>

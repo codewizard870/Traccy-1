@@ -464,6 +464,9 @@
         height: 200px !important;
       }
     }
+    .stf__wrapper {
+      padding-bottom: 0px !important;
+    }
     .demoPage {
       background: $white;
       color: $text-primary;
@@ -634,7 +637,7 @@
         }
       }
       .bookpage-inner-right {
-        padding: 22px 41px 0 49px;
+        padding: 31px 41px 0 53px;
         height: 100%;
 
         @media screen and (max-width: 576px) {
@@ -729,7 +732,7 @@
               color: black;
               font-size: 12px;
               font-weight: 700;
-              margin-top: 10px;
+              margin-top: 30px;
             }
             h2 {
               color: black;
@@ -802,20 +805,24 @@
     .right-numbers {
       position: absolute;
       right: 0;
-      bottom: 5%;
+      bottom: 10%;
       ul {
         padding-left: 0;
         li {
-          font-size: 26px;
+          font-size: 28px;
           display: flex;
           align-items: center;
           position: relative;
-          background: rgba(#4a4a4a, 0.3);
-          padding: 0.8rem 0.8rem 0.8rem 1.8rem;
+          padding: 0.8rem 10rem 0.8rem 1.8rem;
           font-weight: bold;
-          transform: translateX(118px);
+          // transform: translateX(-118px);
           transition: all ease-in 0.1s;
           cursor: pointer;
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+            padding: 0.2rem 0.1rem 0.2rem 0.8rem;
+          }
+
           &::before {
             content: " ";
             width: 30px;
@@ -825,44 +832,58 @@
             top: 0;
             left: 0;
             z-index: 1;
+            transition: all ease-in 0.1s;
           }
           span {
             overflow: hidden;
-            font-size: 1rem;
+            font-size: 12px;
             font-weight: normal;
             margin-left: 20px;
             margin-right: 20px;
+            @media screen and (max-width: 767px) {
+              font-size: 8px;
+            }
           }
           &:nth-child(1) {
             &::before {
-              background: transparent
-                linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-                padding-box;
+              background: linear-gradient(270deg, rgba(0, 240, 255, 0.7) 0%, rgba(42, 53, 158, 0.7) 33.85%, rgba(86, 245, 255, 0.7) 72.92%, rgba(120, 86, 255, 0.7) 97.92%);
             }
           }
           &:nth-child(2) {
             &::before {
-              background: transparent
-                linear-gradient(90deg, #721d4b 0%, #c73c86 100%) 0% 0% no-repeat
-                padding-box;
+              background: linear-gradient(270deg, rgba(0, 255, 25, 0.7) 0%, rgba(44, 158, 42, 0.7) 47.4%, rgba(86, 255, 103, 0.7) 100%);
             }
           }
           &:nth-child(3) {
             &::before {
-              background: transparent
-                linear-gradient(90deg, #866c33 0%, #f4c867 100%) 0% 0% no-repeat
-                padding-box;
+              background: linear-gradient(270deg, rgba(204, 255, 0, 0.7) 0%, rgba(250, 0, 0, 0.7) 47.4%, rgba(255, 122, 0, 0.7) 100%);
+            }
+          }
+          &:nth-child(4) {
+            &::before {
+              background: linear-gradient(270deg, rgba(166, 231, 227, 0.7) 0%, rgba(0, 54, 247, 0.7) 61.46%, rgba(157, 102, 227, 0.7) 98.96%);
+            }
+          }
+          &:nth-child(5) {
+            &::before {
+              background: linear-gradient(270deg, rgba(250, 255, 0, 0.7) 0%, rgba(43, 221, 40, 0.7) 61.46%, rgba(255, 124, 2, 0.7) 100%);
             }
           }
           &.selected {
-            transform: translateX(0);
+            // transform: translateX(0);
+            &::before {
+              width: 100%;
+            }
           }
         }
       }
     }
     .bottom-left-details {
       display: flex;
+      flex-direction: column;
       max-width: 850px;
+      position: absolute;
+      bottom: 0;
       @media screen and (max-width: 767px) {
         flex-direction: column;
       }
@@ -870,7 +891,7 @@
         font-size: 4.5rem;
         text-align: center;
         padding: 10 2rem 0 0;
-        min-width: 150px;
+        max-width: 98px;
         @media screen and (max-width: 991px) {
           font-size: 2.5rem;
           min-width: 90px;
@@ -880,55 +901,66 @@
           width: 100%;
           height: 5px;
           display: block;
-          background: transparent
-            linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-            padding-box;
+          background: linear-gradient(270deg, rgba(54, 255, 243, 0.7) 0%, rgba(35, 0, 251, 0.7) 47.4%, rgba(47, 209, 190, 0.7) 88.54%);
           margin-bottom: 0.5rem;
         }
       }
       .right-content {
         padding-top: 10px;
-        padding-left: 30px;
+        padding-left: 44px;
+        @media screen and (max-width: 767px) {
+          padding-top: 2px;
+          padding-left: 10px;
+        }
         h4 {
-          font-size: 2.2rem;
+          font-size: 50px;
           text-transform: uppercase;
           margin-bottom: 0.6rem;
           @media screen and (max-width: 991px) {
-            font-size: 1.7rem;
+            font-size: 18px;
           }
         }
         p {
-          font-size: 1rem;
-          line-height: 1.5;
+          font-size: 32px;
+          font-weight: 300;
+          white-space: nowrap;
           @media screen and (max-width: 991px) {
-            font-size: 0.8rem;
+            font-size: 12px;
           }
         }
       }
       &.details1 {
         .numbers {
           .color-bar {
-            background: transparent
-              linear-gradient(90deg, #187b93 0%, #44d3c3 100%) 0% 0% no-repeat
-              padding-box;
+            background: linear-gradient(270deg, rgba(0, 240, 255, 0.7) 0%, rgba(42, 53, 158, 0.7) 33.85%, rgba(86, 245, 255, 0.7) 72.92%, rgba(120, 86, 255, 0.7) 97.92%);
           }
         }
       }
       &.details2 {
         .numbers {
           .color-bar {
-            background: transparent
-              linear-gradient(90deg, #721d4b 0%, #c73c86 100%) 0% 0% no-repeat
-              padding-box;
+            background: linear-gradient(270deg, rgba(0, 255, 25, 0.7) 0%, rgba(44, 158, 42, 0.7) 47.4%, rgba(86, 255, 103, 0.7) 100%);
           }
         }
       }
       &.details3 {
         .numbers {
           .color-bar {
-            background: transparent
-              linear-gradient(90deg, #866c33 0%, #f4c867 100%) 0% 0% no-repeat
-              padding-box;
+            background: linear-gradient(270deg, rgba(204, 255, 0, 0.7) 0%, rgba(250, 0, 0, 0.7) 47.4%, rgba(255, 122, 0, 0.7) 100%);
+          }
+        }
+      }
+      &.details4 {
+        .numbers {
+          .color-bar {
+            background: linear-gradient(270deg, rgba(166, 231, 227, 0.7) 0%, rgba(0, 54, 247, 0.7) 61.46%, rgba(157, 102, 227, 0.7) 98.96%);
+          }
+        }
+      }
+      &.details5 {
+        .numbers {
+          .color-bar {
+            background: linear-gradient(270deg, rgba(250, 255, 0, 0.7) 0%, rgba(43, 221, 40, 0.7) 61.46%, rgba(255, 124, 2, 0.7) 100%);
           }
         }
       }
@@ -947,13 +979,13 @@
         right: 0;
         .popup {
           position: absolute;
-          max-width: 550px;
-          width: 100%;
           z-index: 2;
-          top: 25px;
-          right: 0;
           img {
-            width: 100%;
+            width: auto;
+            height: auto;
+            @media screen and (max-width: 767px) {
+              width: 100px;
+            }
           }
           .popup-inner {
             position: relative;
@@ -968,8 +1000,45 @@
             }
           }
         }
-        .popup.popup-second {
-          top: 250px;
+        .popup.popup-1 {
+          left: 61%;
+          top: 32%;
+          @media screen and (max-width: 767px) {
+            left: 53%;
+            top: 17%;
+          }
+        }
+        .popup.popup-2 {
+          left: 60%;
+          top: 32%;
+          @media screen and (max-width: 767px) {
+            left: 58%;
+            top: 18%;
+          }
+        }
+        .popup.popup-3 {
+          left: 32%;
+          top: 35%;
+          @media screen and (max-width: 767px) {
+            left: 22%;
+            top: 20%;
+          }
+        }
+        .popup.popup-4 {
+          left: 43%;
+          top: 16%;
+          @media screen and (max-width: 767px) {
+            left: 45;
+            top: 16%;
+          }
+        }
+        .popup.popup-5 {
+          left: 31%;
+          top: 27%;
+          @media screen and (max-width: 767px) {
+            left: 22%;
+            top: 18%;
+          }
         }
         .points {
           font-size: 3.4rem;
@@ -996,7 +1065,7 @@
             border-style: solid;
             cursor: pointer;
           }
-          &:nth-child(1) {
+          &.point-1 {
             position: absolute;
             bottom: 0;
             left: 45%;
@@ -1009,7 +1078,7 @@
               top: 63%;
             }
           }
-          &:nth-child(2) {
+          &.point-2 {
             display: flex;
             align-items: center;
             position: absolute;
@@ -1024,7 +1093,7 @@
               top: 41%;
             }
           }
-          &:nth-child(3) {
+          &.point-3 {
             display: flex;
             align-items: center;
             position: absolute;
@@ -1039,7 +1108,7 @@
               top: 36%;
             }
           }
-          &:nth-child(4) {
+          &.point-4 {
             display: flex;
             align-items: center;
             position: absolute;
@@ -1054,7 +1123,7 @@
               top: 56%;
             }
           }
-          &:nth-child(5) {
+          &.point-5 {
             display: flex;
             align-items: center;
             position: absolute;
@@ -1065,7 +1134,7 @@
               margin-left: 10px;
             }
           }
-          &:nth-child(6) {
+          &.point-6 {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1081,7 +1150,7 @@
               top: 44%;
             }
           }
-          &:nth-child(7) {
+          &.point-7 {
             display: flex;
             align-items: center;
             position: absolute;
