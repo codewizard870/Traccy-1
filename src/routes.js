@@ -15,6 +15,9 @@ import FlyOut from "./containers/ImpactThroughTraccyDetails/FlyOut";
 import TraccyConnect from "./containers/ImpactThroughTraccyDetails/TraccyConnect";
 import Lynx from "./containers/ImpactThroughTraccyDetails/Lynx";
 import GreenProtocol from "./containers/ImpactThroughTraccyDetails/GreenProtocol";
+import TraccySolar from "./containers/ImpactThroughTraccyDetails/TraccySolar";
+import TraccyLab from "./containers/ImpactThroughTraccyDetails/TraccyLab";
+import TraccyAgro from "./containers/ImpactThroughTraccyDetails/TraccyAgro";
 
 // Route Views
 
@@ -102,5 +105,20 @@ export const rotues = [
     path: "/impact-through-traccy-details/green-protocol",
     layout: defaultWhite,
     component: () => <GreenProtocol />
+  },
+  {
+    path: "/impact-through-traccy-details/traccy-solar",
+    layout: defaultWhite,
+    component: () => <TraccySolar />
+  },
+  {
+    path: "/impact-through-traccy-details/traccy-lab",
+    layout: defaultWhite,
+    component: () => <TraccyLab />
+  },
+  {
+    path: "/impact-through-traccy-details/traccy-agro",
+    layout: defaultWhite,
+    component: () => <TraccyAgro />
   }
 ];

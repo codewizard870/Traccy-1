@@ -194,16 +194,19 @@ export const Sliders = [
             number: "Traccy Lab",
             desc: "Creating a automated ecosystem in real world whereall the population is 100% independent to external sources, likeWater purification, Food and plant production, oil creation, energy production and green mobilitation",
             image: "/impact/side-menu/traccy-lab.png",
+            route: "traccy-lab"
          },
          {
             number: "Traccy Solar",
             desc: "",
             image: "/impact/side-menu/traccy-solar.png",
+            route: "traccy-solar"
          },
          {
             number: "Traccy Agro",
             desc: "",
             image: "/impact/side-menu/traccy-agro.png",
+            route: "traccy-agro"
          },
       ],
    },
