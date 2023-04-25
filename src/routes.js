@@ -14,6 +14,7 @@ import Library from "./containers/Library";
 import FlyOut from "./containers/ImpactThroughTraccyDetails/FlyOut";
 import TraccyConnect from "./containers/ImpactThroughTraccyDetails/TraccyConnect";
 import Lynx from "./containers/ImpactThroughTraccyDetails/Lynx";
+import GreenProtocol from "./containers/ImpactThroughTraccyDetails/GreenProtocol";
 
 // Route Views
 
@@ -88,7 +89,7 @@ export const rotues = [
     component: () => <FlyOut />
   },
   {
-    path: "/impact-through-traccy-details/traccyconnect",
+    path: "/impact-through-traccy-details/traccy-connect",
     layout: defaultWhite,
     component: () => <TraccyConnect />
   },
@@ -96,5 +97,10 @@ export const rotues = [
     path: "/impact-through-traccy-details/lynx",
     layout: defaultWhite,
     component: () => <Lynx />
+  },
+  {
+    path: "/impact-through-traccy-details/green-protocol",
+    layout: defaultWhite,
+    component: () => <GreenProtocol />
   }
 ];

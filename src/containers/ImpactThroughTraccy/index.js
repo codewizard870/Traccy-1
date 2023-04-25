@@ -183,7 +183,8 @@ export const Sliders = [
          },
          {
             number: "02. Green Protocol",
-            desc: "NFT tokenisation of green assets like renewable energy, agriculture, recycling and more. Crowdfunding modelling and co-ownership of real world asset for change the climatic changes."
+            desc: "NFT tokenisation of green assets like renewable energy, agriculture, recycling and more. Crowdfunding modelling and co-ownership of real world asset for change the climatic changes.",
+            route: "green-protocol"
          },
          {
             number: "03. DecentaCity",
@@ -231,7 +232,7 @@ export const Sliders = [
          {
             number: "01. Traccy Connect",
             desc: "Traccy Connect is the platform will provideSTOEducationImpact Score and Impact Credits",
-            route: "traccyconnect"
+            route: "traccy-connect"
 
          }
       ]
