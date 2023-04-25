@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../components/common';
-import { Button, Drawer, Tabs } from 'antd';
+import { Drawer } from 'antd';
 import './index.scss';
 
 import { useHistory } from 'react-router-dom';
@@ -119,8 +119,10 @@ const ImpactThroughTraccy = () => {
                   </div>
                   {Sliders[stageIndex].projects.map((project, index) => (
                      <div className="item" onClick={() => goDetail(project, index)}>
+                        <img src={project.image} alt="avatar"/>
+                        <div className="splitter" />
                         <span>{project.number}</span>
-                        <span>{project.desc}</span>
+                        <div className="splitter outer" />
                      </div>
                   ))}
                </div>
@@ -177,31 +179,32 @@ export const Sliders = [
       banner: "/impact/5309059.jpg",
       projects: [
          {
-            number: "01. Lynx Vr",
+            number: "Lynx Vr",
             desc: "LynxVr is a cognitive therapist using Blockchain for increase privacy and clients confidential aboutmedical and therapist section",
+            image: "/impact/side-menu/lynx.png",
             route: "lynx"
          },
          {
-            number: "02. Green Protocol",
+            number: "Green Protocol",
             desc: "NFT tokenisation of green assets like renewable energy, agriculture, recycling and more. Crowdfunding modelling and co-ownership of real world asset for change the climatic changes.",
+            image: "/impact/side-menu/green-protocol.png",
             route: "green-protocol"
          },
          {
-            number: "03. DecentaCity",
-            desc: "Creating a automated ecosystem in real world whereall the population is 100% independent to external sources, likeWater purification, Food and plant production, oil creation, energy production and green mobilitation"
+            number: "Traccy Lab",
+            desc: "Creating a automated ecosystem in real world whereall the population is 100% independent to external sources, likeWater purification, Food and plant production, oil creation, energy production and green mobilitation",
+            image: "/impact/side-menu/traccy-lab.png",
          },
          {
-            number: "04. Traccy Solar",
-            desc: ""
+            number: "Traccy Solar",
+            desc: "",
+            image: "/impact/side-menu/traccy-solar.png",
          },
          {
-            number: "05. Traccy Lab",
-            desc: ""
+            number: "Traccy Agro",
+            desc: "",
+            image: "/impact/side-menu/traccy-agro.png",
          },
-         {
-            number: "06. Tomato Project",
-            desc: ""
-         }
       ],
    },
    {
@@ -214,8 +217,9 @@ export const Sliders = [
       banner: "/impact/5335415.jpg",
       projects: [
          {
-            number: "01. FlyOut",
+            number: "FlyOut",
             desc: "A mosquito solution system based on organicproduct reducing the mosquito population",
+            image: "/impact/side-menu/flyout.png",
             route: "flyout"
          }
       ]
@@ -230,10 +234,10 @@ export const Sliders = [
       banner: "/impact/5072310.jpg",
       projects: [
          {
-            number: "01. Traccy Connect",
+            number: "Traccy Connect",
             desc: "Traccy Connect is the platform will provideSTOEducationImpact Score and Impact Credits",
+            image: "/impact/side-menu/traccy-impact.png",
             route: "traccy-connect"
-
          }
       ]
    },

@@ -107,8 +107,10 @@ const GreenProtocol = () => {
             </div>
             {Sliders[stageIndex].projects.map((project, index) => (
               <div className="item" onClick={() => goDetail(project, index)}>
+                <img src={project.image} alt="avatar" />
+                <div className="splitter" />
                 <span>{project.number}</span>
-                <span>{project.desc}</span>
+                <div className="splitter outer" />
               </div>
             ))}
           </div>
@@ -160,7 +162,7 @@ const GreenProtocol = () => {
                         <img src="/impact/green-protocol/renewable_energy.png" alt="machine" />
                         <h1>NFTs as a real world asset</h1>
                         <p>
-                        Decentralize NFT asset with less volatility with real asset and real world impact. 
+                          Decentralize NFT asset with less volatility with real asset and real world impact.
                         </p>
                       </div>
                     </div>

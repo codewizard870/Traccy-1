@@ -134,8 +134,10 @@ const Lynx = () => {
             </div>
             {Sliders[stageIndex].projects.map((project, index) => (
               <div className="item" onClick={() => goDetail(project, index)}>
+                <img src={project.image} alt="avatar" />
+                <div className="splitter" />
                 <span>{project.number}</span>
-                <span>{project.desc}</span>
+                <div className="splitter outer" />
               </div>
             ))}
           </div>

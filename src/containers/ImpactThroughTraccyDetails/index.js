@@ -77,11 +77,11 @@ const ImpactThroughTraccyDetails = () => {
     }
 
     const goDetail = (project, index) => {
-        if(project.route)
-           router.push(`/impact-through-traccy-details/${project.route}`)
+        if (project.route)
+            router.push(`/impact-through-traccy-details/${project.route}`)
         else
-        router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-     }
+            router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
+    }
     return (
         <div className='itt-dtl-wrapper' onClick={onClose}>
             <section className='banner-section'>
@@ -139,8 +139,10 @@ const ImpactThroughTraccyDetails = () => {
                         </div>
                         {Sliders[stageIndex].projects.map((project, index) => (
                             <div className="item" onClick={() => goDetail(project, index)}>
+                                <img src={project.image} alt="avatar" />
+                                <div className="splitter" />
                                 <span>{project.number}</span>
-                                <span>{project.desc}</span>
+                                <div className="splitter outer" />
                             </div>
                         ))}
                     </div>
