@@ -7,6 +7,8 @@ import { useHistory } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import MapImg from '../../assets/images/map.png';
+import Footer from '../../components/layout/Footer/Footer';
+import { useEffect } from 'react';
 
 const ImpactThroughTraccy = () => {
    const router = useHistory();
@@ -24,7 +26,7 @@ const ImpactThroughTraccy = () => {
          </div>
       ),
       customPaging: i => (
-         <div className='thumb-col-main'>
+         <div className='thumb-col-main impact-dots'>
             {i === 0 && <div></div>}
             {i === 1 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
             {i === 2 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
@@ -54,165 +56,260 @@ const ImpactThroughTraccy = () => {
       else
          router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
    }
+
+   useEffect(() => {
+      const intro = document.getElementById("intro-wrapper");
+      const handleScroll = () => {
+         let c = Math.floor(intro.scrollTop / intro.clientHeight);
+         const dots = document.getElementsByClassName("intro-dot");
+         for (let i = 0; i < dots.length; i++) {
+            if (c === i)
+               dots[i].className = "intro-dot selected"
+            else
+               dots[i].className = "intro-dot"
+         }
+
+         const impactDots = document.getElementsByClassName("impact-dots");
+         for (let i = 0; i < impactDots.length; i++) {
+            if (c === 3)
+               impactDots[i].style.display = "block";
+            else
+               impactDots[i].style.display = "none"
+         }
+      }
+      handleScroll();
+
+      intro.addEventListener("scroll", handleScroll);
+      return () => intro.removeEventListener("scroll", handleScroll);
+   }, [])
    return (
-      <div className='itt-wrapper' onClick={onClose}>
-         <section className='banner-section'>
-            <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
-            <Slider {...settings2} ref={slider}>
-               <div>
-                  <div className='about-banner' style={{ backgroundImage: `url("/impact/intro.png")` }}></div>
-                  <Container>
-                     <div className="stage-wrapper">
-                        <div className="stage-main">
-                        </div>
-                     </div>
-                  </Container>
-               </div>
-               {Sliders.map((data, index) => (
-                  <div key={index}>
-                     <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div>
-                     <Container>
-                        <div className="stage-wrapper">
-                           <div className="stage-main">
-                              <div className="stage-left">
-                                 <h1>
-                                    {data.stage} Stage
-                                 </h1>
-                                 <span className="desc">{data.desc}</span>
-                                 <span className="application">{data.application}</span>
-                                 <div className="selection">
-                                    <span className="number">{data.application_number}</span>
-                                    <span className="selection-desc">selection</span>
-                                    <div className="indicator" />
-                                 </div>
-                                 <div className="project-list-button" onClick={() => onConnect(index)}>
-                                    <div className="list-indicator" />
-                                    <span>Project List</span>
-                                 </div>
-                              </div>
-                              <div className="stage-right">
-                                 <div className="processing"><span>Processing Time</span></div>
-                                 <div className="processing-desc">
-                                    <span>{data.month}</span>
-                                    <span>month</span>
-                                 </div>
-                                 <div className="world"><span>World Location</span></div>
-                                 <div className="world-desc">
-                                    <span>{data.world}</span>
-                                    <span>countries</span>
+      <>
+         <div className='itt-wrapper' onClick={onClose}>
+            <section className='banner-section'>
+               <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
+               <Slider {...settings2} ref={slider}>
+                  <div>
+                     <div className='about-banner' style={{ backgroundImage: `url("/impact/intro.png")` }}></div>
+                     <div className="intro-wrapper" id="intro-wrapper">
+                        <div className="page-wrapper page-1">
+                           <div className="page-1-left">
+                              <h1>Impact<br />Through<br />Traccy </h1>
+                              <p>Traccy sells our tokens working in third Traccy<br />
+                                 sells our tokens working in third sells<br />
+                                 our tokens working in third<br />
+                              </p>
+                           </div>
+                           <div className="page-1-right">
+                              <img src="/impact/intro/page-1-logo.png" alt="logo" />
+                           </div>
+                           <div className="page-number">
+                              <span>01</span>
+                              <div className="page-more">
+                                 <span>see more</span>
+                                 <div className="page-button">
+
                                  </div>
                               </div>
                            </div>
-                           <Col sm='12' className='arrow-action'>
-                              <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
-                              <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
-                           </Col>
                         </div>
-                     </Container>
-                  </div>
-               ))}
+                        <div className="page-wrapper page-2">
+                           <div className="page-2-left">
+                              <img src="/impact/intro/page-2-logo.png" alt="logo" />
+                           </div>
+                           <div className="page-2-right">
+                              <h1>Trigger</h1>
+                              <p>
+                                 Traccy sells our tokens working in third Traccy<br />
+                                 sells our tokens working in third sells<br />
+                                 our tokens working in third
+                              </p>
+                           </div>
+                        </div>
+                        <div className="page-wrapper page-3">
+                           <div className="page-3-left">
+                              <h1>Engage</h1>
+                              <p>
+                                 Traccy sells our tokens working in third Traccy<br />
+                                 sells our tokens working in third sells<br />
+                                 our tokens working in third<br /><br /><br />
+                                 Traccy sells our tokens working in third Traccy<br />
+                                 sells our tokens working in third sells<br />
+                                 our tokens working in third
+                              </p>
+                           </div>
+                           <div className="page-3-right">
+                              <img src="/impact/intro/page-3-logo.png" alt="logo" />
+                           </div>
+                        </div>
+                        <div className="page-wrapper page-4">
+                           <div className="page-4-left">
+                              <img src="/impact/intro/page-4-logo.png" alt="logo" />
+                           </div>
+                           <div className="page-4-right">
+                              <h1>Connect</h1>
+                              <p>
+                                 Traccy sells our tokens working in third Traccy<br />
+                                 sells our tokens working in third sells<br />
+                                 our tokens working in third<br />
+                              </p>
+                           </div>
+                        </div>
 
-            </Slider>
-            <Drawer
-               title={false}
-               placement='right'
-               width={"100%"}
-               onClose={onClose}
-               closeIcon={false}
-               open={openModal}
-               rootClassName='project-sidebar'
-            >
-               <div className="project-list">
-                  <div className="title">
-                     <span>Project List</span>
+                        <div className="intro-dots">
+                           <div className="intro-dot"></div>
+                           <div className="intro-dot"></div>
+                           <div className="intro-dot"></div>
+                           <div className="intro-dot"></div>
+                        </div>
+                     </div>
                   </div>
-                  {stageIndex > 0 && Sliders[stageIndex - 1].projects.map((project, index) => (
-                     <div className="item" onClick={() => goDetail(project, index)}>
-                        <img src={project.image} alt="avatar" />
-                        <div className="splitter" />
-                        <span>{project.number}</span>
-                        <div className="splitter outer" />
+                  {Sliders.map((data, index) => (
+                     <div key={index}>
+                        <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div>
+                        <Container>
+                           <div className="stage-wrapper">
+                              <div className="stage-main">
+                                 <div className="stage-left">
+                                    <h1>
+                                       {data.stage} Stage
+                                    </h1>
+                                    <span className="desc">{data.desc}</span>
+                                    <span className="application">{data.application}</span>
+                                    <div className="selection">
+                                       <span className="number">{data.application_number}</span>
+                                       <span className="selection-desc">selection</span>
+                                       <div className="indicator" />
+                                    </div>
+                                    <div className="project-list-button" onClick={() => onConnect(index)}>
+                                       <div className="list-indicator" />
+                                       <span>Project List</span>
+                                    </div>
+                                 </div>
+                                 <div className="stage-right">
+                                    <div className="processing"><span>Processing Time</span></div>
+                                    <div className="processing-desc">
+                                       <span>{data.month}</span>
+                                       <span>month</span>
+                                    </div>
+                                    <div className="world"><span>World Location</span></div>
+                                    <div className="world-desc">
+                                       <span>{data.world}</span>
+                                       <span>countries</span>
+                                    </div>
+                                 </div>
+                              </div>
+                              <Col sm='12' className='arrow-action'>
+                                 <button onClick={() => slider?.current?.slickPrev()}><SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' /></button>
+                                 <button onClick={() => slider?.current?.slickNext()}><SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' /></button>
+                              </Col>
+                           </div>
+                        </Container>
                      </div>
                   ))}
-               </div>
-            </Drawer>
-         </section>
-         {console.log(stageIndex)}
-         {stageIndex !== 0 &&
-            <section className='map-section'>
-               <Container>
-                  <Row>
-                     <Col>
-                        <div className='map-wrapper'>
-                           <div className='project-center'>
-                              {stageIndex === 1 &&
-                                 <>
-                                    <div className='points point-1'>
-                                       <span></span>
-                                       <div>01</div>
-                                    </div>
-                                    <div className='points point-2'>
-                                       <span></span>
-                                       <div>02</div>
-                                    </div>
-                                    <div className='points point-3'>
-                                       <span></span>
-                                       <div>03</div>
-                                    </div>
-                                    <div className='points point-4'>
-                                       <span></span>
-                                       <div>04</div>
-                                    </div>
-                                    <div className='points point-5'>
-                                       <span></span>
-                                       <div>05</div>
-                                    </div>
-                                 </>
-                              }
-                              {stageIndex === 2 &&
-                                 <>
-                                    <div className='points point-6'>
-                                       <span></span>
-                                       <div>01</div>
-                                    </div>
-                                 </>
-                              }
-                              {stageIndex === 3 &&
-                                 <>
-                                    <div className='points point-7'>
-                                       <span></span>
-                                       <div>01</div>
-                                    </div>
-                                 </>
-                              }
-                           </div>
-                           <img src={MapImg} alt='Map' />
+               </Slider>
+               <Drawer
+                  title={false}
+                  placement='right'
+                  width={"100%"}
+                  onClose={onClose}
+                  closeIcon={false}
+                  open={openModal}
+                  rootClassName='project-sidebar'
+               >
+                  <div className="project-list">
+                     <div className="title">
+                        <span>Project List</span>
+                     </div>
+                     {stageIndex > 0 && Sliders[stageIndex - 1].projects.map((project, index) => (
+                        <div className="item" onClick={() => goDetail(project, index)}>
+                           <img src={project.image} alt="avatar" />
+                           <div className="splitter" />
+                           <span>{project.number}</span>
+                           <div className="splitter outer" />
                         </div>
-                     </Col>
-                  </Row>
-               </Container>
-               <div className='right-numbers'>
-                  <ul>
-                     {stageIndex === 1 &&
-                        <>
-                           <li className="right-1">01</li>
-                           <li className="right-2">02</li>
-                           <li className="right-3">03</li>
-                           <li className="right-4">04</li>
-                           <li className="right-5">05</li>
-                        </>
-                     }
-                     {stageIndex === 2 &&
-                        <li className="right-6">01</li>
-                     }
-                     {stageIndex === 3 &&
-                        <li className="right-7">01</li>
-                     }
-                  </ul>
-               </div>
+                     ))}
+                  </div>
+               </Drawer>
             </section>
+            {stageIndex !== 0 &&
+               <section className='map-section'>
+                  <Container>
+                     <Row>
+                        <Col>
+                           <div className='map-wrapper'>
+                              <div className='project-center'>
+                                 {stageIndex === 1 &&
+                                    <>
+                                       <div className='points point-1'>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                       <div className='points point-2'>
+                                          <span></span>
+                                          <div>02</div>
+                                       </div>
+                                       <div className='points point-3'>
+                                          <span></span>
+                                          <div>03</div>
+                                       </div>
+                                       <div className='points point-4'>
+                                          <span></span>
+                                          <div>04</div>
+                                       </div>
+                                       <div className='points point-5'>
+                                          <span></span>
+                                          <div>05</div>
+                                       </div>
+                                    </>
+                                 }
+                                 {stageIndex === 2 &&
+                                    <>
+                                       <div className='points point-6'>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                    </>
+                                 }
+                                 {stageIndex === 3 &&
+                                    <>
+                                       <div className='points point-7'>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                    </>
+                                 }
+                              </div>
+                              <img src={MapImg} alt='Map' />
+                           </div>
+                        </Col>
+                     </Row>
+                  </Container>
+                  <div className='right-numbers'>
+                     <ul>
+                        {stageIndex === 1 &&
+                           <>
+                              <li className="right-1">01</li>
+                              <li className="right-2">02</li>
+                              <li className="right-3">03</li>
+                              <li className="right-4">04</li>
+                              <li className="right-5">05</li>
+                           </>
+                        }
+                        {stageIndex === 2 &&
+                           <li className="right-6">01</li>
+                        }
+                        {stageIndex === 3 &&
+                           <li className="right-7">01</li>
+                        }
+                     </ul>
+                  </div>
+               </section>
+            }
+         </div>
+         {stageIndex !== 0 &&
+            <Footer />
          }
-      </div>
+      </>
    )
 };
 export const Sliders = [

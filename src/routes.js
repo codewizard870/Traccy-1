@@ -7,7 +7,7 @@ import ImpactThroughTraccy from "./containers/ImpactThroughTraccy";
 import ImpactThroughTraccyDetails from "./containers/ImpactThroughTraccyDetails";
 import TraccyToken from "./containers/TraccyToken";
 // Layout Types
-import { authLayout, defaultLayout, defaultheaderLayout, defaultWhite } from "./layouts";
+import { authLayout, defaultLayout, defaultheaderLayout, defaultWhite, defaultWhiteHeader } from "./layouts";
 
 import Invest from "./containers/Invest";
 import Library from "./containers/Library";
@@ -66,7 +66,7 @@ export const rotues = [
   },
   {
     path: "/impact-through-traccy",
-    layout: defaultWhite,
+    layout: defaultWhiteHeader,
     component: () => <ImpactThroughTraccy />
   },
   {
