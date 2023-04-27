@@ -92,10 +92,10 @@ const FlyOut = () => {
                   <div className="selection">
                     <span className="number">3’230’000 $</span>
                   </div>
-                  <div className="project-list-button" onClick={() => onConnect(0)}>
+                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
                     <div className="list-indicator" />
                     <span>Project List</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="stage-right">
                   <div className="processing"><span>Processing Time</span></div>
@@ -284,7 +284,7 @@ const FlyOut = () => {
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
                 <div className='project-center'>
-                  <div className='points' onClick={() => showModal(0)}>
+                  {/* <div className='points' onClick={() => showModal(0)}>
                     <span></span>
                     <div>01</div>
                   </div>
@@ -306,7 +306,7 @@ const FlyOut = () => {
                   </div>
                   <div className='points'>
                     07 <span></span>
-                  </div>
+                  </div> */}
                   {showContent === 0 &&
                     <div className='popup'>
                       <div className='popup-inner'>

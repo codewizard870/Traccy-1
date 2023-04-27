@@ -13,7 +13,7 @@ import { Sliders } from '../../ImpactThroughTraccy';
 
 const TraccySolar = () => {
   const router = useHistory();
-  const [showContent, setShowContent] = useState(0);
+  const [showContent, setShowContent] = useState(2);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
   const hideModal = () => {
@@ -71,10 +71,10 @@ const TraccySolar = () => {
                   <div className="selection">
                     <span className="number">2’500’000 $</span>
                   </div>
-                  <div className="project-list-button" onClick={() => onConnect(0)}>
+                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
                     <div className="list-indicator" />
                     <span>Project List</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="stage-right">
                   <div className="processing"><span>Processing Time</span></div>
@@ -183,7 +183,7 @@ const TraccySolar = () => {
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
                 <div className='project-center'>
-                  <div className='points point-1'>
+                  {/* <div className='points point-1'>
                     <span></span>
                     <div>01</div>
                   </div>
@@ -205,7 +205,7 @@ const TraccySolar = () => {
                   </div>
                   <div className='points point-7'>
                     07 <span></span>
-                  </div>
+                  </div> */}
                   {showContent === 0 &&
                     <div className='popup popup-1'>
                       <div className='popup-inner'>
@@ -319,19 +319,19 @@ const TraccySolar = () => {
         }
         <div className='right-numbers'>
           <ul>
-            <li className={showContent === 0 ? 'selected' : ''} onClick={() => showModal(0)}>
+            <li className={showContent === 0 ? 'selected' : ''}>
               01 <span>LYNXVR<br />JAKARTA, INDONESIA</span>
             </li>
-            <li className={showContent === 1 ? 'selected' : ''} onClick={() => showModal(1)}>
+            <li className={showContent === 1 ? 'selected' : ''}>
               02 <span>GREEN PROTOCOL<br />JAKARTA, INDONESIA</span>
             </li>
-            <li className={showContent === 2 ? 'selected' : ''} onClick={() => showModal(2)}>
+            <li className={showContent === 2 ? 'selected' : ''}>
               03 <span>TRACCY SOLAR<br />DRC CONGO</span>
             </li>
-            <li className={showContent === 3 ? 'selected' : ''} onClick={() => showModal(3)}>
+            <li className={showContent === 3 ? 'selected' : ''}>
               04 <span>TRACCY LAB<br />ZURICH, SWITZERLAN</span>
             </li>
-            <li className={showContent === 4 ? 'selected' : ''} onClick={() => showModal(4)}>
+            <li className={showContent === 4 ? 'selected' : ''}>
               05 <span>TRACCY AGRO<br /> DRC CONGO</span>
             </li>
           </ul>

@@ -25,10 +25,11 @@ const ImpactThroughTraccy = () => {
       ),
       customPaging: i => (
          <div className='thumb-col-main'>
-            {i === 0 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
-            {i === 1 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
-            {i === 2 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
-            {i === 3 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
+            {i === 0 && <div></div>}
+            {i === 1 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
+            {i === 2 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
+            {i === 3 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
+            {i === 4 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
          </div>
       ),
       afterChange: index => {
@@ -40,7 +41,6 @@ const ImpactThroughTraccy = () => {
    const [stageIndex, setStageIndex] = useState(0);
    const onConnect = (index) => {
       setOpen(true);
-      setStageIndex(index)
    }
 
    const onClose = () => {
@@ -49,16 +49,25 @@ const ImpactThroughTraccy = () => {
    }
 
    const goDetail = (project, index) => {
-      if(project.route)
+      if (project.route)
          router.push(`/impact-through-traccy-details/${project.route}`)
       else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
+         router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
    }
    return (
       <div className='itt-wrapper' onClick={onClose}>
          <section className='banner-section'>
             <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
             <Slider {...settings2} ref={slider}>
+               <div>
+                  <div className='about-banner' style={{ backgroundImage: `url("/impact/intro.png")` }}></div>
+                  <Container>
+                     <div className="stage-wrapper">
+                        <div className="stage-main">
+                        </div>
+                     </div>
+                  </Container>
+               </div>
                {Sliders.map((data, index) => (
                   <div key={index}>
                      <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div>
@@ -117,9 +126,9 @@ const ImpactThroughTraccy = () => {
                   <div className="title">
                      <span>Project List</span>
                   </div>
-                  {Sliders[stageIndex].projects.map((project, index) => (
+                  {stageIndex > 0 && Sliders[stageIndex - 1].projects.map((project, index) => (
                      <div className="item" onClick={() => goDetail(project, index)}>
-                        <img src={project.image} alt="avatar"/>
+                        <img src={project.image} alt="avatar" />
                         <div className="splitter" />
                         <span>{project.number}</span>
                         <div className="splitter outer" />
@@ -128,43 +137,81 @@ const ImpactThroughTraccy = () => {
                </div>
             </Drawer>
          </section>
-         <section className='map-section'>
-            <Container>
-               <Row>
-                  <Col>
-                     <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
-                     <div className='map-wrapper'>
-                        <div className='project-center'>
-                           <div className='points'>
-                              <span></span>
-                              <div>01</div>
+         {console.log(stageIndex)}
+         {stageIndex !== 0 &&
+            <section className='map-section'>
+               <Container>
+                  <Row>
+                     <Col>
+                        <div className='map-wrapper'>
+                           <div className='project-center'>
+                              {stageIndex === 1 &&
+                                 <>
+                                    <div className='points point-1'>
+                                       <span></span>
+                                       <div>01</div>
+                                    </div>
+                                    <div className='points point-2'>
+                                       <span></span>
+                                       <div>02</div>
+                                    </div>
+                                    <div className='points point-3'>
+                                       <span></span>
+                                       <div>03</div>
+                                    </div>
+                                    <div className='points point-4'>
+                                       <span></span>
+                                       <div>04</div>
+                                    </div>
+                                    <div className='points point-5'>
+                                       <span></span>
+                                       <div>05</div>
+                                    </div>
+                                 </>
+                              }
+                              {stageIndex === 2 &&
+                                 <>
+                                    <div className='points point-6'>
+                                       <span></span>
+                                       <div>01</div>
+                                    </div>
+                                 </>
+                              }
+                              {stageIndex === 3 &&
+                                 <>
+                                    <div className='points point-7'>
+                                       <span></span>
+                                       <div>01</div>
+                                    </div>
+                                 </>
+                              }
                            </div>
-                           <div className='points'>
-                              <span></span>02
-                           </div>
-                           <div className='points'>
-                              03 <span></span>
-                           </div>
-                           <div className='points'>
-                              <span></span>
-                              <div>04</div>
-                           </div>
-                           <div className='points'>
-                              05 <span></span>
-                           </div>
-                           <div className='points'>
-                              <div>06</div> <span></span>
-                           </div>
-                           <div className='points'>
-                              07 <span></span>
-                           </div>
+                           <img src={MapImg} alt='Map' />
                         </div>
-                        <img src={MapImg} alt='Map' />
-                     </div>
-                  </Col>
-               </Row>
-            </Container>
-         </section>
+                     </Col>
+                  </Row>
+               </Container>
+               <div className='right-numbers'>
+                  <ul>
+                     {stageIndex === 1 &&
+                        <>
+                           <li className="right-1">01</li>
+                           <li className="right-2">02</li>
+                           <li className="right-3">03</li>
+                           <li className="right-4">04</li>
+                           <li className="right-5">05</li>
+                        </>
+                     }
+                     {stageIndex === 2 &&
+                        <li className="right-6">01</li>
+                     }
+                     {stageIndex === 3 &&
+                        <li className="right-7">01</li>
+                     }
+                  </ul>
+               </div>
+            </section>
+         }
       </div>
    )
 };
@@ -173,10 +220,10 @@ export const Sliders = [
       stage: "Selection",
       desc: "We are selecting new Project",
       application: "Application",
-      application_number: 7,
+      application_number: 6,
       month: 1,
       world: 6,
-      banner: "/impact/5309059.jpg",
+      banner: "/impact/5309059.png",
       projects: [
          {
             number: "Lynx Vr",
@@ -214,10 +261,10 @@ export const Sliders = [
       stage: "Incubation",
       desc: "We are incubating new Project!",
       application: "Incubation",
-      application_number: 2,
+      application_number: 1,
       month: 3,
-      world: 2,
-      banner: "/impact/5335415.jpg",
+      world: 1,
+      banner: "/impact/5335415.png",
       projects: [
          {
             number: "FlyOut",
@@ -231,10 +278,10 @@ export const Sliders = [
       stage: "Launching",
       desc: "We are launching new Project!",
       application: "Launching",
-      application_number: 2,
-      month: 2,
-      world: 2,
-      banner: "/impact/5072310.jpg",
+      application_number: 1,
+      month: 1,
+      world: 1,
+      banner: "/impact/5072310.png",
       projects: [
          {
             number: "Traccy Connect",
@@ -248,10 +295,10 @@ export const Sliders = [
       stage: "Monitoring",
       desc: "We are monitoring new Project!",
       application: "Monitoring",
-      application_number: 2,
+      application_number: 0,
       month: 6,
-      world: 2,
-      banner: "/impact/2328116.jpg",
+      world: 0,
+      banner: "/impact/2328116.png",
       projects: []
    }
 ]

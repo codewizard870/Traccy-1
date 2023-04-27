@@ -92,10 +92,10 @@ const TraccyConnect = () => {
                   <div className="selection">
                     <span className="number">7’500’000 $</span>
                   </div>
-                  <div className="project-list-button" onClick={() => onConnect(0)}>
+                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
                     <div className="list-indicator" />
                     <span>Project List</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="stage-right">
                   <div className="processing"><span>Processing Time</span></div>
