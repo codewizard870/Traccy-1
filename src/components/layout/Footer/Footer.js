@@ -14,11 +14,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <Container>
-        <Row>
+        {/* <Row>
           <Col>
             <Divider />
           </Col>
-        </Row>
+        </Row> */}
         <Row className="footer-upper">
           <Col lg='7'>
             <Row>
