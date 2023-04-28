@@ -82,6 +82,16 @@ const ImpactThroughTraccy = () => {
       intro.addEventListener("scroll", handleScroll);
       return () => intro.removeEventListener("scroll", handleScroll);
    }, [])
+
+   const handleDot = (index) => {
+      const intro = document.getElementById("intro-wrapper");
+      intro.scrollTo({
+         top: intro.clientHeight * index,
+         left: 0,
+         behavior: "smooth",
+      });
+      console.log(index, intro.clientHeight)
+   }
    return (
       <>
          <div className='itt-wrapper' onClick={onClose}>
@@ -102,15 +112,6 @@ const ImpactThroughTraccy = () => {
                            <div className="page-1-right">
                               <img src="/impact/intro/page-1-logo.png" alt="logo" />
                            </div>
-                           <div className="page-number">
-                              <span>01</span>
-                              <div className="page-more">
-                                 <span>see more</span>
-                                 <div className="page-button">
-
-                                 </div>
-                              </div>
-                           </div>
                         </div>
                         <div className="page-wrapper page-2">
                            <div className="page-2-left">
@@ -123,6 +124,15 @@ const ImpactThroughTraccy = () => {
                                  sells our tokens working in third sells<br />
                                  our tokens working in third
                               </p>
+                           </div>
+                           <div className="page-number">
+                              <h1>01</h1>
+                              <div className="page-more">
+                                 <span>see more</span>
+                                 <div className="page-button">
+                                    <img src="/impact/right-arrow.svg" alt="backarrow" />
+                                 </div>
+                              </div>
                            </div>
                         </div>
                         <div className="page-wrapper page-3">
@@ -140,6 +150,16 @@ const ImpactThroughTraccy = () => {
                            <div className="page-3-right">
                               <img src="/impact/intro/page-3-logo.png" alt="logo" />
                            </div>
+                           <div className="page-number">
+                              <h1>02</h1>
+                              <div className="page-more">
+                                 <span>see more</span>
+                                 <div className="page-button">
+                                    <img src="/impact/right-arrow.svg" alt="backarrow" />
+
+                                 </div>
+                              </div>
+                           </div>
                         </div>
                         <div className="page-wrapper page-4">
                            <div className="page-4-left">
@@ -153,13 +173,28 @@ const ImpactThroughTraccy = () => {
                                  our tokens working in third<br />
                               </p>
                            </div>
+                           <div className="page-number">
+                              <h1>03</h1>
+                              <div className="page-more">
+                                 <span>SUBSCRIBE</span>
+                                 <div className="page-button">
+                                    <img src="/impact/right-arrow.svg" alt="backarrow" />
+                                 </div>
+                              </div>
+                           </div>
                         </div>
 
                         <div className="intro-dots">
-                           <div className="intro-dot"></div>
-                           <div className="intro-dot"></div>
-                           <div className="intro-dot"></div>
-                           <div className="intro-dot"></div>
+                           <div className="intro-dot" onClick={() => handleDot(0)}></div>
+                           <div className="intro-dot" onClick={() => handleDot(1)}></div>
+                           <div className="intro-dot" onClick={() => handleDot(2)}></div>
+                           <div className="intro-dot" onClick={() => handleDot(3)}></div>
+                        </div>
+                        <div className='social-icon-list'>
+                           <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                           <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                           <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                           <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                         </div>
                      </div>
                   </div>
