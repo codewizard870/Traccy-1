@@ -1,0 +1,65 @@
+@import "../../../assets/scss/variables.scss";
+
+.popup {
+  position: absolute;
+  z-index: 2;
+  img {
+    width: auto;
+    height: auto;
+    @media screen and (max-width: 767px) {
+      width: 100px;
+    }
+  }
+  .popup-inner {
+    position: relative;
+    .icon {
+      fill: $white;
+      width: 16px;
+      cursor: pointer;
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+    }
+  }
+}
+.popup.popup-1 {
+  left: 61%;
+  top: 32%;
+  @media screen and (max-width: 767px) {
+    left: 53%;
+    top: 17%;
+  }
+}
+.popup.popup-2 {
+  left: 60%;
+  top: 32%;
+  @media screen and (max-width: 767px) {
+    left: 58%;
+    top: 18%;
+  }
+}
+.popup.popup-3 {
+  left: 32%;
+  top: 35%;
+  @media screen and (max-width: 767px) {
+    left: 22%;
+    top: 20%;
+  }
+}
+.popup.popup-4 {
+  left: 43%;
+  top: 16%;
+  @media screen and (max-width: 767px) {
+    left: 45;
+    top: 16%;
+  }
+}
+.popup.popup-5 {
+  left: 31%;
+  top: 27%;
+  @media screen and (max-width: 767px) {
+    left: 22%;
+    top: 18%;
+  }
+}
