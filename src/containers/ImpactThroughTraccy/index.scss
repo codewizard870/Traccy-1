@@ -1393,7 +1393,17 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        position: relative;
 
+        &::before{
+          position: absolute;
+          content: "";
+          width: 210px;
+          height: 100%;
+          backdrop-filter: blur(10px);
+          z-index: 0;
+        }
+        
         .title {
           display: flex;
           align-items: center;
@@ -1417,6 +1427,7 @@
           cursor: pointer;
           overflow: hidden;
           backdrop-filter: blur(10px);
+          z-index: 1;
 
           img {
             width: 150px;
