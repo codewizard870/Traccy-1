@@ -62,9 +62,10 @@ const TraccyToken = () => {
         speed: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
-        vertical: true,
-        verticalSwiping: true,
-        swipeToSlide: true,
+        // vertical: true,
+        // verticalSwiping: true,
+        // swipeToSlide: true,
+        fade: true,
         customPaging: function (i) {
             return (
                 <a>
