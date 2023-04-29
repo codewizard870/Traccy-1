@@ -8,7 +8,6 @@ import "../../assets/scss/plugins/slick-slider/slick.min.scss";
 import "../../assets/scss/plugins/slick-slider/slick-theme.min.scss"
 import './index.scss';
 
-import hoverVideo from '../../assets/images/hover-video.gif';
 import { useTranslation } from 'react-i18next';
 
 function NextArrow(props) {
@@ -114,7 +113,7 @@ const Home = () => {
                   <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/traccy-token")} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src={hoverVideo} className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG-Gif-Trial2.gif" className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>01</h4>
                            <Divider />
@@ -124,7 +123,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{marginLeft: "3px"}} />
+                           <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{marginLeft: "3px", marginTop: "5px", width: "65px", height: "65px"}} />
                         </div>
                         <div className='desc-text'>
                            <h2>TRCY Connect</h2>
@@ -147,7 +146,7 @@ const Home = () => {
                   <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/impact-through-traccy")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src={hoverVideo} className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG---IMP.gif" className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>02</h4>
                            <Divider />
@@ -180,7 +179,7 @@ const Home = () => {
                   <div  onClick = {() => history.push("/about")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src={hoverVideo} className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG---abt-us.gif" className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>03</h4>
                            <Divider />
@@ -212,7 +211,7 @@ const Home = () => {
                   <div onMouseOver={() => slickGoTo(4)}  onClick = {() => history.push("/become-part")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src={hoverVideo} className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG---BCP.gif" className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>04</h4>
                            <Divider />
@@ -244,7 +243,7 @@ const Home = () => {
                   <div onMouseOver={() => slickGoTo(4)} onClick = {() => history.push("/invest")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src={hoverVideo} className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG---Line.gif" className="fog-img" alt="hover" />
                         <div className='slide-number'>
                            <h4>05</h4>
                            <Divider />
