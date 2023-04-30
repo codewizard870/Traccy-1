@@ -251,17 +251,20 @@
     .stage-wrapper {
       display: flex;
       margin-top: 150px;
+      justify-content: center;
       height: calc(100vh - 100px);
       @media screen and (max-width: 767px) {
         margin-top: 150px;
       }
+
       .stage-main {
         display: flex;
         justify-content: center;
-        width: 100%;
-        gap: 10px;
+        width: 80%;
+        gap: 100px;
         @media screen and (max-width: 767px) {
-          //  flex-direction: column;
+          width: 100%;
+          gap: 10px;
         }
         .stage-left {
           display: flex;
@@ -295,7 +298,6 @@
             font-size: 40px;
             font-weight: 700;
             line-height: 150%;
-            width: 70%;
             @media screen and (max-width: 767px) {
               font-size: 24px;
               line-height: 150%;

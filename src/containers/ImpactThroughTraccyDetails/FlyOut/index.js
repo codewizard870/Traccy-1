@@ -87,7 +87,11 @@ const FlyOut = () => {
                   <h1>
                     FlyOUT
                   </h1>
-                  <span className="desc">We are changing the Solar Technology</span>
+                  <span className="desc">
+                    Automatic misting System to
+                    reduce Mosquito Population
+                    organically
+                  </span>
                   <span className="application">Fundraising required</span>
                   <div className="selection">
                     <span className="number">3’230’000 $</span>
@@ -101,7 +105,7 @@ const FlyOut = () => {
                   <div className="processing"><span>Processing Time</span></div>
                   <div className="processing-desc">
                     <span>9</span>
-                    <span>month</span>
+                    <span>months</span>
                   </div>
                   <div className="world"><span>Break Event Point</span></div>
                   <div className="world-desc">

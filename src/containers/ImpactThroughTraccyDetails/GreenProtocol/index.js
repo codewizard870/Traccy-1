@@ -68,7 +68,7 @@ const GreenProtocol = () => {
                   <h1>
                     Green Protocol
                   </h1>
-                  <span className="desc">NFT fractionation for ownership of Green asset in the real world </span>
+                  <span className="desc">NFT fractionation for ownership<br/> of Green asset in the real world </span>
                   <span className="application">Fundraising required</span>
                   <div className="selection">
                     <span className="number">7’500’000 $</span>
@@ -82,7 +82,7 @@ const GreenProtocol = () => {
                   <div className="processing"><span>Processing Time</span></div>
                   <div className="processing-desc">
                     <span>4</span>
-                    <span>month</span>
+                    <span>months</span>
                   </div>
                   <div className="world"><span>Break Event Point</span></div>
                   <div className="world-desc">

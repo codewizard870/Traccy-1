@@ -90,12 +90,10 @@ const Lynx = () => {
                   <h1>
                     LynxVerse
                   </h1>
-                  <span className="desc">Lynxverse is a metaverse game designed
-                    for mental health and well being with
-                    implementation of cognitive therapy behavior
-                    scenarios where users can experience a therapy
-                    in a safe and secure manner, without the need
-                    for constant human interaction.</span>
+                  <span className="desc">
+                    Safe and cognitive therapy
+                    scenarios for mental health
+                  </span>
                   <span className="application">Fundraising required</span>
                   <div className="selection">
                     <span className="number">7’500’000 $</span>
@@ -109,7 +107,7 @@ const Lynx = () => {
                   <div className="processing"><span>Processing Time</span></div>
                   <div className="processing-desc">
                     <span>4</span>
-                    <span>month</span>
+                    <span>months</span>
                   </div>
                   <div className="world"><span>Break Event Point</span></div>
                   <div className="world-desc">
@@ -181,7 +179,8 @@ const Lynx = () => {
                                 Anonymous game on the metaverse: Users can play the game scenarios without giving away any personal information
                               </li>
                               <li>
-                                Scenario-based dynamic gameplay: Scenarios are scientifically constructed to target specific mental health issues and can be targeted towards key groups.
+                                Scenario-based dynamic gameplay:
+                                Scenarios are scientifically constructed to target specific mental health issues and can be targeted towards key groups.
                               </li>
                             </ul>
                           </p>
@@ -249,7 +248,7 @@ const Lynx = () => {
             </Col>
           </Row>
         </Container>
-        <RightNumbers showContent={showContent}/>
+        <RightNumbers showContent={showContent} />
       </section>
     </div>
   )

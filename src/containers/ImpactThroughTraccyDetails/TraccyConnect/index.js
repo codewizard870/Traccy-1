@@ -87,7 +87,9 @@ const TraccyConnect = () => {
                   <h1>
                     Traccy Connect
                   </h1>
-                  <span className="desc">Investment opportunity with Impact on environment and people</span>
+                  <span className="desc">
+                    Impactful Projects through Asset- <br />Backed Tokenization Platform
+                  </span>
                   <span className="application">Fundraising required</span>
                   <div className="selection">
                     <span className="number">7’500’000 $</span>
@@ -101,7 +103,7 @@ const TraccyConnect = () => {
                   <div className="processing"><span>Processing Time</span></div>
                   <div className="processing-desc">
                     <span>4</span>
-                    <span>month</span>
+                    <span>months</span>
                   </div>
                   <div className="world"><span>Break Event Point</span></div>
                   <div className="world-desc">
@@ -180,7 +182,7 @@ const TraccyConnect = () => {
                         </div>
                       </div>
                       <div className='right-col'>
-                        <img src="/impact/5335418.png" alt="machine" />
+                        <img src="/impact/traccy-connect/coin.png" alt="machine" />
                         <h1>Traccy Connect</h1>
                         <h2>Invest in Impact, make changes!</h2>
                         <p>
