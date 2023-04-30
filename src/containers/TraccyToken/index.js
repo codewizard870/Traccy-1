@@ -140,9 +140,9 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>The <span style={{ fontWeight: 'bold' }}>Ecosystem</span> that optimally combines <span style={{ fontWeight: 'bold' }}>digital</span> and <span style={{ fontWeight: 'bold' }}>real Assets</span></h1>
+                            <h1>The <span style={{ fontWeight: 'bold' }}>Platform</span> that optimally combines <span style={{ fontWeight: 'bold' }}>digital</span> and <span style={{ fontWeight: 'bold' }}>real Assets</span></h1>
                             <p>
-                                Buy our TRCY Token and profit from unlimited access to our exclusive services, explore our sustainable projects and use your voting power to create an impact through our platform.
+                                With the TRCYC Security Token, you become a participant in the profits of Traccy Connect, the impact platform through which our sustainable projects, as well as exclusive services are handled
                             </p>
                             <ul>
                                 <li>
@@ -271,7 +271,7 @@ const TraccyToken = () => {
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'>Why <span>Traccy</span> Connect?</h1>
-                            <p className='main-heading-text'>Our business model is supported by the following 4 pillars</p>
+                            <p className='main-heading-text'>Our business model is supported by the following four pillars</p>
                         </Col>
                     </Row>
                     <Row>
@@ -281,7 +281,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' /> */}
                                     <img className="icon" src="/traccy-token/lab.svg" alt="lab" />
                                 </div>
-                                <h4>TRCY LAB</h4>
+                                <h4>TRACCY LAB</h4>
                                 <p>
                                     {t("token:trcylab")}
                                 </p>
@@ -305,7 +305,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='token' viewbox='0 0 50.148 59.189' /> */}
                                     <img className="icon" src="/traccy-token/token.svg" alt="token" />
                                 </div>
-                                <h4>TRCY</h4>
+                                <h4>TRCYC TOKEN</h4>
                                 <p>
                                     {t("token:token")}
                                 </p>
@@ -317,7 +317,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
                                     <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
-                                <h4>IMPACT</h4>
+                                <h4>TRACCY CONNECT</h4>
                                 <p>
                                     {t("token:connect")}
                                 </p>
@@ -347,7 +347,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
                                                     </div>
                                                     <h3>Community Access</h3>
-                                                    <p> We will give you full access to the platform and became part of our community</p>
+                                                    <p> You  will get full access to the platform and became part of our community</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -366,8 +366,8 @@ const TraccyToken = () => {
                                                     <div className='icon-circle'>
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
-                                                    <h3>Direct Partecipation</h3>
-                                                    <p> We give you access to all the new projects STO</p>
+                                                    <h3>Direct Participation</h3>
+                                                    <p>You will get access to all the new projects STO</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -387,7 +387,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='voting-power-icon' viewbox='0 0 50.148 59.189' />
                                                     </div>
                                                     <h3>Voting Power</h3>
-                                                    <p>You will be able to vote and decide on Tracct Connect</p>
+                                                    <p>Through Traccy Connect you will be able to vote and decide on Projects</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -524,8 +524,10 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col>
-                            <h1 className='main-heading text-center'><span> Platform  </span> </h1>
-                            <p className='main-heading-text'>{t("token:platform")}</p>
+                            <h1 className='main-heading text-center'>
+                                <span> A glimpse of the Traccy Connect Platform </span>
+                            </h1>
+                            {/* <p className='main-heading-text'>{t("token:platform")}</p> */}
                         </Col>
                     </Row>
                     <Row>

@@ -1,14 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, Steps } from 'antd';
+import React from 'react';
 import { SvgIcon } from '../../components/common';
 import './index.scss';
 
 import Traccyicon from '../../assets/images/icon.png';
-import LogoLight from '../../assets/images/logo-light.png';
-import { Navbar } from '../../components/layout';
 import Title from './Title';
-import FunctionTitle from './FunctionTitle';
 import FilesWrapper from './FilesWrapper';
 import Information from './Information';
 

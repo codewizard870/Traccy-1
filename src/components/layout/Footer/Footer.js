@@ -43,7 +43,7 @@ const Footer = () => {
               <Col lg='4'>
                 <h3>Social Media</h3>
                 <ul>
-                  <li>FaceBook</li>
+                  <li>Facebook</li>
                   <li>Telegram </li>
                   <li>Twitter  </li>
                   <li>Linkedin </li>
@@ -54,7 +54,7 @@ const Footer = () => {
           <Col lg='1'></Col>
           <Col lg='4' className="subscribe-col">
             <h3>Connect your Wallet </h3>
-            <p>Connect you wallet for partecipate to STO  </p>
+            <p>Connect you wallet to partecipate in STO  </p>
             <Button type="primary" onClick={handleClick} id="footer-wallet">Connect Wallet</Button>
           </Col>
         </Row>

@@ -62,7 +62,7 @@ const FormInformationStep = () => {
                 <Col lg='6'>
                     <Form.Item
                         name="interestedas"
-                        label={t("interest")}
+                        label={t("Interest")}
                         rules={[{ required: true, message: 'Please Enter intertests!' }]}
                     >
                         <Select

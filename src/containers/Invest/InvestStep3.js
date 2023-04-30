@@ -165,7 +165,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
             </div>
             <div className="input-title">
               <span>{t("buy:title")} <span style={{ color: "red" }}>*</span></span>
-              <input onChange={handleTitle} placeholder="Invest Name" />
+              <input onChange={handleTitle} placeholder="Investment Name" />
             </div>
             <div className="input-email">
               <span>Email <span style={{ color: "red" }}>*</span></span>

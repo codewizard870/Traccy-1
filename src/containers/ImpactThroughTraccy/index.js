@@ -221,7 +221,7 @@ const ImpactThroughTraccy = () => {
                                     <span className="application">{data.application}</span>
                                     <div className="selection">
                                        <span className="number">{data.application_number}</span>
-                                       <span className="selection-desc">selection</span>
+                                       <span className="selection-desc">selections</span>
                                        <div className="indicator" />
                                     </div>
                                     <div className="project-list-button" onClick={() => onConnect(index)}>
@@ -233,12 +233,12 @@ const ImpactThroughTraccy = () => {
                                     <div className="processing"><span>Processing Time</span></div>
                                     <div className="processing-desc">
                                        <span>{data.month}</span>
-                                       <span>month</span>
+                                       <span>Months</span>
                                     </div>
                                     <div className="world"><span>World Location</span></div>
                                     <div className="world-desc">
                                        <span>{data.world}</span>
-                                       <span>countries</span>
+                                       <span>Countries</span>
                                     </div>
                                  </div>
                               </div>
@@ -359,7 +359,7 @@ const ImpactThroughTraccy = () => {
 export const Sliders = [
    {
       stage: "Selection",
-      desc: "We are selecting new Project",
+      desc: "We are selecting new Projects",
       application: "Application",
       application_number: 6,
       month: 1,
@@ -417,7 +417,7 @@ export const Sliders = [
    },
    {
       stage: "Launching",
-      desc: "We are launching new Project!",
+      desc: "We are launching new Projects",
       application: "Launching",
       application_number: 1,
       month: 1,
@@ -434,7 +434,7 @@ export const Sliders = [
    },
    {
       stage: "Monitoring",
-      desc: "We are monitoring new Project!",
+      desc: "We are monitoring new Projects",
       application: "Monitoring",
       application_number: 0,
       month: 6,

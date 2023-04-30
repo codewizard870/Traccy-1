@@ -44,7 +44,7 @@ const SentStep = () => {
     return (
         <div className='sent-wrapper'>
             <h2>Your request was successfully sent </h2>
-            <p>All set! Your transaction is pending and a Rich-Uncles <br /> Representative will be in touch</p>
+            <p>All set! Your transaction is pending and a RichUncle <br /> Representative will be in touch</p>
             <Button type='primary'>Get our Newsletter </Button>
             <h2>Shared information </h2>
             <Slider {...settings}>

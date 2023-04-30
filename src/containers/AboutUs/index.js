@@ -421,12 +421,12 @@ const OURTEAM = [
     {
         image: "/about-us/marko.png",
         name: "Marko Vitez",
-        role: "Full stack developer & smart contracts",
+        role: "Full Stack Developer & Smart Contracts",
     },
     {
         image: "/about-us/pirda.png",
         name: "Pirda Fajirati",
-        role: "Graphic Designer and Ui/Ux",
+        role: "Graphic Designer & UI/UX",
     },
     {
         image: "/about-us/fidelius.png",
@@ -440,8 +440,8 @@ const OURTEAM = [
     },
     {
         image: "/about-us/julia.png",
-        name: "Julia Neumann",
-        role: "Business Developer",
+        name: "Eric Lee",
+        role: "Full Stack Developer",
     },
     {
         image: "/about-us/yves.png",

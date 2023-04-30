@@ -23,8 +23,8 @@ const InvestStep2 = ({onPrev, onNext}) => {
   return (
     <InvestWrapper>
       <div className="invest-step2-body0">
-        <span>Input your Investment Amount</span>
-        <span>Please select the chain and tokens, enter amount and we will convert the TRCY amount for you</span>
+        <span>Enter your Investment Amount</span>
+        <span>Please select the chain and tokens, enter the amount and we will convert the TRCY amount for you</span>
         <div className="selector-container">
           <ChainSelector />
           <AmountInput />
