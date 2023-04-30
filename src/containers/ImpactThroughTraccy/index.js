@@ -3,7 +3,7 @@ import { Container, Row, Col, SvgIcon } from '../../components/common';
 import { Drawer } from 'antd';
 import './index.scss';
 
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 
 import MapImg from '../../assets/images/map.png';
@@ -12,7 +12,17 @@ import { useEffect } from 'react';
 
 const ImpactThroughTraccy = () => {
    const router = useHistory();
+   const { step } = useParams();
+
    const slider = React.useRef(null);
+   useEffect(() => {
+      let iStep = parseInt(step);
+
+      if (iStep >= 0 && iStep < 5) {
+         const thumbs = document.getElementsByClassName("thumb-col");
+         thumbs[iStep].click();
+      }
+   }, [step])
    const settings2 = {
       dots: true,
       infinite: false,
@@ -27,7 +37,7 @@ const ImpactThroughTraccy = () => {
       ),
       customPaging: i => (
          <div className='thumb-col-main impact-dots'>
-            {i === 0 && <div></div>}
+            {i === 0 && <div className='thumb-col first-thumb'></div>}
             {i === 1 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
             {i === 2 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
             {i === 3 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
@@ -90,7 +100,6 @@ const ImpactThroughTraccy = () => {
          left: 0,
          behavior: "smooth",
       });
-      console.log(index, intro.clientHeight)
    }
    return (
       <>
@@ -275,23 +284,23 @@ const ImpactThroughTraccy = () => {
                               <div className='project-center'>
                                  {stageIndex === 1 &&
                                     <>
-                                       <div className='points point-1'>
+                                       <div className='points point-1' onClick={() => router.push("/impact-through-traccy-details/lynx")}>
                                           <span></span>
                                           <div>01</div>
                                        </div>
-                                       <div className='points point-2'>
+                                       <div className='points point-2' onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>
                                           <span></span>
                                           <div>02</div>
                                        </div>
-                                       <div className='points point-3'>
+                                       <div className='points point-3' onClick={() => router.push("/impact-through-traccy-details/traccy-solar")}>
                                           <span></span>
                                           <div>03</div>
                                        </div>
-                                       <div className='points point-4'>
+                                       <div className='points point-4' onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>
                                           <span></span>
                                           <div>04</div>
                                        </div>
-                                       <div className='points point-5'>
+                                       <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-agro")}>
                                           <span></span>
                                           <div>05</div>
                                        </div>
@@ -299,7 +308,7 @@ const ImpactThroughTraccy = () => {
                                  }
                                  {stageIndex === 2 &&
                                     <>
-                                       <div className='points point-6'>
+                                       <div className='points point-6' onClick={() => router.push("/impact-through-traccy-details/flyout")}>
                                           <span></span>
                                           <div>01</div>
                                        </div>
@@ -307,7 +316,7 @@ const ImpactThroughTraccy = () => {
                                  }
                                  {stageIndex === 3 &&
                                     <>
-                                       <div className='points point-7'>
+                                       <div className='points point-7' onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>
                                           <span></span>
                                           <div>01</div>
                                        </div>
@@ -323,18 +332,18 @@ const ImpactThroughTraccy = () => {
                      <ul>
                         {stageIndex === 1 &&
                            <>
-                              <li className="right-1">01</li>
-                              <li className="right-2">02</li>
-                              <li className="right-3">03</li>
-                              <li className="right-4">04</li>
-                              <li className="right-5">05</li>
+                              <li className="right-1" onClick={() => router.push("/impact-through-traccy-details/lynx")}>01</li>
+                              <li className="right-2" onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>02</li>
+                              <li className="right-3" onClick={() => router.push("/impact-through-traccy-details/traccy-solar")} >03</li>
+                              <li className="right-4" onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>04</li>
+                              <li className="right-5" onClick={() => router.push("/impact-through-traccy-details/traccy-agro")}>05</li>
                            </>
                         }
                         {stageIndex === 2 &&
-                           <li className="right-6">01</li>
+                           <li className="right-6" onClick={() => router.push("/impact-through-traccy-details/flyout")} >01</li>
                         }
                         {stageIndex === 3 &&
-                           <li className="right-7">01</li>
+                           <li className="right-7" onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>01</li>
                         }
                      </ul>
                   </div>

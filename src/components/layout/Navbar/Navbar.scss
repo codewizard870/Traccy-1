@@ -207,6 +207,44 @@
                         }
                     }
                 }
+                .impact-menu-wrapper{
+                    position: relative;
+
+                    .impact-menu{
+                        position: absolute;
+                        display: none;
+                        background: #00000033;
+                        flex-direction: column;
+                        gap: 7px;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin-left: -15px;
+                        margin-top: -18px;
+                        padding: 30px 5px 10px 10px;
+                        
+                        a {
+                            &::after {
+                                width: 0px;
+                            }
+                        }
+                        span {
+                            cursor: pointer;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                    &:hover {
+                        a {
+                            &::after {
+                                width: 0px;
+                            }
+                        }
+                        .impact-menu {
+                            display: flex;
+                        }
+                    }
+                }
             }
 
             .brochure-btn{

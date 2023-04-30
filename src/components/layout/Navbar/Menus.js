@@ -30,10 +30,10 @@ const Menus = () => {
     i18n.changeLanguage(lang_code);
   }
 
-  const lang = localStorage.getItem("lang")??"en";
+  const lang = localStorage.getItem("lang") ?? "en";
   const [defaultLang, setDefaultLang] = useState(lang);
   useEffect(() => {
-    if (lang) 
+    if (lang)
       i18n.changeLanguage(lang);
   }, [i18n, lang]);
 
@@ -63,7 +63,7 @@ const Menus = () => {
               <div className='menu-icon'>
                 <SvgIcon name='tccytoken-icon' viewbox='0 0 24.914 20.444' />
               </div>
-              TRCY Connect
+              TRACCY Connect
             </Link>
           </li>
           <li>
@@ -107,8 +107,15 @@ const Menus = () => {
         <li>
           <NavLink to='/traccy-token'>TRCY CONNECT</NavLink>
         </li>
-        <li>
+        <li className="impact-menu-wrapper">
           <NavLink to='/impact-through-traccy'>IMPACT</NavLink>
+          <div className="impact-menu">
+            <NavLink to='/impact-through-traccy/0'><span>Intro</span></NavLink>
+            <NavLink to='/impact-through-traccy/1'><span>Selection</span></NavLink>
+            <NavLink to='/impact-through-traccy/2'><span>Incubation</span></NavLink>
+            <NavLink to='/impact-through-traccy/3'><span>Launch</span></NavLink>
+            <NavLink to='/impact-through-traccy/4'><span>Monitoring</span></NavLink>
+          </div>
         </li>
         <li>
           <NavLink to='/about'>ABOUT US</NavLink>

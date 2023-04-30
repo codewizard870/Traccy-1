@@ -70,6 +70,11 @@ export const rotues = [
     component: () => <ImpactThroughTraccy />
   },
   {
+    path: "/impact-through-traccy/:step",
+    layout: defaultWhiteHeader,
+    component: () => <ImpactThroughTraccy />
+  },
+  {
     path: "/impact-through-traccy-details/:index/:pIndex",
     layout: defaultWhite,
     component: () => <ImpactThroughTraccyDetails />
