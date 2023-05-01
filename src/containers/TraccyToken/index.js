@@ -59,7 +59,7 @@ const TraccyToken = () => {
         infinite: true,
         autoplay: true,
         autoplaySpeed: 4000,
-        speed: 800,
+        speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
         // vertical: true,

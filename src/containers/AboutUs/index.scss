@@ -532,7 +532,7 @@
   .ourteam-section {
     position: relative;
     margin-top: 200px;
-    margin-bottom: 200px;
+    padding-bottom: 200px;
     @media screen and (max-width: 767px) {
       margin-top: 0px;
       margin-bottom: 50px;
@@ -617,6 +617,7 @@
         img {
           height: 143px;
           border-radius: 50%;
+          background: $white;
           @media screen and (max-width: 767px) {
             height: 120px;
           }
@@ -750,6 +751,7 @@
             img {
               height: 143px;
               border-radius: 50%;
+              background: $white;
               @media screen and (max-width: 767px) {
                 height: 120px;
               }
