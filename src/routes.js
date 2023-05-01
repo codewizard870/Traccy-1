@@ -64,11 +64,11 @@ export const rotues = [
     layout: authLayout,
     component: () => <BecomePart />
   },
-  {
-    path: "/impact-through-traccy",
-    layout: defaultWhiteHeader,
-    component: () => <ImpactThroughTraccy />
-  },
+  // {
+  //   path: "/impact-through-traccy",
+  //   layout: defaultWhiteHeader,
+  //   component: () => <ImpactThroughTraccy />
+  // },
   {
     path: "/impact-through-traccy/:step",
     layout: defaultWhiteHeader,
