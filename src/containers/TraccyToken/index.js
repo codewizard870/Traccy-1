@@ -58,7 +58,7 @@ const TraccyToken = () => {
         dots: true,
         infinite: true,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 8000,
         speed: 1500,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -372,7 +372,7 @@ const TraccyToken = () => {
                                             </div>
                                         </Col>
                                         <Col className='right-col'>
-                                            <img className='center-image' src={Stakingimg} alt='line' />
+                                            <img className='center-image' src="/traccy-token/direct-participant.gif" alt='line' />
                                         </Col>
                                     </Row>
                                 </div>
@@ -392,7 +392,7 @@ const TraccyToken = () => {
                                             </div>
                                         </Col>
                                         <Col className='right-col'>
-                                            <img className='center-image' src={VotingPower} alt='line' />
+                                            <img className='center-image' src="/traccy-token/voting-power.gif" alt='line' />
                                         </Col>
                                     </Row>
                                 </div>

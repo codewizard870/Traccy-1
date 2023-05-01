@@ -438,11 +438,11 @@ const OURTEAM = [
         name: "Gian-Luca Grüter",
         role: "Investor Relations Specialist",
     },
-    {
-        image: "/about-us/julia.png",
-        name: "Eric Lee",
-        role: "Full Stack Developer",
-    },
+    // {
+    //     image: "/about-us/julia.png",
+    //     name: "Eric Lee",
+    //     role: "Full Stack Developer",
+    // },
     {
         image: "/about-us/yves.png",
         name: "Yves Gloggner",
