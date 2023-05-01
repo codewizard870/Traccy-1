@@ -153,7 +153,7 @@ const TraccyAgro = () => {
                           </p>
                         </div>
                         <div className='left-bottom'>
-                          <h1>2</h1>
+                          <h1>12</h1>
                           <div className='small-head'>
                             <p>Construction period</p>
                             <h4>Months</h4>

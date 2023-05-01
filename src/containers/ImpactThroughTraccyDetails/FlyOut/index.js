@@ -314,7 +314,7 @@ const FlyOut = () => {
                   {showContent === 0 &&
                     <div className='popup'>
                       <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
                         <div className="content-wrapper">
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>

@@ -350,7 +350,7 @@ const TraccyConnect = () => {
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
                 <div className='project-center'>
-                  <div className='points' onClick={() => showModal(0)}>
+                  {/* <div className='points' onClick={() => showModal(0)}>
                     <span></span>
                     <div>01</div>
                   </div>
@@ -372,11 +372,11 @@ const TraccyConnect = () => {
                   </div>
                   <div className='points'>
                     07 <span></span>
-                  </div>
+                  </div> */}
                   {showContent === 0 &&
                     <div className='popup'>
                       <div className='popup-inner'>
-                        <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} />
+                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
                         <div className="content-wrapper">
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>
