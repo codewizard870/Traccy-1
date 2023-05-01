@@ -147,7 +147,10 @@ const ImpactThroughTraccy = () => {
                               <h1>01</h1>
                               <div className="page-more">
                                  <span>see more</span>
-                                 <div className="page-button">
+                                 <div 
+                                    className="page-button"
+                                    onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}
+                                 >
                                     <img src="/impact/right-arrow.svg" alt="backarrow" />
                                  </div>
                               </div>
@@ -174,9 +177,11 @@ const ImpactThroughTraccy = () => {
                               <h1>02</h1>
                               <div className="page-more">
                                  <span>see more</span>
-                                 <div className="page-button">
+                                 <div 
+                                    className="page-button" 
+                                    onClick={() => router.push("/traccy-token")}
+                                 >
                                     <img src="/impact/right-arrow.svg" alt="backarrow" />
-
                                  </div>
                               </div>
                            </div>
@@ -199,7 +204,10 @@ const ImpactThroughTraccy = () => {
                               <h1>03</h1>
                               <div className="page-more">
                                  <span>SUBSCRIBE</span>
-                                 <div className="page-button">
+                                 <div 
+                                    className="page-button"
+                                    onClick={() => router.push("/become-part")}
+                                 >
                                     <img src="/impact/right-arrow.svg" alt="backarrow" />
                                  </div>
                               </div>

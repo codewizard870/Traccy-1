@@ -281,7 +281,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' /> */}
                                     <img className="icon" src="/traccy-token/lab.svg" alt="lab" />
                                 </div>
-                                <h4>TRACCY LAB</h4>
+                                <h4>IMPACT</h4>
                                 <p>
                                     {t("token:trcylab")}
                                 </p>
@@ -293,7 +293,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='community' viewbox='0 0 63.185 49.33' /> */}
                                     <img className="icon" src="/traccy-token/community.svg" alt="community" />
                                 </div>
-                                <h4>TRCommunitY</h4>
+                                <h4>COMMUNITY</h4>
                                 <p>
                                     {t("token:community")}
                                 </p>
@@ -305,7 +305,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='token' viewbox='0 0 50.148 59.189' /> */}
                                     <img className="icon" src="/traccy-token/token.svg" alt="token" />
                                 </div>
-                                <h4>TRCYC TOKEN</h4>
+                                <h4>STO</h4>
                                 <p>
                                     {t("token:token")}
                                 </p>
@@ -317,7 +317,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
                                     <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
-                                <h4>TRACCY CONNECT</h4>
+                                <h4>FINALCIAL SERVICES</h4>
                                 <p>
                                     {t("token:connect")}
                                 </p>
