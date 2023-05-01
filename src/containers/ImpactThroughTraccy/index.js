@@ -81,7 +81,7 @@ const ImpactThroughTraccy = () => {
 
          const impactDots = document.getElementsByClassName("impact-dots");
          for (let i = 0; i < impactDots.length; i++) {
-            if (c === 3)
+            if (c === 0)
                impactDots[i].style.display = "block";
             else
                impactDots[i].style.display = "none"
@@ -108,9 +108,11 @@ const ImpactThroughTraccy = () => {
                <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
                <Slider {...settings2} ref={slider}>
                   <div>
-                     <div className='about-banner' style={{ backgroundImage: `url("/impact/intro.png")` }}></div>
                      <div className="intro-wrapper" id="intro-wrapper">
-                        <div className="page-wrapper page-1">
+                        <div
+                           className="page-wrapper page-1"
+                           style={{ backgroundImage: `url("/impact/intro-1-background.png")` }}
+                        >
                            <div className="page-1-left">
                               <h1>Impact<br />Through<br />Traccy </h1>
                               <p>Traccy sells our tokens working in third Traccy<br />
@@ -122,16 +124,23 @@ const ImpactThroughTraccy = () => {
                               <img src="/impact/intro/page-1-logo.png" alt="logo" />
                            </div>
                         </div>
-                        <div className="page-wrapper page-2">
+                        <div
+                           className="page-wrapper page-2"
+                           style={{ backgroundImage: `url("/impact/intro-2-background.png")` }}
+                        >
                            <div className="page-2-left">
                               <img src="/impact/intro/page-2-logo.png" alt="logo" />
                            </div>
                            <div className="page-2-right">
                               <h1>Trigger</h1>
                               <p>
-                                 Traccy sells our tokens working in third Traccy<br />
-                                 sells our tokens working in third sells<br />
-                                 our tokens working in third
+                                 Traccy Lab is a dynamic space where sustainable impact projects
+                                 are developed and reviewed. Our team of experts collaborates with entrepreneurs, startups and organizations to create innovative
+                                 solutions that tackle social and environmental challenges. Our
+                                 mission is to incubate and accelerate projects that make a positive
+                                 impact on the world, while providing resources  and mentorship to
+                                 help them succeed. From ideation to execution, Traccy Lab is
+                                 committed to fostering a culture of impact and sustainability.
                               </p>
                            </div>
                            <div className="page-number">
@@ -144,16 +153,18 @@ const ImpactThroughTraccy = () => {
                               </div>
                            </div>
                         </div>
-                        <div className="page-wrapper page-3">
+                        <div
+                           className="page-wrapper page-3"
+                           style={{ backgroundImage: `url("/impact/intro-3-background.png")` }}
+                        >
                            <div className="page-3-left">
                               <h1>Engage</h1>
                               <p>
-                                 Traccy sells our tokens working in third Traccy<br />
-                                 sells our tokens working in third sells<br />
-                                 our tokens working in third<br /><br /><br />
-                                 Traccy sells our tokens working in third Traccy<br />
-                                 sells our tokens working in third sells<br />
-                                 our tokens working in third
+                                 The Community of Impact Investors invest globally
+                                 in proven high-demand business models in developing
+                                 countries such as agriculture, real estate, education,
+                                 energy supply and many more.
+                                 Unlike traditional investors, the Traccy Community goes beyond the pursuit of financial returns and extends to generating value for our ecosystem.
                               </p>
                            </div>
                            <div className="page-3-right">
@@ -170,16 +181,18 @@ const ImpactThroughTraccy = () => {
                               </div>
                            </div>
                         </div>
-                        <div className="page-wrapper page-4">
+                        <div
+                           className="page-wrapper page-4"
+                           style={{ backgroundImage: `url("/impact/intro-4-background.png")` }}
+                        >
                            <div className="page-4-left">
                               <img src="/impact/intro/page-4-logo.png" alt="logo" />
                            </div>
                            <div className="page-4-right">
                               <h1>Connect</h1>
                               <p>
-                                 Traccy sells our tokens working in third Traccy<br />
-                                 sells our tokens working in third sells<br />
-                                 our tokens working in third<br />
+                                 Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues. <br /><br /><br />
+                                 We facilitates access to the international market for people in developing countries, allowing them to participate in projects and benefit from low-cost services, which have a positive impact on their daily lives.
                               </p>
                            </div>
                            <div className="page-number">

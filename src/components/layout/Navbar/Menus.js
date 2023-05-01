@@ -67,7 +67,7 @@ const Menus = () => {
             </Link>
           </li>
           <li>
-            <Link to='/impact-through-traccy'>
+            <Link to='/impact-through-traccy/0'>
               <div className='menu-icon'>
                 <SvgIcon name='itc-icon' viewbox='0 0 22.018 17.733' />
               </div>
