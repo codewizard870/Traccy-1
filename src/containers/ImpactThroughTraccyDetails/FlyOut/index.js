@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../../components/common';
 import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
@@ -35,6 +35,16 @@ const FlyOut = () => {
   const [showContent, setShowContent] = useState(0);
   const [contentIndex, setContentIndex] = useState(0);
   const [contentExpand, setContentExpan] = useState(false);
+
+  useEffect(() => {
+    let imgs = document.getElementsByClassName("fly-content-image");
+    for (let i = 0; i < imgs.length; i++) {
+      if (i === contentIndex)
+        imgs[i].classList.add("active");
+      else
+        imgs[i].classList.remove("active");
+    }
+  }, [contentIndex]);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
   const hideModal = () => {
@@ -340,37 +350,37 @@ const FlyOut = () => {
                                 <div className="control-button" onClick={() => setContentIndex(5)}>
                                   <img className="nth7" src="/impact/flyout/content-control/7.png" alt='4' style={{ width: "25px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(6)}>
+                                <div className="control-button">
                                   <img className="nth8" src="/impact/flyout/content-control/8.png" alt='4' style={{ width: "28px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(7)}>
+                                <div className="control-button">
                                   <img className="nth9" src="/impact/flyout/content-control/9.png" alt='4' style={{ width: "25px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(8)}>
+                                <div className="control-button">
                                   <img className="nth10" src="/impact/flyout/content-control/10.png" alt='4' style={{ width: "28px" }} />
                                 </div>
                               </>
                             }
                           </div>
                           <div className="content">
-                            {contentIndex === 0 &&
-                              <img src="/impact/flyout/content/1.svg" alt="1" />
-                            }
-                            {contentIndex === 1 &&
-                              <img src="/impact/flyout/content/2.svg" alt="1" />
-                            }
-                            {contentIndex === 2 &&
-                              <img src="/impact/flyout/content/3.svg" alt="1" />
-                            }
-                            {contentIndex === 3 &&
-                              <img src="/impact/flyout/content/4.svg" alt="1" />
-                            }
-                            {contentIndex === 4 &&
-                              <img src="/impact/flyout/content/5.svg" alt="1" />
-                            }
-                            {contentIndex === 5 &&
-                              <img src="/impact/flyout/content/6.svg" alt="1" />
-                            }
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/1.svg" alt="1" />
+                            </div>
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/2.svg" alt="1" />
+                            </div>
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/3.svg" alt="1" />
+                            </div>
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/4.svg" alt="1" />
+                            </div>
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/5.svg" alt="1" />
+                            </div>
+                            <div className="fly-content-image">
+                              <img  src="/impact/flyout/content/6.svg" alt="1" />
+                            </div>
                           </div>
                         </div>
                       </div>

@@ -1139,21 +1139,28 @@
                 }
               }
               .content {
-                padding: 10px 0;
-                background: linear-gradient(270.07deg, rgba(0, 0, 0, 0.7268) 0.07%, rgba(30, 26, 38, 0.8556) 97.22%);
                 position: relative;
                 width: 450px;
                 height: auto;
 
-                img {
+                div {
+                  padding: 10px 0;
+                  background: linear-gradient(
+                    270.07deg,
+                    rgba(0, 0, 0, 0.7268) 0.07%,
+                    rgba(30, 26, 38, 0.8556) 97.22%
+                  );
                   position: absolute;
                   opacity: 0;
-                  transition: opacity .5s ease;
+                  transition: opacity 0.5s ease;
                   left: 0;
                   top: 0;
-                  width: 100%;
+
+                  img {
+                    width: 100%;
+                  }
                 }
-                img.active{
+                div.active{
                   opacity: 1;
                 }
               }

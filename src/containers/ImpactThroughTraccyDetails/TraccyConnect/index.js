@@ -38,7 +38,7 @@ const TraccyConnect = () => {
   const [contentExpand, setContentExpan] = useState(false);
 
   useEffect(() => {
-    let imgs = document.getElementsByClassName("content-image");
+    let imgs = document.getElementsByClassName("traccy-content-image");
     for (let i = 0; i < imgs.length; i++) {
       if (i === contentIndex)
         imgs[i].classList.add("active");
@@ -426,23 +426,18 @@ const TraccyConnect = () => {
                             }
                           </div>
                           <div className="content">
-                            <img className="content-image" src="/impact/traccy-connect/content/1.svg" alt="1" />
-                            <img className="content-image" src="/impact/traccy-connect/content/2.svg" alt="1" />
-                            <img className="content-image" src="/impact/traccy-connect/content/3.svg" alt="1" />
-                            <img className="content-image" src="/impact/traccy-connect/content/4.png" alt="1" />
-
-                            {/* {contentIndex === 0 &&
+                            <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/1.svg" alt="1" />
-                            }
-                            {contentIndex === 1 &&
+                            </div>
+                            <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/2.svg" alt="1" />
-                            }
-                            {contentIndex === 2 &&
+                            </div>
+                            <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/3.svg" alt="1" />
-                            }
-                            {contentIndex === 3 &&
+                            </div>
+                            <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/4.png" alt="1" />
-                            } */}
+                            </div>
                           </div>
                         </div>
                       </div>
