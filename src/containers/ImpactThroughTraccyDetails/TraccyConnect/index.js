@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../../components/common';
 import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
@@ -10,6 +10,7 @@ import { Link, useHistory } from 'react-router-dom';
 import MapImg from '../../../assets/images/map.png';
 import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
+import Slider from 'react-slick';
 
 const items = [
   {
@@ -35,6 +36,16 @@ const TraccyConnect = () => {
   const [showContent, setShowContent] = useState(0);
   const [contentIndex, setContentIndex] = useState(0);
   const [contentExpand, setContentExpan] = useState(false);
+
+  useEffect(() => {
+    let imgs = document.getElementsByClassName("content-image");
+    for (let i = 0; i < imgs.length; i++) {
+      if (i === contentIndex)
+        imgs[i].classList.add("active");
+      else
+        imgs[i].classList.remove("active");
+    }
+  }, [contentIndex]);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
   const hideModal = () => {
@@ -385,10 +396,10 @@ const TraccyConnect = () => {
                             <div className="control-button" onClick={() => setContentIndex(1)}>
                               <img className="nth2" src="/impact/traccy-connect/content-control/2.svg" alt='2' style={{ width: "29px" }} />
                             </div>
-                            <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
+                            <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth3" src="/impact/traccy-connect/content-control/3.svg" alt='3' style={{ width: "30px" }} />
                             </div>
-                            <div className="control-button" onClick={() => setContentIndex(3)}>
+                            <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />
                             </div>
                             {contentExpand &&
@@ -396,26 +407,31 @@ const TraccyConnect = () => {
                                 <div className="control-button">
                                   <img className="nth5" src="/impact/traccy-connect/content-control/5.svg" alt='4' style={{ width: "25px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(4)}>
+                                <div className="control-button">
                                   <img className="nth6" src="/impact/traccy-connect/content-control/6.svg" alt='4' style={{ width: "28px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(5)}>
+                                <div className="control-button">
                                   <img className="nth7" src="/impact/traccy-connect/content-control/7.svg" alt='4' style={{ width: "25px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(6)}>
+                                <div className="control-button">
                                   <img className="nth8" src="/impact/traccy-connect/content-control/8.png" alt='4' style={{ width: "28px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(7)}>
+                                <div className="control-button">
                                   <img className="nth9" src="/impact/traccy-connect/content-control/9.svg" alt='4' style={{ width: "25px" }} />
                                 </div>
-                                <div className="control-button" onClick={() => setContentIndex(8)}>
+                                <div className="control-button">
                                   <img className="nth10" src="/impact/traccy-connect/content-control/10.png" alt='4' style={{ width: "28px" }} />
                                 </div>
                               </>
                             }
                           </div>
                           <div className="content">
-                            {contentIndex === 0 &&
+                            <img className="content-image" src="/impact/traccy-connect/content/1.svg" alt="1" />
+                            <img className="content-image" src="/impact/traccy-connect/content/2.svg" alt="1" />
+                            <img className="content-image" src="/impact/traccy-connect/content/3.svg" alt="1" />
+                            <img className="content-image" src="/impact/traccy-connect/content/4.png" alt="1" />
+
+                            {/* {contentIndex === 0 &&
                               <img src="/impact/traccy-connect/content/1.svg" alt="1" />
                             }
                             {contentIndex === 1 &&
@@ -426,7 +442,7 @@ const TraccyConnect = () => {
                             }
                             {contentIndex === 3 &&
                               <img src="/impact/traccy-connect/content/4.png" alt="1" />
-                            }
+                            } */}
                           </div>
                         </div>
                       </div>
