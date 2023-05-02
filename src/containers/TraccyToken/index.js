@@ -140,7 +140,12 @@ const TraccyToken = () => {
                 <Container>
                     <Row>
                         <Col lg='6' className="banner-left">
-                            <h1>The <span style={{ fontWeight: 'bold' }}>Platform</span> that optimally combines <span style={{ fontWeight: 'bold' }}>digital</span> and <span style={{ fontWeight: 'bold' }}>real Assets</span></h1>
+                            <h1>
+                                Sustainable<br/>
+                                <span style={{ fontWeight: 'bold' }}>Impact</span> through<br/>
+                                our first <span style={{ fontWeight: 'bold' }}> STO
+                                </span>
+                            </h1>
                             <p>
                                 With the TRCYC Security Token, you become a participant in the profits of Traccy Connect, the impact platform through which our sustainable projects, as well as exclusive services are handled
                             </p>

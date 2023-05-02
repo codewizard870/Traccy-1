@@ -133,7 +133,7 @@ const AboutUs = () => {
                                 Share
                                 <Divider />
                                 <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                 <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                 <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                             </div>
@@ -254,7 +254,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:joas")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -272,7 +272,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:mick")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -290,7 +290,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:farrah")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -308,7 +308,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:dedry")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -326,7 +326,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:andrea")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -344,7 +344,7 @@ const AboutUs = () => {
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
                                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                 </div>
@@ -380,7 +380,7 @@ const AboutUs = () => {
                                 <span className="card-description">{team.role}</span>
 
                                 <div className="card-social">
-                                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
@@ -399,7 +399,7 @@ const AboutUs = () => {
                                         <span className="card-description">{team.role}</span>
 
                                         <div className="card-social">
-                                            <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                                            <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                             <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                             <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                                             <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />

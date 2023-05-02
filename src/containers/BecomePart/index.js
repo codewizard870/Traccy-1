@@ -46,7 +46,7 @@ const BecomePart = () => {
             <div className='leftbar'>
                 <div className='social-icon-list'>
                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                    <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                     <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                     <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                 </div>

@@ -43,9 +43,9 @@ const Footer = () => {
               <Col lg='4'>
                 <h3>Social Media</h3>
                 <ul>
-                  <li>Facebook</li>
                   <li>Telegram </li>
                   <li>Twitter  </li>
+                  <li>Instagram</li>
                   <li>Linkedin </li>
                 </ul>
               </Col>
@@ -67,7 +67,7 @@ const Footer = () => {
           </Col>
           <Col lg='4'>
             <div className='social-icon-list'>
-              <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+              <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
               <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
               <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
               <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />

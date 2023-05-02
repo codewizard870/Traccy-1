@@ -108,16 +108,17 @@ const ImpactThroughTraccy = () => {
                <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
                <Slider {...settings2} ref={slider}>
                   <div>
-                     <div className="intro-wrapper" id="intro-wrapper">
+                     <div className="intro-wrapper" id="intro-wrapper"
+                        style={{ backgroundImage: `url("/impact/intro/background.png")` }}
+                     >
                         <div
                            className="page-wrapper page-1"
-                           style={{ backgroundImage: `url("/impact/intro-1-background.png")` }}
+                        // style={{ backgroundImage: `url("/impact/intro-1-background.png")` }}
                         >
                            <div className="page-1-left">
                               <h1>Impact<br />Through<br />Traccy </h1>
-                              <p>Traccy sells our tokens working in third Traccy<br />
-                                 sells our tokens working in third sells<br />
-                                 our tokens working in third<br />
+                              <p>
+                                 At Traccy, it is all about creating impact. We have built an ecosystem that enables changemakers to invest quickly and securely in sustainable innovations, while also providing qualified project owners with the financing they need. In doing so, we're bridging the gap between funds seeking projects and projects ready to be funded on a global scale.
                               </p>
                            </div>
                            <div className="page-1-right">
@@ -126,7 +127,7 @@ const ImpactThroughTraccy = () => {
                         </div>
                         <div
                            className="page-wrapper page-2"
-                           style={{ backgroundImage: `url("/impact/intro-2-background.png")` }}
+                        // style={{ backgroundImage: `url("/impact/intro-2-background.png")` }}
                         >
                            <div className="page-2-left">
                               <img src="/impact/intro/page-2-logo.png" alt="logo" />
@@ -134,20 +135,14 @@ const ImpactThroughTraccy = () => {
                            <div className="page-2-right">
                               <h1>Trigger</h1>
                               <p>
-                                 Traccy Lab is a dynamic space where sustainable impact projects
-                                 are developed and reviewed. Our team of experts collaborates with entrepreneurs, startups and organizations to create innovative
-                                 solutions that tackle social and environmental challenges. Our
-                                 mission is to incubate and accelerate projects that make a positive
-                                 impact on the world, while providing resources  and mentorship to
-                                 help them succeed. From ideation to execution, Traccy Lab is
-                                 committed to fostering a culture of impact and sustainability.
+                                 Based on market research and considering various criteria such as economic freedom, growth and equity risk in a project country, Traccy Lab selects, and incubates projects that create innovative solutions to social and environmental challenges. Traccy Lab provides resources and mentors to help these projects succeed and strives to foster a culture of impact and sustainability from idea to implementation.
                               </p>
                            </div>
                            <div className="page-number">
                               <h1>01</h1>
                               <div className="page-more">
                                  <span>see more</span>
-                                 <div 
+                                 <div
                                     className="page-button"
                                     onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}
                                  >
@@ -158,16 +153,12 @@ const ImpactThroughTraccy = () => {
                         </div>
                         <div
                            className="page-wrapper page-3"
-                           style={{ backgroundImage: `url("/impact/intro-3-background.png")` }}
+                        // style={{ backgroundImage: `url("/impact/intro-3-background.png")` }}
                         >
                            <div className="page-3-left">
                               <h1>Engage</h1>
                               <p>
-                                 The Community of Impact Investors invest globally
-                                 in proven high-demand business models in developing
-                                 countries such as agriculture, real estate, education,
-                                 energy supply and many more.
-                                 Unlike traditional investors, the Traccy Community goes beyond the pursuit of financial returns and extends to generating value for our ecosystem.
+                                 Engage on Traccy Connect by purchasing your tokens and making a commitment to invest in high-impact projects that address social and environmental challenges. As a community member, you will have access to project participation during the launch phase, enabling you to make a positive impact on the world.
                               </p>
                            </div>
                            <div className="page-3-right">
@@ -177,8 +168,8 @@ const ImpactThroughTraccy = () => {
                               <h1>02</h1>
                               <div className="page-more">
                                  <span>see more</span>
-                                 <div 
-                                    className="page-button" 
+                                 <div
+                                    className="page-button"
                                     onClick={() => router.push("/traccy-token")}
                                  >
                                     <img src="/impact/right-arrow.svg" alt="backarrow" />
@@ -188,7 +179,7 @@ const ImpactThroughTraccy = () => {
                         </div>
                         <div
                            className="page-wrapper page-4"
-                           style={{ backgroundImage: `url("/impact/intro-4-background.png")` }}
+                        // style={{ backgroundImage: `url("/impact/intro-4-background.png")` }}
                         >
                            <div className="page-4-left">
                               <img src="/impact/intro/page-4-logo.png" alt="logo" />
@@ -196,15 +187,14 @@ const ImpactThroughTraccy = () => {
                            <div className="page-4-right">
                               <h1>Connect</h1>
                               <p>
-                                 Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues. <br /><br /><br />
-                                 We facilitates access to the international market for people in developing countries, allowing them to participate in projects and benefit from low-cost services, which have a positive impact on their daily lives.
+                                 Stay connected to sustainable impact by monitoring projects and investments during their execution phase. Collaborate with like-minded community members and support project owners in their mission to make a positive change on society and the environment.
                               </p>
                            </div>
                            <div className="page-number">
                               <h1>03</h1>
                               <div className="page-more">
                                  <span>SUBSCRIBE</span>
-                                 <div 
+                                 <div
                                     className="page-button"
                                     onClick={() => router.push("/become-part")}
                                  >
@@ -221,7 +211,7 @@ const ImpactThroughTraccy = () => {
                            <div className="intro-dot" onClick={() => handleDot(3)}></div>
                         </div>
                         <div className='social-icon-list'>
-                           <SvgIcon name='facebook' viewbox='0 0 34.875 34.664' />
+                           <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                            <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                            <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
                            <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
