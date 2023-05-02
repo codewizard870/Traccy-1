@@ -74,7 +74,7 @@ const BecomePart = () => {
                             <a href='https://drive.google.com/file/d/1O2SMCDtlAMBvQZe9YbFcA16lXX7J9_Nl/view?usp=share_link' target='_blank' rel="noreferrer">
                                 {t("become:terms")}
                             </a>  I
-                            <a href='https://drive.google.com/file/d/1F21d_kCvsnBp3qfSFtXod3Z86p8jNCQJ/view?usp=share_link' target='_blank' rel="noreferrer">
+                            <a href='/Policy.html' target='_blank' rel="noreferrer">
                                 {t("become:privacy")}
                             </a>
                         </div>
