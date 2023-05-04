@@ -86,7 +86,7 @@ const FlyOut = () => {
     <div className='flyout-wrapper' onClick={onClose}>
       <section className='banner-section'>
         <div className='about-banner' style={{ backgroundImage: "url(/impact/flyout/flyout.png)" }}></div>
-        <Link to='/impact-through-traccy/1' className='backarrow'>
+        <Link to='/impact-through-traccy/2' className='backarrow'>
           <img src="/impact/backarrow.svg" alt="backarrow" />
         </Link>
         <div>
@@ -181,7 +181,7 @@ const FlyOut = () => {
                       <div className='left-upper'>
                         <h4>Mosquito System</h4>
                         <p>
-                          Our automatic misting system for mosquito control is a type of insect control system that uses a combination of water and insecticide to create a mist that kills mosquitoes and other flying insects. The misting system is installed in an outdoor area, such as a backyard or patio, and is typically controlled by a timer or a remote control.
+                          Our automatic misting system for mosquito control is a type of insect control system that uses a combination of water and insecticide to create a mist that kills Mosquitoes and other flying insects. The misting system is installed in an outdoor area, such as a backyard or patio, and is typically controlled by a timer or a remote control.
                         </p>
                       </div>
                       <div className='left-bottom'>
@@ -236,15 +236,15 @@ const FlyOut = () => {
                     {tab === "1" &&
                       <div className="second">
                         <h1>Business Model</h1>
-                        <p>Reduce the mosquito population with habing in the same time reduction of sickness like Malaria or Dengue.</p>
+                        <p>Reduce the Mosquito population with having in the same time reduction of diseases like Malaria or Dengue.</p>
                         <div className="second-row">
                           <BussinessModel />
                           <div className="second-col">
                             <h1>Estimation</h1>
-                            <p>Sickness reduction</p>
-                            <h2>2.2 Milion cases </h2>
-                            <p>Hospitalisation saving cost</p>
-                            <h2>$ 660 Milion  </h2>
+                            <p>Disease reduction</p>
+                            <h2>2.2 Million cases </h2>
+                            <p>Hospitalisation saving costs</p>
+                            <h2>$ 660 Million  </h2>
                           </div>
                         </div>
                       </div>
@@ -329,21 +329,27 @@ const FlyOut = () => {
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>
                               <img className="nth1" src="/impact/flyout/content-control/1.svg" alt='1' style={{ width: "30px" }} />
+                              <span className="left">1</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(1)}>
                               <img className="nth2" src="/impact/flyout/content-control/2.svg" alt='2' style={{ width: "29px" }} />
+                              <span className="right">2</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(2)}>
                               <img className="nth3" src="/impact/flyout/content-control/3.svg" alt='3' style={{ width: "30px" }} />
+                              <span className="left">3</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth4" src="/impact/flyout/content-control/4.svg" alt='4' style={{ width: "37px" }} />
+                              <span className="right">4</span>
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth5" src="/impact/flyout/content-control/5.svg" alt='4' style={{ width: "25px" }} />
+                              <span className="left">5</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(4)}>
                               <img className="nth6" src="/impact/flyout/content-control/6.svg" alt='4' style={{ width: "28px" }} />
+                              <span className="right">More</span>
                             </div>
                             {contentExpand &&
                               <>
@@ -364,22 +370,22 @@ const FlyOut = () => {
                           </div>
                           <div className="content">
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/1.svg" alt="1" />
+                              <img src="/impact/flyout/content/1.svg" alt="1" />
                             </div>
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/2.svg" alt="1" />
+                              <img src="/impact/flyout/content/2.svg" alt="1" />
                             </div>
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/3.svg" alt="1" />
+                              <img src="/impact/flyout/content/3.svg" alt="1" />
                             </div>
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/4.svg" alt="1" />
+                              <img src="/impact/flyout/content/4.svg" alt="1" />
                             </div>
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/5.svg" alt="1" />
+                              <img src="/impact/flyout/content/5.svg" alt="1" />
                             </div>
                             <div className="fly-content-image">
-                              <img  src="/impact/flyout/content/6.svg" alt="1" />
+                              <img src="/impact/flyout/content/6.svg" alt="1" />
                             </div>
                           </div>
                         </div>

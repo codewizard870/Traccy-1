@@ -1120,6 +1120,22 @@
                   height: 50px;
                   background: linear-gradient(270.07deg, rgba(30, 26, 38, 0.7626) 0.07%, rgba(0, 0, 0, 0.5822) 100.89%);
 
+                  span {
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    z-index: 10;
+                    transition: opacity 0.5s ease;
+                  }
+                  span.left {
+                    left: -70px;
+                    width: 60px;
+                    text-align: right;
+                  }
+                  span.right {
+                    left: 110px;
+                  }
+
                   &:hover {
                     background: linear-gradient(301.66deg, rgba(65, 60, 60, 0.79) -28.63%, rgba(24, 22, 28, 0.93) 78.08%);
 
@@ -1135,7 +1151,11 @@
                     img.nth4 {
                       content: url("../../../assets/images/impact/traccy-connect/content-control/4.svg");
                     }
+                    span {
+                      opacity: 1;
+                    }
                   }
+
                 }
               }
               .content {

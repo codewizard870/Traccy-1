@@ -1051,6 +1051,21 @@
                     rgba(0, 0, 0, 0.79) 0.07%,
                     rgba(30, 26, 38, 0.93) 97.22%
                   );
+                  span {
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    z-index: 10;
+                    transition: opacity 0.5s ease;
+                  }
+                  span.left {
+                    left: -70px;
+                    width: 60px;
+                    text-align: right;
+                  }
+                  span.right {
+                    left: 110px;
+                  }
 
                   &:hover {
                     img.nth1 {
@@ -1070,6 +1085,9 @@
                     }
                     img.nth6 {
                       content: url("../../../assets/images/impact/flyout/content-control/6.svg");
+                    }
+                    span {
+                      opacity: 1;
                     }
                   }
                 }
