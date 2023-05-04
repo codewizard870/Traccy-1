@@ -56,7 +56,7 @@ const TraccySolar = () => {
     <div className='traccy-solar-wrapper' onClick={onClose}>
       <section className='banner-section'>
         <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-solar/traccy-solar.png)" }}></div>
-        <Link to='/impact-through-traccy' className='backarrow'>
+        <Link to='/impact-through-traccy/1' className='backarrow'>
           <img src="/impact/backarrow.svg" alt="backarrow" />
         </Link>
         <div>

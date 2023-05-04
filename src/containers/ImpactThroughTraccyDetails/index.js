@@ -86,7 +86,7 @@ const ImpactThroughTraccyDetails = () => {
         <div className='itt-dtl-wrapper' onClick={onClose}>
             <section className='banner-section'>
                 <div className='about-banner' style={{ backgroundImage: `url(${Sliders[index ?? 0].banner})` }}></div>
-                <Link to='/impact-through-traccy' className='backarrow'>
+                <Link to='/impact-through-traccy/0' className='backarrow'>
                     <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
                     Back
                 </Link>

@@ -143,7 +143,7 @@ const Home = () => {
                         <LearnMore/>
                      </div>
                   </div>
-                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/impact-through-traccy")}>
+                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/impact-through-traccy/0")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src="/main-menu/BG---IMP.gif" className="fog-img" alt="hover" />

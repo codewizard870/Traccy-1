@@ -57,7 +57,7 @@ const TraccyLab = () => {
     <div className='traccy-lab-wrapper' onClick={onClose}>
       <section className='banner-section'>
         <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-lab/traccy-lab.png)" }}></div>
-        <Link to='/impact-through-traccy' className='backarrow'>
+        <Link to='/impact-through-traccy/1' className='backarrow'>
           <img src="/impact/backarrow.svg" alt="backarrow" />
         </Link>
         <div>

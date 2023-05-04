@@ -18,7 +18,7 @@ const Information = () => {
     },
     {
       label: "Trccy Impact",
-      link: "/impact-through-traccy",
+      link: "/impact-through-traccy/0",
     },
     {
       label: t("library:aboutus"),
