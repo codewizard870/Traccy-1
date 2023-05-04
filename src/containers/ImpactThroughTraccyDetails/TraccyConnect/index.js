@@ -392,15 +392,15 @@ const TraccyConnect = () => {
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>
                               <img className="nth1" src="/impact/traccy-connect/content-control/1.svg" alt='1' style={{ width: "30px" }} />
-                              <span className="left">System</span>
+                              <span className="left">Projects</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(1)}>
                               <img className="nth2" src="/impact/traccy-connect/content-control/2.svg" alt='2' style={{ width: "29px" }} />
-                              <span className="right">Revenue</span>
+                              <span className="right">POVERTY REDUCATION</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth3" src="/impact/traccy-connect/content-control/3.svg" alt='3' style={{ width: "30px" }} />
-                              <span className="left">Search</span>
+                              <span className="left">Job Creation</span>
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />

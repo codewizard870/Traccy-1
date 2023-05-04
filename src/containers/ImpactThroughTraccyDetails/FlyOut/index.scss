@@ -1056,12 +1056,14 @@
                     opacity: 0;
                     top: 0;
                     z-index: 10;
+                    white-space: nowrap;
                     transition: opacity 0.5s ease;
                   }
                   span.left {
-                    left: -70px;
-                    width: 60px;
+                    left: -200px;
+                    width: 190px;
                     text-align: right;
+
                   }
                   span.right {
                     left: 110px;

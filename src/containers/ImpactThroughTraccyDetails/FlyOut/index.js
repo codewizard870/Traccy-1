@@ -329,23 +329,23 @@ const FlyOut = () => {
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>
                               <img className="nth1" src="/impact/flyout/content-control/1.svg" alt='1' style={{ width: "30px" }} />
-                              <span className="left">1</span>
+                              <span className="left">System</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(1)}>
                               <img className="nth2" src="/impact/flyout/content-control/2.svg" alt='2' style={{ width: "29px" }} />
-                              <span className="right">2</span>
+                              <span className="right">Revenue</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(2)}>
                               <img className="nth3" src="/impact/flyout/content-control/3.svg" alt='3' style={{ width: "30px" }} />
-                              <span className="left">3</span>
+                              <span className="left">Sickness Reduction</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth4" src="/impact/flyout/content-control/4.svg" alt='4' style={{ width: "37px" }} />
-                              <span className="right">4</span>
+                              <span className="right">Hospitalisation Saving</span>
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth5" src="/impact/flyout/content-control/5.svg" alt='4' style={{ width: "25px" }} />
-                              <span className="left">5</span>
+                              <span className="left">Job Creation</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(4)}>
                               <img className="nth6" src="/impact/flyout/content-control/6.svg" alt='4' style={{ width: "28px" }} />
