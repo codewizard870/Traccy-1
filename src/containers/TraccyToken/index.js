@@ -357,7 +357,7 @@ const TraccyToken = () => {
                                             </div>
                                         </Col>
                                         <Col className='right-col'>
-                                            <img className='center-image' src={CommunityImg} alt='line' />
+                                            <img className='center-image' src="/traccy-token/community-access.gif" alt='line' />
                                         </Col>
                                     </Row>
                                 </div>
