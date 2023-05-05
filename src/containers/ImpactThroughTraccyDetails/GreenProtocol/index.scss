@@ -470,7 +470,7 @@
       padding-bottom: 0px !important;
     }
     .demoPage {
-      background: $white;
+      // background: $white;
       color: $text-primary;
       min-height: 306px;
 
@@ -642,7 +642,8 @@
       .bookpage-inner-right {
         padding: 31px 41px 0 53px;
         height: 100%;
-
+        background: white;
+        
         @media screen and (max-width: 576px) {
           padding: 56px 20px 0 20px;
         }

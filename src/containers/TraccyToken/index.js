@@ -372,7 +372,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
                                                     <h3>Direct Participation</h3>
-                                                    <p>You will get access to all the new projects STO</p>
+                                                    <p>You will get access to all the new projects STO<br/>&nbsp;</p>
                                                 </div>
                                             </div>
                                         </Col>

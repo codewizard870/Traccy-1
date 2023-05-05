@@ -374,7 +374,9 @@ const AboutUs = () => {
                     <div className="ourteam-wrapper">
                         {OURTEAM.map(team => (
                             <div className="card">
-                                <img src={team.image} alt="team" />
+                                <div className="avatar-wrapper">
+                                    <img src={team.image} alt="team" />
+                                </div>
                                 <span className="card-name">{team.name}</span>
                                 {/* <span className="card-role">{team.role}</span> */}
                                 <span className="card-description">{team.role}</span>
@@ -393,7 +395,9 @@ const AboutUs = () => {
                             {OURTEAM.map(team => (
                                 <div>
                                     <div className="card">
-                                        <img src={team.image} alt="team" />
+                                        <div className="avatar-wrapper">
+                                            <img src={team.image} alt="team" />
+                                        </div>
                                         <span className="card-name">{team.name}</span>
                                         {/* <span className="card-role">{team.role}</span> */}
                                         <span className="card-description">{team.role}</span>

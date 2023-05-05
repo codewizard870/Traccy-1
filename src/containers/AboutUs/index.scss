@@ -394,7 +394,7 @@
               .image-circle {
                 width: 130px;
                 height: 130px;
-                border-radius: 130px;
+                border-radius: 50%;
                 overflow: hidden;
                 margin-bottom: 18px;
                 @media screen and (max-width: 1024px) {
@@ -559,7 +559,9 @@
       }
     }
     .blur-circle1 {
-      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+      background: transparent
+        linear-gradient(142deg, #7e384f 0%, #934d74 48%, #0c395b 100%) 0% 0%
+        no-repeat padding-box;
       opacity: 0.09;
       filter: blur(50px);
       width: 600px;
@@ -569,9 +571,11 @@
       left: 0;
       display: inline-block;
       z-index: 0;
-  }
-  .blur-circle2 {
-      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+    }
+    .blur-circle2 {
+      background: transparent
+        linear-gradient(142deg, #7e384f 0%, #934d74 48%, #0c395b 100%) 0% 0%
+        no-repeat padding-box;
       opacity: 0.09;
       filter: blur(50px);
       width: 600px;
@@ -583,9 +587,11 @@
       display: inline-block;
       z-index: 0;
       bottom: -8%;
-  }
-  .blur-circle3 {
-      background: transparent linear-gradient(142deg, #7E384F 0%, #934D74 48%, #0C395B 100%) 0% 0% no-repeat padding-box;
+    }
+    .blur-circle3 {
+      background: transparent
+        linear-gradient(142deg, #7e384f 0%, #934d74 48%, #0c395b 100%) 0% 0%
+        no-repeat padding-box;
       opacity: 0.09;
       filter: blur(50px);
       width: 600px;
@@ -596,7 +602,7 @@
       margin: auto;
       display: inline-block;
       z-index: 0;
-  }
+    }
 
     .ourteam-wrapper {
       display: flex;
@@ -614,12 +620,21 @@
         @media screen and (max-width: 767px) {
           width: 180px;
         }
-        img {
+        .avatar-wrapper {
+          display: flex;
+          width: 143px;
           height: 143px;
+          justify-content: center;
+          overflow: hidden;
           border-radius: 50%;
           background: $white;
-          @media screen and (max-width: 767px) {
-            height: 120px;
+          img {
+            height: 143px;
+            // border-radius: 50%;
+            // background: $white;
+            @media screen and (max-width: 767px) {
+              height: 120px;
+            }
           }
         }
         &:hover {
@@ -748,12 +763,21 @@
             @media screen and (max-width: 767px) {
               width: 180px;
             }
-            img {
-              height: 143px;
+            .avatar-wrapper {
+              display: flex;
+              width: 120px;
+              height: 120px;
+              justify-content: center;
+              overflow: hidden;
               border-radius: 50%;
               background: $white;
-              @media screen and (max-width: 767px) {
-                height: 120px;
+              img {
+                height: 143px;
+                // border-radius: 50%;
+                // background: $white;
+                @media screen and (max-width: 767px) {
+                  height: 120px;
+                }
               }
             }
             &:hover {

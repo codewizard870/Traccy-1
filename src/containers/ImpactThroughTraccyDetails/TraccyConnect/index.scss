@@ -472,7 +472,7 @@
       padding-bottom: 0px !important;
     }
     .demoPage {
-      background: $white;
+      // background: $white;
       color: $text-primary;
       min-height: 306px;
 
@@ -558,6 +558,8 @@
         height: 100%;
         display: flex;
         flex-direction: column;
+        background: white;
+        
         .row {
           display: flex;
           justify-content: space-between;
@@ -642,6 +644,7 @@
       .bookpage-inner-right {
         padding: 22px 41px 0 49px;
         height: 100%;
+        background: white;
 
         @media screen and (max-width: 576px) {
           padding: 56px 20px 0 20px;
