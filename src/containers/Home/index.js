@@ -132,13 +132,11 @@ const Home = () => {
                               <h3>TRCY Connect</h3>
                            </div>
                            <p>
-                              {t("main_menu:trcy")}
+                           
                            </p>
 
                            <ul>
-                              <li>{t("main_menu:trcy_1")}</li>
-                              <li>{t("main_menu:trcy_2")}</li>
-                              <li>{t("main_menu:trcy_3")}</li>
+                            
                            </ul>
                         </div>
                         <LearnMore/>
@@ -166,12 +164,10 @@ const Home = () => {
                               <h3>Impact</h3>
                            </div>
                            <p>
-                              {t("main_menu:impact")}
+                             
                            </p>
                            <ul>
-                              <li>{t("main_menu:impact_1")}</li>
-                              <li>{t("main_menu:impact_2")}</li>
-                              <li>{t("main_menu:impact_3")}</li>
+                            
                            </ul>
                         </div>
                         <LearnMore/>
@@ -198,12 +194,10 @@ const Home = () => {
                               <h3>About Us</h3>
                            </div>
                            <p>
-                              {t("main_menu:about")}
+                             
                            </p>
                            <ul>
-                              <li>{t("main_menu:about_1")}</li>
-                              <li>{t("main_menu:about_2")}</li>
-                              <li>{t("main_menu:about_3")}</li>
+                             
                            </ul>
                         </div>
                         <LearnMore/>
@@ -230,12 +224,10 @@ const Home = () => {
                               <h3>Become a part </h3>
                            </div>
                            <p>
-                              {t("main_menu:become")}
+                              
                            </p>
                            <ul>
-                              <li>{t("main_menu:become_1")}</li>
-                              <li>{t("main_menu:become_2")}</li>
-                              <li>{t("main_menu:become_3")}</li>
+                    
                            </ul>
                         </div>
                         <LearnMore/>
@@ -262,12 +254,10 @@ const Home = () => {
                               <h3>PURCHASE TRCY </h3>
                            </div>
                            <p>
-                              {t("main_menu:buy")}
+                             
                            </p>
                            <ul>
-                              <li>{t("main_menu:buy_1")}</li>
-                              <li>{t("main_menu:buy_2")}</li>
-                              <li>{t("main_menu:buy_3")}</li>
+                           
                            </ul>
                         </div>
                         <LearnMore />
