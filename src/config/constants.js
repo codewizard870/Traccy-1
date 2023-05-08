@@ -4,11 +4,11 @@ export const REQUEST_ENDPOINT =
   "https://clownfish-app-ytxjf.ondigitalocean.app";
 
 export const WEFUND_JUNO_ADDRESS =
-  "juno1gc3lpde7nx8khqfafw3st7j4ptd6qfccu6y04a";
-export const WEFUND_BSC_ADDRESS = "0x09Bb243F4b7BF5952BB4196c6968D3453DBEf71c";
-export const WEFUND_TRON_WALLET = "TQzceggoo7S7AoMyiLBVTKwMtN4Q9gdqW4";
+  "juno18pqs43u5z8gszhm8grwxvq8fpu66rheqwheuav";
+export const WEFUND_BSC_ADDRESS = "0xCa7f7606853A7D70386B1C854a9A77Fc72195913";
+export const WEFUND_TRON_WALLET = "TNTg2T9dbKG96A94DRbyxMqUVqfnpurR6G";
 export const WEFUND_POLYGON_WALLET =
-  "0x09Bb243F4b7BF5952BB4196c6968D3453DBEf71c";
+  "0xCa7f7606853A7D70386B1C854a9A77Fc72195913";
 
 export const WEFUND_TRUST_BNB_WALLET = "";
 export const WEFUND_NEAR_WALLET =
