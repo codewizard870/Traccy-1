@@ -12,7 +12,7 @@ export const WEFUND_POLYGON_WALLET =
 
 export const WEFUND_TRUST_BNB_WALLET = "";
 export const WEFUND_NEAR_WALLET =
-  "84f097a62590c92503a32336e8ad4cf166b90ea605b652bd0eb392dc9f76554c";
+  "";
 export const WEFUND_ELROND_WALLET = "";
 
 export const SUCCESS_OPTION = {
