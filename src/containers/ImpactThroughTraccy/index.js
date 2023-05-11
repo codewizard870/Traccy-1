@@ -311,7 +311,7 @@ const ImpactThroughTraccy = () => {
                                           <span></span>
                                           <div>04</div>
                                        </div>
-                                       <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-agro")}>
+                                       <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>
                                           <span></span>
                                           <div>05</div>
                                        </div>
@@ -347,7 +347,7 @@ const ImpactThroughTraccy = () => {
                               <li className="right-2" onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>02</li>
                               <li className="right-3" onClick={() => router.push("/impact-through-traccy-details/traccy-solar")} >03</li>
                               <li className="right-4" onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>04</li>
-                              <li className="right-5" onClick={() => router.push("/impact-through-traccy-details/traccy-agro")}>05</li>
+                              <li className="right-5" onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>05</li>
                            </>
                         }
                         {stageIndex === 2 &&
@@ -402,10 +402,10 @@ export const Sliders = [
             route: "traccy-solar"
          },
          {
-            number: "Traccy Agro",
+            number: "Traccy Farm",
             desc: "",
             image: "/impact/side-menu/traccy-agro.png",
-            route: "traccy-agro"
+            route: "traccy-farm"
          },
       ],
    },
