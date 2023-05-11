@@ -67,7 +67,7 @@ const TraccyConnect = () => {
   const [tab, setTab] = useState("1");
   return (
     <div className='traccyconnect-wrapper'>
-      <Stage 
+      <Stage
         bg="/impact/traccy-connect/traccy-connect.png"
         title="Traccy Connect"
         content="Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues.  "
@@ -88,11 +88,10 @@ const TraccyConnect = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>Traccy Connect</h2>
-                        <img src="/impact/traccy-connect-logo.png" alt="mosquito" />
+                        <img src="/impact/traccy-connect/traccy-connect-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
-                        <img src="/impact/traccy-connect-side.png" alt="mosquito" />
+                        <img src="/impact/traccy-connect/traccy-connect-side.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
@@ -142,11 +141,11 @@ const TraccyConnect = () => {
                       </div>
                       <div className="left-section notfirst">
                         <h2>Traccy Connect</h2>
-                        <img src="/impact/traccy-connect-logo.png" alt="logo" />
+                        <img src="/impact/traccy-connect/traccy-connect-logo.png" alt="logo" />
                         <Tabs defaultActiveKey="1" items={items} onChange={(activeKey) => setTab(activeKey)} />
                       </div>
                       <div className="right-section">
-                        <img src="/impact/traccy-connect-side.png" alt="mosquito" />
+                        <img src="/impact/traccy-connect/traccy-connect-side.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
@@ -264,7 +263,7 @@ const TraccyConnect = () => {
                     }
                     {tab === "3" &&
                       <div className="four">
-                        <img src="/impact/traccy-connect/tokenomics.png" alt="tokenomics" />
+                        <img src="/impact/traccy-connect/tokenomic.png" alt="tokenomics" />
                       </div>
                     }
                     {tab === "4" &&
