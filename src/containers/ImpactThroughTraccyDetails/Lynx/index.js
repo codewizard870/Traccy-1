@@ -78,7 +78,7 @@ const Lynx = () => {
 
   return (
     <div className='lynx-wrapper' onClick={onClose}>
-      <Stage 
+      <Stage
         bg="/impact/lynx/lynx.png"
         title="LynxVerse"
         content="LynxVerse is a metaverse game designed for mental health and wellbeing with implementation of cognitive therapy behaviour scenarios."
@@ -100,7 +100,6 @@ const Lynx = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>LynxVerse</h2>
                         <img src="/impact/lynx/lynx-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
@@ -120,17 +119,9 @@ const Lynx = () => {
                     <div className="first">
                       <div className='left-col'>
                         <div className='left-upper'>
-                          <h4>What is the benefit of LynxVerse?</h4>
+                          <h4>Benefits at a glance</h4>
                           <p>
-                            <ul>
-                              <li>
-                                Anonymous game on the metaverse: Users can play the game scenarios without giving away any personal information
-                              </li>
-                              <li>
-                                Scenario-based dynamic gameplay:
-                                Scenarios are scientifically constructed to target specific mental health issues and can be targeted towards key groups.
-                              </li>
-                            </ul>
+                            User can experience a therapy in a safe and secure manner, without the need for constant human interaction. The decentralized Technology increases privacy and security and enables more confidence between client and therapist
                           </p>
                         </div>
                         <div className='left-bottom'>
@@ -145,7 +136,7 @@ const Lynx = () => {
                         <img src="/impact/lynx/lynx21.png" alt="machine" />
                         <h1>Metaverse for Mental Health & Well-Being</h1>
                         <p>
-                          Decentralize Metaverse  Technology to increase the privacy & security and give better confidence between clients and Therapist
+                          Safe and cognitive therapy scenarios for mental health and wellbeing
                         </p>
                       </div>
                     </div>

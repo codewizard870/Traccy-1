@@ -77,7 +77,6 @@ const GreenProtocol = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>Green Protocol</h2>
                         <img src="/impact/green-protocol/green-protocol-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
@@ -97,9 +96,9 @@ const GreenProtocol = () => {
                     <div className="first">
                       <div className='left-col'>
                         <div className='left-upper'>
-                          <h4>Tokenisation of Green Asset</h4>
+                          <h4>Benefits at a glance</h4>
                           <p>
-                            Green protocol providing impact investment for those who want to support sustainability. By crowdfunding a real world green project combine with NFTs technology to generate sustainable profit sharing for a sustainable project
+                            By leveraging the power of crowdfunding and NFT technology, we are creating a sustainable project with real-world impact. This unique combination allows us to generate sustainable profit sharing for investors while supporting a green project.
                           </p>
                         </div>
                         <div className='left-bottom'>
@@ -112,7 +111,7 @@ const GreenProtocol = () => {
                       </div>
                       <div className='right-col'>
                         <img src="/impact/green-protocol/renewable_energy.png" alt="machine" />
-                        <h1>NFTs as a real world asset</h1>
+                        <h1>Impact together</h1>
                         <p>
                           Decentralize NFT asset with less volatility with real asset and real world impact.
                         </p>

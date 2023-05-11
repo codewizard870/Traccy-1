@@ -11,7 +11,7 @@ const RightNumbers = ({ showContent }) => {
             <div className='color-bar'></div>
           </div>
           <div className='right-content'>
-            <h4>01 LYNX</h4>
+            <h4>01 LynxVr</h4>
           </div>
         </div>
       }
