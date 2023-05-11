@@ -1,15 +1,12 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../../components/common';
-import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
 import PageFlip from 'react-pageflip';
 import './index.scss';
 
-import { Link, useHistory } from 'react-router-dom';
 
 import MapImg from '../../../assets/images/map.png';
 import { useState } from 'react';
-import { Sliders } from '../../ImpactThroughTraccy';
 import RightNumbers from '../../../components/Impact/right-numbers';
 import Popup from '../../../components/Impact/pop-up';
 import Stage from '../../../components/ImpactDetail/Stage';
@@ -18,7 +15,7 @@ const TraccyLab = () => {
   const [showContent, setShowContent] = useState(3);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
-  
+
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -51,7 +48,6 @@ const TraccyLab = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>Traccy Lab</h2>
                         <img src="/impact/traccy-lab/traccy-lab-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
@@ -71,9 +67,9 @@ const TraccyLab = () => {
                     <div className="first">
                       <div className='left-col'>
                         <div className='left-upper'>
-                          <h4>What is the benefit of Lab?</h4>
+                          <h4>Benefits at a glance</h4>
                           <p>
-                            Creating a expert tieam able to helo with incubation, grants and support for all the new start-up.
+                            Traccy Lab provides resources and mentors to help these projects succeed and strives to foster a culture of impact and sustainability from idea to implementation.
                           </p>
                         </div>
                         <div className='left-bottom'>
@@ -86,9 +82,9 @@ const TraccyLab = () => {
                       </div>
                       <div className='right-col'>
                         <img src="/impact/traccy-lab/idea-incubation.png" alt="machine" />
-                        <h1>Build together</h1>
+                        <h1>Create together</h1>
                         <p>
-                          We build winning projects with impact on environment and people
+                          Our team of experts collaborates with entrepreneurs, startups and organizations to create innovative Impact
                         </p>
                       </div>
                     </div>

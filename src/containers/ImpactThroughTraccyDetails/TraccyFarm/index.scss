@@ -171,7 +171,7 @@
         background: white;
 
         @media screen and (max-width: 576px) {
-          padding: 56px 20px 0 20px;
+          padding: 46px 20px 0 20px;
         }
         .first {
           display: flex;
@@ -216,6 +216,9 @@
               align-items: flex-start;
               position: absolute;
               bottom: -20px;
+              @media screen and (max-width: 767px) {
+                bottom: -15px;
+              }
 
               h1 {
                 font-size: 125px;
@@ -252,6 +255,10 @@
           }
           .right-col {
             max-width: 40%;
+            @media screen and (max-width: 767px) {
+              max-width: 100%;
+            }
+            
             img {
               width: 100%;
               @media screen and (max-width: 767px) {

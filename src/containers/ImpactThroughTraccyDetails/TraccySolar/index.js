@@ -45,11 +45,10 @@ const TraccySolar = () => {
                   <div className='bookpage-inner-left'>
                     <div className="row">
                       <div className="left-section">
-                        <h2>Traccy Solar</h2>
                         <img src="/impact/traccy-solar/traccy-solar-logo.png" alt="mosquito" />
                       </div>
                       <div className="right-section">
-                        <img src="/impact/traccy-solar/traccy-side.png" alt="mosquito" />
+                        <img src="/impact/traccy-solar/traccy-solar-side.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
