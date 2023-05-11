@@ -11,6 +11,7 @@ import MapImg from '../../../assets/images/map.png';
 import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
 import Slider from 'react-slick';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const items = [
   {
@@ -55,25 +56,6 @@ const TraccyConnect = () => {
     setShowContent(index);
   };
 
-  const [openModal, setOpen] = useState(false);
-  const [stageIndex, setStageIndex] = useState(0);
-  const onConnect = (index) => {
-    setOpen(true);
-    setStageIndex(index)
-  }
-
-  const onClose = () => {
-    if (openModal)
-      setOpen(false)
-  }
-
-  const goDetail = (project, index) => {
-    if (project.route)
-      router.push(`/impact-through-traccy-details/${project.route}`)
-    else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-  }
-
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -84,72 +66,19 @@ const TraccyConnect = () => {
 
   const [tab, setTab] = useState("1");
   return (
-    <div className='traccyconnect-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-connect.png)" }}></div>
-        <Link to='/impact-through-traccy/2' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    Traccy Connect
-                  </h1>
-                  <span className="desc">
-                    Impactful Projects through Asset- <br />Backed Tokenization Platform
-                  </span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">7’500’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>4</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>18</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+    <div className='traccyconnect-wrapper'>
+      <Stage 
+        bg="/impact/traccy-connect/traccy-connect.png"
+        title="Traccy Connect"
+        content="Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues.  "
+        application="7’500’000 $"
+        processing="4"
+        event="18"
+        profit="12"
+        sdg="5"
+        primaryColor="#110041"
+        secondaryColor="#0F71E3"
+      />
       <section className='book-section'>
         <Container>
           <Row>
@@ -179,9 +108,9 @@ const TraccyConnect = () => {
                     <div className="first">
                       <div className='left-col'>
                         <div className='left-upper'>
-                          <h4>Invest with Impact with Traccy Connect!</h4>
+                          <h4>Benefits at a glance</h4>
                           <p>
-                            Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues.
+                            We facilitates access to the international market for people in developing countries, allowing them to participate in projects and benefit from low-cost services, which have a positive impact on their daily lives.
                           </p>
                         </div>
                         <div className='left-bottom'>
@@ -194,10 +123,9 @@ const TraccyConnect = () => {
                       </div>
                       <div className='right-col'>
                         <img src="/impact/traccy-connect/coin.png" alt="machine" />
-                        <h1>Traccy Connect</h1>
-                        <h2>Invest in Impact, make changes!</h2>
+                        <h1>Invest together</h1>
                         <p>
-                          We facilitate access to the international market for people in developing countries, allowing them to participate in projects and benefit from low-cost services, which have a positive impact on their daily lives.
+                          Impactful projects through asset-backed tokenization Platform
                         </p>
                       </div>
                     </div>

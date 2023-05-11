@@ -1,49 +1,19 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../../components/common';
-import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
 import PageFlip from 'react-pageflip';
 import './index.scss';
 
-import { Link, useHistory } from 'react-router-dom';
-
 import MapImg from '../../../assets/images/map.png';
 import { useState } from 'react';
-import { Sliders } from '../../ImpactThroughTraccy';
 import RightNumbers from '../../../components/Impact/right-numbers';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const TraccySolar = () => {
-  const router = useHistory();
   const [showContent, setShowContent] = useState(2);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
-  const hideModal = () => {
-    setShowContent(-1);
-  }
-  const showModal = (index) => {
-    setShowContent(index);
-  };
-
-
-  const [openModal, setOpen] = useState(false);
-  const [stageIndex, setStageIndex] = useState(0);
-  const onConnect = (index) => {
-    setOpen(true);
-    setStageIndex(index)
-  }
-
-  const onClose = () => {
-    if (openModal)
-      setOpen(false)
-  }
-
-  const goDetail = (project, index) => {
-    if (project.route)
-      router.push(`/impact-through-traccy-details/${project.route}`)
-    else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-  }
-
+  
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -53,70 +23,19 @@ const TraccySolar = () => {
   }
 
   return (
-    <div className='traccy-solar-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-solar/traccy-solar.png)" }}></div>
-        <Link to='/impact-through-traccy/1' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    Traccy Solar
-                  </h1>
-                  <span className="desc">Empowering the solar energy for a better future  </span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">2’500’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>9</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>8</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+    <div className='traccy-solar-wrapper'>
+      <Stage
+        bg="/impact/traccy-solar/traccy-solar.png"
+        title="Traccy Solar"
+        content="Traccy Solar provides sustainable energy solutions in developing countries. Areas in need of clean energy are identified and solar solutions are designed and implemented."
+        application="2’500’000 $"
+        processing="9"
+        event="8"
+        profit="23"
+        sdg="7"
+        primaryColor="#FFB800"
+        secondaryColor="#DBFF00"
+      />
       <section className='book-section'>
         <Container>
           <Row>

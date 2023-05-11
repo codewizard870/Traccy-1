@@ -10,6 +10,7 @@ import { Link, useHistory } from 'react-router-dom';
 import MapImg from '../../../assets/images/map.png';
 import { Sliders } from '../../ImpactThroughTraccy';
 import BussinessModel from '../../../components/Impact/FlyOut/bussiness-model';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const items = [
   {
@@ -31,7 +32,6 @@ const items = [
 ];
 
 const FlyOut = () => {
-  const router = useHistory();
   const [showContent, setShowContent] = useState(0);
   const [contentIndex, setContentIndex] = useState(0);
   const [contentExpand, setContentExpan] = useState(false);
@@ -54,25 +54,6 @@ const FlyOut = () => {
     setShowContent(index);
   };
 
-  const [openModal, setOpen] = useState(false);
-  const [stageIndex, setStageIndex] = useState(0);
-  const onConnect = (index) => {
-    setOpen(true);
-    setStageIndex(index)
-  }
-
-  const onClose = () => {
-    if (openModal)
-      setOpen(false)
-  }
-
-  const goDetail = (project, index) => {
-    if (project.route)
-      router.push(`/impact-through-traccy-details/${project.route}`)
-    else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-  }
-
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -83,74 +64,19 @@ const FlyOut = () => {
 
   const [tab, setTab] = useState("1");
   return (
-    <div className='flyout-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/flyout/flyout.png)" }}></div>
-        <Link to='/impact-through-traccy/2' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    FlyOUT
-                  </h1>
-                  <span className="desc">
-                    Automatic misting System to
-                    reduce Mosquito Population
-                    organically
-                  </span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">3’230’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>9</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>18</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+    <div className='flyout-wrapper'>
+      <Stage 
+        bg="/impact/flyout/flyout.png"
+        title="FlyOut"
+        content="The automatic misting system is a type of insect control system using a combination of water and organic insecticide to create a mist that kills mosquitos and other flying insects."
+        application="1’200’000 $"
+        processing="9"
+        event="18"
+        profit="12"
+        sdg="5"
+        primaryColor="#B9FCA8"
+        secondaryColor="#78F176"
+      />
       <section className='book-section'>
         <Container>
           <Row>

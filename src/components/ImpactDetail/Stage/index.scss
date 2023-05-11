@@ -1,0 +1,145 @@
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  .about-banner {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 140px;
+    height: calc(100vh + 100px);
+    z-index: 2;
+    position: relative;
+    width: 80%;
+
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+
+    .title {
+      display: flex;
+      gap: 74px;
+
+      .backarrow {
+        color: white;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        transition: all ease-in 0.1s;
+        z-index: 3;
+        @media screen and (max-width: 767px) {
+          left: 10px;
+          img {
+            width: 30px;
+          }
+        }
+        &:hover {
+          transform: translateX(3px);
+        }
+
+        .icon {
+          fill: white;
+          height: 13px;
+          margin-right: 3px;
+        }
+      }
+      h1 {
+        font-size: 55px;
+        line-height: 1.1;
+        font-weight: 700;
+        margin-bottom: 0px;
+
+        @media screen and (max-width: 767px) {
+          font-size: 24px;
+          padding-right: 10px;
+        }
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    .desc {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 150%;
+      margin-top: 35px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 24px;
+        line-height: 150%;
+        width: 100%;
+      }
+    }
+    .application {
+      font-size: 28px;
+      font-weight: 700;
+      color: #c7fbba;
+      letter-spacing: 0.05em;
+      margin-top: 50px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    .application-number {
+      font-size: 60px;
+      font-weight: 800;
+      color: #78f176;
+      margin-top: 10px;
+
+      @media screen and (max-width: 767px) {
+        font-size: 30px;
+      }
+    }
+    .information {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 77px;
+
+      .information-label {
+        span {
+          font-size: 18px;
+          font-weight: 700;
+          color: #c7fbba;
+          @media screen and (max-width: 767px) {
+            font-size: 12px;
+          }
+        }
+        .information-value {
+          display: flex;
+          align-items: flex-end;
+          gap: 10px;
+
+          span:nth-child(1) {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 100%;
+            color: white;
+
+            @media screen and (max-width: 767px) {
+              font-size: 48px;
+            }
+          }
+          span:nth-child(2) {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            padding-bottom: 3px;
+
+            @media screen and (max-width: 767px) {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

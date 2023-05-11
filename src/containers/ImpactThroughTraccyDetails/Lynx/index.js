@@ -15,6 +15,7 @@ import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
 import RightNumbers from '../../../components/Impact/right-numbers';
 import Popup from '../../../components/Impact/pop-up';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const items = [
   {
@@ -77,72 +78,19 @@ const Lynx = () => {
 
   return (
     <div className='lynx-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/lynx/lynx.png)" }}></div>
-        <Link to='/impact-through-traccy/1' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    LynxVerse
-                  </h1>
-                  <span className="desc">
-                    Safe and cognitive therapy
-                    scenarios for mental health
-                  </span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">7’500’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>4</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>18</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+      <Stage 
+        bg="/impact/lynx/lynx.png"
+        title="LynxVerse"
+        content="LynxVerse is a metaverse game designed for mental health and wellbeing with implementation of cognitive therapy behaviour scenarios."
+        application="1’000’000 $"
+        processing="4"
+        event="18"
+        profit="12"
+        sdg="5"
+        primaryColor="#9BCFEC"
+        secondaryColor="#5C99D1"
+      />
+
       <section className='book-section'>
         <Container>
           <Row>

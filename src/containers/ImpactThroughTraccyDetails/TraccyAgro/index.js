@@ -1,50 +1,20 @@
 import React, { useRef } from 'react';
 import { Container, Row, Col, SvgIcon } from '../../../components/common';
-import { Drawer, Tabs } from 'antd';
 import { useMediaQuery } from 'react-responsive'
 import PageFlip from 'react-pageflip';
 import './index.scss';
 
-import { Link, useHistory } from 'react-router-dom';
-
 import MapImg from '../../../assets/images/map.png';
 import { useState } from 'react';
-import { Sliders } from '../../ImpactThroughTraccy';
 import RightNumbers from '../../../components/Impact/right-numbers';
 import Popup from '../../../components/Impact/pop-up';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const TraccyAgro = () => {
-  const router = useHistory();
   const [showContent, setShowContent] = useState(4);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
-  const hideModal = () => {
-    setShowContent(-1);
-  }
-  const showModal = (index) => {
-    setShowContent(index);
-  };
-
-
-  const [openModal, setOpen] = useState(false);
-  const [stageIndex, setStageIndex] = useState(0);
-  const onConnect = (index) => {
-    setOpen(true);
-    setStageIndex(index)
-  }
-
-  const onClose = () => {
-    if (openModal)
-      setOpen(false)
-  }
-
-  const goDetail = (project, index) => {
-    if (project.route)
-      router.push(`/impact-through-traccy-details/${project.route}`)
-    else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-  }
-
+ 
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -54,70 +24,19 @@ const TraccyAgro = () => {
   }
 
   return (
-    <div className='traccy-agro-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-agro/traccy-agro.png)" }}></div>
-        <Link to='/impact-through-traccy/1' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    Traccy Agro
-                  </h1>
-                  <span className="desc">Farming Tomato and making impact products</span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">100’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>2</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>2</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+    <div className='traccy-agro-wrapper'>
+      <Stage
+        bg="/impact/traccy-agro/traccy-farm.png"
+        title="Traccy Farm"
+        content="Our first farm is a tomato farm in the Democratic Republic of Congo, which we manage using modern and sustainable methods. The tomato farm in DR Congo serves as a model for future cultivation projects in countries with great potential and high import scores."
+        application="5’000’000 $"
+        processing="2"
+        event="2"
+        profit="23"
+        sdg="7"
+        primaryColor="#50E456"
+        secondaryColor="#42FF00"
+      />
       <section className='book-section'>
         <Container>
           <Row>

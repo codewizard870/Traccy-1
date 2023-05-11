@@ -12,39 +12,13 @@ import { useState } from 'react';
 import { Sliders } from '../../ImpactThroughTraccy';
 import RightNumbers from '../../../components/Impact/right-numbers';
 import Popup from '../../../components/Impact/pop-up';
+import Stage from '../../../components/ImpactDetail/Stage';
 
 const TraccyLab = () => {
-  const router = useHistory();
   const [showContent, setShowContent] = useState(3);
 
   const smallDeviceBook = useMediaQuery({ query: '(max-width: 991px)' })
-  const hideModal = () => {
-    setShowContent(-1);
-  }
-  const showModal = (index) => {
-    setShowContent(index);
-  };
-
-
-  const [openModal, setOpen] = useState(false);
-  const [stageIndex, setStageIndex] = useState(0);
-  const onConnect = (index) => {
-    setOpen(true);
-    setStageIndex(index)
-  }
-
-  const onClose = () => {
-    if (openModal)
-      setOpen(false)
-  }
-
-  const goDetail = (project, index) => {
-    if (project.route)
-      router.push(`/impact-through-traccy-details/${project.route}`)
-    else
-      router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
-  }
-
+  
   const bookRef = useRef();
   const prevPage = () => {
     bookRef.current.pageFlip().flipPrev();
@@ -54,70 +28,20 @@ const TraccyLab = () => {
   }
 
   return (
-    <div className='traccy-lab-wrapper' onClick={onClose}>
-      <section className='banner-section'>
-        <div className='about-banner' style={{ backgroundImage: "url(/impact/traccy-lab/traccy-lab.png)" }}></div>
-        <Link to='/impact-through-traccy/1' className='backarrow'>
-          <img src="/impact/backarrow.svg" alt="backarrow" />
-        </Link>
-        <div>
-          <Container>
-            <div className="stage-wrapper">
-              <div className="stage-main">
-                <div className="stage-left">
-                  <h1>
-                    Traccy Lab
-                  </h1>
-                  <span className="desc">Incubation and project Launches</span>
-                  <span className="application">Fundraising required</span>
-                  <div className="selection">
-                    <span className="number">4’500’000 $</span>
-                  </div>
-                  {/* <div className="project-list-button" onClick={() => onConnect(0)}>
-                    <div className="list-indicator" />
-                    <span>Project List</span>
-                  </div> */}
-                </div>
-                <div className="stage-right">
-                  <div className="processing"><span>Processing Time</span></div>
-                  <div className="processing-desc">
-                    <span>9</span>
-                    <span>months</span>
-                  </div>
-                  <div className="world"><span>Break Event Point</span></div>
-                  <div className="world-desc">
-                    <span>8</span>
-                    <span>months</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Container>
-        </div>
-        <Drawer
-          title={false}
-          placement='right'
-          width={"100%"}
-          onClose={onClose}
-          closeIcon={false}
-          open={openModal}
-          rootClassName='project-sidebar'
-        >
-          <div className="project-list">
-            <div className="title">
-              <span>Project List</span>
-            </div>
-            {Sliders[stageIndex].projects.map((project, index) => (
-              <div className="item" onClick={() => goDetail(project, index)}>
-                <img src={project.image} alt="avatar" />
-                <div className="splitter" />
-                <span>{project.number}</span>
-                <div className="splitter outer" />
-              </div>
-            ))}
-          </div>
-        </Drawer>
-      </section>
+    <div className='traccy-lab-wrapper'>
+      <Stage
+        bg="/impact/traccy-lab/traccy-lab.png"
+        title="Traccy Lab"
+        content="Based on market research and considering various criteria Traccy Lab selects and incubates projects that create innovative solutions to social and environmental challenges."
+        application="4’500’000 $"
+        processing="9"
+        event="8"
+        profit="23"
+        sdg="7"
+        primaryColor="#7C8DBA"
+        secondaryColor="#00F0FF"
+      />
+
       <section className='book-section'>
         <Container>
           <Row>
@@ -149,7 +73,7 @@ const TraccyLab = () => {
                         <div className='left-upper'>
                           <h4>What is the benefit of Lab?</h4>
                           <p>
-                          Creating a expert tieam able to helo with incubation, grants and support for all the new start-up.
+                            Creating a expert tieam able to helo with incubation, grants and support for all the new start-up.
                           </p>
                         </div>
                         <div className='left-bottom'>
