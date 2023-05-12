@@ -263,7 +263,7 @@ const FlyOut = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(2)}>
                               <img className="nth3" src="/impact/flyout/content-control/3.svg" alt='3' style={{ width: "30px" }} />
-                              <span className="left">Sickness Reduction</span>
+                              <span className="left">Sickness<br/>Reduction</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth4" src="/impact/flyout/content-control/4.svg" alt='4' style={{ width: "37px" }} />
@@ -271,7 +271,7 @@ const FlyOut = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth5" src="/impact/flyout/content-control/5.svg" alt='4' style={{ width: "25px" }} />
-                              <span className="left">Job Creation</span>
+                              <span className="left">Job<br/>Creation</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(4)}>
                               <img className="nth6" src="/impact/flyout/content-control/6.svg" alt='4' style={{ width: "28px" }} />
@@ -281,15 +281,19 @@ const FlyOut = () => {
                               <>
                                 <div className="control-button" onClick={() => setContentIndex(5)}>
                                   <img className="nth7" src="/impact/flyout/content-control/7.png" alt='4' style={{ width: "25px" }} />
+                                  <span className="left">Industry Innovation<br/>and Infrastructure</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth8" src="/impact/flyout/content-control/8.png" alt='4' style={{ width: "28px" }} />
+                                  <span className="right"> Responsible consumption<br/>and production</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth9" src="/impact/flyout/content-control/9.png" alt='4' style={{ width: "25px" }} />
+                                  <span className="left">Good health<br/> and well-being</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth10" src="/impact/flyout/content-control/10.png" alt='4' style={{ width: "28px" }} />
+                                  <span className="right">Climate Action</span>
                                 </div>
                               </>
                             }

@@ -29,7 +29,7 @@
     position: absolute;
     z-index: 10;
     width: 100%;
-    transform: translateY(-10%);
+    transform: translateY(-50%);
     @media screen and (max-width: 767px) {
       transform: translateY(-35%);
     }
@@ -628,11 +628,14 @@
                   align-items: center;
                   width: 50px;
                   height: 50px;
+                  position: relative;
+
                   background: linear-gradient(
                     270.07deg,
                     rgba(0, 0, 0, 0.79) 0.07%,
                     rgba(30, 26, 38, 0.93) 97.22%
                   );
+
                   span {
                     position: absolute;
                     opacity: 0;
@@ -640,14 +643,15 @@
                     z-index: 10;
                     white-space: nowrap;
                     transition: opacity 0.5s ease;
+                    padding: 8px 4px;
+                    border-radius: 10px;
+                    background: black;
                   }
                   span.left {
-                    left: -200px;
-                    width: 190px;
-                    text-align: right;
+                    right: 60px;
                   }
                   span.right {
-                    left: 110px;
+                    left: 60px;
                   }
 
                   &:hover {
