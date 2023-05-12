@@ -669,7 +669,7 @@
           width: 100%;
           z-index: 2;
           top: 130px;
-          right: 50px;
+          right: 150px;
           @media screen and (max-width: 767px) {
             top: 20px;
             right: 0px;
@@ -700,6 +700,8 @@
                   align-items: center;
                   width: 50px;
                   height: 50px;
+                  position: relative;
+
                   background: linear-gradient(270.07deg, rgba(30, 26, 38, 0.7626) 0.07%, rgba(0, 0, 0, 0.5822) 100.89%);
 
                   span {
@@ -709,14 +711,15 @@
                     z-index: 10;
                     transition: opacity 0.5s ease;
                     white-space: nowrap;
+                    padding: 8px 4px;
+                    border-radius: 10px;
+                    background: black;
                   }
                   span.left {
-                    left: -200px;
-                    width: 190px;
-                    text-align: right;
+                    right: 60px;
                   }
                   span.right {
-                    left: 110px;
+                    left: 60px;
                   }
 
                   &:hover {

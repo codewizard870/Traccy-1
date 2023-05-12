@@ -316,46 +316,6 @@ const TraccyConnect = () => {
                       <div className='popup-inner'>
                         {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
                         <div className="content-wrapper">
-                          <div className="content-control">
-                            <div className="control-button" onClick={() => setContentIndex(0)}>
-                              <img className="nth1" src="/impact/traccy-connect/content-control/1.svg" alt='1' style={{ width: "30px" }} />
-                              <span className="left">Projects</span>
-                            </div>
-                            <div className="control-button" onClick={() => setContentIndex(1)}>
-                              <img className="nth2" src="/impact/traccy-connect/content-control/2.svg" alt='2' style={{ width: "29px" }} />
-                              <span className="right">POVERTY REDUCATION</span>
-                            </div>
-                            <div className="control-button" onClick={() => setContentIndex(3)}>
-                              <img className="nth3" src="/impact/traccy-connect/content-control/3.svg" alt='3' style={{ width: "30px" }} />
-                              <span className="left">Job Creation</span>
-                            </div>
-                            <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
-                              <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />
-                              <span className="right">More</span>
-                            </div>
-                            {contentExpand &&
-                              <>
-                                <div className="control-button">
-                                  <img className="nth5" src="/impact/traccy-connect/content-control/5.svg" alt='4' style={{ width: "25px" }} />
-                                </div>
-                                <div className="control-button">
-                                  <img className="nth6" src="/impact/traccy-connect/content-control/6.svg" alt='4' style={{ width: "28px" }} />
-                                </div>
-                                <div className="control-button">
-                                  <img className="nth7" src="/impact/traccy-connect/content-control/7.svg" alt='4' style={{ width: "25px" }} />
-                                </div>
-                                <div className="control-button">
-                                  <img className="nth8" src="/impact/traccy-connect/content-control/8.png" alt='4' style={{ width: "28px" }} />
-                                </div>
-                                <div className="control-button">
-                                  <img className="nth9" src="/impact/traccy-connect/content-control/9.svg" alt='4' style={{ width: "25px" }} />
-                                </div>
-                                <div className="control-button">
-                                  <img className="nth10" src="/impact/traccy-connect/content-control/10.png" alt='4' style={{ width: "28px" }} />
-                                </div>
-                              </>
-                            }
-                          </div>
                           <div className="content">
                             <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/1.svg" alt="1" />
@@ -370,6 +330,52 @@ const TraccyConnect = () => {
                             <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/4.png" alt="1" />
                             </div>
+                          </div>
+                          <div className="content-control">
+                            <div className="control-button" onClick={() => setContentIndex(0)}>
+                              <img className="nth1" src="/impact/traccy-connect/content-control/1.svg" alt='1' style={{ width: "30px" }} />
+                              <span className="left">Projects</span>
+                            </div>
+                            <div className="control-button" onClick={() => setContentIndex(1)}>
+                              <img className="nth2" src="/impact/traccy-connect/content-control/2.svg" alt='2' style={{ width: "29px" }} />
+                              <span className="right">POVERTY<br/>REDUCATION</span>
+                            </div>
+                            <div className="control-button" onClick={() => setContentIndex(3)}>
+                              <img className="nth3" src="/impact/traccy-connect/content-control/3.svg" alt='3' style={{ width: "30px" }} />
+                              <span className="left">Job<br/>Creation</span>
+                            </div>
+                            <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
+                              <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />
+                              <span className="right">More</span>
+                            </div>
+                            {contentExpand &&
+                              <>
+                                <div className="control-button">
+                                  <img className="nth5" src="/impact/traccy-connect/content-control/5.svg" alt='4' style={{ width: "25px" }} />
+                                  <span className="left">Quality<br/>Education</span>
+                                </div>
+                                <div className="control-button">
+                                  <img className="nth6" src="/impact/traccy-connect/content-control/6.svg" alt='4' style={{ width: "28px" }} />
+                                  <span className="right">Gender<br/>Equality</span>
+                                </div>
+                                <div className="control-button">
+                                  <img className="nth7" src="/impact/traccy-connect/content-control/7.svg" alt='4' style={{ width: "25px" }} />
+                                  <span className="left">Decent work and<br/> Economy Growth</span>
+                                </div>
+                                <div className="control-button">
+                                  <img className="nth8" src="/impact/traccy-connect/content-control/8.png" alt='4' style={{ width: "28px" }} />
+                                  <span className="right">Industry Innovation<br/>and Infrastructure</span>
+                                </div>
+                                <div className="control-button">
+                                  <img className="nth9" src="/impact/traccy-connect/content-control/9.svg" alt='4' style={{ width: "25px" }} />
+                                  <span className="left">Reduce<br/>Inequalities</span>
+                                </div>
+                                <div className="control-button">
+                                  <img className="nth10" src="/impact/traccy-connect/content-control/10.png" alt='4' style={{ width: "28px" }} />
+                                  <span className="right">Sustainable Cities<br/>and Community</span>
+                                </div>
+                              </>
+                            }
                           </div>
                         </div>
                       </div>
