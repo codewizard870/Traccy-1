@@ -236,8 +236,11 @@ const ImpactThroughTraccy = () => {
                                        <div className="indicator" />
                                     </div>
                                     <div className="project-list-button" onClick={() => onConnect(index)}>
-                                       <div className="list-indicator" />
                                        <span>Project List</span>
+                                       <svg width="7" height="13" viewBox="0 0 7 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <rect width="8.56312" height="1.19726" rx="0.59863" transform="matrix(0.704076 -0.710124 -0.383266 -0.923638 0.519531 12.2773)" fill="white" />
+                                          <rect width="8.40448" height="1.21272" rx="0.60636" transform="matrix(0.735698 0.67731 0.35421 -0.935166 0 1.13477)" fill="white" />
+                                       </svg>
                                     </div>
                                  </div>
                                  <div className="stage-right">
@@ -375,7 +378,7 @@ export const Sliders = [
       application_number: 6,
       month: 1,
       world: 6,
-      banner: "/impact/5309059.png",
+      banner: "/impact/stage-banner.png",
       projects: [
          {
             number: "Lynx Vr",
@@ -416,7 +419,7 @@ export const Sliders = [
       application_number: 1,
       month: 3,
       world: 1,
-      banner: "/impact/5335415.png",
+      banner: "/impact/stage-banner.png",
       projects: [
          {
             number: "FlyOut",
@@ -433,7 +436,7 @@ export const Sliders = [
       application_number: 1,
       month: 1,
       world: 1,
-      banner: "/impact/5072310.png",
+      banner: "/impact/stage-banner.png",
       projects: [
          {
             number: "Traccy Connect",
@@ -450,7 +453,7 @@ export const Sliders = [
       application_number: 0,
       month: 6,
       world: 0,
-      banner: "/impact/2328116.png",
+      banner: "/impact/stage-banner.png",
       projects: []
    }
 ]
