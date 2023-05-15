@@ -9,6 +9,7 @@ import './index.scss';
 
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import { toast } from "react-toastify";
 
 export const UserContext = createContext({
     name: '',
@@ -48,8 +49,10 @@ const BecomePart = () => {
             emailjs.send('service_a3qu5la', 'template_s3507wx', templateParams, '2Q4kzA1Odjqa9ncqL')
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
+                    toast.success("Email successfully sent");
                 }, (err) => {
                     console.log('FAILED...', err);
+                    toast.error("Email sending is failed");
                 });
         }
     };
