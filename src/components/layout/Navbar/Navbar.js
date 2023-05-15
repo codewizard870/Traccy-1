@@ -41,6 +41,7 @@ const Navbar = () => {
           <div className="right-header">
             <Menus />
           </div>
+          
         </div>
       </Container>
     </header>

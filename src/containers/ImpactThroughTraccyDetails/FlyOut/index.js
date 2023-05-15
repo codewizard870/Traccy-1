@@ -65,7 +65,7 @@ const FlyOut = () => {
   const [tab, setTab] = useState("1");
   return (
     <div className='flyout-wrapper'>
-      <Stage 
+      <Stage
         bg="/impact/flyout/flyout.png"
         title="FlyOut"
         content="The automatic misting system is a type of insect control system using a combination of water and organic insecticide to create a mist that kills mosquitos and other flying insects."
@@ -105,9 +105,9 @@ const FlyOut = () => {
                     </div>
                     <div className='left-col'>
                       <div className='left-upper'>
-                        <h4>Mosquito System</h4>
+                        <h4>Benefit at a glance</h4>
                         <p>
-                          Our automatic misting system for mosquito control is a type of insect control system that uses a combination of water and insecticide to create a mist that kills Mosquitoes and other flying insects. The misting system is installed in an outdoor area, such as a backyard or patio, and is typically controlled by a timer or a remote control.
+                          The misting system is installed in an outdoor area, such as a backyard or pation and is typically controlled by a timer or remote control. The automatic misting system reduces the mosquito population in a organic way.
                         </p>
                       </div>
                       <div className='left-bottom'>
@@ -263,7 +263,7 @@ const FlyOut = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(2)}>
                               <img className="nth3" src="/impact/flyout/content-control/3.svg" alt='3' style={{ width: "30px" }} />
-                              <span className="left">Sickness<br/>Reduction</span>
+                              <span className="left">Sickness<br />Reduction</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(3)}>
                               <img className="nth4" src="/impact/flyout/content-control/4.svg" alt='4' style={{ width: "37px" }} />
@@ -271,7 +271,7 @@ const FlyOut = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth5" src="/impact/flyout/content-control/5.svg" alt='4' style={{ width: "25px" }} />
-                              <span className="left">Job<br/>Creation</span>
+                              <span className="left">Job<br />Creation</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(4)}>
                               <img className="nth6" src="/impact/flyout/content-control/6.svg" alt='4' style={{ width: "28px" }} />
@@ -281,15 +281,15 @@ const FlyOut = () => {
                               <>
                                 <div className="control-button" onClick={() => setContentIndex(5)}>
                                   <img className="nth7" src="/impact/flyout/content-control/7.png" alt='4' style={{ width: "25px" }} />
-                                  <span className="left">Industry Innovation<br/>and Infrastructure</span>
+                                  <span className="left">Industry Innovation<br />and Infrastructure</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth8" src="/impact/flyout/content-control/8.png" alt='4' style={{ width: "28px" }} />
-                                  <span className="right"> Responsible consumption<br/>and production</span>
+                                  <span className="right"> Responsible consumption<br />and production</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth9" src="/impact/flyout/content-control/9.png" alt='4' style={{ width: "25px" }} />
-                                  <span className="left">Good health<br/> and well-being</span>
+                                  <span className="left">Good health<br /> and well-being</span>
                                 </div>
                                 <div className="control-button">
                                   <img className="nth10" src="/impact/flyout/content-control/10.png" alt='4' style={{ width: "28px" }} />

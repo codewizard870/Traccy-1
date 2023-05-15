@@ -781,6 +781,8 @@
           font-size: 16px;
           line-height: 200%;
           max-width: 34vw;
+          position: relative;
+          z-index: 2;
 
           @media screen and (max-width: 1400px) {
             font-size: 14px;
@@ -870,28 +872,34 @@
             flex-direction: column;
           }
           .page-3-left {
+            p {
+              max-width: 28vw;
+              @media screen and (max-width: 767px) {
+                max-width: 100%;
+              }
+            }
           }
           .page-3-right {
             img {
               position: absolute;
-              left: 83px;
-              bottom: 0px;
+              right: 0px;
+              top: 0px;
 
               @media screen and (max-width: 1400px) {
-                transform: translate(-6%, 5%);
+                // transform: translate(-6%, 5%);
                 scale: 0.9;
               }
               @media screen and (max-width: 1200px) {
-                transform: translate(-10%, 8%);
+                transform: translate(10%, -8%);
                 scale: 0.8;
               }
               @media screen and (max-width: 1000px) {
-                transform: translate(-20%, 25%);
+                transform: translate(20%, -20%);
                 scale: 0.7;
               }
               @media screen and (max-width: 767px) {
                 width: 200%;
-                transform: translate(-53%, 0);
+                transform: translate(20%, 80%);
               }
             }
           }
