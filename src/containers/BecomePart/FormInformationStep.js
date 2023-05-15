@@ -22,8 +22,8 @@ const FormInformationStep = () => {
             <Row>
                 <Col lg='6'>
                     <Form.Item
-                        name="name"
-                        label={t("become:name")}
+                        name="First Name"
+                        label={t("First Name")}
                         rules={[{ required: true, message: 'First Name' }]}
                     >
                         <Input defaultValue={name} value={name} onChange={e => setName(e.target.value)} />
@@ -31,8 +31,8 @@ const FormInformationStep = () => {
                 </Col>
                 <Col lg='6'>
                     <Form.Item
-                        name="surname"
-                        label={t("become:surname")}
+                        name="Surname"
+                        label={t("become:Surname")}
                         rules={[{ required: true, message: 'Surname' }]}
                     >
                         <Input defaultValue={name} value={name} onChange={e => setName(e.target.value)} />
