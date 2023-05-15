@@ -1,6 +1,1 @@
-<svg width="238" height="238" viewBox="0 0 238 238" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M182 118.5C182 149.535 174.631 177.437 162.924 197.444C151.161 217.546 135.494 229 119 229C102.506 229 86.8393 217.546 75.0762 197.444C63.3694 177.437 56 149.535 56 118.5C56 87.4647 63.3694 59.563 75.0762 39.5564C86.8393 19.4539 102.506 8 119 8C135.494 8 151.161 19.4539 162.924 39.5564C174.631 59.563 182 87.4647 182 118.5Z" stroke="#F81381" stroke-width="6"/>
-<line x1="119" x2="119" y2="238" stroke="#F81381" stroke-width="6"/>
-<circle cx="119" cy="119" r="115" stroke="white" stroke-width="6"/>
-<line y1="115" x2="238" y2="115" stroke="white" stroke-width="6"/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238 238"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;stroke-width:6px;}.cls-1{stroke:#f81381;}.cls-2{stroke:#fff;}</style></defs><polyline class="cls-1" points="197.087 26.72 235.008 26.72 235.008 64.641"/><polyline class="cls-1" points="235.008 26.72 137.825 111.956 101.88 82.151 2.992 155.852"/><polyline class="cls-2" points="48.547 149.395 48.547 211.28 2.992 211.28 2.992 172.903"/><polyline class="cls-2" points="110.7 111.956 110.7 211.28 65.146 211.28 65.146 129.314"/><polyline class="cls-2" points="172.854 106.911 172.854 211.28 127.3 211.28 127.3 123.947"/><polyline class="cls-2" points="235.008 80.012 235.008 211.28 189.453 211.28 189.453 94.109"/></svg>

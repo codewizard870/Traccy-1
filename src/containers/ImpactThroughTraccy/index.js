@@ -105,8 +105,9 @@ const ImpactThroughTraccy = () => {
    return (
       <>
          <div className='itt-wrapper' onClick={onClose}>
+         <div className='about-banner' style={{ backgroundImage: `url("/impact/stage-banner.png")` }}></div>
+
             <section className='banner-section'>
-               <div className='about-banner' style={{ backgroundImage: `url("/impact/stage-banner.png")` }}></div>
                <Slider {...settings2} ref={slider}>
                   <div>
                      <div className="intro-wrapper" id="intro-wrapper"
@@ -300,57 +301,53 @@ const ImpactThroughTraccy = () => {
             </section>
             {stageIndex !== 0 &&
                <section className='map-section'>
-                  <Container>
-                     <Row>
-                        <Col>
-                           <div className='map-wrapper'>
-                              <div className='project-center'>
-                                 {stageIndex === 1 &&
-                                    <>
-                                       <div className='points point-1' onClick={() => router.push("/impact-through-traccy-details/lynx")}>
-                                          <span></span>
-                                          <div>01</div>
-                                       </div>
-                                       <div className='points point-2' onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>
-                                          <span></span>
-                                          <div>02</div>
-                                       </div>
-                                       <div className='points point-3' onClick={() => router.push("/impact-through-traccy-details/traccy-solar")}>
-                                          <span></span>
-                                          <div>03</div>
-                                       </div>
-                                       <div className='points point-4' onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>
-                                          <span></span>
-                                          <div>04</div>
-                                       </div>
-                                       <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>
-                                          <span></span>
-                                          <div>05</div>
-                                       </div>
-                                    </>
-                                 }
-                                 {stageIndex === 2 &&
-                                    <>
-                                       <div className='points point-6' onClick={() => router.push("/impact-through-traccy-details/flyout")}>
-                                          <span></span>
-                                          <div>01</div>
-                                       </div>
-                                    </>
-                                 }
-                                 {stageIndex === 3 &&
-                                    <>
-                                       <div className='points point-7' onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>
-                                          <span></span>
-                                          <div>01</div>
-                                       </div>
-                                    </>
-                                 }
+
+                  <div className='map-wrapper'>
+                     <div className='project-center'>
+                        {stageIndex === 1 &&
+                           <>
+                              <div className='points point-1' onClick={() => router.push("/impact-through-traccy-details/lynx")}>
+                                 <span></span>
+                                 <div>01</div>
                               </div>
-                              <img src={MapImg} alt='Map' />
-                           </div>
-                        </Col>
-                     </Row>
-                  </Container>
+                              <div className='points point-2' onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>
+                                 <span></span>
+                                 <div>02</div>
+                              </div>
+                              <div className='points point-3' onClick={() => router.push("/impact-through-traccy-details/traccy-solar")}>
+                                 <span></span>
+                                 <div>03</div>
+                              </div>
+                              <div className='points point-4' onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>
+                                 <span></span>
+                                 <div>04</div>
+                              </div>
+                              <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>
+                                 <span></span>
+                                 <div>05</div>
+                              </div>
+                           </>
+                        }
+                        {stageIndex === 2 &&
+                           <>
+                              <div className='points point-6' onClick={() => router.push("/impact-through-traccy-details/flyout")}>
+                                 <span></span>
+                                 <div>01</div>
+                              </div>
+                           </>
+                        }
+                        {stageIndex === 3 &&
+                           <>
+                              <div className='points point-7' onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>
+                                 <span></span>
+                                 <div>01</div>
+                              </div>
+                           </>
+                        }
+                     </div>
+                     <img src="/impact/map.png" alt='Map'/>
+                  </div>
+
                   <div className='right-numbers'>
                      <ul>
                         {stageIndex === 1 &&
