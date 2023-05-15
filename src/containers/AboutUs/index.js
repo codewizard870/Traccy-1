@@ -278,10 +278,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> CEO & Co-Founder</div>
                                                 <p>{t("about_us:joas")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/joas-fischer-79419b164" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -296,10 +298,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> CIO</div>
                                                 <p>{t("about_us:mick")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/mick-misamu-6381b3193" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -314,10 +318,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> CMO</div>
                                                 <p>{t("about_us:farrah")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/farrah-mettler-306922187" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -332,10 +338,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> CFO</div>
                                                 <p>{t("about_us:dedry")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/dedry-misamu-lusilavo-a3b811117" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -350,10 +358,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> COO & CTO</div>
                                                 <p>{t("about_us:andrea")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/bello-andrea-380572b4" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -368,10 +378,12 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> </div>
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
-                                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
                                                     <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                                    <a href="https://www.linkedin.com/in/ika-nur-afifah" target="_blank" rel="noreferrer">
+                                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                                    </a>
                                                 </div>
                                             </div>
                                             <div className='slider-right'>
@@ -407,10 +419,12 @@ const AboutUs = () => {
                                 <span className="card-description">{team.role}</span>
 
                                 <div className="card-social">
-                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
+                                    {/* <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                     <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                    <a href={team.linkedin}>
+                                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                    </a>
                                 </div>
                             </div>
                         ))}
@@ -428,10 +442,12 @@ const AboutUs = () => {
                                         <span className="card-description">{team.role}</span>
 
                                         <div className="card-social">
-                                            <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
+                                            {/* <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
                                             <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                            <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                            <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                            <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
+                                            <a href={team.linkedin}>
+                                                <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -451,21 +467,25 @@ const OURTEAM = [
         image: "/about-us/marko.png",
         name: "Marko Vitez",
         role: "Full Stack Developer & Smart Contracts",
+        linkedin: "https://www.linkedin.com/in/marko-vitez-6381b3193"
     },
     {
         image: "/about-us/pirda.png",
         name: "Pirda Fajirati",
         role: "Graphic Designer & UI/UX",
+        linkedin: "https://www.linkedin.com/in/mick-misamu-6381b3193"
     },
     {
         image: "/about-us/fidelius.png",
         name: "Fidelius Schüpfer",
         role: "Financial Relations Specialist",
+        linkedin: "https://www.linkedin.com/in/fidelius-sch%C3%BCpfer-28a7a7215"
     },
     {
         image: "/about-us/gianluca.png",
         name: "Gian-Luca Grüter",
         role: "Investor Relations Specialist",
+        linkedin: "https://www.linkedin.com/in/gianluca-gr%C3%BCter2000"
     },
     // {
     //     image: "/about-us/julia.png",
@@ -476,5 +496,6 @@ const OURTEAM = [
         image: "/about-us/yves.png",
         name: "Yves Gloggner",
         role: "Financial Relations Specialist",
+        linkedin: "https://www.linkedin.com/in/yveslucgloggner"
     },
 ];

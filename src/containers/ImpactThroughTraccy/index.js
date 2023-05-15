@@ -30,6 +30,7 @@ const ImpactThroughTraccy = () => {
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
+      fade: true,
       appendDots: dots => (
          <div className='thumb-col-main'>
             <ul style={{ margin: "0px" }}> {dots} </ul>
@@ -105,7 +106,7 @@ const ImpactThroughTraccy = () => {
       <>
          <div className='itt-wrapper' onClick={onClose}>
             <section className='banner-section'>
-               <div className='about-banner' style={{ backgroundImage: `url("/impact/5309059.jpg")` }}></div>
+               <div className='about-banner' style={{ backgroundImage: `url("/impact/stage-banner.png")` }}></div>
                <Slider {...settings2} ref={slider}>
                   <div>
                      <div className="intro-wrapper" id="intro-wrapper"
@@ -220,7 +221,7 @@ const ImpactThroughTraccy = () => {
                   </div>
                   {Sliders.map((data, index) => (
                      <div key={index}>
-                        <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div>
+                        {/* <div className='about-banner' style={{ backgroundImage: `url(${data.banner})` }}></div> */}
                         <Container>
                            <div className="stage-wrapper">
                               <div className="stage-main">
