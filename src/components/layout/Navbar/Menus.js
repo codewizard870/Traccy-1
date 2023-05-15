@@ -131,7 +131,7 @@ const Menus = () => {
         </li>
       </ul>
       <ConnectWallet />
-      <Select
+      {/* <Select
         defaultValue={defaultLang}
         value={defaultLang}
         className='lang-select'
@@ -152,7 +152,7 @@ const Menus = () => {
             label: <div className="lang-item"><div className="flag-icon"><img src={FrenchIcon} alt="french" /></div>FR </div>,
           },
         ]}
-      />
+      /> */}
       <Button className="menu-icon" onClick={showDrawer}><SvgIcon name="menu" viewbox="0 0 28 28" /></Button>
     </>
   );

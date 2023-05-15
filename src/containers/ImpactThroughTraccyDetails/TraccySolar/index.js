@@ -51,7 +51,7 @@ const TraccySolar = () => {
                         <img src="/impact/traccy-solar/traccy-solar-side.png" alt="mosquito" />
                       </div>
                       <div className='arrow-right-sm' onClick={nextPage}>
-                        <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
+                        <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' style={{fill: "white"}}/>
                       </div>
                     </div>
                   </div>

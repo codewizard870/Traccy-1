@@ -347,7 +347,8 @@
       align-items: center;
       transition: all ease-in 0.1s;
       z-index: 3;
-
+      cursor: pointer;
+      
       &:hover {
         transform: translateX(3px);
       }

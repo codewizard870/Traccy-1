@@ -125,7 +125,7 @@ const BecomePart = () => {
                             <div className="steps-action">
                                 {current === 0 && (
                                     <>
-                                        <Link to='/'>FAQ</Link>
+                                        {/* <Link to='/'>FAQ</Link> */}
                                         <Button type="primary" onClick={() => next()}>
                                             Continue
                                         </Button>
@@ -133,7 +133,7 @@ const BecomePart = () => {
                                 )}
                                 {current === 1 && (
                                     <>
-                                        <Link to='/'>FAQ</Link>
+                                        {/* <Link to='/'>FAQ</Link> */}
                                         <div>
                                             <Button onClick={() => prev()}>
                                                 Back

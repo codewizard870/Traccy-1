@@ -101,10 +101,10 @@ const Home = () => {
       <>
          <div className='home2-wrapper'>
             <div className='home2-wrapper-inner'>
-               <Link to='/' className='backarrow'>
+               <div className='backarrow' onClick={() => history.goBack()}>
                   <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
                   Back
-               </Link>
+               </div>
                <Slider
                   ref={e => setSlider(e)}
                   beforeChange={beforeChange}
