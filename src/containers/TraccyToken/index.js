@@ -52,7 +52,7 @@ const TraccyToken = () => {
     const { t } = useTranslation();
     const history = useHistory();
     const [countdownEndDate, setCountdownEndDate] = useState(
-        new Date("March 2, 2023 00:00:00").getTime()
+        new Date("July 2, 2023 00:00:00").getTime()
     );
     const settings = {
         dots: true,

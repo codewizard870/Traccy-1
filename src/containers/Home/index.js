@@ -91,10 +91,10 @@ const Home = () => {
          slider.slickGoTo(slick)
    }
 
-   const lang = localStorage.getItem("lang")??"en";
+   const lang = localStorage.getItem("lang") ?? "en";
    useEffect(() => {
-     if (lang) 
-       i18n.changeLanguage(lang);
+      if (lang)
+         i18n.changeLanguage(lang);
    }, [i18n, lang]);
 
    return (
@@ -110,10 +110,11 @@ const Home = () => {
                   beforeChange={beforeChange}
                   {...settings}
                >
-                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/traccy-token")} >
+                  <div onMouseMove={() => slickGoTo(0)} onClick={() => history.push("/traccy-token")} >
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
-                        <img src="/main-menu/BG-Gif-Trial2.gif" className="fog-img" alt="hover" />
+                        <img src="/main-menu/BG-Gif-Trial2.gif" className="fog-img" alt="hover"
+                        />
                         <div className='slide-number'>
                            <h4>01</h4>
                            <Divider />
@@ -123,7 +124,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{marginLeft: "3px", marginTop: "5px", width: "65px", height: "65px"}} />
+                           <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{ marginLeft: "3px", marginTop: "5px", width: "140px", height: "140px" }} />
                         </div>
                         <div className='desc-text'>
                            <h2>TRCY Connect</h2>
@@ -131,17 +132,17 @@ const Home = () => {
                               <h3>TRCY Connect</h3>
                            </div>
                            <p>
-                           
+
                            </p>
 
                            <ul>
-                            
+
                            </ul>
                         </div>
-                        <LearnMore/>
+                        <LearnMore />
                      </div>
                   </div>
-                  <div onMouseMove={() => slickGoTo(0)}  onClick = {() => history.push("/impact-through-traccy/0")}>
+                  <div onMouseMove={() => slickGoTo(0)} onClick={() => history.push("/impact-through-traccy/0")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src="/main-menu/BG---IMP.gif" className="fog-img" alt="hover" />
@@ -154,8 +155,8 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/impact.gif" className="animation-icon" alt="animation" 
-                           style={{width: "50px", height: "50px"}}/>
+                           <img src="/main-menu/impact.gif" className="animation-icon" alt="animation"
+                              style={{ width: "50px", height: "50px" }} />
                         </div>
                         <div className='desc-text'>
                            <h2>Impact</h2>
@@ -163,16 +164,16 @@ const Home = () => {
                               <h3>Impact</h3>
                            </div>
                            <p>
-                             
+
                            </p>
                            <ul>
-                            
+
                            </ul>
                         </div>
-                        <LearnMore/>
+                        <LearnMore />
                      </div>
                   </div>
-                  <div  onClick = {() => history.push("/about")}>
+                  <div onClick={() => history.push("/about")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src="/main-menu/BG---abt-us.gif" className="fog-img" alt="hover" />
@@ -193,16 +194,16 @@ const Home = () => {
                               <h3>About Us</h3>
                            </div>
                            <p>
-                             
+
                            </p>
                            <ul>
-                             
+
                            </ul>
                         </div>
-                        <LearnMore/>
+                        <LearnMore />
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(4)}  onClick = {() => history.push("/become-part")}>
+                  <div onMouseOver={() => slickGoTo(4)} onClick={() => history.push("/become-part")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src="/main-menu/BG---BCP.gif" className="fog-img" alt="hover" />
@@ -215,7 +216,7 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/become.gif" className="animation-icon" alt="animation" style={{marginBottom: "10px"}}/>
+                           <img src="/main-menu/become.gif" className="animation-icon" alt="animation" style={{ marginBottom: "10px" }} />
                         </div>
                         <div className='desc-text'>
                            <h2>Become a part </h2>
@@ -223,16 +224,16 @@ const Home = () => {
                               <h3>Become a part </h3>
                            </div>
                            <p>
-                              
+
                            </p>
                            <ul>
-                    
+
                            </ul>
                         </div>
-                        <LearnMore/>
+                        <LearnMore />
                      </div>
                   </div>
-                  <div onMouseOver={() => slickGoTo(4)} onClick = {() => history.push("/invest")}>
+                  <div onMouseOver={() => slickGoTo(4)} onClick={() => history.push("/invest")}>
                      <div className='home2-slide-card'>
                         <div className="home2-slide-overlay" />
                         <img src="/main-menu/BG---Line.gif" className="fog-img" alt="hover" />
@@ -245,7 +246,8 @@ const Home = () => {
                               <circle className="background" cx="50" cy="50" r="45" stroke="#803B9B" fill="transparent" stroke-width="1" pathLength="1" stroke-dasharray="1" stroke-dashoffset="0" />
                               <circle className="foreground" cx="50" cy="50" r="45" transform="rotate(110)" transform-origin="center" fill="transparent" stroke-width="2" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" stroke-linecap="round" />
                            </svg>
-                           <img src="/main-menu/buy-token.gif" className="animation-icon" alt="animation" />
+                           <img src="/main-menu/buy-token.gif" className="animation-icon" alt="animation"
+                              style={{ width: "140px", height: "140px" }} />
                         </div>
                         <div className='desc-text'>
                            <h2>Buy Token</h2>
@@ -253,10 +255,10 @@ const Home = () => {
                               <h3>PURCHASE TRCY </h3>
                            </div>
                            <p>
-                             
+
                            </p>
                            <ul>
-                           
+
                            </ul>
                         </div>
                         <LearnMore />

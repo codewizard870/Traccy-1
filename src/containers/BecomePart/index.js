@@ -45,10 +45,10 @@ const BecomePart = () => {
             </div>
             <div className='leftbar'>
                 <div className='social-icon-list'>
-                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                    <a href="/"><SvgIcon name='twitter' viewbox='0 0 36 29.239' /></a>
+                    <a href="/"><SvgIcon name='telegram' viewbox='0 0 34.875 34.664' /></a>
+                    <a href="/"><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></a>
+                    <a href="/"><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></a>
                 </div>
             </div>
             <div className='right-section'>

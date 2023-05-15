@@ -69,17 +69,42 @@ const AboutUs = () => {
         customPaging: i => (
             <div className='thumb-col-main'
             >
-                {i === 0 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb4} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Joas Fischer</div>
-                    <div className='thumb-designation'><span></span> CEO</div></div>}
-                {i === 1 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb1} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Mick Misamu</div>
-                    <div className='thumb-designation'><span></span> CIO</div></div>}
+                {i === 0 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb4} alt='Mick Misamu' />
+                        </div>
+                        <div className='thumb-bottom'>Joas Fischer</div>
+                        <div className='thumb-designation'>
+                            <span></span> CEO
+                        </div>
+                    </div>}
+                {i === 1 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb1} alt='Mick Misamu' />
+                        </div>
+                        <div className='thumb-bottom'>Mick Misamu</div>
+                        <div className='thumb-designation'>
+                            <span></span> CIO & Co-Founder
+                        </div>
+                    </div>
+                }
                 {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
                     <div className='thumb-designation'><span></span> CMO</div></div>}
-                {i === 3 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb3} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Dedry  Misamu</div>
-                    <div className='thumb-designation'><span></span> CFO</div></div>}
+                {i === 3 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb3} alt='Mick Misamu' />
+                        </div>
+                        <div className='thumb-bottom'>Dedry  Misamu</div>
+                        <div className='thumb-designation'>
+                            <span></span> CFO & Co-Founder
+                        </div>
+                    </div>}
                 {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
                     <div className='thumb-designation'><span></span> COO & CTO</div></div>}
-                {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>IKA NUR AFFIFAH</div>
+                {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
                     <div className='thumb-designation'><span></span> CBDO</div></div>}
             </div>
         )
@@ -339,7 +364,7 @@ const AboutUs = () => {
                                     <div>
                                         <div className='slider-card'>
                                             <div className='slider-left'>
-                                                <h3>Ika Nur Affifah </h3>
+                                                <h3>Ika Affifah </h3>
                                                 <div className='designation'><Divider /> </div>
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>

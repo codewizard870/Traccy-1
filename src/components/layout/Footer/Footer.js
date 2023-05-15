@@ -26,27 +26,27 @@ const Footer = () => {
                 <h3>Website</h3>
                 <ul>
                   <a href="/home"><li>Home</li></a>
-                  <a href="/traccy-token"><li>Traccy Token</li></a>
-                  <a href="/impact-through-traccy/0"><li>Traccy Impact</li></a>
+                  <a href="/traccy-token"><li>Traccy Connect</li></a>
+                  <a href="/impact-through-traccy/0"><li>Impact</li></a>
                   <a href="/about"><li>About Us</li></a>
                   <a href="/become-part"><li>Bacome a Part</li></a>
-                  <a href="/invest"><li>But Token</li></a>
+                  <a href="/invest"><li>Buy Token</li></a>
                 </ul>
               </Col>
               <Col lg='4'>
                 <h3>Company</h3>
                 <ul>
                   <a href="/become-part"><li>Contact Us</li></a>
-                  <a href="/library"><li>Documents </li></a>
+                  {/* <a href="/library"><li>Documents </li></a> */}
                 </ul>
               </Col>
               <Col lg='4'>
                 <h3>Social Media</h3>
                 <ul>
-                  <li>Telegram </li>
-                  <li>Twitter  </li>
-                  <li>Instagram</li>
-                  <li>Linkedin </li>
+                  <a href="https://telegram.com//"><li>Telegram </li></a>
+                  <a href="https://twitter.com/"><li>Twitter  </li></a>
+                  <a href="https://instagram.com"><li>Instagram</li></a>
+                  <a href="https://linkedin.com/"><li>Linkedin </li></a>
                 </ul>
               </Col>
             </Row>
