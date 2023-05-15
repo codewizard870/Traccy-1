@@ -216,8 +216,12 @@ const AboutUs = () => {
                                         </Button>
                                     </div>
                                 </div>
-                                <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div>
-                                <img src={videoimg} alt='video-img' />
+                                {/* <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div> */}
+                                {/* <img src={videoimg} alt='video-img' /> */}
+                                <video  autoplay controls>
+                                    <source src="https://drive.google.com/file/d/1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4/view?usp=share_link" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </Col>
                     </Row>

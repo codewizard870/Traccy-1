@@ -127,9 +127,9 @@ const Home = () => {
                            <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{ marginLeft: "3px", marginTop: "5px", width: "140px", height: "140px" }} />
                         </div>
                         <div className='desc-text'>
-                           <h2>TRCY Connect</h2>
+                           <h2>TRACCY Connect</h2>
                            <div className="desc-content">
-                              <h3>TRCY Connect</h3>
+                              <h3>TRACCY Connect</h3>
                            </div>
                            <p>
 

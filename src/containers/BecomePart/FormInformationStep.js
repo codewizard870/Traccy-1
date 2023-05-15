@@ -22,9 +22,18 @@ const FormInformationStep = () => {
             <Row>
                 <Col lg='6'>
                     <Form.Item
-                        name="name"
-                        label={t("become:name")}
-                        rules={[{ required: true, message: 'Please Enter Full Name!' }]}
+                        name="First Name"
+                        label={t("First Name")}
+                        rules={[{ required: true, message: 'First Name' }]}
+                    >
+                        <Input defaultValue={name} value={name} onChange={e => setName(e.target.value)} />
+                    </Form.Item>
+                </Col>
+                <Col lg='6'>
+                    <Form.Item
+                        name="Surname"
+                        label={t("become:Surname")}
+                        rules={[{ required: true, message: 'Surname' }]}
                     >
                         <Input defaultValue={name} value={name} onChange={e => setName(e.target.value)} />
                     </Form.Item>
@@ -58,6 +67,10 @@ const FormInformationStep = () => {
                                 {
                                     value: 'Female',
                                     label: 'Female',
+                                },
+                                {
+                                    value: 'Company',
+                                    label: 'Company',
                                 }
                             ]}
                             value={gender}
@@ -81,8 +94,8 @@ const FormInformationStep = () => {
                                     label: 'Employee',
                                 },
                                 {
-                                    value: 'Parther',
-                                    label: 'Parther',
+                                    value: 'Partner',
+                                    label: 'Partner',
                                 },
                                 {
                                     value: 'Community Member',
@@ -91,6 +104,10 @@ const FormInformationStep = () => {
                                 {
                                     value: 'General Questions',
                                     label: 'General Questions',
+                                },
+                                {
+                                    value: 'Suggestions',
+                                    label: 'Suggestions',
                                 }
                             ]}
                             value={interest}
