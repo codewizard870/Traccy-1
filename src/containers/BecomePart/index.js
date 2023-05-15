@@ -48,14 +48,8 @@ const BecomePart = () => {
             emailjs.send('service_a3qu5la', 'template_s3507wx', templateParams, '2Q4kzA1Odjqa9ncqL')
                 .then((response) => {
                     console.log('SUCCESS!', response.status, response.text);
-                    const cnt = document.getElementById("confirm");
-                    cnt.innerHTML = `${response.status} - ${response.text}`
                 }, (err) => {
                     console.log('FAILED...', err);
-                    const cnt = document.getElementById("confirm");
-
-                    cnt.innerHTML = `${JSON.stringify(err)}`
-
                 });
         }
     };
@@ -93,8 +87,6 @@ const BecomePart = () => {
                         <a href="/"><SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /></a>
                         <a href="/"><SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' /></a>
                     </div>
-                    <label id="confirm">Hello</label>
-
                 </div>
                 <div className='right-section'>
                     {/* <div className='header-bar'>
