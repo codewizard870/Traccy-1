@@ -1228,6 +1228,10 @@
             .icon {
               width: 65px;
               height: 65px;
+              @media screen and (max-width: 767px) {
+                width: 40px;
+                height: 40px;
+              }
             }
           }
         }

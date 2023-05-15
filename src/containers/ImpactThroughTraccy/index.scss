@@ -499,7 +499,7 @@
               margin-top: 10px;
             }
             @media screen and (max-width: 767px) {
-              font-size: 24px;
+              font-size: 20px;
               padding-right: 10px;
             }
           }
@@ -514,7 +514,7 @@
               max-width: 350px;
             }
             @media screen and (max-width: 767px) {
-              font-size: 24px;
+              font-size: 20px;
               width: 100%;
             }
           }
@@ -821,8 +821,8 @@
                 scale: 0.7;
               }
               @media screen and (max-width: 767px) {
-                width: 300%;
-                transform: translate(20%, 45%);
+                width: 200%;
+                transform: translate(9%, 96%);
               }
             }
           }
@@ -936,7 +936,7 @@
             img {
               @media screen and (max-width: 767px) {
                 width: 200%;
-                transform: translate(-33%, 0);
+                transform: translate(-15%, 25%);
               }
             }
           }
@@ -1007,6 +1007,7 @@
         top: 50%;
         left: 95vw;
         transform: translate(0, -50%);
+        z-index: 2;
 
         .intro-dot {
           width: 7px;
@@ -1034,6 +1035,7 @@
         position: fixed;
         left: 10vw;
         bottom: 55px;
+        z-index: 2;
         @media screen and (max-width: 767px) {
           display: none;
         }

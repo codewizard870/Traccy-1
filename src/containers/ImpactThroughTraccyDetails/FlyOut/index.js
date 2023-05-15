@@ -149,7 +149,14 @@ const FlyOut = () => {
                     </div>
                     <div className="row">
                       <div className="tab-section notfirst">
-                        <Tabs defaultActiveKey="1" items={items} onChange={(activeKey) => setTab(activeKey)} />
+                        <Tabs
+                          defaultActiveKey="1" items={items}
+                          onChange={(activeKey) => {
+                            setTab(activeKey);
+                            nextPage()
+                          }
+                          }
+                        />
                       </div>
                     </div>
                   </div>

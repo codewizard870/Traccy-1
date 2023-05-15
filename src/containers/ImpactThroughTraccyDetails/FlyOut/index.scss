@@ -177,6 +177,7 @@
             &.notfirst {
               margin-top: 57px;
               text-align: right;
+              padding-right: 10px;
             }
             img {
               width: 138px;
@@ -396,6 +397,9 @@
           width: 100%;
           img {
             width: 378px;
+            @media screen and (max-width: 776px) {
+              width: 100%;
+            }
           }
         }
         .five {

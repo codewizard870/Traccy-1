@@ -415,7 +415,7 @@ export const Sliders = [
    },
    {
       stage: "Incubation",
-      desc: "We are incubating new Project!",
+      desc: "We are incubating new Project",
       application: "Incubation",
       application_number: 1,
       month: 3,
