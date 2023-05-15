@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Divider } from 'antd';
 import './index.scss';
+import { UserContext } from '.';
 
 const ReviewConfirmStep = () => {
+    const { name, email, gender, interest, message }= useContext(UserContext);
     return (
         <>
             <div className='review-dlt'>
                 <h3>Personal Details </h3>
                 <p>
-                    Mick Misamu <br /> 
-                    1 Hessestrass <br />  
-                    Zurich 8051 <br />
-                    12/09/2022
+                    {name} <br /> 
+                    {email} <br />  
+                    {gender} <br />
+                    {interest} <br />
+                    {message}
                 </p>
             </div>
             <div className='review-dlt bottom'>

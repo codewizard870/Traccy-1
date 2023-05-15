@@ -6,6 +6,7 @@
     "@ant-design/icons": "^5.0.1",
     "@cosmjs/cosmwasm-stargate": "^0.29.5",
     "@cosmjs/math": "^0.29.5",
+    "@emailjs/browser": "^3.11.0",
     "@react-spring/web": "^9.6.1",
     "@restart/context": "^2.1.4",
     "@testing-library/jest-dom": "^5.16.4",

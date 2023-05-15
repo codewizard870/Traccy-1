@@ -45,10 +45,10 @@ const SentStep = () => {
         <div className='sent-wrapper'>
             <h2>Your request was successfully sent </h2>
             <p>All set! Your transaction is pending and a RichUncle <br /> Representative will be in touch</p>
-            <Button type='primary'>Get our Newsletter </Button>
+            {/* <Button type='primary'>Get our Newsletter </Button> */}
             <h2>Shared information </h2>
             <Slider {...settings}>
-                <div>
+                {/* <div>
                     <div className='download-col'>
                         <h4>Factheet</h4>
                         <div className='download-btn'><div className='arrow-icon'> <SvgIcon name='chevron-down' viewbox='0 0 23.616 13.503' /> </div> Download PDF</div>
@@ -61,7 +61,8 @@ const SentStep = () => {
                         <div className='download-btn'><div className='arrow-icon'> <SvgIcon name='chevron-down' viewbox='0 0 23.616 13.503' /> </div> Download PDF</div>
                         <Divider />
                     </div>
-                </div>
+                </div> */}
+                <div/>
                 <div>
                     <div className='download-col'>
                         <h4>Whitepaper</h4>
@@ -69,6 +70,7 @@ const SentStep = () => {
                         <Divider />
                     </div>
                 </div>
+                <div/>
             </Slider>
         </div>
     )
