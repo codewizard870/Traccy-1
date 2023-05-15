@@ -157,10 +157,18 @@ const AboutUs = () => {
                             <div className='social-inner'>
                                 Share
                                 <Divider />
-                                <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                                <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                <a href="https://twitter.com/traccyag">
+                                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                                </a>
+                                <a href="https://web.telegram.org/z/#-1837824968">
+                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
+                                </a>
+                                <a href="https://www.instagram.com/traccy_official/">
+                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                                </a>
+                                <a href="https://www.linkedin.com/company/traccy-ag/?viewAsMember=true">
+                                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                                </a>
                             </div>
                         </Col>
                     </Row>
@@ -218,7 +226,7 @@ const AboutUs = () => {
                                 </div>
                                 {/* <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div> */}
                                 {/* <img src={videoimg} alt='video-img' /> */}
-                                <video  autoplay controls>
+                                <video autoplay controls>
                                     <source src="https://drive.google.com/file/d/1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4/view?usp=share_link" type="video/mp4" />
                                     Your browser does not support the video tag.
                                 </video>
@@ -473,12 +481,12 @@ const OURTEAM = [
         role: "Full Stack Developer & Smart Contracts",
         linkedin: "https://www.linkedin.com/in/marko-vitez-6381b3193"
     },
-    {
-        image: "/about-us/pirda.png",
-        name: "Pirda Fajirati",
-        role: "Graphic Designer & UI/UX",
-        linkedin: "https://www.linkedin.com/in/mick-misamu-6381b3193"
-    },
+    // {
+    //     image: "/about-us/pirda.png",
+    //     name: "Pirda Fajirati",
+    //     role: "Graphic Designer & UI/UX",
+    //     linkedin: "https://www.linkedin.com/in/mick-misamu-6381b3193"
+    // },
     {
         image: "/about-us/fidelius.png",
         name: "Fidelius Schüpfer",

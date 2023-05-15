@@ -746,7 +746,8 @@
       scroll-snap-type: y mandatory;
       position: relative;
       background-size: cover;
-
+      z-index: 10;
+      
       .page-wrapper {
         scroll-snap-align: start;
         scroll-snap-stop: always;

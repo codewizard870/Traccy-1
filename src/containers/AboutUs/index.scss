@@ -573,6 +573,7 @@
       left: 0;
       display: inline-block;
       z-index: 0;
+      pointer-events: none;
     }
     .blur-circle2 {
       background: transparent
@@ -589,6 +590,7 @@
       display: inline-block;
       z-index: 0;
       bottom: -8%;
+      pointer-events: none;
     }
     .blur-circle3 {
       background: transparent
@@ -604,6 +606,7 @@
       margin: auto;
       display: inline-block;
       z-index: 0;
+      pointer-events: none;
     }
 
     .ourteam-wrapper {

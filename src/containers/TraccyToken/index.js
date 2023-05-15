@@ -126,7 +126,7 @@ const TraccyToken = () => {
         for (let i = 0; i < points.length; i++) {
             const childRect = points[i].getBoundingClientRect();
             const left = childRect.left - parentRect.left - descs[i].clientWidth / 2;
-            const top = childRect.top - parentRect.top - descs[i].clientHeight / 2;
+            const top = childRect.top - parentRect.top + 35;// - descs[i].clientHeight / 2;
             descs[i].style.left = `${left > 0 ? left : 0}px`;
             descs[i].style.top = `${top}px`;
         }
@@ -141,8 +141,8 @@ const TraccyToken = () => {
                     <Row>
                         <Col lg='6' className="banner-left">
                             <h1>
-                                Sustainable<br/>
-                                <span style={{ fontWeight: 'bold' }}>Impact</span> through<br/>
+                                Sustainable<br />
+                                <span style={{ fontWeight: 'bold' }}>Impact</span> through<br />
                                 our first <span style={{ fontWeight: 'bold' }}> STO
                                 </span>
                             </h1>
@@ -372,7 +372,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
                                                     <h3>Direct Participation</h3>
-                                                    <p>You will get access to all the new projects STO<br/>&nbsp;</p>
+                                                    <p>You will get access to all the new projects STO<br />&nbsp;</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -420,17 +420,19 @@ const TraccyToken = () => {
                             <div className='roadmap-wrapper' ref={roadmapWrapperRef} >
                                 <svg className="roadmap-path" width="1334" height="243" viewBox="0 0 1334 243" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M310.124 71.5438C207.324 182.996 91.4447 135.874 29.9561 87.0395V112.044C91.4447 160.879 215.474 207.277 315.968 93.8864C458.792 -67.2655 594.675 125.374 648.371 157.069C702.067 188.765 820.417 268.761 997.577 135.992C1139.3 29.7761 1259.24 114.392 1304.41 168.392V143.387C1259.24 89.3878 1133.46 7.94133 991.732 114.157C814.572 246.926 699.371 163.134 648.371 127.539C600.154 93.8871 452.582 -82.9056 310.124 71.5438Z" fill="url(#paint0_linear_913_1982)" />
-                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 0)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 0)} onMouseLeave={(e) => hoverRoadmap(e, -1)}>
                                         <path d="M431.761 36.6261C441.848 36.6261 450.025 28.4271 450.025 18.313C450.025 8.19903 441.848 0 431.761 0C421.674 0 413.497 8.19903 413.497 18.313C413.497 28.4271 421.674 36.6261 431.761 36.6261Z" fill="#D9D9D9" fill-opacity="0.01" />
                                         <path d="M431.761 34.161C441.242 34.161 448.929 26.7503 448.929 17.6088C448.929 8.4673 441.242 1.05664 431.761 1.05664C422.279 1.05664 414.593 8.4673 414.593 17.6088C414.593 26.7503 422.279 34.161 431.761 34.161Z" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="2.11542" />
                                         <path d="M431.761 23.2445C434.989 23.2445 437.606 20.7217 437.606 17.6096C437.606 14.4975 434.989 11.9746 431.761 11.9746C428.534 11.9746 425.917 14.4975 425.917 17.6096C425.917 20.7217 428.534 23.2445 431.761 23.2445Z" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 1)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 1)}
+                                        onMouseLeave={(e) => hoverRoadmap(e, -1)}>
                                         <path d="M801.422 218.349C811.509 218.349 819.686 210.15 819.686 200.036C819.686 189.922 811.509 181.723 801.422 181.723C791.335 181.723 783.158 189.922 783.158 200.036C783.158 210.15 791.335 218.349 801.422 218.349Z" fill="#D9D9D9" fill-opacity="0.01" />
                                         <path d="M801.422 215.884C810.904 215.884 818.59 208.473 818.59 199.331C818.59 190.19 810.904 182.779 801.422 182.779C791.94 182.779 784.254 190.19 784.254 199.331C784.254 208.473 791.94 215.884 801.422 215.884Z" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="2.11542" />
                                         <path d="M801.423 204.967C804.65 204.967 807.267 202.444 807.267 199.332C807.267 196.22 804.65 193.697 801.423 193.697C798.195 193.697 795.578 196.22 795.578 199.332C795.578 202.444 798.195 204.967 801.423 204.967Z" fill="#FFFBFB" fill-opacity="0.2" />
                                     </g>
-                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 2)}>
+                                    <g className="roadmap-point" onMouseEnter={(e) => hoverRoadmap(e, 2)}
+                                        onMouseLeave={(e) => hoverRoadmap(e, -1)}>
                                         <path d="M1136.75 92.9737C1146.83 92.9737 1155.01 84.7747 1155.01 74.6607C1155.01 64.5467 1146.83 56.3477 1136.75 56.3477C1126.66 56.3477 1118.48 64.5467 1118.48 74.6607C1118.48 84.7747 1126.66 92.9737 1136.75 92.9737Z" fill="#D9D9D9" fill-opacity="0.01" />
                                         <path d="M1136.75 90.5086C1146.23 90.5086 1153.92 83.098 1153.92 73.9565C1153.92 64.815 1146.23 57.4043 1136.75 57.4043C1127.27 57.4043 1119.58 64.815 1119.58 73.9565C1119.58 83.098 1127.27 90.5086 1136.75 90.5086Z" stroke="#FEFCFC" stroke-opacity="0.2" stroke-width="2.11542" />
                                         <path d="M1136.75 79.5922C1139.97 79.5922 1142.59 77.0693 1142.59 73.9572C1142.59 70.8451 1139.97 68.3223 1136.75 68.3223C1133.52 68.3223 1130.9 70.8451 1130.9 73.9572C1130.9 77.0693 1133.52 79.5922 1136.75 79.5922Z" fill="#FFFBFB" fill-opacity="0.2" />
