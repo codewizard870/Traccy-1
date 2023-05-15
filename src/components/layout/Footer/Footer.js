@@ -43,10 +43,10 @@ const Footer = () => {
               <Col lg='4'>
                 <h3>Social Media</h3>
                 <ul>
-                  <a href="https://telegram.com//"><li>Telegram </li></a>
-                  <a href="https://twitter.com/"><li>Twitter  </li></a>
-                  <a href="https://instagram.com"><li>Instagram</li></a>
-                  <a href="https://linkedin.com/"><li>Linkedin </li></a>
+                  <a href="https://web.telegram.org/z/#-1837824968"><li>Telegram </li></a>
+                  <a href="https://twitter.com/traccyag"><li>Twitter  </li></a>
+                  <a href="https://www.instagram.com/traccy_official/"><li>Instagram</li></a>
+                  <a href="https://www.linkedin.com/company/traccy-ag/?viewAsMember=true"><li>Linkedin </li></a>
                 </ul>
               </Col>
             </Row>
@@ -67,10 +67,18 @@ const Footer = () => {
           </Col>
           <Col lg='4'>
             <div className='social-icon-list'>
-              <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-              <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-              <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-              <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+              <a href="https://twitter.com/traccyag">
+                <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+              </a>
+              <a href="https://web.telegram.org/z/#-1837824968">
+                <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
+              </a>
+              <a href="https://www.instagram.com/traccy_official/">
+                <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+              </a>
+              <a href="https://www.linkedin.com/company/traccy-ag/?viewAsMember=true">
+                <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+              </a>
             </div>
           </Col>
         </Row>

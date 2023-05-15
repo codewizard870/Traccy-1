@@ -11,7 +11,7 @@ import './index.scss';
 import { useTranslation } from 'react-i18next';
 
 const Invest = () => {
-    const {t} = useTranslation();
+    const { t } = useTranslation();
     const [current, setCurrent] = useState(0);
 
     const next = () => {
@@ -45,15 +45,23 @@ const Invest = () => {
     return (
         <div className='investform-wrapper'>
             <div className="polygon-effect">
-                <img src="/invest-form/left-hexa.png" alt="polygon-left"/>
-                <img src="/invest-form/right-hexa.png" alt="polygon-right"/>
+                <img src="/invest-form/left-hexa.png" alt="polygon-left" />
+                <img src="/invest-form/right-hexa.png" alt="polygon-right" />
             </div>
             <div className='leftbar'>
                 <div className='social-icon-list'>
-                    <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
-                    <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                    <a href="https://twitter.com/traccyag">
+                        <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
+                    </a>
+                    <a href="https://web.telegram.org/z/#-1837824968">
+                        <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
+                    </a>
+                    <a href="https://www.instagram.com/traccy_official/">
+                        <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' />
+                    </a>
+                    <a href="https://www.linkedin.com/company/traccy-ag/?viewAsMember=true">
+                        <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
+                    </a>
                 </div>
             </div>
             <div className='right-section'>
