@@ -127,9 +127,9 @@ const Home = () => {
                            <img src="/main-menu/trcy-token.gif" className="animation-icon" alt="animation" style={{ marginLeft: "3px", marginTop: "5px", width: "140px", height: "140px" }} />
                         </div>
                         <div className='desc-text'>
-                           <h2>TRACCY Connect</h2>
+                           <h2>Traccy Connect</h2>
                            <div className="desc-content">
-                              <h3>TRACCY Connect</h3>
+                              <h3>The Impact Platform</h3>
                            </div>
                            <p>
 
@@ -161,7 +161,7 @@ const Home = () => {
                         <div className='desc-text'>
                            <h2>Impact</h2>
                            <div className="desc-content">
-                              <h3>Impact</h3>
+                              <h3>Our sustainable Projects</h3>
                            </div>
                            <p>
 
@@ -191,7 +191,7 @@ const Home = () => {
                         <div className='desc-text'>
                            <h2>About Us</h2>
                            <div className="desc-content">
-                              <h3>About Us</h3>
+                              <h3>A Team of Visionaries</h3>
                            </div>
                            <p>
 
@@ -221,7 +221,7 @@ const Home = () => {
                         <div className='desc-text'>
                            <h2>Become a part </h2>
                            <div className="desc-content">
-                              <h3>Become a part </h3>
+                              <h3>The Community of Changemakers</h3>
                            </div>
                            <p>
 
@@ -252,7 +252,7 @@ const Home = () => {
                         <div className='desc-text'>
                            <h2>Buy Token</h2>
                            <div className="desc-content">
-                              <h3>PURCHASE TRCY </h3>
+                              <h3>Participate in your preferred Project</h3>
                            </div>
                            <p>
 
