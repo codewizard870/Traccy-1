@@ -115,7 +115,6 @@ const ImpactThroughTraccy = () => {
                      >
                         <div
                            className="page-wrapper page-1"
-                        // style={{ backgroundImage: `url("/impact/intro-1-background.png")` }}
                         >
                            <div className="page-1-left">
                               <h1>Impact Through Traccy</h1>
@@ -129,7 +128,6 @@ const ImpactThroughTraccy = () => {
                         </div>
                         <div
                            className="page-wrapper page-2"
-                        // style={{ backgroundImage: `url("/impact/intro-2-background.png")` }}
                         >
                            <div className="page-2-left">
                               <img src="/impact/intro/page-2-logo.png" alt="logo" />
