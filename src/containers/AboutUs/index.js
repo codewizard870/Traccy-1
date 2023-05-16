@@ -387,7 +387,7 @@ const AboutUs = () => {
                                         <div className='slider-card'>
                                             <div className='slider-left'>
                                                 <h3>Ika Affifah </h3>
-                                                <div className='designation'><Divider /> </div>
+                                                <div className='designation'><Divider /> CBDO </div>
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
                                                     {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
