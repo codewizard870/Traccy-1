@@ -192,20 +192,6 @@
             @media screen and (max-width: 1441px) {
               font-size: 12px;
             }
-            &.active {
-              &::after {
-                content: " ";
-                position: absolute;
-                bottom: -12px;
-                height: 2px;
-                background: $white;
-                width: 44px;
-                margin: auto;
-                left: 0;
-                right: 0;
-                box-shadow: 0 0 8px rgba($white, 0.8);
-              }
-            }
             &:hover {
               &::after {
                 content: " ";
@@ -218,6 +204,20 @@
                 left: 0;
                 right: 0;
                 box-shadow: 0 0 8px rgba($white, 0.2);
+              }
+            }
+            &.active_m {
+              &::after {
+                content: " ";
+                position: absolute;
+                bottom: -12px;
+                height: 2px;
+                background: $white;
+                width: 44px;
+                margin: auto;
+                left: 0;
+                right: 0;
+                box-shadow: 0 0 8px rgba($white, 0.8);
               }
             }
           }

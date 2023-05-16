@@ -765,6 +765,8 @@
           font-weight: 600;
           line-height: 86px;
           max-width: 34vw;
+          position: relative;
+          z-index: 2;
 
           @media screen and (max-width: 1400px) {
             font-size: 80px;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useHistory, useLocation } from "react-router-dom";
 import { Select, Drawer, Button } from "antd";
 import { SvgIcon } from '../../../components/common';
 import { Link } from "react-router-dom";
@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 
 const Menus = () => {
+  const router = useHistory();
   const [open, setOpen] = useState(false);
   const { i18n } = useTranslation();
 
@@ -37,6 +38,7 @@ const Menus = () => {
       i18n.changeLanguage(lang);
   }, [i18n, lang]);
 
+  const { pathname: path } = useLocation();
   return (
     <>
       <Drawer
@@ -105,10 +107,20 @@ const Menus = () => {
           <a href="https://traccy-globe.vercel.app/">Home</a>
         </li>
         <li>
-          <NavLink to='/traccy-token'>TRACCY CONNECT</NavLink>
+          <NavLink
+            to='/traccy-token'
+            className={`${path.includes("/traccy-token") ? "active_m" : ""}`}
+          >
+            TRACCY CONNECT
+          </NavLink>
         </li>
         <li className="impact-menu-wrapper">
-          <NavLink to='/impact-through-traccy/0'>IMPACT</NavLink>
+          <NavLink
+            to='/impact-through-traccy/0'
+            className={`${path.includes("/impact-through-traccy") ? "active_m" : ""}`}
+          >
+            IMPACT
+          </NavLink>
           <div className="impact-menu-all">
             <div className="mask" />
             <div className="impact-menu">
@@ -121,13 +133,28 @@ const Menus = () => {
           </div>
         </li>
         <li>
-          <NavLink to='/about'>ABOUT US</NavLink>
+          <NavLink
+            to='/about'
+            className={`${path.includes("/about") ? "active_m" : ""}`}
+          >
+            ABOUT US
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/become-part'>BECOME A PART</NavLink>
+          <NavLink
+            to='/become-part'
+            className={`${path.includes("/become-part") ? "active_m" : ""}`}
+          >
+            BECOME A PART
+          </NavLink>
         </li>
         <li>
-          <NavLink to='/invest'>BUY TOKEN</NavLink>
+          <NavLink
+            to='/invest'
+            className={`${path.includes("/invest") ? "active_m" : ""}`}
+          >
+            BUY TOKEN
+          </NavLink>
         </li>
       </ul>
       <ConnectWallet />

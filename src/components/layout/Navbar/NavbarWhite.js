@@ -25,6 +25,19 @@ const Navbar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const intro = document.getElementById("intro-wrapper");
+
+    const handleIntroScroll = () => {
+      if (intro)
+        setScrollTop(intro.scrollTop);
+    }
+    handleIntroScroll();
+    if(intro)
+      intro.addEventListener("scroll", handleIntroScroll);
+    return () => intro && intro.removeEventListener("scroll", handleIntroScroll);
+  }, [])
+
   return (
     <header className={`main-header`}>
       <Container className="container-with-connect-wallet">
