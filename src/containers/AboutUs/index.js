@@ -86,7 +86,7 @@ const AboutUs = () => {
                         </div>
                         <div className='thumb-bottom'>Mick Misamu</div>
                         <div className='thumb-designation'>
-                            <span></span> CIO & Co-Founder
+                            <span></span> CIO
                         </div>
                     </div>
                 }
@@ -99,7 +99,7 @@ const AboutUs = () => {
                         </div>
                         <div className='thumb-bottom'>Dedry  Misamu</div>
                         <div className='thumb-designation'>
-                            <span></span> CFO & Co-Founder
+                            <span></span> CFO
                         </div>
                     </div>}
                 {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
@@ -307,7 +307,7 @@ const AboutUs = () => {
                                         <div className='slider-card'>
                                             <div className='slider-left'>
                                                 <h3>Mick Misamu </h3>
-                                                <div className='designation'><Divider /> CIO</div>
+                                                <div className='designation'><Divider /> CIO & Co-Founder</div>
                                                 <p>{t("about_us:mick")}</p>
                                                 <div className='social-icons'>
                                                     {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
@@ -347,7 +347,7 @@ const AboutUs = () => {
                                         <div className='slider-card'>
                                             <div className='slider-left'>
                                                 <h3>Dedry Misamu </h3>
-                                                <div className='designation'><Divider /> CFO</div>
+                                                <div className='designation'><Divider /> CFO & Co-Founder</div>
                                                 <p>{t("about_us:dedry")}</p>
                                                 <div className='social-icons'>
                                                     {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />

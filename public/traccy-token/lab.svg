@@ -1,7 +1,6 @@
-<svg width="163" height="223" viewBox="0 0 163 223" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M87 63.5C118.833 65.1667 177 125.5 130 189.5" stroke="#F81381" stroke-width="6"/>
-<path d="M77 80.5C116.5 83.5 157.5 144.5 102.5 191" stroke="#F81381" stroke-width="6"/>
-<path d="M94 33L101 18L76 6L69 21L94.5 33M71 121L16.5 95L10.5 108L64.5 133.5L71 121Z" stroke="#FCFCFC" stroke-width="6"/>
-<path d="M98.5 35L65 19L26.5 100L61 116L98.5 35Z" stroke="#FCFCFC" stroke-width="6"/>
-<path d="M159 219V191L4 192V219H159Z" stroke="#F81381" stroke-width="6"/>
+<svg width="238" height="238" viewBox="0 0 238 238" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M182 118.5C182 149.535 174.631 177.437 162.924 197.444C151.161 217.546 135.494 229 119 229C102.506 229 86.8393 217.546 75.0762 197.444C63.3694 177.437 56 149.535 56 118.5C56 87.4647 63.3694 59.563 75.0762 39.5564C86.8393 19.4539 102.506 8 119 8C135.494 8 151.161 19.4539 162.924 39.5564C174.631 59.563 182 87.4647 182 118.5Z" stroke="#F81381" stroke-width="6"/>
+<line x1="119" x2="119" y2="238" stroke="#F81381" stroke-width="6"/>
+<circle cx="119" cy="119" r="115" stroke="white" stroke-width="6"/>
+<line y1="115" x2="238" y2="115" stroke="white" stroke-width="6"/>
 </svg>

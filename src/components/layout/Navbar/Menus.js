@@ -105,7 +105,7 @@ const Menus = () => {
           <a href="https://traccy-globe.vercel.app/">Home</a>
         </li>
         <li>
-          <NavLink to='/traccy-token'>TRCY CONNECT</NavLink>
+          <NavLink to='/traccy-token'>TRACCY CONNECT</NavLink>
         </li>
         <li className="impact-menu-wrapper">
           <NavLink to='/impact-through-traccy/0'>IMPACT</NavLink>
