@@ -140,7 +140,6 @@ const TraccyConnect = () => {
                         <SvgIcon name='circle-bottom' viewbox='0 0 51 50.998' />
                       </div>
                       <div className="left-section notfirst">
-                        <h2>Traccy Connect</h2>
                         <img src="/impact/traccy-connect/traccy-connect-logo.png" alt="logo" />
                         <Tabs defaultActiveKey="1" items={items} onChange={(activeKey) => setTab(activeKey)} />
                       </div>

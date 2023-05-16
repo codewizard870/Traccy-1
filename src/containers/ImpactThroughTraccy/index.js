@@ -172,7 +172,7 @@ const ImpactThroughTraccy = () => {
                                  <span>see more</span>
                                  <div
                                     className="page-button"
-                                    onClick={() => router.push("/traccy-token")}
+                                    onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}
                                  >
                                     <img src="/impact/right-arrow.svg" alt="backarrow" />
                                  </div>
