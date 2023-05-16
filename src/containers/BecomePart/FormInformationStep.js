@@ -121,7 +121,7 @@ const FormInformationStep = () => {
                     <Form.Item
                         name="message"
                     >
-                        <TextArea placeholder={t("become:message")} rows={6} 
+                        <TextArea placeholder={t("become:message")} rows={6} id="message"
                         value={message} onChange={e => setMessage(e.target.value)}/>
                     </Form.Item>
                 </Col>

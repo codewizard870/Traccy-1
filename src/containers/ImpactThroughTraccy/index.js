@@ -105,8 +105,7 @@ const ImpactThroughTraccy = () => {
    return (
       <>
          <div className='itt-wrapper' onClick={onClose}>
-         <div className='about-banner' style={{ backgroundImage: `url("/impact/stage-banner.png")` }}></div>
-
+            <div className='about-banner' style={{ backgroundImage: `url("/impact/stage-banner.png")` }}></div>
             <section className='banner-section'>
                <Slider {...settings2} ref={slider}>
                   <div>
@@ -343,7 +342,7 @@ const ImpactThroughTraccy = () => {
                            </>
                         }
                      </div>
-                     <img src="/impact/map.png" alt='Map'/>
+                     <img src="/impact/map.png" alt='Map' />
                   </div>
 
                   <div className='right-numbers'>

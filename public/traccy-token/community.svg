@@ -1,17 +1,1 @@
-<svg width="212" height="196" viewBox="0 0 212 196" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="76.5" cy="23.5" r="19.5" stroke="white" stroke-width="6"/>
-<path d="M76.5 43C63.6667 42 37.6 51.1994 36 79.9994" stroke="white" stroke-width="6"/>
-<circle cx="44.5" cy="101.5" r="19.5" stroke="#F81381" stroke-width="6"/>
-<path d="M45.5 121C32.6667 120 5.6 129.2 4 158" stroke="#F81381" stroke-width="6"/>
-<path d="M4 158V192H40" stroke="#F81381" stroke-width="6"/>
-<path d="M58.5 150.5V192H153.5" stroke="white" stroke-width="6"/>
-<circle cx="23.5" cy="23.5" r="19.5" transform="matrix(-1 0 0 1 159 0)" stroke="white" stroke-width="6"/>
-<path d="M134.5 43.0002C147.333 42.0002 174.4 51.1997 176 79.9997" stroke="white" stroke-width="6"/>
-<circle cx="23.5" cy="23.5" r="19.5" transform="matrix(-1 0 0 1 191 78)" stroke="#F81381" stroke-width="6"/>
-<path d="M166.5 121C179.333 120 206.4 129.2 208 158" stroke="#F81381" stroke-width="6"/>
-<path d="M208 158V192H172" stroke="#F81381" stroke-width="6"/>
-<path d="M130 89.5C130 102.411 119.323 113 106 113C92.6769 113 82 102.411 82 89.5C82 76.589 92.6769 66 106 66C119.323 66 130 76.589 130 89.5Z" stroke="white" stroke-width="6"/>
-<path d="M106 116.5C91 115.834 66 118.5 58.5 151.5" stroke="white" stroke-width="6"/>
-<path d="M153 150L153.5 195.5" stroke="white" stroke-width="6"/>
-<path d="M106 116.5C121 115.834 146 118.5 153.5 151.5" stroke="white" stroke-width="6"/>
-</svg>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 238 238"><defs><style>.cls-1,.cls-2{fill:none;stroke-miterlimit:10;stroke-width:6px;}.cls-1{stroke:#fff;}.cls-2{stroke:#f81381;}</style></defs><circle class="cls-1" cx="144.975" cy="23.928" r="20.901"/><path class="cls-1" d="M144.975,44.829h6.574a30.1,30.1,0,0,1,30.1,30.1"/><circle class="cls-2" cx="93.025" cy="23.928" r="20.901"/><path class="cls-2" d="M93.025,44.829H86.451a30.1,30.1,0,0,0-30.1,30.1"/><circle class="cls-1" cx="119" cy="82.748" r="24.373"/><path class="cls-1" d="M76.229,142.227a35.1,35.1,0,0,1,35.105-35.106h15.332a35.1,35.1,0,0,1,35.1,35.106"/><circle class="cls-2" cx="144.975" cy="154.709" r="20.901"/><path class="cls-2" d="M144.975,175.61h6.574a30.1,30.1,0,0,1,30.1,30.1v29.259H148.615"/><path class="cls-2" d="M144.975,175.61H138.4a30.1,30.1,0,0,0-30.1,30.1v29.259h53.473"/><circle class="cls-1" cx="93.025" cy="154.709" r="20.901"/><path class="cls-1" d="M93.025,175.61H86.451a30.1,30.1,0,0,0-30.1,30.1v29.259H89.385"/><circle class="cls-2" cx="64.236" cy="93.48" r="20.901"/><path class="cls-2" d="M64.236,114.38H57.662a30.1,30.1,0,0,0-30.1,30.1v29.259H60.6"/><circle class="cls-2" cx="173.764" cy="93.48" r="20.901"/><path class="cls-2" d="M173.764,114.38h6.574a30.1,30.1,0,0,1,30.1,30.1v29.259H177.4"/></svg>
