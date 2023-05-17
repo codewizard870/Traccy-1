@@ -9,24 +9,24 @@ import './index.scss';
 function NextArrow(props) {
     const { className, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-        <SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' />
-    </div>
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <SvgIcon name='arrow-right' viewbox='0 0 9.073 16.494' />
+        </div>
     );
-  }
-  
-  function PrevArrow(props) {
+}
+
+function PrevArrow(props) {
     const { className, onClick } = props;
     return (
-      <div
-        className={className}
-        onClick={onClick}
-      >
-        <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
-    </div>
+        <div
+            className={className}
+            onClick={onClick}
+        >
+            <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+        </div>
     );
 }
 
@@ -35,7 +35,7 @@ const SentStep = () => {
         dots: false,
         infinite: false,
         speed: 500,
-        arrows:  true,
+        arrows: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         nextArrow: <NextArrow />,
@@ -62,15 +62,16 @@ const SentStep = () => {
                         <Divider />
                     </div>
                 </div> */}
-                <div/>
-                <div>
+                <div />
+                <div />
+                {/* <div>
                     <div className='download-col'>
                         <h4>Whitepaper</h4>
                         <div className='download-btn'><div className='arrow-icon'> <SvgIcon name='chevron-down' viewbox='0 0 23.616 13.503' /> </div> Download PDF</div>
                         <Divider />
                     </div>
-                </div>
-                <div/>
+                </div> */}
+                <div />
             </Slider>
         </div>
     )

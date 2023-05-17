@@ -29,7 +29,7 @@ const Navbar = () => {
     <header className={`main-header`}>
       <Container className="container-with-connect-wallet">
         <div className={`${scrollTop > 10 ? "dark-header" : ""} header-inner `}>
-          <div className="logo" onClick={() => history.push("/home")}>
+          <div className="logo" onClick={() => history.push("https://traccy-globe-zwhnr.ondigitalocean.app/")}>
             <img src={TraccyLogo} alt="logo" />
             <img src={TraccyLogoSmall} alt="logo" />
             <p>

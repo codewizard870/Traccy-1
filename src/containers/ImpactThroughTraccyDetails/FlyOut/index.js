@@ -154,8 +154,7 @@ const FlyOut = () => {
                           onChange={(activeKey) => {
                             setTab(activeKey);
                             nextPage()
-                          }
-                          }
+                          }}
                         />
                       </div>
                     </div>
@@ -211,7 +210,7 @@ const FlyOut = () => {
                     }
                     {tab === "4" &&
                       <div className="five">
-                        <img src="/impact/flyout/roadmap.png" alt="roadmap" />
+                        <img src="/impact/flyout/roadmap.svg" alt="roadmap" />
                       </div>
                     }
                   </div>

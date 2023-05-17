@@ -48,7 +48,7 @@
         height: 200px !important;
       }
     }
-    .stf__wrapper{
+    .stf__wrapper {
       padding-bottom: 0px !important;
     }
     .demoPage {
@@ -139,7 +139,7 @@
         display: flex;
         flex-direction: column;
         background: white;
-        
+
         .row {
           display: flex;
           justify-content: space-between;
@@ -148,6 +148,7 @@
           height: 100%;
           flex-wrap: nowrap;
           .left-section {
+            width: 100%;
             padding: 33px 10px 0px 54px;
 
             @media screen and (max-width: 767px) {
@@ -227,7 +228,7 @@
         height: 100%;
         background: white;
         overflow: hidden;
-        
+
         @media screen and (max-width: 576px) {
           padding: 56px 20px 0 20px;
         }
@@ -307,9 +308,7 @@
           }
           .right-col {
             max-width: 40%;
-            @media screen and (max-width: 767px) {
-              max-width: 100%;
-            }
+
             img {
               width: 100%;
               margin-top: -20px;
@@ -443,18 +442,22 @@
             color: black;
             font-size: 20px;
             font-weight: 700;
+            @media screen and (max-width: 776px) {
+              font-size: 16px;
+            }
           }
           .third-row {
             display: flex;
             margin-left: 10px;
-            font-size: 14px;
-            font-weight: 400;
             width: 100%;
             p {
               font-size: 14px;
               font-weight: 400;
               width: 50%;
               margin: 0;
+              @media screen and (max-width: 776px) {
+                font-size: 10px;
+              }
             }
             h2 {
               color: black;
@@ -462,8 +465,14 @@
               font-weight: 700;
               width: 50%;
               text-decoration: underline;
+              @media screen and (max-width: 776px) {
+                font-size: 18px;
+              }
               span {
                 font-size: 30px;
+                @media screen and (max-width: 776px) {
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -488,8 +497,11 @@
           align-items: center;
           width: 100%;
           img {
-            width: 100%;
-            max-width: 440px;
+            width: auto;
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+            // max-width: 440px;
           }
         }
       }
@@ -583,8 +595,12 @@
           }
           &:nth-child(1) {
             &::before {
-              background: linear-gradient(270deg, rgba(0, 240, 255, 0.7) 0%, rgba(42, 53, 158, 0.7) 47.4%, rgba(221, 86, 255, 0.7) 100%);
-
+              background: linear-gradient(
+                270deg,
+                rgba(0, 240, 255, 0.7) 0%,
+                rgba(42, 53, 158, 0.7) 47.4%,
+                rgba(221, 86, 255, 0.7) 100%
+              );
             }
           }
           &:nth-child(2) {
@@ -630,7 +646,12 @@
           width: 100%;
           height: 5px;
           display: block;
-          background: linear-gradient(270deg, rgba(54, 255, 243, 0.7) 0%, rgba(35, 0, 251, 0.7) 47.4%, rgba(181, 86, 255, 0.7) 100%);
+          background: linear-gradient(
+            270deg,
+            rgba(54, 255, 243, 0.7) 0%,
+            rgba(35, 0, 251, 0.7) 47.4%,
+            rgba(181, 86, 255, 0.7) 100%
+          );
           margin-bottom: 0.5rem;
         }
       }
@@ -705,7 +726,11 @@
                   height: 50px;
                   position: relative;
 
-                  background: linear-gradient(270.07deg, rgba(30, 26, 38, 0.7626) 0.07%, rgba(0, 0, 0, 0.5822) 100.89%);
+                  background: linear-gradient(
+                    270.07deg,
+                    rgba(30, 26, 38, 0.7626) 0.07%,
+                    rgba(0, 0, 0, 0.5822) 100.89%
+                  );
 
                   span {
                     position: absolute;
@@ -730,7 +755,11 @@
                   }
 
                   &:hover {
-                    background: linear-gradient(301.66deg, rgba(65, 60, 60, 0.79) -28.63%, rgba(24, 22, 28, 0.93) 78.08%);
+                    background: linear-gradient(
+                      301.66deg,
+                      rgba(65, 60, 60, 0.79) -28.63%,
+                      rgba(24, 22, 28, 0.93) 78.08%
+                    );
 
                     img.nth1 {
                       content: url("../../../assets/images/impact/traccy-connect/content-control/1.svg");
@@ -748,7 +777,6 @@
                       opacity: 1;
                     }
                   }
-
                 }
               }
               .content {
@@ -773,7 +801,7 @@
                     width: 100%;
                   }
                 }
-                div.active{
+                div.active {
                   opacity: 1;
                 }
               }

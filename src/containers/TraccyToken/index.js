@@ -52,7 +52,7 @@ const TraccyToken = () => {
     const { t } = useTranslation();
     const history = useHistory();
     const [countdownEndDate, setCountdownEndDate] = useState(
-        new Date("July 2, 2023 00:00:00").getTime()
+        new Date("Jan 2, 2023 00:00:00").getTime()
     );
     const settings = {
         dots: true,
@@ -168,7 +168,7 @@ const TraccyToken = () => {
                                     BUY TOKEN
                                     <SvgIcon name='send-icon' viewbox='0 0 19.612 18.074' />
                                 </Button>
-                                <div className='white-paper' onClick={onDownload}>
+                                {/* <div className='white-paper' onClick={onDownload}>
                                     <h4>White paper </h4>
                                     <div>
                                         <p>Download {percent}%</p>
@@ -176,7 +176,7 @@ const TraccyToken = () => {
                                             <SvgIcon name='arrow-down' viewbox='0 0 25.87 25.87' />
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </Col>
                         <Col lg='6' className='banner-right'>

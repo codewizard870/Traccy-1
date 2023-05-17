@@ -363,18 +363,22 @@
             color: black;
             font-size: 20px;
             font-weight: 700;
+            @media screen and (max-width: 776px) {
+              font-size: 16px;
+            }
           }
           .third-row {
             display: flex;
             margin-left: 10px;
-            font-size: 14px;
-            font-weight: 400;
             width: 100%;
             p {
               font-size: 14px;
               font-weight: 400;
               width: 50%;
               margin: 0;
+              @media screen and (max-width: 776px) {
+                font-size: 10px;
+              }
             }
             h2 {
               color: black;
@@ -382,8 +386,14 @@
               font-weight: 700;
               width: 50%;
               text-decoration: underline;
+              @media screen and (max-width: 776px) {
+                font-size: 18px;
+              }
               span {
                 font-size: 30px;
+                @media screen and (max-width: 776px) {
+                  font-size: 20px;
+                }
               }
             }
           }
@@ -394,7 +404,7 @@
         .four {
           display: flex;
           justify-content: center;
-          align-items: center;
+          // align-items: center;
           width: 100%;
           img {
             width: 378px;
@@ -404,12 +414,13 @@
           }
         }
         .five {
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
           width: 100%;
           img {
-            width: 497px;
+            // width: 497px;
+            width: auto;
             @media screen and (max-width: 776px) {
               width: 100%;
             }
