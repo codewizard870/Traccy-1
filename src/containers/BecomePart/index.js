@@ -119,7 +119,7 @@ const BecomePart = () => {
                                 </p>
                             </div>
                             <div className='bottom-link'>
-                                <a href='https://drive.google.com/file/d/1O2SMCDtlAMBvQZe9YbFcA16lXX7J9_Nl/view?usp=share_link' target='_blank' rel="noreferrer">
+                                <a href='/termofuse.html' target='_blank' rel="noreferrer">
                                     {t("become:terms")}
                                 </a>  I
                                 <a href='/Policy.html' target='_blank' rel="noreferrer">
