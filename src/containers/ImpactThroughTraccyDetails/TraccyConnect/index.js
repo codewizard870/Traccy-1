@@ -321,13 +321,13 @@ const TraccyConnect = () => {
                     <div className='popup'>
                       <div className='popup-inner'>
                         {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/traccy-connect/traccy-connect-mark.svg" className="mark" alt="mark" />
                         <div className="content-wrapper">
                           <div className="content">
                             <div className="traccy-content-image" >
                               <img src="/impact/traccy-connect/content/1.svg" alt="1" />
                             </div>
                             <div className="traccy-content-image" >
-                              <span>Revenue</span>
                               <img src="/impact/traccy-connect/content/2.svg" alt="1" />
                             </div>
                             <div className="traccy-content-image" >
@@ -352,7 +352,7 @@ const TraccyConnect = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth4" src="/impact/traccy-connect/content-control/4.svg" alt='4' style={{ width: "37px" }} />
-                              <span className="right">More</span>
+                              <span className="right">SDGs Goals</span>
                             </div>
                             {contentExpand &&
                               <>
@@ -384,6 +384,7 @@ const TraccyConnect = () => {
                             }
                           </div>
                         </div>
+
                       </div>
                     </div>
                   }

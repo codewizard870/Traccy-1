@@ -614,12 +614,38 @@
           max-width: 550px;
           width: 100%;
           z-index: 2;
-          top: 130px;
-          right: 50px;
-          @media screen and (max-width: 767px) {
-            top: 10px;
-            right: 0px;
+          top: 9vw;
+          right: 16vw;
+
+          @media screen and (max-width: 1890px) {
+            top: 10vw;
+            right: 15vw;
           }
+          @media screen and (max-width: 1690px) {
+            top: 9.5vw;
+            right: 15vw;
+          }
+          @media screen and (max-width: 1590px) {
+            top: 9vw;
+            right: 16vw;
+          }
+          @media screen and (max-width: 1390px) {
+            top: 9.5vw;
+            right: 17vw;
+          }
+          @media screen and (max-width: 1190px) {
+            top: 10.5vw;
+            right: 19vw;
+          }
+          @media screen and (max-width: 1000px) {
+            top: 7vw;
+            right: 19vw;
+          }
+          @media screen and (max-width: 767px) {
+            top: 9vw;
+            right: 0;
+          }
+
           .popup-inner {
             position: relative;
             .icon {
@@ -639,6 +665,11 @@
                 max-width: 100px;
                 min-width: 100px;
                 max-height: 50px;
+                @media screen and (max-width: 767px) {
+                  max-width: 60px;
+                  min-width: 60px;
+                  max-height: 30px;
+                }
                 .control-button {
                   display: flex;
                   justify-content: center;
@@ -653,6 +684,17 @@
                     rgba(30, 26, 38, 0.93) 97.22%
                   );
 
+                  @media screen and (max-width: 767px) {
+                    width: 30px;
+                    height: 30px;
+                  }
+
+                  img {
+                    @media screen and (max-width: 767px) {
+                      width: 15px !important;
+                      height: 15px !important;
+                    }
+                  }
                   span {
                     position: absolute;
                     opacity: 0;
@@ -663,16 +705,22 @@
                     padding: 8px 4px;
                     border-radius: 10px;
                     background: black;
+                    @media screen and (max-width: 767px) {
+                      font-size: 10px;
+                    }
                   }
                   span.left {
                     right: 60px;
                     @media screen and (max-width: 767px) {
-                      left: 110px;
+                      left: 70px;
                       right: auto;
                     }
                   }
                   span.right {
                     left: 60px;
+                    @media screen and (max-width: 767px) {
+                      left: 40px;
+                    }
                   }
 
                   &:hover {
@@ -725,6 +773,17 @@
                 div.active {
                   opacity: 1;
                 }
+              }
+            }
+            .mark {
+              position: absolute;
+              left: 550px;
+              top: 190px;
+              transform: translate(-50%, -50%);
+              width: 50px;
+              height: 50px;
+              @media screen and (max-width: 767px) {
+                display: none;
               }
             }
           }

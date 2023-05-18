@@ -209,7 +209,7 @@ const AboutUs = () => {
                     <Row>
                         <Col className='video-colum'>
                             <div className='video-inner'>
-                                <div className='upper-action'>
+                                {/* <div className='upper-action'>
                                     <div className='action-left'>
                                         Traccy + trésor hardware Wallet Advanced security made easy (Tracy wallet 1 Trevor model 1 )
                                     </div>
@@ -223,17 +223,14 @@ const AboutUs = () => {
                                             Épater ans …
                                         </Button>
                                     </div>
-                                </div>
+                                </div> */}
                                 {/* <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div> */}
                                 {/* <img src={videoimg} alt='video-img' /> */}
-                                <iframe src="https://drive.google.com/file/d/1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4/preview" title="video"
-                                width="100%" style={{height: "43vw"}}></iframe>
-                                {/* <video autoplay controls>
-                                    <source src="https://drive.google.com/file/d/1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4/view?usp=share_link" type="video/mp4" />
-                                    <source 
-                                    src="https://drive.google.com/uc?export=download&id=1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4" type='video/mp4'></source>
-                                    Your browser does not support the video tag.
-                                </video> */}
+                                {/* <iframe src="https://drive.google.com/file/d/1z3y1b27DQkoYbQ4fw4JtgHr8-2fTVMX4/preview" title="video"
+                                width="100%" style={{height: "43vw"}}></iframe> */}
+                                <video autoplay controls>
+                                    <source src="https://youtu.be/aZx5E3QVL0M" type="video/mp4" />
+                                </video>
                             </div>
                         </Col>
                     </Row>

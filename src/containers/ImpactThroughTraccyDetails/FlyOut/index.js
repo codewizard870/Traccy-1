@@ -257,6 +257,7 @@ const FlyOut = () => {
                     <div className='popup'>
                       <div className='popup-inner'>
                         {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
+                        <img src="/impact/flyout/flyout-mark.svg" className="mark" alt="mark" />
                         <div className="content-wrapper">
                           <div className="content-control">
                             <div className="control-button" onClick={() => setContentIndex(0)}>
@@ -277,11 +278,11 @@ const FlyOut = () => {
                             </div>
                             <div className="control-button" onClick={() => setContentExpan(!contentExpand)}>
                               <img className="nth5" src="/impact/flyout/content-control/5.svg" alt='4' style={{ width: "25px" }} />
-                              <span className="left">Job<br />Creation</span>
+                              <span className="left">SDGs Goals</span>
                             </div>
                             <div className="control-button" onClick={() => setContentIndex(4)}>
                               <img className="nth6" src="/impact/flyout/content-control/6.svg" alt='4' style={{ width: "28px" }} />
-                              <span className="right">More</span>
+                              <span className="right">Job<br />Creation</span>
                             </div>
                             {contentExpand &&
                               <>
