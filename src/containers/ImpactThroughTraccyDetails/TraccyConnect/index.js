@@ -72,10 +72,10 @@ const TraccyConnect = () => {
         title="Traccy Connect"
         content="Our decentralized finance solution enables global investors to invest in impactful entrepreneurial projects in developing countries instantly through Asset-Backed Tokenization, receiving economic rewards while addressing development and investment issues.  "
         application="7’500’000 $"
-        processing="4"
-        event="18"
-        profit="12"
-        sdg="5"
+        processing={1}
+        event={17}
+        profit={13}
+        sdg={6}
         primaryColor="#110041"
         secondaryColor="#0F71E3"
       />

@@ -239,7 +239,9 @@ const ImpactThroughTraccy = () => {
                                     <span className="application">{data.application}</span>
                                     <div className="selection">
                                        <span className="number">{data.application_number}</span>
-                                       <span className="selection-desc">selections</span>
+                                       <span className="selection-desc">
+                                          {data.application_number > 1 ? "selections" : "selection"}
+                                       </span>
                                        <div className="indicator" />
                                     </div>
                                     <div className="project-list-button" onClick={() => onConnect(index)}>
@@ -254,12 +256,12 @@ const ImpactThroughTraccy = () => {
                                     <div className="processing"><span>Processing Time</span></div>
                                     <div className="processing-desc">
                                        <span>{data.month}</span>
-                                       <span>Months</span>
+                                       <span>{data.month > 1 ? "Months" : "Month"}</span>
                                     </div>
                                     <div className="world"><span>World Location</span></div>
                                     <div className="world-desc">
                                        <span>{data.world}</span>
-                                       <span>Countries</span>
+                                       <span>{data.world > 1 ? "Countries" : " Country" }</span>
                                     </div>
                                  </div>
                               </div>
@@ -378,9 +380,9 @@ export const Sliders = [
       stage: "Selection",
       desc: "We are selecting new Projects",
       application: "Application",
-      application_number: 6,
+      application_number: 5,
       month: 1,
-      world: 6,
+      world: 3,
       banner: "/impact/stage-banner.png",
       projects: [
          {

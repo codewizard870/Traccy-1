@@ -31,10 +31,10 @@ const TraccyLab = () => {
         title="Traccy Lab"
         content="Based on market research and considering various criteria Traccy Lab selects and incubates projects that create innovative solutions to social and environmental challenges."
         application="4’500’000 $"
-        processing="9"
-        event="8"
-        profit="23"
-        sdg="7"
+        processing={5}
+        event={29}
+        profit={6}
+        sdg="4"
         primaryColor="#7C8DBA"
         secondaryColor="#00F0FF"
       />

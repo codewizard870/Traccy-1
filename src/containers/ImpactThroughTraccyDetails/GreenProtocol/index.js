@@ -61,10 +61,10 @@ const GreenProtocol = () => {
         title="Green Protocol"
         content="Green Protocol provides investment opportunities for those who want to make an impact on sustainability."
         application="5’000’000 $"
-        processing="4"
-        event="18"
-        profit="12"
-        sdg="5"
+        processing={3}
+        event={24}
+        profit={12}
+        sdg={13}
         primaryColor="#00FF85"
         secondaryColor="#0CCB58"
       />
@@ -102,7 +102,7 @@ const GreenProtocol = () => {
                           </p>
                         </div>
                         <div className='left-bottom'>
-                          <h1>24</h1>
+                          <h1>8</h1>
                           <div className='small-head'>
                             <p>Construction period</p>
                             <h4>Months</h4>

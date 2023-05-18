@@ -104,8 +104,8 @@ const AboutUs = () => {
                     </div>}
                 {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
                     <div className='thumb-designation'><span></span> COO & CTO</div></div>}
-                {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
-                    <div className='thumb-designation'><span></span> CBDO</div></div>}
+                {/* {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
+                    <div className='thumb-designation'><span></span> CBDO</div></div>} */}
             </div>
         )
     };
@@ -387,17 +387,14 @@ const AboutUs = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div>
+                                    {/* <div>
                                         <div className='slider-card'>
                                             <div className='slider-left'>
                                                 <h3>Ika Affifah </h3>
                                                 <div className='designation'><Divider /> CBDO </div>
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
-                                                    {/* <SvgIcon name='twitter' viewbox='0 0 36 29.239' />
-                                                    <SvgIcon name='telegram' viewbox='0 0 34.875 34.664' />
-                                                    <SvgIcon name='instagram' viewbox='0 0 32.999 32.999' /> */}
-                                                    <a href="https://www.linkedin.com/in/ika-nur-afifah" target="_blank" rel="noreferrer">
+                                                             <a href="https://www.linkedin.com/in/ika-nur-afifah" target="_blank" rel="noreferrer">
                                                         <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                     </a>
                                                 </div>
@@ -406,7 +403,7 @@ const AboutUs = () => {
                                                 <img src="/about-us/ika.png" alt='ika' />
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </Slider>
                             </div>
                         </Col>
@@ -479,12 +476,12 @@ const AboutUs = () => {
 export default AboutUs
 
 const OURTEAM = [
-    {
-        image: "/about-us/marko.png",
-        name: "Marko Vitez",
-        role: "Full Stack Developer & Smart Contracts",
-        linkedin: "https://www.linkedin.com/in/marko-vitez-6381b3193"
-    },
+    // {
+    //     image: "/about-us/marko.png",
+    //     name: "Marko Vitez",
+    //     role: "Full Stack Developer & Smart Contracts",
+    //     linkedin: "https://www.linkedin.com/in/marko-vitez-6381b3193"
+    // },
     // {
     //     image: "/about-us/pirda.png",
     //     name: "Pirda Fajirati",

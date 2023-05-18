@@ -83,10 +83,10 @@ const Lynx = () => {
         title="LynxVerse"
         content="LynxVerse is a metaverse game designed for mental health and wellbeing with implementation of cognitive therapy behaviour scenarios."
         application="1’000’000 $"
-        processing="4"
-        event="18"
-        profit="12"
-        sdg="5"
+        processing={5}
+        event={30}
+        profit={10}
+        sdg={6}
         primaryColor="#9BCFEC"
         secondaryColor="#5C99D1"
       />
@@ -125,7 +125,7 @@ const Lynx = () => {
                           </p>
                         </div>
                         <div className='left-bottom'>
-                          <h1>24</h1>
+                          <h1>13</h1>
                           <div className='small-head'>
                             <p>Construction period</p>
                             <h4>Months</h4>

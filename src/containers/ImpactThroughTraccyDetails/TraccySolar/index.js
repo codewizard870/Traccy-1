@@ -29,10 +29,10 @@ const TraccySolar = () => {
         title="Traccy Solar"
         content="Traccy Solar provides sustainable energy solutions in developing countries. Areas in need of clean energy are identified and solar solutions are designed and implemented."
         application="2’500’000 $"
-        processing="9"
-        event="8"
-        profit="23"
-        sdg="7"
+        processing={2}
+        event={24}
+        profit={9}
+        sdg={8}
         primaryColor="#FFB800"
         secondaryColor="#DBFF00"
       />
@@ -70,7 +70,7 @@ const TraccySolar = () => {
                           </p>
                         </div>
                         <div className='left-bottom'>
-                          <h1>12</h1>
+                          <h1>10</h1>
                           <div className='small-head'>
                             <p>Construction period</p>
                             <h4>Months</h4>

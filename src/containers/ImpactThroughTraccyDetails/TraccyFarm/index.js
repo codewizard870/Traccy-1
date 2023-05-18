@@ -30,10 +30,10 @@ const TraccyFarm = () => {
         title="Traccy Farm"
         content="Our first farm is a tomato farm in the Democratic Republic of Congo, which we manage using modern and sustainable methods. The tomato farm in DR Congo serves as a model for future cultivation projects in countries with great potential and high import scores."
         application="5’000’000 $"
-        processing="2"
-        event="2"
-        profit="23"
-        sdg="7"
+        processing={3}
+        event={27}
+        profit={8}
+        sdg={7}
         primaryColor="#50E456"
         secondaryColor="#42FF00"
       />

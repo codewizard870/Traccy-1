@@ -70,10 +70,10 @@ const FlyOut = () => {
         title="FlyOut"
         content="The automatic misting system is a type of insect control system using a combination of water and organic insecticide to create a mist that kills mosquitos and other flying insects."
         application="1’200’000 $"
-        processing="9"
-        event="18"
-        profit="12"
-        sdg="5"
+        processing={1}
+        event={12}
+        profit={11}
+        sdg={4}
         primaryColor="#B9FCA8"
         secondaryColor="#78F176"
       />
@@ -111,10 +111,10 @@ const FlyOut = () => {
                         </p>
                       </div>
                       <div className='left-bottom'>
-                        <h1>18</h1>
+                        <h1>1</h1>
                         <div className='small-head'>
                           <p>Construction period</p>
-                          <h4>Months</h4>
+                          <h4>Month</h4>
                         </div>
                       </div>
                     </div>

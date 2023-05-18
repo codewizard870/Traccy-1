@@ -31,18 +31,18 @@ const Stage = ({ bg, title, content, application, processing, event, profit, sdg
             <span style={{ color: primaryColor }}>Processing Time</span>
             <div className="information-value">
               <span>{processing}</span>
-              <span>months</span>
+              <span>{processing === 1 ? "Month" : "Months"}</span>
             </div>
           </div>
           <div className="information-label">
             <span style={{ color: primaryColor }}>Break Event Point</span>
             <div className="information-value">
               <span>{event}</span>
-              <span>months</span>
+              <span>{event === 1 ? "Month" : "Months"}</span>
             </div>
           </div>
           <div className="information-label">
-            <span style={{ color: primaryColor }}>Profit Estimate</span>
+            <span style={{ color: primaryColor }}>Profit Estimate in 5Y</span>
             <div className="information-value">
               <span>{profit}</span>
               <span>x</span>
