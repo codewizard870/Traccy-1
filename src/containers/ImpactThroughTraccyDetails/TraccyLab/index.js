@@ -104,33 +104,10 @@ const TraccyLab = () => {
             <Col>
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
-                <div className='project-center'>
-                  {/* <div className='points point-1'>
-                    <span></span>
-                    <div>01</div>
-                  </div>
-                  <div className='points point-2'>
-                    <span></span>02
-                  </div>
-                  <div className='points point-3'>
-                    03 <span></span>
-                  </div>
-                  <div className='points point-4'>
-                    <span></span>
-                    <div>04</div>
-                  </div>
-                  <div className='points point-5'>
-                    05 <span></span>
-                  </div>
-                  <div className='points point-6'>
-                    <div>06</div> <span></span>
-                  </div>
-                  <div className='points point-7'>
-                    07 <span></span>
-                  </div> */}
+                {/* <div className='project-center'>
                   <Popup showContent={showContent} />
-                </div>
-                <img src={MapImg} alt='Map' />
+                </div> */}
+                <img src="/impact/traccy-lab/traccy-lab-map.png" alt='Map' />
               </div>
             </Col>
           </Row>

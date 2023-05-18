@@ -344,6 +344,10 @@
       text-align: center;
       img {
         width: 100%;
+        @media screen and (max-width: 767px) {
+          width: 200%;
+          transform: translate(-50%, 0%);
+        }
       }
       .project-center {
         height: 100%;

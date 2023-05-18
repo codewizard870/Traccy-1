@@ -101,72 +101,7 @@ const TraccySolar = () => {
             <Col>
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
-                <div className='project-center'>
-                  {/* <div className='points point-1'>
-                    <span></span>
-                    <div>01</div>
-                  </div>
-                  <div className='points point-2'>
-                    <span></span>02
-                  </div>
-                  <div className='points point-3'>
-                    03 <span></span>
-                  </div>
-                  <div className='points point-4'>
-                    <span></span>
-                    <div>04</div>
-                  </div>
-                  <div className='points point-5'>
-                    05 <span></span>
-                  </div>
-                  <div className='points point-6'>
-                    <div>06</div> <span></span>
-                  </div>
-                  <div className='points point-7'>
-                    07 <span></span>
-                  </div> */}
-                  {showContent === 0 &&
-                    <div className='popup popup-1'>
-                      <div className='popup-inner'>
-                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
-                        <img src="/impact/map/1.png" alt="Popup" />
-                      </div>
-                    </div>
-                  }
-                  {showContent === 1 &&
-                    <div className='popup popup-2'>
-                      <div className='popup-inner'>
-                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
-                        <img src="/impact/map/2.png" alt="Popup" />
-                      </div>
-                    </div>
-                  }
-                  {showContent === 2 &&
-                    <div className='popup popup-3'>
-                      <div className='popup-inner'>
-                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
-                        <img src="/impact/map/3.png" alt="Popup" />
-                      </div>
-                    </div>
-                  }
-                  {showContent === 3 &&
-                    <div className='popup popup-4'>
-                      <div className='popup-inner'>
-                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
-                        <img src="/impact/map/4.png" alt="Popup" />
-                      </div>
-                    </div>
-                  }
-                  {showContent === 4 &&
-                    <div className='popup popup-5'>
-                      <div className='popup-inner'>
-                        {/* <SvgIcon name='close' viewbox='0 0 10.357 10.357' onClick={hideModal} /> */}
-                        <img src="/impact/map/5.png" alt="Popup" />
-                      </div>
-                    </div>
-                  }
-                </div>
-                <img src={MapImg} alt='Map' />
+                <img src="/impact/traccy-solar/traccy-solar-map.png" alt='Map' />
               </div>
             </Col>
           </Row>

@@ -102,10 +102,10 @@ const TraccyFarm = () => {
             <Col>
               <h2 className='header-title'>OUR GLOBAL PROJECTS</h2>
               <div className='map-wrapper'>
-                <div className='project-center'>
+                {/* <div className='project-center'>
                   <Popup showContent={showContent} />
-                </div>
-                <img src={MapImg} alt='Map' />
+                </div> */}
+                <img src="/impact/traccy-agro/traccy-farm-map.png" alt='Map' />
               </div>
             </Col>
           </Row>
