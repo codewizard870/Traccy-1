@@ -189,7 +189,7 @@ const FlyOut = () => {
                           <p>Net Profit Estimate in 5 Years</p>
                         </div>
                         <div className="third-row">
-                          <h2><span>$ 2</span> Milion</h2>
+                          <h2><span>$ 1.2</span> Milion</h2>
                           <h2><span>$ 225</span> Milion</h2>
                         </div>
 
@@ -199,7 +199,7 @@ const FlyOut = () => {
                         </div>
                         <div className="third-row">
                           <h2><span>107</span> X</h2>
-                          <h2><span>14</span> Months</h2>
+                          <h2><span>12</span> Months</h2>
                         </div>
                       </div>
                     }

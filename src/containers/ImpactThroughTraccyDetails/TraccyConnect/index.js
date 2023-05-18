@@ -263,7 +263,7 @@ const TraccyConnect = () => {
                         </div>
                         <div className="third-row">
                           <h2><span>130</span> X</h2>
-                          <h2><span>18</span> Months</h2>
+                          <h2><span>17</span> Months</h2>
                         </div>
                       </div>
                     }
