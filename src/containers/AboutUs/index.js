@@ -90,8 +90,16 @@ const AboutUs = () => {
                         </div>
                     </div>
                 }
-                {i === 2 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb2} alt='Mick Misamu' /></div> <div className='thumb-bottom'>Farrah Mettler</div>
-                    <div className='thumb-designation'><span></span> CMO</div></div>}
+                {i === 2 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb2} alt='Mick Misamu' />
+                        </div>
+                        <div className='thumb-bottom'>Farrah Mettler</div>
+                        <div className='thumb-designation'>
+                            <span></span> CMO
+                        </div>
+                    </div>}
                 {i === 3 &&
                     <div className='thumb-col'>
                         <div className='image-circle'>
@@ -102,10 +110,26 @@ const AboutUs = () => {
                             <span></span> CFO
                         </div>
                     </div>}
-                { i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
-                    <div className='thumb-designation'><span></span> COO & CTO</div></div>} 
-                { i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
-                    <div className='thumb-designation'><span></span> CBDO</div></div>}
+                {i === 4 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb5} alt='Andrea Bello' />
+                        </div>
+                        <div className='thumb-bottom'>Andrea Bello</div>
+                        <div className='thumb-designation'>
+                            <span></span> COO & CTO
+                        </div>
+                    </div>}
+                {i === 5 &&
+                    <div className='thumb-col'>
+                        <div className='image-circle'>
+                            <img src={TeamThumb6} alt='IKA NUR AFFIFAH' />
+                        </div>
+                        <div className='thumb-bottom'>Ika Affifah</div>
+                        <div className='thumb-designation'>
+                            <span></span> CBDO
+                        </div>
+                    </div>}
             </div>
         )
     };
@@ -227,7 +251,7 @@ const AboutUs = () => {
                                 {/* <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div> */}
                                 {/* <img src={videoimg} alt='video-img' /> */}
                                 <iframe src="https://www.youtube.com/embed/aZx5E3QVL0M" title="video"
-                                    width="100%" allowTransparency={true} allowFullScreen={true} style={{ height: "52vw", border: "0px" }}></iframe>
+                                    width="100%" allowTransparency={true} style={{ height: "52vw", border: "0px" }}></iframe>
                                 {/* <iframe width="420" height="315"
                                     src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
                                 </iframe> */}
@@ -394,7 +418,7 @@ const AboutUs = () => {
                                                 <div className='designation'><Divider /> CBDO </div>
                                                 <p>{t("about_us:ika")}</p>
                                                 <div className='social-icons'>
-                                                             <a href="https://www.linkedin.com/in/ika-nur-afifah" target="_blank" rel="noreferrer">
+                                                    <a href="https://www.linkedin.com/in/ika-nur-afifah" target="_blank" rel="noreferrer">
                                                         <SvgIcon name='linkedin' viewbox='0 0 32.001 32.001' />
                                                     </a>
                                                 </div>
