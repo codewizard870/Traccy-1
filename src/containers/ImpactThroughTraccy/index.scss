@@ -238,7 +238,8 @@
           right: -6vw;
         }
         @media screen and (max-width: 767px) {
-          bottom: 50px;
+          top: calc(100vh - 60px);
+          bottom: auto;
           right: 0px;
         }
         ul {
