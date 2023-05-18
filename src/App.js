@@ -21,6 +21,7 @@ function App() {
       <Router
         history={history}
         basename={process.env.REACT_APP_BASENAME || ""}
+        forceRefresh
       >
         {rotues.map((route, index) => {
           return (

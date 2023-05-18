@@ -359,6 +359,8 @@
       }
       .slick-slide {
         height: 100vh;
+        pointer-events: none;
+
         @media screen and (max-width: 767px) {
           height: auto;
         }
@@ -412,6 +414,7 @@
           }
         }
         &.slick-active {
+          pointer-events: all;
           .about-banner {
             background-size: cover;
           }
