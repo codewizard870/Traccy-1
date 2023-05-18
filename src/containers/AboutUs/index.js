@@ -102,10 +102,10 @@ const AboutUs = () => {
                             <span></span> CFO
                         </div>
                     </div>}
-                {/* {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
-                    <div className='thumb-designation'><span></span> COO & CTO</div></div>} */}
-                {/* {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
-                    <div className='thumb-designation'><span></span> CBDO</div></div>} */}
+                { {i === 4 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb5} alt='Andrea Bello' /></div> <div className='thumb-bottom'>Andrea Bello</div>
+                    <div className='thumb-designation'><span></span> COO & CTO</div></div>} }
+                { {i === 5 && <div className='thumb-col'><div className='image-circle'><img src={TeamThumb6} alt='IKA NUR AFFIFAH' /></div> <div className='thumb-bottom'>Ika Affifah</div>
+                    <div className='thumb-designation'><span></span> CBDO</div></div>} }
             </div>
         )
     };
