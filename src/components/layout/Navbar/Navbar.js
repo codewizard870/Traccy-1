@@ -33,9 +33,9 @@ const Navbar = () => {
             <img src={TraccyLogo} alt="logo" />
             <img src={TraccyLogoSmall} alt="logo" />
             <p>
-              Using <br />
-              Blockchain <br />
-              Impactful
+              using <br />
+              blockchain <br />
+              impactful
             </p>
           </div>
           <div className="right-header">

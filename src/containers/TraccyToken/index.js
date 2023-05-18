@@ -147,7 +147,7 @@ const TraccyToken = () => {
                                 </span>
                             </h1>
                             <p>
-                                With the TRCYC Security Token, you become a participant in the profits of Traccy Connect, the impact platform through which our sustainable projects, as well as exclusive services are handled
+                                With the TRCYC Security Token, you become a participant in the profits of Traccy Connect, the impact platform through which our sustainable projects, as well as exclusive services are handled.
                             </p>
                             <ul>
                                 <li>
@@ -352,7 +352,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='community-access-icon' viewbox='0 0 76.732 48.846' />
                                                     </div>
                                                     <h3>Community Access</h3>
-                                                    <p> You  will get full access to the platform and became part of our community</p>
+                                                    <p> You  will get full access to the platform and became part of our community.</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -372,7 +372,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='staking-rewards-icon' viewbox='0 0 63.185 49.33' />
                                                     </div>
                                                     <h3>Direct Participation</h3>
-                                                    <p>You will get access to all the new projects STO<br />&nbsp;</p>
+                                                    <p>You will get access to all the new STO projects.<br />&nbsp;</p>
                                                 </div>
                                             </div>
                                         </Col>
@@ -392,7 +392,7 @@ const TraccyToken = () => {
                                                         <SvgIcon name='voting-power-icon' viewbox='0 0 50.148 59.189' />
                                                     </div>
                                                     <h3>Voting Power</h3>
-                                                    <p>Through Traccy Connect you will be able to vote and decide on Projects</p>
+                                                    <p>Through Traccy Connect you will be able to vote and decide on projects.</p>
                                                 </div>
                                             </div>
                                         </Col>
