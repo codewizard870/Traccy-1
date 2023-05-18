@@ -69,12 +69,12 @@ const Menus = () => {
             </Link>
           </li>
           <li>
-            <Link to='/impact-through-traccy/0'>
+            <a href='/impact-through-traccy/0'>
               <div className='menu-icon'>
                 <SvgIcon name='itc-icon' viewbox='0 0 22.018 17.733' />
               </div>
               Impact
-            </Link>
+            </a>
           </li>
           <li>
             <Link to='/about'>
@@ -115,12 +115,12 @@ const Menus = () => {
           </NavLink>
         </li>
         <li className="impact-menu-wrapper">
-          <NavLink
-            to='/impact-through-traccy/0'
+          <a
+            href='/impact-through-traccy/0'
             className={`${path.includes("/impact-through-traccy") ? "active_m" : ""}`}
           >
             IMPACT
-          </NavLink>
+          </a>
           <div className="impact-menu-all">
             <div className="mask" />
             <div className="impact-menu">

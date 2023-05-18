@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import SvgSprite from "./utility/SvgSpriteLoader";
 import { rotues } from "./routes";
 import React, { useEffect } from "react";
@@ -21,7 +22,7 @@ function App() {
       <Router
         history={history}
         basename={process.env.REACT_APP_BASENAME || ""}
-        forceRefresh
+        // forceRefresh
       >
         {rotues.map((route, index) => {
           return (

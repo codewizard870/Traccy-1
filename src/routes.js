@@ -72,7 +72,7 @@ export const rotues = [
   {
     path: "/impact-through-traccy/:step",
     layout: defaultWhiteHeader,
-    component: () => <ImpactThroughTraccy />
+    component: () => <ImpactThroughTraccy />,
   },
   {
     path: "/impact-through-traccy-details/:index/:pIndex",
