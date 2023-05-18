@@ -378,9 +378,9 @@ export const Sliders = [
       stage: "Selection",
       desc: "We are selecting new Projects",
       application: "Application",
-      application_number: 6,
+      application_number: 5,
       month: 1,
-      world: 6,
+      world: 3,
       banner: "/impact/stage-banner.png",
       projects: [
          {

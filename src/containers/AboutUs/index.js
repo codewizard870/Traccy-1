@@ -182,7 +182,7 @@ const AboutUs = () => {
                             <div className='header-row'>
                                 <img src={TraccyIcon} alt="Traccy" />
                                 <h4>Traccy using Blockchain Impactful</h4>
-                                <p>{t("about_us:impactful")}</p>
+                               
                             </div>
                         </Col>
                     </Row>
