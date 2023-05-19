@@ -76,6 +76,7 @@ const FlyOut = () => {
         sdg={4}
         primaryColor="#B9FCA8"
         secondaryColor="#78F176"
+        backRoute='/impact-through-traccy/2'
       />
       <section className='book-section'>
         <Container>

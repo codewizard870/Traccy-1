@@ -695,23 +695,31 @@
           top: 8vw;
           right: 4vw;
           @media screen and (max-width: 1890px) {
-            top: 7vw;
+            top: 7.5vw;
             right: 9vw;
           }
           @media screen and (max-width: 1690px) {
-            top: 7vw;
+            top: 7.5vw;
             right: 6vw;
           }
           @media screen and (max-width: 1590px) {
             top: 8vw;
+            right: 4.5vw;
+          }
+          @media screen and (max-width: 1490px) {
+            top: 8vw;
+            right: 4.5vw;
+          }
+          @media screen and (max-width: 1390px) {
+            top: 8.5vw;
             right: 4vw;
           }
           @media screen and (max-width: 1190px) {
-            top: 9vw;
+            top: 9.5vw;
             right: 4vw;
           }
           @media screen and (max-width: 1000px) {
-            top: 9vw;
+            top: 9.5vw;
             right: -6vw;
           }
           @media screen and (max-width: 767px) {

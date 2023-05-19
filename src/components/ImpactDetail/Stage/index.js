@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 import "./index.scss";
 
-const Stage = ({ bg, title, content, application, processing, event, profit, sdg, primaryColor, secondaryColor }) => {
+const Stage = ({ bg, title, content, application, processing, event, profit, sdg, primaryColor, secondaryColor, backRoute = "/impact-through-traccy/1" }) => {
   return (
     <section className='hero-section'>
       <div className='about-banner' style={{ backgroundImage: `url(${bg})` }}></div>
 
       <div className="hero-wrapper">
         <div className="title">
-          <Link to='/impact-through-traccy/2' className='backarrow'>
+          <Link to={backRoute} className='backarrow'>
             <img src="/impact/backarrow.svg" alt="backarrow" />
           </Link>
           <h1>

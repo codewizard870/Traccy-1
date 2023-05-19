@@ -78,6 +78,7 @@ const TraccyConnect = () => {
         sdg={6}
         primaryColor="#110041"
         secondaryColor="#0F71E3"
+        backRoute="/impact-through-traccy/3"
       />
       <section className='book-section'>
         <Container>
