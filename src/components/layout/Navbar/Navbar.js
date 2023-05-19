@@ -5,11 +5,10 @@ import "./Navbar.scss";
 import "./ConnectWallet.scss";
 import TraccyLogo from '../../../assets/images/logo.png';
 import TraccyLogoSmall from '../../../assets/images/icon.png';
-import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
+import { WindowsFilled } from "@ant-design/icons";
 
 const Navbar = () => {
-  const history = useHistory();
   const [scrollTop, setScrollTop] = useState(0);
 
   useEffect(() => {
@@ -29,7 +28,10 @@ const Navbar = () => {
     <header className={`main-header`}>
       <Container className="container-with-connect-wallet">
         <div className={`${scrollTop > 10 ? "dark-header" : ""} header-inner `}>
-          <div className="logo" onClick={() => history.push("https://traccy-globe-zwhnr.ondigitalocean.app/")}>
+          <div
+            className="logo"
+            onClick={() => window.location.assign("https://traccy-globe-zwhnr.ondigitalocean.app/")}
+          >
             <img src={TraccyLogo} alt="logo" />
             <img src={TraccyLogoSmall} alt="logo" />
             <p>
@@ -41,7 +43,7 @@ const Navbar = () => {
           <div className="right-header">
             <Menus />
           </div>
-          
+
         </div>
       </Container>
     </header>
