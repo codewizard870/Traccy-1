@@ -19,7 +19,7 @@ const TokenSelector = () => {
     getBalance();
   }, [dispatch, state.investChain, state.investToken, wallet]);
 
-  const token = "TRCY";
+  const token = "TRCYC";
   const price = 0.06;
 
   const changeValue = (e) => {

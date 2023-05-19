@@ -433,6 +433,62 @@
             }
           }
         }
+        .impact-menu-wrapper {
+          position: relative;
+
+          .impact-menu-all {
+            position: absolute;
+            display: none;
+            margin-top: -20px;
+            margin-left: 30px;
+
+            .mask {
+              height: 13px;
+            }
+            .impact-menu {
+              display: flex;
+              background: linear-gradient(187deg, #540d56 0%, #220925 24%, #080510 100%);
+              flex-direction: column;
+              gap: 7px;
+              border-radius: 10px;
+              padding: 15px 10px;
+
+              a {
+                display: flex;
+                justify-content: center;
+                padding: 10px 20px;
+                span {
+                  font-size: 16px;
+                  font-weight: 300;
+                  text-transform: none;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+                &::after {
+                  width: 0px;
+                }
+              }
+            }
+          }
+          &:hover {
+            .impact-menu-all {
+              display: block;
+            }
+            a::after {
+              content: " ";
+              position: absolute;
+              bottom: -12px;
+              height: 2px;
+              background: rgba($white, 0.2);
+              width: 44px;
+              margin: auto;
+              left: 0;
+              right: 0;
+              box-shadow: 0 0 8px rgba($white, 0.2);
+            }
+          }
+        }
       }
     }
   }
