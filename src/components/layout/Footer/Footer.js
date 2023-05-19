@@ -54,7 +54,7 @@ const Footer = () => {
           <Col lg='1'></Col>
           <Col lg='4' className="subscribe-col">
             <h3>Connect your Wallet </h3>
-            <p>Connect you wallet to partecipate in STO  </p>
+            <p>Connect you wallet to participate in STO  </p>
             <Button type="primary" onClick={handleClick} id="footer-wallet">Connect Wallet</Button>
           </Col>
         </Row>
