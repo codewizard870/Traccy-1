@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className={`${scrollTop > 10 ? "dark-header" : ""} header-inner `}>
           <div
             className="logo"
-            onClick={() => window.location.assign("https://traccy-globe-zwhnr.ondigitalocean.app/")}
+            onClick={() => window.location.assign("https://traccy.io/")}
           >
             <img src={TraccyLogo} alt="logo" />
             <img src={TraccyLogoSmall} alt="logo" />

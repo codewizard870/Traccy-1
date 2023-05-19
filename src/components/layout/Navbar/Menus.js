@@ -56,7 +56,7 @@ const Menus = () => {
         <Button className="menu-close" onClick={onClose}><SvgIcon name="close" viewbox="0 0 10.357 10.357" /></Button>
         <ul>
           <li>
-            <a href="https://traccy-globe-zwhnr.ondigitalocean.app/">
+            <a href="https://traccy.io/">
               <div className='menu-icon'>
                 <SvgIcon name='home-icon' viewbox='0 0 18 20' />
               </div>
@@ -130,7 +130,7 @@ const Menus = () => {
       </Drawer>
       <ul className="web-menu">
         <li>
-          <a href="https://traccy-globe-zwhnr.ondigitalocean.app/">Home</a>
+          <a href="https://traccy.io/">Home</a>
         </li>
         <li>
           <NavLink
