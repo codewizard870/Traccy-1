@@ -1289,14 +1289,14 @@
   .mobile {
     display: none;
   }
-  // @media screen and (max-width: 776px) {
-  //   .desktop {
-  //     display: none;
-  //   }
-  //   .mobile {
-  //     display: block;
-  //   }
-  // }
+  @media screen and (max-width: 776px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
   .roadmap-wrapper {
     margin-top: 1rem;
     position: relative;

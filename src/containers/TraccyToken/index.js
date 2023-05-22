@@ -18,6 +18,7 @@ import HeaderBg2 from '../../assets/images/title-bg2.svg';
 import VotingPower from '../../assets/images/voting-power.svg';
 import { useTranslation } from 'react-i18next';
 import RoadmapPath from '../../assets/images/raodmap-line.svg';
+import RoadMap from '../../components/TraccyToken/RoadMap';
 
 
 const InfoModal = () => {
@@ -322,7 +323,7 @@ const TraccyToken = () => {
                                     {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
                                     <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
-                                <h4>FINALCIAL SERVICES</h4>
+                                <h4>FINANCIAL SERVICES</h4>
                                 <p>
                                     {t("token:connect")}
                                 </p>
@@ -409,14 +410,14 @@ const TraccyToken = () => {
             <section className='roadmap-section'>
                 <img className='left-hexa' src="/traccy-token/roadmap-left-hexa.svg" alt='Hexa' />
                 <img className='right-hexa' src="/traccy-token/roadmap-right-hexa.svg" alt='Hexa' />
-                <Container className="desktop">
+                <Container>
                     <Row>
                         <Col>
                             <h1 className='main-heading text-center'><span>Roadmap</span></h1>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
+                        <Col className="desktop">
                             <div className='roadmap-wrapper' ref={roadmapWrapperRef} >
                                 <svg className="roadmap-path" width="1334" height="243" viewBox="0 0 1334 243" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M310.124 71.5438C207.324 182.996 91.4447 135.874 29.9561 87.0395V112.044C91.4447 160.879 215.474 207.277 315.968 93.8864C458.792 -67.2655 594.675 125.374 648.371 157.069C702.067 188.765 820.417 268.761 997.577 135.992C1139.3 29.7761 1259.24 114.392 1304.41 168.392V143.387C1259.24 89.3878 1133.46 7.94133 991.732 114.157C814.572 246.926 699.371 163.134 648.371 127.539C600.154 93.8871 452.582 -82.9056 310.124 71.5438Z" fill="url(#paint0_linear_913_1982)" />
@@ -464,65 +465,13 @@ const TraccyToken = () => {
                                 ))}
                             </div>
                         </Col>
-                    </Row>
-                </Container>
-                <Container className="mobile">
-                    <Row>
-                        <Col>
-                            <h1 className='main-heading text-center'><span>Roadmap</span></h1>
-                            <p className='main-heading-text'>
-                                Buy NFTS, access Defi dApps, and explore Web3 <br />
-                                across multiple networks on Chrome and Brave
-                            </p>
-                        </Col>
-                    </Row>
-                    <Row>
-                        <Col>
-                            <div className='roadmap-wrapper'>
-                                <img className='roadmap-path' src={RoadmapPath} alt='Roadmap Path' />
-                                <SvgIcon className='circle-icon-upper' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
-                                <Slider {...settings}>
-                                    <div>
-                                        <div className='roadmap-card'>
-                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
-                                            <div className='action'>
-                                                2022 Q3
-                                                <InfoModal />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='roadmap-card'>
-                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
-                                            <div className='action'>
-                                                2022 Q4
-                                                <InfoModal />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='roadmap-card'>
-                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
-                                            <div className='action'>
-                                                2023 Q1
-                                                <InfoModal />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className='roadmap-card'>
-                                            <SvgIcon className='circle-icon' name='roadmap-icon' viewbox='0 0 73.146 204.128' />
-                                            <div className='action'>
-                                                2023 Q2
-                                                <InfoModal />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Slider>
-                            </div>
+                        <Col className="mobile">
+                            <RoadMap datas={RoadmapDescs} />
+
                         </Col>
                     </Row>
                 </Container>
+
             </section>
             <section className='platform-section'>
                 <div className='blur-circle1'></div>

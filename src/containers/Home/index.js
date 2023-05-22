@@ -105,6 +105,10 @@ const Home = () => {
                   <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
                   Back
                </div>
+               <div className='swipearrow' onClick={() => slider.slickNext()}>
+                  Swipe
+                  <SvgIcon name='arrow-left' viewbox='0 0 9.071 16.492' />
+               </div>
                <Slider
                   ref={e => setSlider(e)}
                   beforeChange={beforeChange}

@@ -359,6 +359,33 @@
         margin-right: 3px;
       }
     }
+    .swipearrow{
+      position: absolute;
+      left: 150px;
+      top: 31px;
+      color: $white;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      transition: all ease-in 0.1s;
+      z-index: 3;
+      cursor: pointer;
+      
+      @media screen and (max-width: 767px) {
+        left: auto;
+        right: 30px;
+      }
+      &:hover {
+        transform: translateX(3px);
+      }
+
+      .icon {
+        fill: $white;
+        height: 13px;
+        margin-right: 3px;
+        rotate: 180deg;
+      }
+    }
   }
 
   .slick-slider {

@@ -59,13 +59,7 @@
       position: absolute;
       width: 100%;
     }
-    .row {
-      min-height: 850px;
-      align-items: center;
-      @media screen and (max-width: 991px) {
-        margin-top: 80px;
-      }
-    }
+
     .banner-left {
       display: flex;
       flex-direction: column;
@@ -226,7 +220,7 @@
     }
     .slick-slider {
       .slick-dots {
-        bottom: 4vw;
+        top: calc(100vh - 100px);
         max-width: 800px;
         margin-left: auto;
         right: 6vw;
@@ -238,13 +232,8 @@
           right: -6vw;
         }
 
-        @media screen and (max-width: 767px) and (max-height: 1000px) {
-          top: 70vh;
-          bottom: auto;
-          right: -20vw;
-        }
-        @media screen and (max-width: 767px) and (max-height: 670px) {
-          top: calc(100vh - 60px);
+        @media screen and (max-width: 767px) {
+          top: calc(70vw + 200px);
           bottom: auto;
           right: -20vw;
         }
@@ -365,7 +354,7 @@
         }
       }
       .slick-slide {
-        height: 100vh;
+        // height: 100vh;
         pointer-events: none;
 
         @media screen and (max-width: 767px) {
@@ -487,15 +476,19 @@
     }
     .stage-wrapper {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       margin-top: 13vw;
+      height: 100vh;
+      
       @media screen and (max-width: 767px) {
         margin-top: 150px;
+        height: calc(70vw + 100px);
       }
       .stage-main {
         display: flex;
         width: 100%;
         gap: 10px;
+        max-width: 80vw;
         @media screen and (max-width: 767px) {
           //  flex-direction: column;
         }
@@ -671,7 +664,7 @@
           }
         }
         .stage-right {
-          flex-grow: 1;
+          // flex-grow: 1;
           z-index: 2;
           padding: 0px 50px;
           @media screen and (max-width: 767px) {

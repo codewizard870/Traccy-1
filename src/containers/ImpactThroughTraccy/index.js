@@ -51,7 +51,7 @@ const ImpactThroughTraccy = () => {
    };
 
    const [openModal, setOpen] = useState(false);
-   const [stageIndex, setStageIndex] = useState(0);
+   const [index, setStageIndex] = useState(0);
    const onConnect = (index) => {
       setOpen(true);
    }
@@ -65,7 +65,7 @@ const ImpactThroughTraccy = () => {
       if (project.route)
          router.push(`/impact-through-traccy-details/${project.route}`)
       else
-         router.push(`/impact-through-traccy-details/${stageIndex}/${index}`)
+         router.push(`/impact-through-traccy-details/${index}/${index}`)
    }
 
    useEffect(() => {
@@ -261,7 +261,7 @@ const ImpactThroughTraccy = () => {
                                     <div className="world"><span>World Location</span></div>
                                     <div className="world-desc">
                                        <span>{data.world}</span>
-                                       <span>{data.world > 1 ? "Countries" : " Country" }</span>
+                                       <span>{data.world > 1 ? "Countries" : " Country"}</span>
                                     </div>
                                  </div>
                               </div>
@@ -271,6 +271,73 @@ const ImpactThroughTraccy = () => {
                               </Col>
                            </div>
                         </Container>
+                        <section className='map-section'>
+                           <div className='map-wrapper'>
+                              <div className='project-center'>
+                                 {index === 0 &&
+                                    <>
+                                       <div className='points point-1' onClick={() => router.push("/impact-through-traccy-details/lynx")}>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                       <div className='points point-2' onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>
+                                          <span></span>
+                                          <div>02</div>
+                                       </div>
+                                       <div className='points point-3' onClick={() => router.push("/impact-through-traccy-details/traccy-solar")}>
+                                          <span></span>
+                                          <div>03</div>
+                                       </div>
+                                       <div className='points point-4' onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>
+                                          <span></span>
+                                          <div>04</div>
+                                       </div>
+                                       <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>
+                                          <span></span>
+                                          <div>05</div>
+                                       </div>
+                                    </>
+                                 }
+                                 {index === 1 &&
+                                    <>
+                                       <div className='points point-6' onClick={() => router.push("/impact-through-traccy-details/flyout")}>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                    </>
+                                 }
+                                 {index === 2 &&
+                                    <>
+                                       <div className='points point-7' onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>
+                                          <span></span>
+                                          <div>01</div>
+                                       </div>
+                                    </>
+                                 }
+                              </div>
+                              <img src="/impact/map.png" alt='Map' />
+                           </div>
+
+                           <div className='right-numbers'>
+                              <ul>
+                                 {index === 0 &&
+                                    <>
+                                       <li className="right-1" onClick={() => router.push("/impact-through-traccy-details/lynx")}>01</li>
+                                       <li className="right-2" onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>02</li>
+                                       <li className="right-3" onClick={() => router.push("/impact-through-traccy-details/traccy-solar")} >03</li>
+                                       <li className="right-4" onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>04</li>
+                                       <li className="right-5" onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>05</li>
+                                    </>
+                                 }
+                                 {index === 1 &&
+                                    <li className="right-6" onClick={() => router.push("/impact-through-traccy-details/flyout")} >01</li>
+                                 }
+                                 {index === 2 &&
+                                    <li className="right-7" onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>01</li>
+                                 }
+                              </ul>
+                           </div>
+                        </section>
                      </div>
                   ))}
                </Slider>
@@ -287,7 +354,7 @@ const ImpactThroughTraccy = () => {
                      <div className="title">
                         <span>Project List</span>
                      </div>
-                     {stageIndex > 0 && Sliders[stageIndex - 1].projects.map((project, index) => (
+                     {index > 0 && Sliders[index - 1].projects.map((project, index) => (
                         <div className="item" onClick={() => goDetail(project, index)}>
                            <img src={project.image} alt="avatar" />
                            <div className="splitter" />
@@ -298,78 +365,9 @@ const ImpactThroughTraccy = () => {
                   </div>
                </Drawer>
             </section>
-            {stageIndex !== 0 &&
-               <section className='map-section'>
 
-                  <div className='map-wrapper'>
-                     <div className='project-center'>
-                        {stageIndex === 1 &&
-                           <>
-                              <div className='points point-1' onClick={() => router.push("/impact-through-traccy-details/lynx")}>
-                                 <span></span>
-                                 <div>01</div>
-                              </div>
-                              <div className='points point-2' onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>
-                                 <span></span>
-                                 <div>02</div>
-                              </div>
-                              <div className='points point-3' onClick={() => router.push("/impact-through-traccy-details/traccy-solar")}>
-                                 <span></span>
-                                 <div>03</div>
-                              </div>
-                              <div className='points point-4' onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>
-                                 <span></span>
-                                 <div>04</div>
-                              </div>
-                              <div className='points point-5' onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>
-                                 <span></span>
-                                 <div>05</div>
-                              </div>
-                           </>
-                        }
-                        {stageIndex === 2 &&
-                           <>
-                              <div className='points point-6' onClick={() => router.push("/impact-through-traccy-details/flyout")}>
-                                 <span></span>
-                                 <div>01</div>
-                              </div>
-                           </>
-                        }
-                        {stageIndex === 3 &&
-                           <>
-                              <div className='points point-7' onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>
-                                 <span></span>
-                                 <div>01</div>
-                              </div>
-                           </>
-                        }
-                     </div>
-                     <img src="/impact/map.png" alt='Map' />
-                  </div>
-
-                  <div className='right-numbers'>
-                     <ul>
-                        {stageIndex === 1 &&
-                           <>
-                              <li className="right-1" onClick={() => router.push("/impact-through-traccy-details/lynx")}>01</li>
-                              <li className="right-2" onClick={() => router.push("/impact-through-traccy-details/green-protocol")}>02</li>
-                              <li className="right-3" onClick={() => router.push("/impact-through-traccy-details/traccy-solar")} >03</li>
-                              <li className="right-4" onClick={() => router.push("/impact-through-traccy-details/traccy-lab")}>04</li>
-                              <li className="right-5" onClick={() => router.push("/impact-through-traccy-details/traccy-farm")}>05</li>
-                           </>
-                        }
-                        {stageIndex === 2 &&
-                           <li className="right-6" onClick={() => router.push("/impact-through-traccy-details/flyout")} >01</li>
-                        }
-                        {stageIndex === 3 &&
-                           <li className="right-7" onClick={() => router.push("/impact-through-traccy-details/traccy-connect")}>01</li>
-                        }
-                     </ul>
-                  </div>
-               </section>
-            }
          </div>
-         {stageIndex !== 0 &&
+         {index !== 0 &&
             <Footer />
          }
       </>

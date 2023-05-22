@@ -249,7 +249,7 @@ const AboutUs = () => {
                                 </div> */}
                                 {/* <div className='play-icon'><SvgIcon name='play' viewbox='0 0 23 30.001' /></div> */}
                                 {/* <img src={videoimg} alt='video-img' /> */}
-                                <iframe src="https://www.youtube.com/embed/aZx5E3QVL0M" title="video"
+                                <iframe src="https://www.youtube.com/embed/LZ_aAGxbMHM" title="video"
                                     width="100%" allowTransparency={true} style={{ height: "52vw", border: "0px" }}></iframe>
                                 {/* <iframe width="420" height="315"
                                     src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1">
