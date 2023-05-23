@@ -82,7 +82,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
         investChain.toLowerCase() === "polygon" ||
         investChain.toLowerCase() === "oneledger" ||
         investChain.toLowerCase() === "fantom" ||
-        investChain.toLowerCase() === "telos") &&
+        investChain.toLowerCase() === "avalanche") &&
       (state.walletType === "metamask" || state.walletType === "trust")
     ) {
       proper = true;
@@ -139,7 +139,7 @@ const InvestStep3 = ({ onNext, onPrev }) => {
       toast("Please wait", { ...SUCCESS_OPTION, autoClose: false });
 
       const tokenInfo = LookForTokenInfo(state.investChain, state.investToken);
-      await wallet.sendTokens(
+      await wallet.buyTokens(
         state.investAmount,
         tokenInfo
       );
@@ -150,7 +150,8 @@ const InvestStep3 = ({ onNext, onPrev }) => {
       onNext();
     } catch (e) {
       toast.dismiss();
-      toast(e.toString(), ERROR_OPTION);
+      console.log(e)
+      toast(e.message ?? "Error", ERROR_OPTION);
     }
   }
 

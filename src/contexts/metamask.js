@@ -10,9 +10,12 @@ import {
   WEFUND_BSC_ADDRESS,
   ERC20_ABI,
   ERROR_OPTION,
+  PAYMENT_CONTRACT_ADDRESS,
 } from "../config/constants";
 import { formatUnits } from "ethers/lib/utils";
 import BigNumber from "bignumber.js";
+import ERC20 from "../config/erc20.json";
+import PAYMENT from "../config/payment_contract.json";
 
 const defaultStates = {
   connected: false,
@@ -43,9 +46,7 @@ export const useMetamaskStore = create(
           signer: signer,
           chainId: res.chainId,
         });
-        // const { chainId } = await provider.getNetwork();
       } catch (err) {
-        // toast.error(err?.message);
         toast.error("Metamask not available", ERROR_OPTION);
         set({ initializing: false });
       }
@@ -93,10 +94,9 @@ export const useMetamaskStore = create(
       let amount = new BigNumber(parseFloat(_amount));
       amount = amount
         .multipliedBy(
-          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+          new BigNumber(10).pow(tokenInfo?.decimals ?? 0)
         )
         .decimalPlaces(0, 1);
-
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const sender = get().account;
       const nonce = provider.getTransactionCount(sender, "latest");
@@ -113,13 +113,39 @@ export const useMetamaskStore = create(
 
         await signer.sendTransaction(tx);
       } else {
-        const contract = new ethers.Contract(tokenInfo.address, ERC20_ABI, signer);
+        const contract = new ethers.Contract(tokenInfo.address, ERC20.abi, signer);
         const gasPrice = await provider.getGasPrice();
-        const res = await contract.transfer(WEFUND_BSC_ADDRESS, amount, {
+        const res = await contract.transfer(WEFUND_BSC_ADDRESS, amount.toString(), {
           gasPrice,
         });
         await res.wait();
       }
+    },
+    buyTokens: async (_amount, tokenInfo) => {
+      const signer = get().signer;
+      if (!signer) return false;
+
+      let amount = new BigNumber(parseFloat(_amount));
+      amount = amount
+        .multipliedBy(
+          new BigNumber(10).pow(tokenInfo?.decimals ? tokenInfo?.decimals : 0)
+        )
+        .decimalPlaces(0, 1);
+
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+      const erc20_contract = new ethers.Contract(tokenInfo.address, ERC20.abi, signer);
+      const gasPrice = await provider.getGasPrice();
+      let res = await erc20_contract.increaseAllowance(PAYMENT_CONTRACT_ADDRESS, amount.toString(), {
+        gasPrice,
+      });
+      await res.wait();
+
+      const payment_contract = new ethers.Contract(PAYMENT_CONTRACT_ADDRESS, PAYMENT.abi, signer);
+      res = await payment_contract.Buy(tokenInfo.address, amount.toString(), {
+        gasPrice,
+      });
+      await res.wait();
     },
     getTokenBalance: async (tokenInfo) => {
       const account = get().account;

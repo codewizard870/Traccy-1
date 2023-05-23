@@ -1,18 +1,15 @@
 export const NETWORK = "mainnet";
-export const WEFUND_ID = 1;
 export const REQUEST_ENDPOINT =
   "https://clownfish-app-ytxjf.ondigitalocean.app";
 
-export const WEFUND_JUNO_ADDRESS =
-  "juno18pqs43u5z8gszhm8grwxvq8fpu66rheqwheuav";
-export const WEFUND_BSC_ADDRESS = "0xCa7f7606853A7D70386B1C854a9A77Fc72195913";
-export const WEFUND_TRON_WALLET = "TNTg2T9dbKG96A94DRbyxMqUVqfnpurR6G";
-export const WEFUND_POLYGON_WALLET =
-  "0xCa7f7606853A7D70386B1C854a9A77Fc72195913";
+export const PAYMENT_CONTRACT_ADDRESS = "0xDB4Eb8a105A20B9070ba292AD897d2d81483CD07"
 
+export const WEFUND_JUNO_ADDRESS = "";
+export const WEFUND_BSC_ADDRESS = "0xeD0C3d4d42EFFb4BbabB8155f6D16A4698e0Ddf1";
+export const WEFUND_TRON_WALLET = "";
+export const WEFUND_POLYGON_WALLET = "";
 export const WEFUND_TRUST_BNB_WALLET = "";
-export const WEFUND_NEAR_WALLET =
-  "";
+export const WEFUND_NEAR_WALLET = "";
 export const WEFUND_ELROND_WALLET = "";
 
 export const SUCCESS_OPTION = {
@@ -37,9 +34,24 @@ export const ERROR_OPTION = {
   progress: undefined,
 };
 
-export const CHAINS = ["Juno", "BSC", "Tron", "Polygon"];
+// export const CHAINS = ["Juno", "BSC", "Tron", "Polygon"];
+export const CHAINS = ["Avalanche"];
 
 export const TOKEN_LIST = [
+  {
+    chain: "Avalanche",
+    name: "USDC",
+    decimals: 6,
+    native: false,
+    address: "0xB97EF9Ef8734C71904D8002F8b6Bc66Dd9c48a6E",
+  },
+  {
+    chain: "Avalanche",
+    name: "USDT",
+    decimals: 6,
+    native: false,
+    address: "0x9702230A8Ea53601f5cD2dc00fDBc13d4dF4A8c7",
+  },
   {
     chain: "Juno",
     name: "USDC",
@@ -235,6 +247,11 @@ export const CHAINS_CONFIG = {
     chainName: "Fantom",
     rpc: "https://rpc2.fantom.network",
   },
+  avalanche: {
+    chainId: "0xa86a",
+    chainName: "Avalanche C-Chain",
+    rpc: "https://api.avax.network/ext/bc/C/rpc",
+  },
 };
 
 export const WALLET_LIST = [
@@ -277,5 +294,6 @@ export const ERC20_ABI = [
   "function balanceOf(address) view returns (uint)",
   "function transfer(address to, uint amount)",
   "function approve(address to, uint amount)",
+  "function increaseAllowance(address spender, uint amount)",
   "event Transfer(address indexed from, address indexed to, uint amount)",
 ];

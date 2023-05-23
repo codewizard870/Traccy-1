@@ -20,11 +20,11 @@ const TokenSelector = () => {
   }, [dispatch, state.investChain, state.investToken, wallet]);
 
   const token = "TRCYC";
-  const price = 0.06;
+  const price = 1.25;
 
   const changeValue = (e) => {
     dispatch({ type: "setInvestAmount", payload: e.target.value });
-    dispatch({ type: "setInvestTrcyAmount", payload: parseFloat(e.target.value) / price });
+    dispatch({ type: "setInvestTrcyAmount", payload: Math.floor(parseFloat(e.target.value) / price) });
   }
   return (
     <div className="input-wrapper">

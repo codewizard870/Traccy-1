@@ -50,6 +50,7 @@ const ChainSelector = () => {
       case "bsc":
       case "bsc_testnet":
       case "polygon":
+      case "avalanche":
         const ethereum = window.ethereum;
         try {
           await ethereum.request({
