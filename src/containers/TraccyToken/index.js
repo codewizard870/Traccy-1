@@ -280,7 +280,7 @@ const TraccyToken = () => {
                             <p className='main-heading-text'>Our business model is supported by the following four pillars</p>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{justifyContent: "space-evenly"}}>
                         <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
@@ -317,10 +317,9 @@ const TraccyToken = () => {
                                 </p>
                             </div>
                         </Col>
-                        <Col lg='3' md='6' sm='12'>
+                        {/* <Col lg='3' md='6' sm='12'>
                             <div className='why-card'>
                                 <div className='icon-circle'>
-                                    {/* <SvgIcon name='connect' viewbox='0 0 62.216 54.826' /> */}
                                     <img className="icon" src="/traccy-token/connect.svg" alt="lab" />
                                 </div>
                                 <h4>FINANCIAL SERVICES</h4>
@@ -328,7 +327,7 @@ const TraccyToken = () => {
                                     {t("token:connect")}
                                 </p>
                             </div>
-                        </Col>
+                        </Col> */}
                     </Row>
                 </Container>
             </section>

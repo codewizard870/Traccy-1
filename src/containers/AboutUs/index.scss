@@ -386,12 +386,13 @@
               border: 0;
               padding: 0 10px;
               @media screen and (max-width: 576px) {
+                width: 90px;
                 padding-bottom: 20px;
               }
             }
             .thumb-col {
               @media screen and (max-width: 576px) {
-                font-size: 12px;
+                font-size: 10px;
               }
               .image-circle {
                 width: 130px;

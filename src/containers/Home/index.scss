@@ -361,17 +361,17 @@
     }
     .swipearrow{
       position: absolute;
-      left: 150px;
       top: 31px;
       color: $white;
       font-size: 15px;
-      display: flex;
+      display: none;
       align-items: center;
       transition: all ease-in 0.1s;
       z-index: 3;
       cursor: pointer;
       
       @media screen and (max-width: 767px) {
+        display: flex;
         left: auto;
         right: 30px;
       }

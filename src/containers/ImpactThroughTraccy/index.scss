@@ -318,9 +318,11 @@
           }
         }
       }
-      .slick-dots.intro{
-        top: calc(100vh - 150px);
-        right: 0px;
+      .slick-dots.intro {
+        @media screen and (max-width: 767px) {
+          top: calc(100vh - 150px);
+          right: 0px;
+        }
       }
       .slick-arrow {
         position: absolute;
@@ -483,7 +485,7 @@
       justify-content: center;
       margin-top: 13vw;
       height: 100vh;
-      
+
       @media screen and (max-width: 767px) {
         margin-top: 150px;
         height: calc(70vw + 150px);
@@ -1017,7 +1019,7 @@
         justify-content: space-between;
         position: fixed;
         left: 10vw;
-        bottom: 3vw;
+        top: calc(100vh - 80px);
         z-index: 2;
 
         @media screen and (max-width: 767px) {
