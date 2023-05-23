@@ -6,7 +6,6 @@ import "./ConnectWallet.scss";
 import TraccyLogo from '../../../assets/images/logo.png';
 import TraccyLogoSmall from '../../../assets/images/icon.png';
 import { useEffect } from "react";
-import { WindowsFilled } from "@ant-design/icons";
 
 const Navbar = () => {
   const [scrollTop, setScrollTop] = useState(0);

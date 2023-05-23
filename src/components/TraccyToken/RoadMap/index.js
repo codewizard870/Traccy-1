@@ -14,7 +14,11 @@ const RoadMap = ({ datas }) => {
     if (e.touches.length > 0) {
       const overlay = document.getElementById("roadmap-overlay");
       const offsetX = relativeX - e.touches[0].clientX;
-      overlay.style.left = `${startPos - offsetX}px`;
+
+      let xPos = startPos - offsetX;
+      if(xPos > 0) xPos = 0;
+      if(xPos < -window.innerWidth * 1.8) xPos = -window.innerWidth * 1.8;
+      overlay.style.left = `${xPos}px`;
     }
   }
   const touchEnd = (e) => {

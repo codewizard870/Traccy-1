@@ -13,7 +13,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 100vw;
+      align-items: center;
+      width: 90vw;
       .roadmap-title{
         font-size: 20px;
         text-align: center;
@@ -30,14 +31,29 @@
           content: "";
           left: 50%;
           top: 50%;
-          width: 10px;
-          height: 10px;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
           background: white;
           transform: translate(-50%, -50%);
         }
+        &::after {
+          position: absolute;
+          content: "";
+          left: 50%;
+          top: 50%;
+          width: 17px;
+          height: 17px;
+          border-radius: 50%;
+          border: 1px solid white;
+          transform: translate(-50%, -50%);
+        }
       }
-
+      .roadmap-content {
+        background: #333d62;
+        width: 80vw;
+        padding: 20px 0 15px 0;
+      }
     }
   }
 }
