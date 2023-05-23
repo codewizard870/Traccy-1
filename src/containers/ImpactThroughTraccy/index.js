@@ -23,6 +23,7 @@ const ImpactThroughTraccy = () => {
          thumbs[iStep].click();
       }
    }, [step])
+
    const settings2 = {
       dots: true,
       infinite: false,
@@ -38,18 +39,45 @@ const ImpactThroughTraccy = () => {
       ),
       customPaging: i => (
          <div className='thumb-col-main impact-dots'>
-            {i === 0 && <div className='thumb-col first-thumb'></div>}
-            {i === 1 && <div className='thumb-col'><span>Phase 1</span>Selection</div>}
-            {i === 2 && <div className='thumb-col'><span>Phase 2</span>Incubation</div>}
-            {i === 3 && <div className='thumb-col'><span>Phase 3</span>Launch</div>}
-            {i === 4 && <div className='thumb-col'><span>Phase 4</span>Monitoring</div>}
+            {i === 0 &&
+               <div className='thumb-col first-thumb' onClick={() => handleChangeStage(0)}>
+               </div>
+            }
+            {i === 1 &&
+               <div className='thumb-col' onClick={() => handleChangeStage(1)}>
+                  <span>Phase 1</span>Selection
+               </div>
+            }
+            {i === 2 &&
+               <div className='thumb-col' onClick={() => handleChangeStage(2)}>
+                  <span>Phase 2</span>Incubation
+               </div>
+            }
+            {i === 3 &&
+               <div className='thumb-col' onClick={() => handleChangeStage(3)}>
+                  <span>Phase 3</span>Launch
+               </div>
+            }
+            {i === 4 &&
+               <div className='thumb-col' onClick={() => handleChangeStage(4)}>
+                  <span>Phase 4</span>Monitoring
+               </div>
+            }
          </div>
       ),
       afterChange: index => {
-         setStageIndex(index)
+         setStageIndex(index);
       }
    };
-
+   const handleChangeStage = index => {
+      console.log(index)
+      const dots = document.getElementsByClassName("slick-dots");
+      if (index > 0) {
+         dots[0].classList.remove("intro")
+      } else {
+         dots[0].classList.add("intro")
+      }
+   }
    const [openModal, setOpen] = useState(false);
    const [index, setStageIndex] = useState(0);
    const onConnect = (index) => {

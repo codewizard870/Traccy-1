@@ -235,7 +235,7 @@
         @media screen and (max-width: 767px) {
           top: calc(70vw + 200px);
           bottom: auto;
-          right: -20vw;
+          right: -25px;
         }
 
         ul {
@@ -317,6 +317,10 @@
             }
           }
         }
+      }
+      .slick-dots.intro{
+        top: calc(100vh - 60px);
+        right: 0px;
       }
       .slick-arrow {
         position: absolute;
@@ -482,7 +486,7 @@
       
       @media screen and (max-width: 767px) {
         margin-top: 150px;
-        height: calc(70vw + 100px);
+        height: calc(70vw + 150px);
       }
       .stage-main {
         display: flex;
@@ -838,7 +842,7 @@
           padding-right: 16vw;
 
           @media screen and (max-width: 767px) {
-            padding-top: 90px;
+            padding-top: 50px;
             padding-left: 20px;
             padding-right: 20px;
             flex-direction: column-reverse;
@@ -897,7 +901,7 @@
           padding-right: 16vw;
 
           @media screen and (max-width: 767px) {
-            padding-top: 90px;
+            padding-top: 50px;
             padding-left: 20px;
             padding-right: 20px;
             flex-direction: column-reverse;
@@ -925,7 +929,7 @@
 
         .page-number {
           position: absolute;
-          top: calc(100vh - 150px);
+          top: calc(100vh - 200px);
           right: 5vw;
           h1 {
             font-size: 100px;
